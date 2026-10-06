@@ -1,0 +1,414 @@
+<!DOCTYPE html><html lang="en" style="width: 1280px; height: 1333px; overflow: hidden; position: relative;"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"surface-container-high":"#dce9ff","inverse-surface":"#213145","surface-tint":"#0051df","on-secondary-fixed-variant":"#3f465c","error-container":"#ffdad6","on-primary-fixed":"#00174d","inverse-on-surface":"#eaf1ff","on-tertiary-fixed-variant":"#005236","outline-variant":"#c3c5d8","surface-variant":"#d3e4fe","outline":"#737687","on-tertiary-fixed":"#002113","on-surface-variant":"#434655","surface-container-low":"#eff4ff","on-error-container":"#93000a","secondary-fixed":"#dae2fd","on-primary-fixed-variant":"#003cab","tertiary-fixed-dim":"#4edea3","surface-bright":"#f8f9ff","on-secondary-container":"#5c647a","primary":"#0048c9","on-background":"#0b1c30","on-secondary":"#ffffff","surface-dim":"#cbdbf5","inverse-primary":"#b5c4ff","primary-container":"#1e60f3","surface-container":"#e5eeff","surface":"#f8f9ff","tertiary-container":"#007c55","on-tertiary-container":"#b5ffd7","secondary-container":"#dae2fd","on-tertiary":"#ffffff","secondary-fixed-dim":"#bec6e0","surface-container-lowest":"#ffffff","on-primary":"#ffffff","on-surface":"#0b1c30","error":"#ba1a1a","primary-fixed":"#dbe1ff","surface-container-highest":"#d3e4fe","tertiary":"#006141","secondary":"#565e74","primary-fixed-dim":"#b5c4ff","on-error":"#ffffff","on-secondary-fixed":"#131b2e","background":"#f8f9ff","tertiary-fixed":"#6ffbbe","on-primary-container":"#edeeff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"2rem","space-xl":"2rem","space-sm":"0.75rem","space-xs":"0.5rem","margin-mobile":"1rem","space-2xs":"0.25rem","gutter":"1.5rem","gutter-mobile":"0.75rem","space-2xl":"3rem","space-md":"1rem","space-lg":"1.5rem"},"fontFamily":{"display-hero":["Plus Jakarta Sans"],"exam-numeric":["Plus Jakarta Sans"],"label-lg":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"label-sm":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-md":["Inter"],"display-hero-mobile":["Plus Jakarta Sans"]},"fontSize":{"display-hero":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"800"}],"exam-numeric":["14px",{"lineHeight":"14px","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-lg":["20px",{"lineHeight":"28px","fontWeight":"700"}],"headline-xl":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-xl-mobile":["22px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"600"}],"display-hero-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"800"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between shadow-[2px_0_12px_rgba(0,0,0,0.06)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-primary-container flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[20px]">school</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md text-on-primary leading-tight tracking-tight">TestPrep</span><span class="font-label-sm text-label-sm text-inverse-primary">Student Portal</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">Main Workspace</div></div><nav class="flex flex-col gap-space-2xs px-space-md" data-active-classes="bg-primary-container text-on-primary-container font-bold"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-inverse-on-surface hover:bg-surface-variant hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-inverse-on-surface hover:bg-surface-variant hover:text-on-surface transition-all" data-path="student-mock-tests" href="#"><span class="material-symbols-outlined text-[20px]">quiz</span><span class="font-label-lg text-label-lg">Mock Tests</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-inverse-on-surface hover:bg-surface-variant hover:text-on-surface transition-all" data-path="previous-tests" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span><span class="font-label-lg text-label-lg">Previous Tests</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-all bg-primary-container text-on-primary-container font-bold" data-path="performance-analysis" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span class="font-label-lg text-label-lg">Performance Analysis</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-inverse-on-surface hover:bg-surface-variant hover:text-on-surface transition-all" data-path="bookmarks" href="#"><span class="material-symbols-outlined text-[20px]">bookmark</span><span class="font-label-lg text-label-lg">Bookmarks</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-inverse-on-surface hover:bg-surface-variant hover:text-on-surface transition-all" data-path="leaderboard" href="#"><span class="material-symbols-outlined text-[20px]">leaderboard</span><span class="font-label-lg text-label-lg">Leaderboard</span></a></nav></div><div class="flex flex-col gap-space-2xs px-space-md pb-space-lg"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">Account &amp; System</div><nav class="flex flex-col gap-space-2xs" data-active-classes="bg-primary-container text-on-primary-container font-bold"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-inverse-on-surface hover:bg-surface-variant hover:text-on-surface transition-all" data-path="student-settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-lg text-label-lg">Settings</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-error hover:bg-error-container hover:text-on-error-container transition-all" data-path="login" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span class="font-label-lg text-label-lg">Logout</span></a></nav></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center relative w-96"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">search</span><input class="w-full pl-10 pr-4 py-space-xs rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:bg-surface-container transition-all" placeholder="Search tests, rank questions, or topics..." type="text"></div><div class="flex items-center gap-space-md"><button aria-label="Notifications" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-space-sm pl-space-xs py-space-2xs pr-space-sm rounded-full bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-tight">Prince Kumar</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Roll #TP-8841</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen px-space-xl py-space-lg"><div class="flex flex-col w-full">
+<!-- Dynamic Confetti / Celebration Header Container -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-xl mb-space-lg shadow-sm flex flex-col items-center text-center">
+<!-- Decorative Ambient Glows -->
+<div class="absolute -top-12 -left-12 w-48 h-48 bg-tertiary-fixed opacity-30 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -top-8 -right-8 w-44 h-44 bg-surface-container-high opacity-40 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Animated Badge with Confetti SVG Accents -->
+<div class="relative flex items-center justify-center mb-space-md">
+<!-- Confetti Particles SVG -->
+<svg class="absolute -inset-6 w-28 h-28 pointer-events-none" fill="none" viewBox="0 0 100 100">
+<circle class="animate-bounce" cx="20" cy="22" fill="#1e60f3" r="3" style="animation-delay: 150ms; animation-duration: 2.2s;"></circle>
+<rect class="animate-bounce" fill="#4edea3" height="5" rx="1.5" style="animation-delay: 350ms; animation-duration: 2.8s;" transform="rotate(25 76 18)" width="5" x="76" y="18"></rect>
+<circle cx="85" cy="52" fill="#f59e0b" r="2.5"></circle>
+<rect fill="#ba1a1a" height="3" rx="1" transform="rotate(-30 12 58)" width="6" x="12" y="58"></rect>
+<circle cx="28" cy="80" fill="#007c55" r="3"></circle>
+<rect fill="#1e60f3" height="5" rx="1.5" transform="rotate(45 70 78)" width="5" x="70" y="78"></rect>
+</svg>
+<!-- Central Success Checkmark Badge -->
+<div class="w-16 h-16 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center shadow-md relative z-10 transition-transform hover:scale-105">
+<span class="material-symbols-outlined text-[36px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<!-- Main Submission Heading & Metadata -->
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mb-space-2xs">
+      Test Submitted Successfully!
+    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+      Well done, <span class="font-label-lg text-label-lg text-primary">Prince!</span> Here is your consolidated performance overview for <span class="font-label-lg text-label-lg text-on-surface">TCS NQT — Full Mock Test 01</span>.
+    </p>
+<!-- Context Meta Badges -->
+<div class="flex flex-wrap items-center justify-center gap-space-sm mt-space-sm">
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-primary">schedule</span> Attempted: Today, 10:30 AM
+      </span>
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-primary">analytics</span> Roll #TP-8841
+      </span>
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">verified</span> Validated Submission
+      </span>
+</div>
+</div>
+<!-- Key Metrics Row (Score Meter + Breakdown KPIs) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-space-md mb-space-lg">
+<!-- Circular Score Meter Card (spans 2 columns on lg) -->
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex items-center justify-between gap-space-md">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-2xs mb-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">military_tech</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Total Score</span>
+</div>
+<div class="flex items-baseline gap-space-2xs">
+<span class="font-display-hero text-display-hero text-on-surface leading-none">78</span>
+<span class="font-headline-md text-headline-md text-outline">/ 90</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">
+          86.6% Normalized Score
+        </p>
+</div>
+<!-- Compact SVG Radial Ring -->
+<div class="relative w-24 h-24 flex items-center justify-center shrink-0">
+<svg class="w-full h-full -rotate-90" viewBox="0 0 80 80">
+<circle class="text-surface-container" cx="40" cy="40" fill="none" r="32" stroke="currentColor" stroke-width="7"></circle>
+<circle class="text-primary-container" cx="40" cy="40" fill="none" r="32" stroke="currentColor" stroke-dasharray="201.06" stroke-dashoffset="44.23" stroke-linecap="round" stroke-width="7"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-exam-numeric text-exam-numeric text-primary leading-tight">78%</span>
+<span class="font-label-sm text-label-sm text-outline" style="font-size: 9px; line-height: 10px;">ACCURACY</span>
+</div>
+</div>
+</div>
+<!-- Correct Answers Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Correct</span>
+<div class="w-7 h-7 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-xl text-headline-xl text-tertiary leading-none">28</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Questions</span>
+</div>
+</div>
+<!-- Incorrect Answers Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Incorrect</span>
+<div class="w-7 h-7 rounded-lg bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-xl text-headline-xl text-error leading-none">08</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">-8 Neg. Marks</span>
+</div>
+</div>
+<!-- Unattempted Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Unattempted</span>
+<div class="w-7 h-7 rounded-lg bg-surface-container text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-xl text-headline-xl text-on-surface leading-none">04</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Skipped Items</span>
+</div>
+</div>
+<!-- Time Taken & Percentile Dual Tile -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Percentile</span>
+<div class="w-7 h-7 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">equalizer</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-xl text-headline-xl text-primary leading-none">93.2</div>
+<div class="flex items-center gap-space-2xs mt-space-2xs text-outline">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">82 / 100m</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bento Section: Analysis Tabs + Table + Strengths / Improvements -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-lg">
+<!-- Main Table Container (8 Cols) -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl shadow-sm flex flex-col overflow-hidden">
+<!-- Section Header & Interactive Tabs -->
+<div class="p-space-lg pb-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Section-wise Performance Breakdown</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Granular assessment across modules and accuracy weightages</p>
+</div>
+<!-- Segmented Tab Switcher -->
+<div class="inline-flex p-space-2xs rounded-lg bg-surface-container-low self-start sm:self-auto">
+<button class="tab-trigger active px-space-md py-space-2xs rounded-md bg-surface-container-lowest shadow-sm font-label-md text-label-md text-primary font-bold" type="button">
+            Overall
+          </button>
+<button class="tab-trigger px-space-md py-space-2xs rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+            Section-wise
+          </button>
+<button class="tab-trigger px-space-md py-space-2xs rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+            Question-wise
+          </button>
+</div>
+</div>
+<!-- Data Table -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-lg">Section Name</th>
+<th class="py-space-sm px-space-md text-center">Questions</th>
+<th class="py-space-sm px-space-md text-center text-tertiary">Correct</th>
+<th class="py-space-sm px-space-md text-center text-error">Incorrect</th>
+<th class="py-space-sm px-space-md text-center">Unattempted</th>
+<th class="py-space-sm px-space-md text-center">Accuracy</th>
+<th class="py-space-sm px-space-lg text-right">Score</th>
+</tr>
+</thead>
+<tbody class="divide-none text-on-surface font-body-md text-body-md">
+<!-- Row 1: Quantitative Aptitude -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-lg flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface">Quantitative Aptitude</div>
+<div class="font-label-sm text-label-sm text-outline">Q.01 - Q.10</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center font-exam-numeric text-exam-numeric text-on-surface-variant">10</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center justify-center px-space-sm py-space-2xs rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-exam-numeric text-exam-numeric">8</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center justify-center px-space-sm py-space-2xs rounded-full bg-error-container text-on-error-container font-exam-numeric text-exam-numeric">1</span>
+</td>
+<td class="py-space-md px-space-md text-center font-exam-numeric text-exam-numeric text-secondary">1</td>
+<td class="py-space-md px-space-md text-center">
+<div class="flex flex-col items-center">
+<span class="font-label-md text-label-md text-tertiary">80%</span>
+<div class="w-14 bg-surface-container h-1.5 rounded-full overflow-hidden mt-1">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 80%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right font-headline-md text-headline-md text-on-surface">23 <span class="text-outline text-label-sm">/ 30</span></td>
+</tr>
+<!-- Row 2: Logical Reasoning -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-bright">
+<td class="py-space-md px-space-lg flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface">Logical Reasoning</div>
+<div class="font-label-sm text-label-sm text-outline">Q.11 - Q.20</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center font-exam-numeric text-exam-numeric text-on-surface-variant">10</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center justify-center px-space-sm py-space-2xs rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-exam-numeric text-exam-numeric">9</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center justify-center px-space-sm py-space-2xs rounded-full bg-error-container text-on-error-container font-exam-numeric text-exam-numeric">1</span>
+</td>
+<td class="py-space-md px-space-md text-center font-exam-numeric text-exam-numeric text-secondary">0</td>
+<td class="py-space-md px-space-md text-center">
+<div class="flex flex-col items-center">
+<span class="font-label-md text-label-md text-tertiary">90%</span>
+<div class="w-14 bg-surface-container h-1.5 rounded-full overflow-hidden mt-1">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 90%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right font-headline-md text-headline-md text-on-surface">26 <span class="text-outline text-label-sm">/ 30</span></td>
+</tr>
+<!-- Row 3: Verbal Ability -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-lg flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface">Verbal Ability</div>
+<div class="font-label-sm text-label-sm text-outline">Q.21 - Q.30</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center font-exam-numeric text-exam-numeric text-on-surface-variant">10</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center justify-center px-space-sm py-space-2xs rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-exam-numeric text-exam-numeric">7</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center justify-center px-space-sm py-space-2xs rounded-full bg-error-container text-on-error-container font-exam-numeric text-exam-numeric">2</span>
+</td>
+<td class="py-space-md px-space-md text-center font-exam-numeric text-exam-numeric text-secondary">1</td>
+<td class="py-space-md px-space-md text-center">
+<div class="flex flex-col items-center">
+<span class="font-label-md text-label-md text-tertiary">70%</span>
+<div class="w-14 bg-surface-container h-1.5 rounded-full overflow-hidden mt-1">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 70%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right font-headline-md text-headline-md text-on-surface">19 <span class="text-outline text-label-sm">/ 30</span></td>
+</tr>
+<!-- Row 4: General Awareness -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-bright">
+<td class="py-space-md px-space-lg flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">public</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface">General Awareness</div>
+<div class="font-label-sm text-label-sm text-outline">Q.31 - Q.40</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center font-exam-numeric text-exam-numeric text-on-surface-variant">10</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center justify-center px-space-sm py-space-2xs rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-exam-numeric text-exam-numeric">4</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center justify-center px-space-sm py-space-2xs rounded-full bg-error-container text-on-error-container font-exam-numeric text-exam-numeric">4</span>
+</td>
+<td class="py-space-md px-space-md text-center font-exam-numeric text-exam-numeric text-secondary">2</td>
+<td class="py-space-md px-space-md text-center">
+<div class="flex flex-col items-center">
+<span class="font-label-md text-label-md text-error">50%</span>
+<div class="w-14 bg-surface-container h-1.5 rounded-full overflow-hidden mt-1">
+<div class="bg-error h-full rounded-full" style="width: 50%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right font-headline-md text-headline-md text-on-surface">10 <span class="text-outline text-label-sm">/ 30</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Quick Footnote -->
+<div class="p-space-md bg-surface-container-low flex items-center justify-between text-outline font-body-sm text-body-sm">
+<span class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[16px]">info</span> Marking Scheme: +3 for Correct, -1 for Incorrect, 0 for Unattempted.
+        </span>
+<span class="font-label-sm text-label-sm text-primary cursor-pointer hover:underline">Download Detailed CSV</span>
+</div>
+</div>
+<!-- Strengths, Improvement & Student Context (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Strengths Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col">
+<div class="flex items-center gap-space-xs mb-space-sm">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Key Strengths</h3>
+<span class="font-label-sm text-label-sm text-outline">High accuracy (&gt;80%)</span>
+</div>
+</div>
+<ul class="flex flex-col gap-space-xs">
+<li class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low">
+<span class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span> Algebra &amp; Equations
+            </span>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed px-space-xs rounded font-bold">100%</span>
+</li>
+<li class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low">
+<span class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span> Data Interpretation
+            </span>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed px-space-xs rounded font-bold">92%</span>
+</li>
+<li class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low">
+<span class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span> Reading Comprehension
+            </span>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed px-space-xs rounded font-bold">85%</span>
+</li>
+</ul>
+</div>
+<!-- Areas to Improve Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col">
+<div class="flex items-center gap-space-xs mb-space-sm">
+<div class="w-8 h-8 rounded-lg bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">track_changes</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Areas to Improve</h3>
+<span class="font-label-sm text-label-sm text-outline">Priority revision topics</span>
+</div>
+</div>
+<ul class="flex flex-col gap-space-xs">
+<li class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low">
+<span class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-error text-[18px]">error</span> Blood Relations
+            </span>
+<span class="font-label-sm text-label-sm text-error bg-error-container px-space-xs rounded font-bold">40%</span>
+</li>
+<li class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low">
+<span class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-error text-[18px]">error</span> Error Detection
+            </span>
+<span class="font-label-sm text-label-sm text-error bg-error-container px-space-xs rounded font-bold">45%</span>
+</li>
+<li class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low">
+<span class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-error text-[18px]">error</span> Number Series
+            </span>
+<span class="font-label-sm text-label-sm text-error bg-error-container px-space-xs rounded font-bold">50%</span>
+</li>
+</ul>
+</div>
+<!-- Study Mascot / Quote Banner -->
+<div class="bg-primary-container text-on-primary rounded-xl p-space-md shadow-sm flex items-center justify-between gap-space-md relative overflow-hidden">
+<div class="flex flex-col z-10">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-primary-container">Next Milestone</span>
+<span class="font-headline-md text-headline-md mt-space-2xs">“Believe in yourself and keep going.”</span>
+<span class="font-body-sm text-body-sm text-inverse-primary mt-space-2xs">Estimated Rank: #342 in National Batch</span>
+</div>
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest/15 flex items-center justify-center shrink-0 z-10">
+<span class="material-symbols-outlined text-[28px] text-on-primary">emoji_events</span>
+</div>
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-surface-container-lowest/10 rounded-full blur-xl pointer-events-none"></div>
+</div>
+</div>
+</div>
+<!-- Persistent Sticky Bottom Action Toolbar -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-primary">psychology_alt</span>
+<span class="font-body-md text-body-md">Solutions and answer explanations are now ready for review.</span>
+</div>
+<!-- Interactive CTA Cluster -->
+<div class="flex flex-wrap items-center gap-space-sm w-full sm:w-auto justify-end">
+<!-- Outlined View Solutions -->
+<button class="flex items-center justify-center gap-space-xs px-space-lg py-space-sm rounded-lg bg-surface-container-low text-primary hover:bg-surface-container transition-all font-label-lg text-label-lg" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span>View Solutions</span>
+</button>
+<!-- Soft Secondary Re-attempt -->
+<button class="flex items-center justify-center gap-space-xs px-space-lg py-space-sm rounded-lg bg-surface-container-high text-on-secondary-fixed-variant hover:bg-surface-variant transition-all font-label-lg text-label-lg" type="button">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+<span>Re-attempt Test</span>
+</button>
+<!-- Solid Primary CTA -->
+<button class="flex items-center justify-center gap-space-xs px-space-xl py-space-sm rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-all font-label-lg text-label-lg shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>Take Another Test</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Simple Tab Toggle Script for Overall / Section-wise views
+  document.querySelectorAll('.tab-trigger').forEach((button) => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.tab-trigger').forEach((btn) => {
+        btn.classList.remove('active', 'bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-bold');
+        btn.classList.add('text-on-surface-variant');
+      });
+      button.classList.add('active', 'bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-bold');
+      button.classList.remove('text-on-surface-variant');
+    });
+  });
+</script></main></div><div id="snapdom-sandbox" data-snapdom-sandbox="true" aria-hidden="true" style="position: absolute; left: -9999px; top: -9999px; width: 0px; height: 0px; overflow: hidden;"></div></body></html>

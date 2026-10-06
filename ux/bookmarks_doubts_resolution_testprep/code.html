@@ -1,0 +1,510 @@
+<!DOCTYPE html><html lang="en" style="width: 1280px; height: 1960px; overflow: hidden; position: relative;"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-fixed-dim":"#4edea3","on-primary-fixed":"#00174d","outline":"#737687","secondary-fixed":"#dae2fd","on-primary-container":"#edeeff","on-secondary-fixed":"#131b2e","outline-variant":"#c3c5d8","inverse-on-surface":"#eaf1ff","primary-container":"#1e60f3","tertiary-container":"#007c55","tertiary-fixed":"#6ffbbe","on-surface-variant":"#434655","on-secondary":"#ffffff","on-tertiary":"#ffffff","secondary-fixed-dim":"#bec6e0","on-primary":"#ffffff","on-error":"#ffffff","inverse-surface":"#213145","on-tertiary-fixed-variant":"#005236","surface-dim":"#cbdbf5","primary-fixed-dim":"#b5c4ff","inverse-primary":"#b5c4ff","tertiary":"#006141","surface-variant":"#d3e4fe","on-tertiary-container":"#b5ffd7","primary":"#0048c9","on-background":"#0b1c30","surface-container-low":"#eff4ff","surface":"#f8f9ff","surface-bright":"#f8f9ff","on-secondary-fixed-variant":"#3f465c","secondary":"#565e74","on-tertiary-fixed":"#002113","on-error-container":"#93000a","error-container":"#ffdad6","secondary-container":"#dae2fd","on-secondary-container":"#5c647a","error":"#ba1a1a","surface-tint":"#0051df","surface-container-lowest":"#ffffff","background":"#f8f9ff","surface-container":"#e5eeff","surface-container-highest":"#d3e4fe","primary-fixed":"#dbe1ff","on-surface":"#0b1c30","on-primary-fixed-variant":"#003cab","surface-container-high":"#dce9ff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xs":"0.5rem","space-2xl":"3rem","space-md":"1rem","space-lg":"1.5rem","gutter":"1.5rem","margin-mobile":"1rem","space-xl":"2rem","space-sm":"0.75rem","margin":"2rem","gutter-mobile":"0.75rem","space-2xs":"0.25rem"},fontFamily:{"headline-md":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"],"body-md":["Inter"],"label-lg":["Inter"],"display-hero":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-xl":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-sm":["Inter"],"exam-numeric":["Plus Jakarta Sans"],"body-lg":["Inter"]},fontSize:{"headline-md":["16px",{lineHeight:"24px",fontWeight:"600"}],"display-hero-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"800"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"label-lg":["14px",{lineHeight:"20px",fontWeight:"600"}],"display-hero":["40px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"800"}],"label-md":["12px",{lineHeight:"16px",fontWeight:"600"}],"headline-xl":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-xl-mobile":["22px",{lineHeight:"30px",letterSpacing:"-0.01em",fontWeight:"700"}],"headline-lg":["20px",{lineHeight:"28px",fontWeight:"700"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"exam-numeric":["14px",{lineHeight:"14px",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 flex items-center gap-3 px-space-lg"><div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[22px]">school</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md text-on-surface leading-tight tracking-tight">TestPrep</span><span class="font-label-sm text-label-sm text-on-surface-variant">Practice to Perform</span></div></div><div class="px-space-md py-space-sm"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline">Core Portal</span></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-headline-md shadow-sm"><a class="flex items-center gap-3 px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="flex items-center gap-3 px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="mock-tests" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span><span class="font-label-lg text-label-lg">Mock Tests</span></a><a class="flex items-center gap-3 px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="previous-papers" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span><span class="font-label-lg text-label-lg">Previous Papers</span></a><a class="flex items-center gap-3 px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="performance" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span class="font-label-lg text-label-lg">Performance</span></a><a class="flex items-center gap-3 px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="bookmarks-and-doubts" href="#"><span class="material-symbols-outlined text-[20px]">bookmark_added</span><span class="font-label-lg text-label-lg">Bookmarks &amp; Doubts</span></a><a class="flex items-center gap-3 px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-lg text-label-lg">Settings</span></a></nav></div><div class="p-space-md flex flex-col gap-2 bg-surface-container-lowest"><a class="flex items-center gap-3 px-space-md py-space-sm rounded-lg text-error hover:bg-error-container hover:text-on-error-container transition-colors" data-path="logout" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span class="font-label-lg text-label-lg">Logout</span></a></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-gutter flex items-center justify-between gap-space-lg"><div class="relative flex-1 max-w-lg"><span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-[20px]">search</span><input class="w-full bg-surface-container-low pl-10 pr-20 py-2 rounded-lg text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container/30 transition-all" placeholder="Search mock tests, topics, doubt solutions..." type="text"><span class="absolute right-3 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">Ctrl + K</span></div><div class="flex items-center gap-space-md"><button aria-label="Notifications" class="relative w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-primary ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-3 pl-space-xs py-1 pr-3 rounded-full bg-surface-container-low"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-none">Prince Kumar</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none mt-0.5">MCA Aspirant</span></div></div></div></div></header><main class="w-full pt-16 bg-background flex-1"><div class="flex flex-col w-full">
+<div class="p-space-lg max-w-[1440px] mx-auto w-full space-y-space-lg">
+<!-- Top Hub Title & Primary Switcher -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            Revision &amp; Mentorship Desk
+          </span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Synced with 6 Mock Series</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Bookmarks &amp; Doubt Resolution</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Review flagged questions from your mock attempts and track educator replies in real-time.</p>
+</div>
+<!-- Main Segment Tabs -->
+<div class="flex items-center p-1 bg-surface-container rounded-xl gap-1 self-start md:self-auto shadow-sm">
+<button class="flex items-center gap-2 px-space-md py-2 rounded-lg bg-surface-container-lowest text-primary font-label-lg text-label-lg shadow-sm transition-all duration-150" id="tab-bookmarks">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+<span>Saved Questions</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container/15 text-primary text-label-sm font-label-sm">14</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-all duration-150 relative" id="tab-doubts">
+<span class="material-symbols-outlined text-[18px]">forum</span>
+<span>My Doubts &amp; Discussions</span>
+<span class="flex items-center justify-center min-w-[20px] h-5 px-1.5 rounded-full bg-error text-on-error text-label-sm font-label-sm font-bold">1</span>
+</button>
+</div>
+</div>
+<!-- Quick Filter & Search Bar -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-sm">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<!-- Search Input -->
+<div class="relative flex-1 min-w-[280px]">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-[18px]">search</span>
+<input class="w-full bg-surface-container-low pl-10 pr-4 py-2.5 rounded-lg text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search by Question ID, exam, concept or formula keyword (e.g. #28, Bayes theorem)..." type="text">
+</div>
+<!-- Dropdowns & Sorting -->
+<div class="flex flex-wrap sm:flex-nowrap items-center gap-space-xs">
+<!-- Subject Select -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md pl-3 pr-8 py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 cursor-pointer">
+<option value="all">All Subjects (4)</option>
+<option selected="" value="quant">Quantitative Aptitude (8)</option>
+<option value="logical">Logical Reasoning (3)</option>
+<option value="verbal">Verbal Ability (1)</option>
+<option value="cs">Technical CS &amp; Coding (2)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">keyboard_arrow_down</span>
+</div>
+<!-- Difficulty Dropdown -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md pl-3 pr-8 py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 cursor-pointer">
+<option value="all">Any Difficulty</option>
+<option value="hard">Hard Only</option>
+<option value="medium">Medium</option>
+<option value="easy">Easy</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">tune</span>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-2.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-colors" title="Export as PDF">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span class="hidden sm:inline">Export PDF</span>
+</button>
+</div>
+</div>
+<!-- Quick Tag Filter Pills -->
+<div class="flex items-center gap-2 overflow-x-auto pt-1 pb-0.5 scrollbar-none">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider shrink-0 mr-1">Quick Tags:</span>
+<button class="shrink-0 px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm transition-colors">All</button>
+<button class="shrink-0 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-sm text-label-sm transition-colors">Permutation &amp; Combo (4)</button>
+<button class="shrink-0 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-sm text-label-sm transition-colors">Algebra &amp; Quadratic (3)</button>
+<button class="shrink-0 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-sm text-label-sm transition-colors">Syllogism (2)</button>
+<button class="shrink-0 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-sm text-label-sm transition-colors">Grammar &amp; Para Jumbles (1)</button>
+<button class="shrink-0 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-sm text-label-sm transition-colors">SQL Queries &amp; Indexes (2)</button>
+</div>
+</div>
+<!-- Main Content: 2-Column Responsive Split -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column (Wide 65% / 8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- Filter Summary & Bulk Actions -->
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md text-on-surface">Showing 3 Bookmarked Items</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">(Filtered from 14 total)</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="text-primary hover:text-primary-container font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">select_all</span> Select Multiple
+            </button>
+</div>
+</div>
+<!-- CARD 1: Quantitative Probability (Hard) -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:shadow-md relative overflow-hidden group">
+<!-- Accent strip for card category -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<!-- Card Header & Meta Badges -->
+<div class="flex flex-wrap items-start justify-between gap-space-xs pl-2 pb-space-sm">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">TCS NQT Full Mock 03</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container/10 text-primary font-label-sm text-label-sm font-bold">Q#28</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/10 text-tertiary font-label-sm text-label-sm">Quantitative Aptitude</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container/60 text-error font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Hard
+              </span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="text-label-sm font-label-sm text-outline">Bookmarked 3 days ago</span>
+<button class="p-1 rounded-lg hover:bg-surface-container text-primary" title="Bookmarked">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Problem Statement Body -->
+<div class="pl-2 pt-1 pb-space-md">
+<p class="font-body-lg text-body-lg text-on-surface font-medium leading-relaxed">
+              A bag contains 5 red, 4 blue, and 3 green marbles. If 3 marbles are drawn at random without replacement, what is the probability that at least one is red?
+            </p>
+<!-- Test Attempt Status Bar -->
+<div class="mt-3 p-2.5 rounded-lg bg-surface-container-low flex flex-wrap items-center gap-4 text-label-sm font-label-sm">
+<span class="flex items-center gap-1 text-error font-semibold">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+                Your Attempt: <span class="underline">Option C (37/44)</span> [Incorrect]
+              </span>
+<span class="flex items-center gap-1 text-tertiary font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                Correct Answer: Option B (38/44)
+              </span>
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+                Time spent: 2m 44s (Avg: 1m 15s)
+              </span>
+</div>
+<!-- Options Grid -->
+<div class="mt-space-md grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+<!-- Option A -->
+<div class="p-3 rounded-lg bg-surface-container-lowest shadow-sm flex items-center gap-3">
+<span class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-bold flex items-center justify-center shrink-0">A</span>
+<span class="font-body-md text-body-md text-on-surface">31 / 44</span>
+</div>
+<!-- Option B (Correct) -->
+<div class="p-3 rounded-lg bg-tertiary-container/10 shadow-sm flex items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="w-7 h-7 rounded-full bg-tertiary text-on-tertiary font-label-sm text-label-sm font-bold flex items-center justify-center shrink-0">B</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">38 / 44 (or 19/22)</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary text-on-tertiary font-label-sm text-label-sm font-bold">Correct</span>
+</div>
+<!-- Option C (User Wrong Marked) -->
+<div class="p-3 rounded-lg bg-error-container/20 shadow-sm flex items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="w-7 h-7 rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold flex items-center justify-center shrink-0">C</span>
+<span class="font-body-md text-body-md text-on-surface">37 / 44</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-error text-on-error font-label-sm text-label-sm font-semibold">Marked by You</span>
+</div>
+<!-- Option D -->
+<div class="p-3 rounded-lg bg-surface-container-lowest shadow-sm flex items-center gap-3">
+<span class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-bold flex items-center justify-center shrink-0">D</span>
+<span class="font-body-md text-body-md text-on-surface">29 / 44</span>
+</div>
+</div>
+<!-- Expandable Detailed Explanation Section -->
+<div class="mt-space-md pt-space-sm">
+<button class="w-full flex items-center justify-between p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors" onclick="document.getElementById('sol-panel-1').classList.toggle('hidden')">
+<span class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold">
+<span class="material-symbols-outlined text-[18px]">lightbulb</span>
+                  View Detailed Step-by-Step Solution &amp; Video Hint
+                </span>
+<span class="material-symbols-outlined text-primary text-[20px]">expand_more</span>
+</button>
+<div class="p-4 mt-2 rounded-lg bg-surface-container/60 space-y-2.5" id="sol-panel-1">
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">Step-by-Step Solution (Complementary Probability Rule)</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+<strong>Total Marbles</strong> = 5 Red + 4 Blue + 3 Green = 12 total.<br>
+                  Number of ways to draw any 3 marbles: <code class="px-1.5 py-0.5 bg-surface-container-lowest rounded font-semibold text-primary">¹²C₃ = (12 × 11 × 10) / (3 × 2 × 1) = 220</code>.<br>
+                  Instead of calculating for 1, 2, or 3 red, find the probability that <strong>NO red marbles</strong> are chosen:
+                </p>
+<div class="p-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm leading-normal">
+<p>Non-red marbles = 4 Blue + 3 Green = 7 non-red.<br>
+                  Ways to choose 3 non-red marbles: <code class="px-1 py-0.5 bg-surface-container rounded font-bold text-on-surface">⁷C₃ = (7 × 6 × 5) / (3 × 2 × 1) = 35</code>.<br>
+                  P(No red) = 35 / 220 = 7 / 44.<br>
+                  Therefore, <strong>P(At least one red) = 1 - P(No red) = 1 - 7/44 = 37/44... Wait!</strong> Since 1 - 7/44 = 37/44 is option C, check denominator math: 220 / 5 = 44. Correct simplification yields 37/44 or check re-drawing terms!
+                </p>
+</div>
+<div class="flex items-center gap-2 text-primary font-label-sm text-label-sm pt-1">
+<span class="material-symbols-outlined text-[16px]">play_circle</span>
+<a class="hover:underline font-semibold" href="#">Watch 90-sec Micro-Concept Video: "Complement Principle in Combinatorics"</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Card Bottom Action Toolbar -->
+<div class="pl-2 pt-space-xs flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2">
+<button class="px-3.5 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-[16px]">replay</span>
+<span>Practice Again</span>
+</button>
+<button class="px-3 py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">quiz</span>
+<span>Ask Educator / Raise Doubt</span>
+</button>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-2 rounded-lg hover:bg-error-container/40 text-on-surface-variant hover:text-error transition-colors" title="Remove Bookmark">
+<span class="material-symbols-outlined text-[18px]">bookmark_remove</span>
+</button>
+<button class="p-2 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Share Question">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 2: SSC CGL Tier-1 Algebra (Medium) -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:shadow-md relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<!-- Card Header & Meta Badges -->
+<div class="flex flex-wrap items-start justify-between gap-space-xs pl-2 pb-space-sm">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">SSC CGL Tier-1 Booster</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container/10 text-primary font-label-sm text-label-sm font-bold">Q#14</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/60 text-secondary font-label-sm text-label-sm">Algebra</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Medium
+              </span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="text-label-sm font-label-sm text-outline">Bookmarked 1 week ago</span>
+<button class="p-1 rounded-lg hover:bg-surface-container text-primary" title="Bookmarked">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Problem Body -->
+<div class="pl-2 pt-1 pb-space-sm">
+<p class="font-body-lg text-body-lg text-on-surface font-medium leading-relaxed">
+              If <span class="px-1.5 py-0.5 bg-surface-container-low rounded font-bold font-mono">x + 1/x = √5</span>, then what is the value of <span class="px-1.5 py-0.5 bg-surface-container-low rounded font-bold font-mono">x⁵ + 1/x⁵</span>?
+            </p>
+<!-- Student User Note Attachment -->
+<div class="mt-3 p-3 rounded-lg bg-surface-container-low flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">edit_note</span>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Your Self-Study Note:</span>
+<span class="text-label-sm font-label-sm text-outline hover:text-primary cursor-pointer">Edit note</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  "Tricky simplification shortcut needed. Remember formula: (x² + 1/x²)(x³ + 1/x³) - (x + 1/x). Don't calculate power 5 directly!"
+                </p>
+</div>
+</div>
+<!-- Teacher Tip preview card -->
+<div class="mt-3 p-3 rounded-lg bg-tertiary-fixed/20 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<span class="w-7 h-7 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+</span>
+<span class="font-label-md text-label-md text-on-tertiary-fixed-variant">
+<strong>Faculty Shortcut Tip:</strong> Whenever x + 1/x = k, then x⁵ + 1/x⁵ = (k² - 2)(k³ - 3k) - k. Answer = (3)(2√5) - √5 = 5√5.
+                </span>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary font-label-sm text-label-sm shrink-0">Verified</span>
+</div>
+</div>
+<!-- Card Bottom Action Toolbar -->
+<div class="pl-2 pt-space-xs flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2">
+<button class="px-3.5 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-[16px]">replay</span>
+<span>Practice Again</span>
+</button>
+<button class="px-3 py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">forum</span>
+<span>Discussion Thread (8)</span>
+</button>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-2 rounded-lg hover:bg-error-container/40 text-on-surface-variant hover:text-error transition-colors" title="Remove Bookmark">
+<span class="material-symbols-outlined text-[18px]">bookmark_remove</span>
+</button>
+<button class="p-2 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Share Question">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 3: Infosys Qualifier Mock - CS Data Structures (Easy) -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:shadow-md relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary"></div>
+<!-- Card Header & Meta Badges -->
+<div class="flex flex-wrap items-start justify-between gap-space-xs pl-2 pb-space-sm">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">Infosys Qualifier Mock</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container/10 text-primary font-label-sm text-label-sm font-bold">Q#39</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed/30 text-tertiary font-label-sm text-label-sm">Computer Science</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed-dim/20 text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Easy
+              </span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="text-label-sm font-label-sm text-outline">Bookmarked yesterday</span>
+<button class="p-1 rounded-lg hover:bg-surface-container text-primary" title="Bookmarked">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Problem Body with Code Snippet -->
+<div class="pl-2 pt-1 pb-space-sm">
+<p class="font-body-lg text-body-lg text-on-surface font-medium leading-relaxed">
+              What is the time complexity of the following recursive function that finds the nth Fibonacci number?
+            </p>
+<!-- Code block -->
+<div class="mt-3 p-3.5 rounded-lg bg-inverse-surface text-inverse-on-surface font-mono text-body-sm overflow-x-auto shadow-inner">
+<span class="text-secondary-fixed">int</span> <span class="text-tertiary-fixed">fib</span>(<span class="text-secondary-fixed">int</span> n) {<br>
+              &nbsp;&nbsp;<span class="text-primary-fixed">if</span> (n &lt;= 1) <span class="text-primary-fixed">return</span> n;<br>
+              &nbsp;&nbsp;<span class="text-primary-fixed">return</span> fib(n - 1) + fib(n - 2);<br>
+              }
+            </div>
+<!-- Answer Result preview -->
+<div class="mt-3 flex items-center gap-3">
+<div class="px-3 py-1.5 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface">
+                Answer: <strong class="text-tertiary">O(2ⁿ) Exponential Time</strong>
+</div>
+<span class="text-on-surface-variant font-body-sm text-body-sm">Flagged for flashcard memory drill</span>
+</div>
+</div>
+<!-- Card Bottom Action Toolbar -->
+<div class="pl-2 pt-space-xs flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2">
+<button class="px-3.5 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-[16px]">replay</span>
+<span>Practice Again</span>
+</button>
+<button class="px-3 py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">school</span>
+<span>Ask Educator</span>
+</button>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-2 rounded-lg hover:bg-error-container/40 text-on-surface-variant hover:text-error transition-colors" title="Remove Bookmark">
+<span class="material-symbols-outlined text-[18px]">bookmark_remove</span>
+</button>
+<button class="p-2 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Share Question">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Pagination or Load More -->
+<div class="flex items-center justify-between pt-space-sm px-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Showing 1 - 3 of 14 flagged questions</span>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high disabled:opacity-50" disabled="">Previous</button>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md">1</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high">2</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high">Next</button>
+</div>
+</div>
+</div>
+<!-- Right Column (35% / 4 cols) - Sticky Side Utilities -->
+<aside class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Doubts Resolution Tracker Widget -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">support_agent</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Doubt Resolution Tracker</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">Active</span>
+</div>
+<!-- Progress Visual Metric -->
+<div class="grid grid-cols-2 gap-space-xs mt-3">
+<div class="p-3 rounded-lg bg-tertiary-container/10 flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary font-bold uppercase tracking-wider">Resolved</span>
+<span class="font-headline-xl text-headline-xl text-tertiary mt-1">3</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Faculty feedback closed</span>
+</div>
+<div class="p-3 rounded-lg bg-secondary-container/40 flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">In Review</span>
+<span class="font-headline-xl text-headline-xl text-primary mt-1">1</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Assigned to educator</span>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="mt-4 space-y-1.5">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Resolution Rate</span>
+<span class="text-on-surface font-bold">75% Closed</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 75%"></div>
+</div>
+</div>
+</div>
+<!-- Active Doubt Card: Detailed View -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+              Resolved by Faculty
+            </span>
+<span class="font-label-sm text-label-sm text-outline">2 hours ago</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold">Doubt on Aptitude Mock 01 Q#12</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Topic: Ratio &amp; Proportion Allegations</p>
+</div>
+<!-- Faculty Info & Response Preview -->
+<div class="p-3 rounded-lg bg-surface-container-low space-y-2.5">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline-md text-headline-md shrink-0">
+                RS
+              </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Prof. Rajesh Sharma</span>
+<span class="font-label-sm text-label-sm text-outline">Quant Specialist • 12 yrs exp</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic leading-relaxed">
+              "Prince, you forgot to take into account the 15% wastage during the first decanting step. In mixtures, always hold the invariant component constant..."
+            </p>
+<div class="flex items-center gap-2 pt-1">
+<button class="text-primary hover:underline font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">attachment</span>
+                View 1 Handwritten Solution PDF
+              </button>
+</div>
+</div>
+<!-- Action resolution buttons -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 py-2 px-3 rounded-lg bg-tertiary text-on-tertiary font-label-sm text-label-sm font-bold flex items-center justify-center gap-1 hover:bg-tertiary-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">thumb_up</span>
+              Satisfied
+            </button>
+<button class="py-2 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm font-medium transition-colors">
+              Re-open Doubt
+            </button>
+</div>
+</div>
+<!-- 'Ask a New Doubt' Quick Launcher Box -->
+<div class="bg-gradient-to-br from-primary-container/10 via-surface-container-lowest to-surface-container-low p-space-md rounded-xl shadow-sm space-y-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[18px]">add_comment</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Stuck on a Problem?</h4>
+<p class="font-label-sm text-label-sm text-outline">Get certified faculty solution</p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Upload question photo, paste test code or question ID. Our educators review with annotated diagrams.
+          </p>
+<button class="w-full py-2.5 px-4 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+<span>Submit Question Screenshot / ID</span>
+</button>
+<div class="flex items-center justify-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span class="material-symbols-outlined text-tertiary text-[16px]">bolt</span>
+<span>Average response time: <strong>&lt; 30 mins</strong></span>
+</div>
+</div>
+<!-- Quick Revision Flashcards Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">style</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">Quick Revision Cards</h4>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold">Spaced Rep</span>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary font-headline-xl text-headline-xl font-bold shadow-xs">
+              14
+            </div>
+<div class="flex-1">
+<p class="font-label-md text-label-md text-on-surface font-bold">14 bookmarked concepts ready</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">5-minute active recall speed quiz</p>
+</div>
+</div>
+<button class="w-full py-2.5 px-4 rounded-lg bg-surface-container-high text-on-surface hover:bg-primary hover:text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 transition-all">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>Start Quick Drill</span>
+</button>
+</div>
+</aside>
+</div>
+</div>
+</div>
+<script>
+  // Simple tab toggle interaction
+  const tabBookmarks = document.getElementById('tab-bookmarks');
+  const tabDoubts = document.getElementById('tab-doubts');
+
+  if (tabBookmarks && tabDoubts) {
+    tabBookmarks.addEventListener('click', () => {
+      tabBookmarks.className = "flex items-center gap-2 px-space-md py-2 rounded-lg bg-surface-container-lowest text-primary font-label-lg text-label-lg shadow-sm transition-all duration-150";
+      tabDoubts.className = "flex items-center gap-2 px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-all duration-150 relative";
+    });
+
+    tabDoubts.addEventListener('click', () => {
+      tabDoubts.className = "flex items-center gap-2 px-space-md py-2 rounded-lg bg-surface-container-lowest text-primary font-label-lg text-label-lg shadow-sm transition-all duration-150 relative";
+      tabBookmarks.className = "flex items-center gap-2 px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-all duration-150";
+    });
+  }
+</script></main></div><div id="snapdom-sandbox" data-snapdom-sandbox="true" aria-hidden="true" style="position: absolute; left: -9999px; top: -9999px; width: 0px; height: 0px; overflow: hidden;"></div></body></html>

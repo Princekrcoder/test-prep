@@ -1,0 +1,84 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', system-ui, sans-serif;
+    --font-jakarta: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overscroll-behavior: none;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #c3c5d8;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #737687;
+  }
+
+  /* Tabular numbers for timer — prevents width jitter */
+  .timer-digits {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum';
+  }
+
+  /* Focus rings — accessible */
+  *:focus-visible {
+    outline: 2px solid #0048c9;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Question option rows — prevent text selection during exam */
+  .exam-option-row {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+}
+
+@layer utilities {
+  /* Palette state colors — exam question palette */
+  .palette-not-visited {
+    @apply bg-white border border-outline-variant text-on-surface;
+  }
+  .palette-not-answered {
+    @apply bg-error-container border border-error text-on-error-container;
+  }
+  .palette-answered {
+    @apply bg-tertiary text-on-tertiary border border-tertiary;
+  }
+  .palette-marked {
+    @apply bg-secondary text-on-secondary border border-secondary;
+  }
+  .palette-answered-marked {
+    @apply bg-secondary text-on-secondary border border-secondary relative;
+  }
+
+  /* Gradient text utility */
+  .gradient-text {
+    background: linear-gradient(135deg, #0048c9, #1e60f3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}

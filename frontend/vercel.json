@@ -1,0 +1,19 @@
+﻿{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://testprep-api.onrender.com/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(auth|onboarding|dashboard|performance|results|attempt|bookmarks|profile)/:path*",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    }
+  ]
+}

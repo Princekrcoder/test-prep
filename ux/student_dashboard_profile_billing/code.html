@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container":"#e5eeff","on-surface-variant":"#434655","secondary-fixed-dim":"#bec6e0","secondary":"#565e74","primary-container":"#1e60f3","tertiary-fixed":"#6ffbbe","on-secondary-fixed":"#131b2e","on-primary-fixed":"#00174d","surface-container-highest":"#d3e4fe","background":"#f8f9ff","on-surface":"#0b1c30","error-container":"#ffdad6","on-secondary":"#ffffff","surface-bright":"#f8f9ff","on-tertiary-fixed":"#002113","surface-dim":"#cbdbf5","tertiary-container":"#007c55","surface-container-lowest":"#ffffff","on-primary-container":"#edeeff","on-background":"#0b1c30","primary":"#0048c9","on-secondary-fixed-variant":"#3f465c","on-secondary-container":"#5c647a","tertiary":"#006141","inverse-on-surface":"#eaf1ff","tertiary-fixed-dim":"#4edea3","on-error":"#ffffff","inverse-surface":"#213145","primary-fixed":"#dbe1ff","on-primary-fixed-variant":"#003cab","surface-tint":"#0051df","primary-fixed-dim":"#b5c4ff","on-error-container":"#93000a","on-tertiary-fixed-variant":"#005236","secondary-container":"#dae2fd","surface-variant":"#d3e4fe","on-tertiary-container":"#b5ffd7","on-tertiary":"#ffffff","on-primary":"#ffffff","error":"#ba1a1a","surface-container-low":"#eff4ff","surface-container-high":"#dce9ff","surface":"#f8f9ff","inverse-primary":"#b5c4ff","outline-variant":"#c3c5d8","outline":"#737687","secondary-fixed":"#dae2fd"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-md":"1rem","space-2xs":"0.25rem","gutter":"1.5rem","space-xl":"2rem","space-lg":"1.5rem","space-xs":"0.5rem","space-2xl":"3rem","margin-mobile":"1rem","margin":"2rem","gutter-mobile":"0.75rem","space-sm":"0.75rem"},"fontFamily":{"display-hero":["Plus Jakarta Sans"],"exam-numeric":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"label-lg":["Inter"],"label-md":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-lg":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["Inter"],"display-hero-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"body-sm":["Inter"]},"fontSize":{"display-hero":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"800"}],"exam-numeric":["14px",{"lineHeight":"14px","fontWeight":"700"}],"headline-xl":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"600"}],"headline-xl-mobile":["22px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"headline-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"28px","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"display-hero-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"800"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}]}}}}</script></head><body class="bg-background text-on-surface font-body-md text-body-md"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-xs bg-surface-container-lowest"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[22px]">school</span></div><span class="font-headline-lg text-headline-lg tracking-tight text-on-surface">TestPrep</span></div><nav class="px-space-sm pt-space-md flex flex-col gap-space-2xs" data-active-classes="bg-primary-container text-on-primary-container font-headline-md rounded-xl shadow-[0_1px_3px_rgba(15,23,42,0.05)]"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="my-test-library" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>My Test Library</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="analytics-and-reports" href="#"><span class="material-symbols-outlined text-[20px]">bar_chart</span><span>Analytics &amp; Reports</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="bookmarks-and-doubts" href="#"><span class="material-symbols-outlined text-[20px]">bookmark</span><span>Bookmarks &amp; Doubts</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="profile-and-billing" href="#"><span class="material-symbols-outlined text-[20px]">person</span><span>Profile &amp; Billing</span></a></nav></div><div class="p-space-sm flex flex-col gap-space-xs"><div class="p-space-md rounded-xl bg-surface-container-low"><div class="flex items-center gap-space-xs mb-space-2xs"><span class="material-symbols-outlined text-primary text-[18px]">verified</span><span class="font-label-md text-label-md text-on-surface">Pro Super Pass</span></div><p class="font-label-sm text-label-sm text-on-surface-variant">Valid till 31 Dec 2026</p></div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="logout" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span>Logout</span></a></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-space-sm top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span><input class="w-full h-10 pl-10 pr-space-md bg-surface-container-low rounded-xl text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container" placeholder="Search mock tests, quizzes, subjects..." type="text"/></div><div class="hidden xl:flex items-center gap-space-2xs px-space-sm py-1.5 rounded-full bg-secondary-container text-on-secondary-fixed whitespace-nowrap"><span class="material-symbols-outlined text-[16px] text-primary">flag</span><span class="font-label-sm text-label-sm">Target: JEE Main &amp; TCS NQT 2026</span></div></div><div class="flex items-center gap-space-md"><button class="relative w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm pl-space-xs py-1 pr-space-sm rounded-full bg-surface-container-low"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden sm:flex flex-col text-left"><div class="flex items-center gap-1"><span class="font-label-md text-label-md text-on-surface leading-none">Prince Kumar</span><span class="material-symbols-outlined text-[14px] text-primary">verified</span></div><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">#TP-2026-MCA-904</span></div></div></div></header><main class="relative pt-16 w-full flex-1 px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-space-lg w-full max-w-[1440px] mx-auto pb-space-2xl">
+<!-- Top Action / Context Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-2xs text-primary font-label-md text-label-md mb-1 uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">manage_accounts</span>
+<span>Account &amp; Settings Hub</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface">Account, Subscriptions &amp; Preferences</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Manage personal academic records, competitive target gates, active billing entitlements, and portal security.</p>
+</div>
+<!-- Quick Status Badges -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="flex items-center gap-space-2xs bg-surface-container-low px-space-md py-2 rounded-xl shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="font-label-md text-label-md text-on-surface">Pass Status: Active</span>
+</div>
+<button class="flex items-center gap-space-2xs bg-primary text-on-primary font-label-lg text-label-lg px-space-lg py-2.5 rounded-xl shadow-md hover:opacity-95 transition-all" id="saveGlobalBtn">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Save Changes</span>
+</button>
+</div>
+</div>
+<!-- Navigation Tabs Navigation Bar -->
+<div class="bg-surface-container-lowest rounded-xl p-1.5 shadow-sm flex items-center gap-1 overflow-x-auto">
+<button class="tab-trigger flex-1 min-w-[200px] flex items-center justify-center gap-space-2xs py-2.5 px-space-md rounded-lg font-headline-md text-headline-md text-on-primary bg-primary shadow-sm transition-all" data-tab-target="tab-profile">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+<span>My Profile &amp; Exam Target</span>
+</button>
+<button class="tab-trigger flex-1 min-w-[200px] flex items-center justify-center gap-space-2xs py-2.5 px-space-md rounded-lg font-headline-md text-headline-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" data-tab-target="tab-billing">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+<span>Subscriptions &amp; Billing History</span>
+</button>
+<button class="tab-trigger flex-1 min-w-[200px] flex items-center justify-center gap-space-2xs py-2.5 px-space-md rounded-lg font-headline-md text-headline-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" data-tab-target="tab-security">
+<span class="material-symbols-outlined text-[20px]">security</span>
+<span>Security &amp; Preferences</span>
+</button>
+</div>
+<!-- ========================================== -->
+<!-- TAB 1: PROFILE & ACADEMIC DOSSIER           -->
+<!-- ========================================== -->
+<div class="tab-content flex flex-col gap-space-xl" id="tab-profile">
+<!-- Profile Header Hero Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm relative overflow-hidden">
+<div class="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-primary-fixed opacity-40 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-xl relative z-10">
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-space-lg">
+<div class="relative group">
+<div class="w-28 h-28 rounded-2xl overflow-hidden shadow-md bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close-up professional studio portrait of an ambitious young Indian computer science male student wearing glasses and navy shirt, smiling with high-trust expression, soft daylight studio lighting, clean background with subtle blue rim light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAeVhIeg5j_pL-XH1A7e-nHZHeQY97IPysNi33YkxBv_SY4ZKUb0JgAW5FFT5K6c6j6rjd6hJd4iwe_rGKjsxZWtb_zX_3-uWauqPsztPVzNWtkcF3Ru5yY5axMhxbWT-XVO5xyTYq-0tALHKcMGPSVIRbNXtqDG796PRo08G2B4H7NUjAYZBwxGXX6c6Qs4DV36KEACPYdpCVOfqmtUz8G8UJKerwqwrhZ_MptK-ybyZorXUDiYPX"/>
+</div>
+<label class="absolute -bottom-2 -right-2 w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center cursor-pointer shadow-md hover:scale-105 transition-transform" for="avatarUploadInput" title="Upload New Photo">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+</label>
+<input accept="image/*" class="hidden" id="avatarUploadInput" type="file"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Prince Kumar</h2>
+<span class="inline-flex items-center gap-1 bg-surface-container-low text-primary px-2.5 py-1 rounded-full font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span> MCA Scholar
+                </span>
+</div>
+<div class="flex items-center gap-space-sm mt-1 text-on-surface-variant font-label-md text-label-md flex-wrap">
+<span class="font-exam-numeric text-exam-numeric text-on-surface bg-surface-container px-2 py-0.5 rounded">Roll No: #TP-2026-MCA-904</span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span>Lovely Professional University, Punjab</span>
+</div>
+<div class="flex items-center gap-space-md mt-3">
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                  Identity Verified via DigiLocker
+                </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Member since July 2024</span>
+</div>
+</div>
+</div>
+<!-- Academic Readiness Score Indicator -->
+<div class="flex items-center gap-space-lg bg-surface-container-low px-space-lg py-space-md rounded-xl w-full lg:w-auto justify-between lg:justify-start">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide">Target Preparedness</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">88.4</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ 100</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> Top 4% In MCA Cohort
+              </span>
+</div>
+<!-- Radial Progress SVG -->
+<div class="relative w-16 h-16 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="88, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="material-symbols-outlined absolute text-primary text-[20px]">bolt</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bento Split: Personal Dossier & Target Exam Matrix -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Left Column: Personal Editable Fields (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">person_pin</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Personal Information</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Auto-saved to Student Record</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Full Name -->
+<div class="flex flex-col gap-1.5 sm:col-span-2">
+<label class="font-label-md text-label-md text-on-surface">Full Name</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">badge</span>
+<input class="w-full h-11 pl-10 pr-space-md bg-surface-container-low rounded-xl text-on-surface font-body-md text-body-md focus:bg-surface-container focus:outline-none" type="text" value="Prince Kumar"/>
+</div>
+</div>
+<!-- Email Address with Verified Tag -->
+<div class="flex flex-col gap-1.5 sm:col-span-2">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface">Email Address</label>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Verified Primary
+                </span>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">mail</span>
+<input class="w-full h-11 pl-10 pr-24 bg-surface-container-low rounded-xl text-on-surface font-body-md text-body-md focus:bg-surface-container focus:outline-none" type="email" value="prince.k904@eduprep.in"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 px-2.5 py-1 text-primary font-label-sm text-label-sm hover:underline" type="button">Change</button>
+</div>
+</div>
+<!-- Phone with OTP Verified Tag -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface">Mobile Number</label>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[14px]">verified</span> OTP Checked
+                </span>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">call</span>
+<input class="w-full h-11 pl-10 pr-space-md bg-surface-container-low rounded-xl text-on-surface font-body-md text-body-md focus:bg-surface-container focus:outline-none" type="text" value="+91 98450 21900"/>
+</div>
+</div>
+<!-- Degree & Graduation Year -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface">Degree &amp; Graduation</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">school</span>
+<input class="w-full h-11 pl-10 pr-space-md bg-surface-container-low rounded-xl text-on-surface font-body-md text-body-md focus:bg-surface-container focus:outline-none" type="text" value="MCA, Final Year (2026 Batch)"/>
+</div>
+</div>
+<!-- College / University -->
+<div class="flex flex-col gap-1.5 sm:col-span-2">
+<label class="font-label-md text-label-md text-on-surface">Institution / University</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">domain</span>
+<input class="w-full h-11 pl-10 pr-space-md bg-surface-container-low rounded-xl text-on-surface font-body-md text-body-md focus:bg-surface-container focus:outline-none" type="text" value="Lovely Professional University, Jalandhar - Delhi G.T. Road, Punjab"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Exam Targets & Benchmarks (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Exam Targets Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">flag_circle</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Target Mock Streams</h3>
+</div>
+<span class="font-label-sm text-label-sm text-primary cursor-pointer hover:underline">+ Add Goal</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Selected test tracks calibrate question recommendation algorithms, timed mock difficulties, and national rank leaderboards.</p>
+<!-- Multi-Select Exam Chips -->
+<div class="flex flex-wrap gap-2 pt-1" id="examChipsContainer">
+<div class="flex items-center gap-1.5 bg-primary text-on-primary px-3 py-1.5 rounded-full font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+<span>TCS NQT 2026</span>
+<button class="ml-1 text-on-primary/80 hover:text-on-primary" type="button">×</button>
+</div>
+<div class="flex items-center gap-1.5 bg-primary text-on-primary px-3 py-1.5 rounded-full font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-[16px]">science</span>
+<span>JEE Main 2026</span>
+<button class="ml-1 text-on-primary/80 hover:text-on-primary" type="button">×</button>
+</div>
+<div class="flex items-center gap-1.5 bg-secondary-container text-on-secondary-fixed px-3 py-1.5 rounded-full font-label-md text-label-md hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>GATE CS 2027</span>
+<button class="ml-1 text-on-secondary-fixed/70 hover:text-on-secondary-fixed" type="button">×</button>
+</div>
+<button class="flex items-center gap-1 bg-surface-container-low text-on-surface-variant px-3 py-1.5 rounded-full font-label-sm text-label-sm hover:bg-surface-container">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>UGC NET CS</span>
+</button>
+</div>
+<!-- Target Goal Cutoff Gauge -->
+<div class="mt-space-sm bg-surface-container-low p-space-md rounded-xl flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">Target Goal Score</span>
+<span class="font-exam-numeric text-exam-numeric text-primary bg-surface-container-lowest px-2 py-0.5 rounded shadow-sm">85% Cutoff Goal</span>
+</div>
+<!-- Track Slider representation -->
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden relative">
+<div class="bg-primary h-full rounded-full" style="width: 85%;"></div>
+</div>
+<div class="flex justify-between items-center font-label-sm text-label-sm text-on-surface-variant">
+<span>Current: 78.5% avg</span>
+<span>Target Delta: +6.5%</span>
+</div>
+</div>
+</div>
+<!-- Academic Counselor Contact Mini Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">support_agent</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-md text-label-md text-on-surface">Dedicated Academic Mentor</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Dr. Arvinder Singh (Dept of Computing)</span>
+<span class="font-label-sm text-label-sm text-tertiary">Weekly Check-in: Thursday 4:30 PM</span>
+</div>
+<button class="bg-surface-container px-3 py-1.5 rounded-lg text-primary font-label-sm text-label-sm hover:bg-surface-container-high transition-colors">Chat</button>
+</div>
+</div>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- TAB 2: SUBSCRIPTIONS & BILLING LEDGER       -->
+<!-- ========================================== -->
+<div class="tab-content hidden flex flex-col gap-space-xl" id="tab-billing">
+<!-- Active Plan Hero Banner -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-md relative overflow-hidden">
+<div class="absolute -right-10 -bottom-10 w-96 h-96 rounded-full bg-primary-fixed opacity-30 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-xl relative z-10">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="flex items-center gap-2">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider px-2.5 py-0.5 rounded-full font-bold">Active Premium Tier</span>
+<span class="bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm px-2.5 py-0.5 rounded-full flex items-center gap-1 font-semibold">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed"></span> 318 Days Remaining
+              </span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface mt-1">Pro Super Pass - 1 Year Unlimited All-Access</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Complete mock exam simulation environment including TCS NQT, JEE Mains, GATE CS full syllabus series, and AI diagnostic score sheets.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs mt-space-xs">
+<div class="flex items-center gap-2 text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+<span>Unlimited 250+ Mock Exams</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+<span>All-India Rank &amp; Percentile Prediction</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+<span>1-on-1 Faculty Doubt Clearance</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+<span>Offline Encrypted Test Download</span>
+</div>
+</div>
+</div>
+<!-- Subscription Actions & Renewal Status -->
+<div class="flex flex-col gap-space-sm w-full lg:w-72 bg-surface-container-low p-space-lg rounded-xl">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Validity Expiration</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">31 December 2026</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Auto-renewal enabled via UPI Mandate</span>
+</div>
+<button class="w-full bg-primary text-on-primary py-2.5 rounded-xl font-label-lg text-label-lg shadow-sm hover:opacity-95 transition-opacity flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">diamond</span>
+<span>Upgrade to Lifetime Access</span>
+</button>
+<button class="w-full bg-surface-container text-on-surface py-2 rounded-xl font-label-md text-label-md hover:bg-surface-container-high transition-colors">
+              Manage Auto-Renew
+            </button>
+</div>
+</div>
+</div>
+<!-- Invoices & Receipts Ledger Table -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-xs">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Invoices &amp; Transaction Receipts</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">All statutory GST-compliant invoices for your student pass purchase and booster sprint access.</p>
+</div>
+<button class="flex items-center gap-1.5 text-primary bg-surface-container-low px-3 py-1.5 rounded-lg font-label-md text-label-md hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">cloud_download</span>
+<span>Export Statement (CSV)</span>
+</button>
+</div>
+<div class="overflow-x-auto w-full mt-space-xs">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-md text-label-md">
+<th class="py-3 px-space-md rounded-l-lg">Invoice No.</th>
+<th class="py-3 px-space-md">Billing Date</th>
+<th class="py-3 px-space-md">Plan / Module</th>
+<th class="py-3 px-space-md">Amount Paid</th>
+<th class="py-3 px-space-md">Payment Method</th>
+<th class="py-3 px-space-md">Status</th>
+<th class="py-3 px-space-md rounded-r-lg text-right">Tax Receipt</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface divide-y divide-surface-container-low">
+<!-- Item 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md font-exam-numeric text-exam-numeric text-primary font-bold">
+                  #INV-2025-0814
+                </td>
+<td class="py-space-md px-space-md font-body-sm text-body-sm">
+                  12 Jan 2025
+                </td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Pro Super Pass (1-Yr All-Access)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SAC Code: 999293 (EdTech Learning)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-headline-md text-headline-md font-bold text-on-surface">
+                  ₹1,299
+                </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">account_balance_wallet</span>
+<span>Google Pay UPI</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 bg-surface-container text-tertiary px-2.5 py-0.5 rounded-full font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Paid
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="inline-flex items-center gap-1 text-primary hover:text-on-primary-fixed-variant font-label-sm text-label-sm bg-surface-container-low hover:bg-surface-container px-3 py-1.5 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>Download Tax Invoice</span>
+</button>
+</td>
+</tr>
+<!-- Item 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md font-exam-numeric text-exam-numeric text-primary font-bold">
+                  #INV-2024-0391
+                </td>
+<td class="py-space-md px-space-md font-body-sm text-body-sm">
+                  05 Sep 2024
+                </td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">TCS NQT Booster Sprint FastTrack</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">30 Mock Papers + Coding Sandbox</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-headline-md text-headline-md font-bold text-on-surface">
+                  ₹599
+                </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">credit_card</span>
+<span>HDFC Debit Card ••4028</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 bg-surface-container text-tertiary px-2.5 py-0.5 rounded-full font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Paid
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="inline-flex items-center gap-1 text-primary hover:text-on-primary-fixed-variant font-label-sm text-label-sm bg-surface-container-low hover:bg-surface-container px-3 py-1.5 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>Download Invoice</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Campus Bulk Sponsorship Voucher Banner -->
+<div class="bg-surface-container rounded-xl p-space-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[28px]">card_giftcard</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Have a University Coupon or Corporate Access Pass?</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Redeem institution vouchers issued through campus placement cells or university libraries.</p>
+</div>
+</div>
+<div class="flex items-center gap-2 w-full md:w-auto">
+<input class="bg-surface-container-lowest px-space-md py-2 rounded-xl text-on-surface font-body-sm text-body-sm uppercase tracking-wider focus:outline-none flex-1 md:w-56" placeholder="Enter Voucher Code (e.g. LPU-2026)" type="text"/>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-space-md py-2 rounded-xl hover:opacity-95 transition-opacity">Apply</button>
+</div>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- TAB 3: SECURITY & PLATFORM PREFERENCES      -->
+<!-- ========================================== -->
+<div class="tab-content hidden flex flex-col gap-space-xl" id="tab-security">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Left Column: Password & Auth Security (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Password Management -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">lock_reset</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Change Account Password</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Use at least 10 characters with numbers and special symbols to safeguard test answer sheets and certificates.</p>
+<div class="flex flex-col gap-space-md mt-1">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface">Current Password</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">key</span>
+<input class="w-full h-11 pl-10 pr-space-md bg-surface-container-low rounded-xl text-on-surface font-body-md text-body-md focus:bg-surface-container focus:outline-none" type="password" value="••••••••••••"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface">New Secure Password</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">lock</span>
+<input class="w-full h-11 pl-10 pr-space-md bg-surface-container-low rounded-xl text-on-surface font-body-md text-body-md focus:bg-surface-container focus:outline-none" id="newPasswordInput" type="password" value="TcsNqt@Pass2026!"/>
+</div>
+<!-- Strength Indicator -->
+<div class="flex items-center gap-2 mt-1">
+<div class="flex-1 h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-4/5 rounded-full"></div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Strong Password (85/100)</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface">Confirm New Password</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">check_circle_outline</span>
+<input class="w-full h-11 pl-10 pr-space-md bg-surface-container-low rounded-xl text-on-surface font-body-md text-body-md focus:bg-surface-container focus:outline-none" type="password" value="TcsNqt@Pass2026!"/>
+</div>
+</div>
+<div class="flex justify-end pt-2">
+<button class="bg-surface-container text-on-surface font-label-md text-label-md px-space-md py-2.5 rounded-xl hover:bg-surface-container-high transition-colors">Update Password</button>
+</div>
+</div>
+</div>
+<!-- Two-Factor Authentication (2FA) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">phonelink_lock</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Two-Factor Authentication (2FA)</h3>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Configured via Authenticator App
+                  </span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Protects your ranking data and sensitive placement assessment files when signing in from public library or campus lab computers.</p>
+<div class="flex items-center justify-between p-space-md bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">smartphone</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Google / Microsoft Authenticator</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Primary TOTP Token Active</span>
+</div>
+</div>
+<button class="text-primary font-label-md text-label-md hover:underline">Re-scan QR</button>
+</div>
+</div>
+</div>
+<!-- Right Column: Preferences, Notifications & Danger Zone (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Appearance & Interface Theme -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">palette</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Interface Appearance</h3>
+</div>
+<div class="grid grid-cols-2 gap-space-sm mt-1">
+<div class="flex flex-col items-center gap-2 p-space-md rounded-xl bg-surface-container text-on-surface cursor-pointer ring-2 ring-primary">
+<span class="material-symbols-outlined text-primary text-[28px]">light_mode</span>
+<span class="font-label-md text-label-md font-bold">Light Examination</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-center">Crisp slate &amp; blue tone</span>
+</div>
+<div class="flex flex-col items-center gap-2 p-space-md rounded-xl bg-surface-container-low text-on-surface-variant cursor-pointer hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[28px]">dark_mode</span>
+<span class="font-label-md text-label-md">Dark Room Mode</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-center">Low-glare night study</span>
+</div>
+</div>
+</div>
+<!-- Notification & Alert Channels -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">notifications_active</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Notification Channels</h3>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Item 1: WhatsApp Alerts -->
+<label class="flex items-start gap-space-sm p-2 rounded-lg hover:bg-surface-container-low cursor-pointer transition-colors">
+<input checked="" class="mt-1 h-4 w-4 rounded text-primary focus:ring-primary" type="checkbox"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface">
+<span>Instant WhatsApp Score Dispatch</span>
+<span class="bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm px-1.5 rounded">Fast</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sends question analysis PDF directly to +91 98450 21900</span>
+</div>
+</label>
+<!-- Item 2: Practice Reminder -->
+<label class="flex items-start gap-space-sm p-2 rounded-lg hover:bg-surface-container-low cursor-pointer transition-colors">
+<input checked="" class="mt-1 h-4 w-4 rounded text-primary focus:ring-primary" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Daily Practice Reminder (8:00 PM)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Notification banner reminder to preserve your 14-day study streak</span>
+</div>
+</label>
+<!-- Item 3: Faculty Doubt Alert -->
+<label class="flex items-start gap-space-sm p-2 rounded-lg hover:bg-surface-container-low cursor-pointer transition-colors">
+<input checked="" class="mt-1 h-4 w-4 rounded text-primary focus:ring-primary" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Faculty Doubt Resolution Alerts</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">SMS notification immediately after mentor annotates your doubt ticket</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Danger Zone & Account Data Export -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs text-error">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+<h3 class="font-headline-md text-headline-md">Data Ownership &amp; Termination</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Export all full question response keys or temporarily suspend your mock test profile.</p>
+<div class="flex flex-col gap-2 pt-1">
+<button class="w-full flex items-center justify-center gap-2 bg-surface-container-low text-on-surface font-label-md text-label-md py-2.5 rounded-xl hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span>Download My Full Test Attempt Data (JSON)</span>
+</button>
+<button class="w-full flex items-center justify-center gap-2 bg-error-container text-on-error-container font-label-md text-label-md py-2.5 rounded-xl hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[18px]">person_off</span>
+<span>Deactivate TestPrep Account</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initProfilePage() {
+    const tabs = document.querySelectorAll('.tab-trigger');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const targetId = tab.getAttribute('data-tab-target');
+        
+        // Reset all buttons
+        tabs.forEach(t => {
+          t.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+          t.classList.add('text-on-surface-variant', 'hover:bg-surface-container-low');
+        });
+
+        // Activate clicked tab
+        tab.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-low');
+        tab.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+
+        // Toggle content containers
+        contents.forEach(content => {
+          if (content.id === targetId) {
+            content.classList.remove('hidden');
+          } else {
+            content.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // Save Changes Toast feedback
+    const saveBtn = document.getElementById('saveGlobalBtn');
+    if (saveBtn) {
+      saveBtn.addEventListener('click', () => {
+        const originalText = saveBtn.innerHTML;
+        saveBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Saving...</span>';
+        saveBtn.classList.add('opacity-80');
+        
+        setTimeout(() => {
+          saveBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done_all</span><span>Updated!</span>';
+          setTimeout(() => {
+            saveBtn.innerHTML = originalText;
+            saveBtn.classList.remove('opacity-80');
+          }, 1800);
+        }, 600);
+      });
+    }
+  })();
+</script></main></div></body></html>

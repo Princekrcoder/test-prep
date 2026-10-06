@@ -1,0 +1,727 @@
+<!DOCTYPE html><html lang="en"><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-fixed-dim":"#bec6e0","on-primary-container":"#edeeff","surface-container-lowest":"#ffffff","secondary-fixed":"#dae2fd","on-primary-fixed-variant":"#003cab","surface-bright":"#f8f9ff","on-tertiary-fixed":"#002113","outline":"#737687","surface-container-low":"#eff4ff","outline-variant":"#c3c5d8","on-tertiary-container":"#b5ffd7","on-secondary-fixed":"#131b2e","on-secondary-fixed-variant":"#3f465c","primary":"#0048c9","inverse-primary":"#b5c4ff","inverse-surface":"#213145","background":"#f8f9ff","tertiary-fixed-dim":"#4edea3","surface":"#f8f9ff","tertiary-fixed":"#6ffbbe","on-surface-variant":"#434655","on-primary-fixed":"#00174d","tertiary-container":"#007c55","on-tertiary":"#ffffff","surface-container":"#e5eeff","on-secondary":"#ffffff","on-background":"#0b1c30","surface-variant":"#d3e4fe","on-surface":"#0b1c30","on-tertiary-fixed-variant":"#005236","surface-dim":"#cbdbf5","inverse-on-surface":"#eaf1ff","error":"#ba1a1a","error-container":"#ffdad6","surface-tint":"#0051df","primary-container":"#1e60f3","secondary":"#565e74","surface-container-high":"#dce9ff","on-error":"#ffffff","on-primary":"#ffffff","on-error-container":"#93000a","surface-container-highest":"#d3e4fe","on-secondary-container":"#5c647a","secondary-container":"#dae2fd","primary-fixed-dim":"#b5c4ff","primary-fixed":"#dbe1ff","tertiary":"#006141"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{margin:"2rem","margin-mobile":"1rem","space-2xs":"0.25rem","space-xs":"0.5rem","space-2xl":"3rem","space-lg":"1.5rem",gutter:"1.5rem","space-md":"1rem","gutter-mobile":"0.75rem","space-xl":"2rem","space-sm":"0.75rem"},fontFamily:{"headline-xl-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"label-lg":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"exam-numeric":["Plus Jakarta Sans"],"body-lg":["Inter"],"body-sm":["Inter"],"headline-md":["Plus Jakarta Sans"]},fontSize:{"headline-xl-mobile":["22px",{lineHeight:"30px",letterSpacing:"-0.01em",fontWeight:"700"}],"headline-lg":["20px",{lineHeight:"28px",fontWeight:"700"}],"display-hero":["40px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"800"}],"headline-xl":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"700"}],"display-hero-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"800"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"label-lg":["14px",{lineHeight:"20px",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",fontWeight:"600"}],"exam-numeric":["14px",{lineHeight:"14px",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"headline-md":["16px",{lineHeight:"24px",fontWeight:"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-fixed-dim":"#bec6e0","on-primary-container":"#edeeff","surface-container-lowest":"#ffffff","secondary-fixed":"#dae2fd","on-primary-fixed-variant":"#003cab","surface-bright":"#f8f9ff","on-tertiary-fixed":"#002113","outline":"#737687","surface-container-low":"#eff4ff","outline-variant":"#c3c5d8","on-tertiary-container":"#b5ffd7","on-secondary-fixed":"#131b2e","on-secondary-fixed-variant":"#3f465c","primary":"#0048c9","inverse-primary":"#b5c4ff","inverse-surface":"#213145","background":"#f8f9ff","tertiary-fixed-dim":"#4edea3","surface":"#f8f9ff","tertiary-fixed":"#6ffbbe","on-surface-variant":"#434655","on-primary-fixed":"#00174d","tertiary-container":"#007c55","on-tertiary":"#ffffff","surface-container":"#e5eeff","on-secondary":"#ffffff","on-background":"#0b1c30","surface-variant":"#d3e4fe","on-surface":"#0b1c30","on-tertiary-fixed-variant":"#005236","surface-dim":"#cbdbf5","inverse-on-surface":"#eaf1ff","error":"#ba1a1a","error-container":"#ffdad6","surface-tint":"#0051df","primary-container":"#1e60f3","secondary":"#565e74","surface-container-high":"#dce9ff","on-error":"#ffffff","on-primary":"#ffffff","on-error-container":"#93000a","surface-container-highest":"#d3e4fe","on-secondary-container":"#5c647a","secondary-container":"#dae2fd","primary-fixed-dim":"#b5c4ff","primary-fixed":"#dbe1ff","tertiary":"#006141"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{margin:"2rem","margin-mobile":"1rem","space-2xs":"0.25rem","space-xs":"0.5rem","space-2xl":"3rem","space-lg":"1.5rem",gutter:"1.5rem","space-md":"1rem","gutter-mobile":"0.75rem","space-xl":"2rem","space-sm":"0.75rem"},fontFamily:{"headline-xl-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"label-lg":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"exam-numeric":["Plus Jakarta Sans"],"body-lg":["Inter"],"body-sm":["Inter"],"headline-md":["Plus Jakarta Sans"]},fontSize:{"headline-xl-mobile":["22px",{lineHeight:"30px",letterSpacing:"-0.01em",fontWeight:"700"}],"headline-lg":["20px",{lineHeight:"28px",fontWeight:"700"}],"display-hero":["40px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"800"}],"headline-xl":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"700"}],"display-hero-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"800"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"label-lg":["14px",{lineHeight:"20px",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",fontWeight:"600"}],"exam-numeric":["14px",{lineHeight:"14px",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"headline-md":["16px",{lineHeight:"24px",fontWeight:"600"}]}}}}</script><aside class="fixed left-0 top-0 h-full w-64 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.08)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 flex items-center gap-space-sm px-space-lg border-b border-outline/20"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary font-headline-md text-headline-md font-bold">TP</div><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight font-bold text-inverse-on-surface">PrepAdmin</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">EdTech Suite</span></div></div><div class="px-space-md py-space-sm"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline-variant font-semibold">Main Navigation</span></div><nav class="flex-1 px-space-md space-y-space-2xs" data-active-classes="bg-primary text-on-primary font-label-lg rounded-lg shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-container-highest/20 hover:text-inverse-on-surface transition-colors font-label-lg text-label-lg" data-path="dashboard-overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard &amp; Overview</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-container-highest/20 hover:text-inverse-on-surface transition-colors font-label-lg text-label-lg" data-path="student-directory" href="#"><span class="material-symbols-outlined text-[20px]">school</span><span>Student Directory</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-container-highest/20 hover:text-inverse-on-surface transition-colors font-label-lg text-label-lg" data-path="test-question-cms" href="#"><span class="material-symbols-outlined text-[20px]">quiz</span><span>Test &amp; Question CMS</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary text-on-primary font-label-lg rounded-lg shadow-sm" data-path="live-proctoring-results" href="#"><span class="material-symbols-outlined text-[20px]">visibility</span><span>Live Proctoring &amp; Results</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-container-highest/20 hover:text-inverse-on-surface transition-colors font-label-lg text-label-lg" data-path="revenue-sales" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span>Revenue &amp; Sales</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-container-highest/20 hover:text-inverse-on-surface transition-colors font-label-lg text-label-lg" data-path="platform-settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Platform Settings</span></a></nav></div><div class="p-space-md border-t border-outline/20"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-error-container hover:text-on-error-container transition-colors font-label-lg text-label-lg" data-path="logout" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span>Logout</span></a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-md z-40 border-b border-surface-container-high px-space-lg flex items-center justify-between shadow-[0_1px_4px_rgba(0,0,0,0.03)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="text-on-surface-variant hover:text-on-surface">Platform</span><span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span><span class="text-primary font-semibold">Console</span></div><div class="inline-flex items-center gap-space-xs px-space-sm py-space-2xs rounded-full bg-tertiary-fixed text-on-tertiary-fixed border border-tertiary-fixed-dim"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span class="font-label-sm text-label-sm font-semibold">1,428 Live Active</span></div></div><div class="flex items-center gap-space-md"><div class="relative hidden xl:block w-72"><span class="material-symbols-outlined absolute left-3 top-2.5 text-[18px] text-outline">search</span><input class="w-full pl-9 pr-space-md py-1.5 rounded-lg border border-outline-variant bg-surface text-on-surface placeholder:text-outline text-body-sm font-body-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Search tests, candidates, IDs..." type="text"></div><div class="flex items-center gap-space-xs"><button class="inline-flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface hover:bg-surface-container-low transition-colors font-label-md text-label-md" type="button"><span class="material-symbols-outlined text-[18px]">download</span><span>Export Reports</span></button><button class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-colors font-label-md text-label-md font-semibold shadow-sm" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Create New Test</span></button></div><div class="relative flex items-center"><button class="relative p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 flex h-4 w-4 items-center justify-center rounded-full bg-error text-on-error font-label-sm text-[10px] font-bold">5</span></button></div><div class="h-6 w-[1px] bg-surface-container-high"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden md:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold">Dr. A. Sharma</span><span class="font-label-sm text-label-sm text-outline">Super Admin</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Top Highlight Notice Bar -->
+<div class="relative overflow-hidden rounded-xl bg-error-container p-space-md mb-space-lg shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm relative z-10">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-error flex items-center justify-center text-on-error shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[24px]">gavel</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md text-on-error-container font-bold">AI Proctoring Active • 2 Critical Anomalies Require Immediate Review</span>
+<span class="px-space-xs py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm uppercase font-bold tracking-wider animate-pulse">Critical SLA &lt; 2m</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-error-container/80">Real-time candidate telemetry scanning video frames, peripheral displays, acoustic levels, and window-focus states across 1,428 active sessions.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-start md:self-auto shrink-0">
+<button class="px-space-md py-1.5 rounded-lg bg-error text-on-error font-label-md text-label-md font-semibold hover:opacity-90 transition-opacity shadow-sm flex items-center gap-space-xs" id="freeze-sessions-btn">
+<span class="material-symbols-outlined text-[18px]">pause_circle</span>
+<span>Halt Flagged Sessions</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container-low transition-colors shadow-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Threshold Rules</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Grid: Live Proctoring & Result Publishing Queue -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- Left Column: Anti-Cheat & Live Proctoring Stream (7 cols) -->
+<div class="xl:col-span-7 flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">videocam</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Live Proctoring Incident Feed</h2>
+<span class="px-space-xs py-0.5 rounded-md bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">3 Flagged</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-error"></span>
+</span>
+<span>Feed Refresh: Instant WebSocket</span>
+</div>
+</div>
+<!-- Incident 1: Candidate Ananya Roy -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-error"></div>
+<div class="flex flex-col sm:flex-row gap-space-md">
+<!-- Snapshot Thumbnail -->
+<div class="relative w-full sm:w-48 h-32 rounded-lg overflow-hidden bg-surface-container-highest shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Security webcam snapshot of a young female candidate taking an online exam on a laptop in a bright study room, looking away toward a second device with low-angle ambient lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXPBDydIY1BnMzIpNtB5q5okAyExBlP2OeG5Su-CXGbKnRsKWpVPLinM7tAcLVCmOd53pMu-U_xZbjm8mCmZuRlBZadE89HkD_8Vy9zuNpITEaz8xD9fhd8qOi3aLP8W9vQPICeZxwRUgi-BfP4JZmMpcQcRdT-i86C9dTjWtJrUyoZb6UeBOG3Ihdb8hAqRU_WvEfoeLoFqZHMgx628pwlQjgOdYrFdP3SrGHv9Ips7-eSqUT5ltJ">
+<div class="absolute bottom-1.5 left-1.5 px-space-xs py-0.5 rounded bg-inverse-surface/80 backdrop-blur-sm text-inverse-on-surface font-label-sm text-[10px] font-mono flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+              REC • 11:42:09 AM
+            </div>
+<div class="absolute top-1.5 right-1.5 px-space-xs py-0.5 rounded bg-error text-on-error font-label-sm text-[10px] font-bold">
+              3 TAB HOPS
+            </div>
+</div>
+<!-- Metadata & Details -->
+<div class="flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center justify-between gap-space-xs mb-1">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">Ananya Roy</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">TCS NQT 03</span>
+<span class="font-label-sm text-label-sm text-outline">ID: #CAN-9821</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold shrink-0">Severity: High</span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low mb-space-sm">
+<p class="font-label-md text-label-md text-error font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">hard_drive</span>
+                  Window Switch Detected
+                </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Switched tab 3 times, viewport idle for 42s, unauthorized clipboard paste activity (148 chars copied from external buffer).
+                </p>
+</div>
+</div>
+<!-- Action Controls -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<button class="px-space-sm py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md font-semibold transition-colors flex items-center gap-1 shadow-sm" onclick="alert('Warning notification dispatched to Ananya Roy.')">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span>Issue Warning Pop</span>
+</button>
+<button class="px-space-sm py-1.5 rounded-lg bg-error text-on-error hover:opacity-90 font-label-md text-label-md font-semibold transition-opacity flex items-center gap-1 shadow-sm" onclick="alert('Candidate Ananya Roy marked for administrative disqualification.')">
+<span class="material-symbols-outlined text-[16px]">block</span>
+<span>Disqualify Candidate</span>
+</button>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-medium transition-colors flex items-center gap-1" onclick="this.closest('.group').remove()">
+<span class="material-symbols-outlined text-[16px]">done</span>
+<span>Dismiss Flag</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Incident 2: Candidate Vikram Singh -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-error"></div>
+<div class="flex flex-col sm:flex-row gap-space-md">
+<!-- Snapshot Thumbnail -->
+<div class="relative w-full sm:w-48 h-32 rounded-lg overflow-hidden bg-surface-container-highest shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Candidate webcam snapshot capturing a young Indian man at a desk with an auxiliary silhouette of an unauthorized bystander person leaning over his shoulder in a dimly lit apartment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDuSZVQFxp_cIA7fpgHacSE-tjKcLyF2YwfNRFNuhZgOHBWLHlWVAFiHUeZx4v9oqpNwutRUsmAgZqcWn2jVg_5KoI5hHhu3CxRLhOHaU6720b6aO2m1eracKRiD63iMz6TpdJUTstyS_b-3fj5CG1TQlERhaZmwJqXpTSCoYbvO4T-1sNbWMpoMEky_9oHVLnZ_GdWm8nMMlEJxr8nQ5ZFofX0pF87b4ttD05etNzRiulrh_CP1ue">
+<div class="absolute bottom-1.5 left-1.5 px-space-xs py-0.5 rounded bg-inverse-surface/80 backdrop-blur-sm text-inverse-on-surface font-label-sm text-[10px] font-mono flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+              REC • 11:43:51 AM
+            </div>
+<div class="absolute top-1.5 right-1.5 px-space-xs py-0.5 rounded bg-error text-on-error font-label-sm text-[10px] font-bold">
+              2 FACES • 78 dB
+            </div>
+</div>
+<!-- Metadata & Details -->
+<div class="flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center justify-between gap-space-xs mb-1">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">Vikram Singh</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">SSC CGL Tier-1</span>
+<span class="font-label-sm text-label-sm text-outline">ID: #CAN-4109</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold shrink-0">Severity: High</span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low mb-space-sm">
+<p class="font-label-md text-label-md text-error font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">group</span>
+                  Multiple Faces Detected • Noise Surge
+                </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Secondary facial anchor identified in background frame. Ambient acoustic threshold breached (&gt;72dB audio spike recorded for 18 consecutive seconds).
+                </p>
+</div>
+</div>
+<!-- Action Controls -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<button class="px-space-sm py-1.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md font-semibold transition-colors flex items-center gap-1 shadow-sm" onclick="alert('Opening live dual-stream proctor camera for Candidate Vikram Singh.')">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Review Video Feed</span>
+</button>
+<button class="px-space-sm py-1.5 rounded-lg bg-error text-on-error hover:opacity-90 font-label-md text-label-md font-semibold transition-opacity flex items-center gap-1 shadow-sm" onclick="alert('Candidate Vikram Singh has been disqualified for impersonation risk.')">
+<span class="material-symbols-outlined text-[16px]">person_cancel</span>
+<span>Disqualify</span>
+</button>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-medium transition-colors flex items-center gap-1" onclick="this.closest('.group').remove()">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>Mark Insignificant</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Incident 3: Candidate Rohit Agrawal -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-secondary"></div>
+<div class="flex flex-col sm:flex-row gap-space-md">
+<!-- Snapshot Thumbnail -->
+<div class="relative w-full sm:w-48 h-32 rounded-lg overflow-hidden bg-surface-container-highest shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Candidate screen diagnostic snapshot showing dual-monitor configuration topology graphic with extended virtual display resolution and mirrored browser windows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-ZzIE_Gt7XNly1_F5pMxuZf21rLDjMZg97KJqJYU1eXRvwRepYZdmz9Hb0IVsPZgaf5b6jwRyChBshVJ-n-ahPBivYf1NQ1UOq7pDEeecbW9UiYGLpa2nQp7z8ISZ806rSJ5qyctKDXOhGa3YGln2zzB1AtnlhvftVv9-j3iHotXUGeNLK8nF2jyTyMPnLWAYcu3RJJulfJ7lfItZ5T-4GmAQrUI85q4Z_VrUsm7ti78uPzsLqQiC">
+<div class="absolute bottom-1.5 left-1.5 px-space-xs py-0.5 rounded bg-inverse-surface/80 backdrop-blur-sm text-inverse-on-surface font-label-sm text-[10px] font-mono flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-pulse"></span>
+              DIAG • 11:44:18 AM
+            </div>
+<div class="absolute top-1.5 right-1.5 px-space-xs py-0.5 rounded bg-secondary text-on-secondary font-label-sm text-[10px] font-bold">
+              MULTI-MONITOR
+            </div>
+</div>
+<!-- Metadata & Details -->
+<div class="flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center justify-between gap-space-xs mb-1">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">Rohit Agrawal</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">GATE CS Mock 04</span>
+<span class="font-label-sm text-label-sm text-outline">ID: #CAN-6332</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-label-sm font-bold shrink-0">Severity: Moderate</span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low mb-space-sm">
+<p class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">display_settings</span>
+                  Screen Sharing / Second Monitor Detected
+                </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  OS display API returned 2 connected output sinks (DisplayPort &amp; HDMI). Candidate canvas dragged across extended viewport (Resolution: 3840x1080).
+                </p>
+</div>
+</div>
+<!-- Action Controls -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<button class="px-space-sm py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md font-semibold transition-colors flex items-center gap-1 shadow-sm" onclick="alert('Force blank screen signal sent to Rohit Agrawal secondary monitor.')">
+<span class="material-symbols-outlined text-[16px]">desktop_access_disabled</span>
+<span>Lock Secondary Screen</span>
+</button>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-highest text-on-surface hover:bg-error-container hover:text-on-error-container font-label-md text-label-md font-semibold transition-colors flex items-center gap-1" onclick="alert('Candidate Rohit Agrawal disqualification logged.')">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+<span>Terminate Session</span>
+</button>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-medium transition-colors flex items-center gap-1" onclick="this.closest('.group').remove()">
+<span class="material-symbols-outlined text-[16px]">remove_done</span>
+<span>Permit Exception</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Result Publishing & Normalization Queue (5 cols) -->
+<div class="xl:col-span-5 flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[22px]">publish</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Result Publishing Queue</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Formula: GATE/NTA Normalized</span>
+</div>
+<!-- Queue Card 1: Aptitude National Mock 01 (Ready to Publish) -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">Aptitude National Mock 01</span>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-label-sm text-label-sm text-outline">Code: ANM-2024-Q1</span>
+<span class="px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                100% Evaluated
+              </span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">1,120</span>
+<span class="block font-label-sm text-label-sm text-outline">Candidates</span>
+</div>
+</div>
+<!-- Evaluation Metrics Grid -->
+<div class="grid grid-cols-3 gap-space-xs p-space-sm rounded-lg bg-surface-container-low mb-space-md text-center">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Cutoff Mark</span>
+<span class="font-exam-numeric text-headline-md text-on-surface font-bold">64.0</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Avg Score</span>
+<span class="font-exam-numeric text-headline-md text-on-surface font-bold">58.2</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Max Score</span>
+<span class="font-exam-numeric text-headline-md text-tertiary font-bold">96.5</span>
+</div>
+</div>
+<!-- Dispatch Options & Template -->
+<div class="flex flex-col gap-space-xs mb-space-md">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">chat</span>
+              WhatsApp &amp; SMS Dispatch Template:
+            </span>
+<span class="px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-mono font-bold">
+              #Score_Announce_v2
+            </span>
+</div>
+<p class="font-body-sm text-[12px] text-outline italic">
+            "Dear [Name], your Aptitude Mock 01 scorecard is live! You ranked #[Rank] with [Marks] marks (Percentile: [P%]). View PDF: [Link]"
+          </p>
+</div>
+<button class="w-full py-space-sm px-space-md rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-all font-label-lg text-label-lg font-bold shadow-md flex items-center justify-center gap-space-xs" onclick="publishMockRanks(this)">
+<span class="material-symbols-outlined text-[20px]">send_time_extension</span>
+<span>Publish Rank List &amp; Send WhatsApp/SMS Alerts</span>
+</button>
+</div>
+<!-- Queue Card 2: SSC Reasoning Sectional Sprint (Processing) -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-xs">
+<div>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">SSC Reasoning Sectional Sprint</span>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-label-sm text-label-sm text-outline">Code: SSC-RSS-11</span>
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] animate-spin">sync</span>
+                Evaluating (89%)
+              </span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">680</span>
+<span class="block font-label-sm text-label-sm text-outline">Submissions</span>
+</div>
+</div>
+<!-- Live Calculation Progress Bar -->
+<div class="my-space-sm">
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface-variant font-semibold">Normalized Standard Deviation Pass</span>
+<span class="text-primary font-bold">605 / 680 done • ETA: ~4 mins</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary-container rounded-full transition-all duration-500" style="width: 89%;"></div>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low mt-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-outline text-[18px]">bolt</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Auto-Publish Once Ready</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Dispatches rank push-notifications immediately</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</div>
+</div>
+<!-- Quick Audit Vault Strip -->
+<div class="rounded-xl bg-surface-container p-space-md shadow-sm flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">verified_user</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold block">Quick Audit Vault</span>
+<span class="font-body-sm text-[12px] text-outline">Immutable ledger of proctor flags &amp; answer timestamps</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-low font-label-sm text-label-sm font-semibold transition-colors flex items-center gap-1 shadow-sm" onclick="downloadCSVLog()">
+<span class="material-symbols-outlined text-[16px]">table_view</span>
+<span>Export Audit Logs (CSV)</span>
+</button>
+<button class="px-space-sm py-1.5 rounded-lg bg-inverse-surface text-inverse-on-surface hover:bg-on-background font-label-sm text-label-sm font-semibold transition-colors flex items-center gap-1 shadow-sm" onclick="downloadIntegrityPDF()">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>Integrity Report</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Analytics & Leaderboard Mosaic -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+<!-- Score Normalization Bell Curve & Metrics (4 cols) -->
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col h-full">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Score Normalization Curve</h3>
+<span class="font-label-sm text-label-sm text-outline">Aptitude National Mock 01 (Gaussian Fit)</span>
+</div>
+<span class="material-symbols-outlined text-outline">query_stats</span>
+</div>
+<!-- Inline SVG Bell Curve Visualization -->
+<div class="relative w-full h-48 bg-surface-container-low rounded-lg p-space-xs flex items-center justify-center overflow-hidden">
+<svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 400 180">
+<defs>
+<linearGradient id="bellGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#1e60f3" stop-opacity="0.45"></stop>
+<stop offset="100%" stop-color="#1e60f3" stop-opacity="0.0"></stop>
+</linearGradient>
+</defs>
+<!-- Grid Lines -->
+<line stroke="#c3c5d8" stroke-dasharray="3,3" stroke-width="1" x1="50" x2="50" y1="20" y2="160"></line>
+<line stroke="#c3c5d8" stroke-dasharray="3,3" stroke-width="1" x1="130" x2="130" y1="20" y2="160"></line>
+<line stroke="#1e60f3" stroke-width="1.5" x1="210" x2="210" y1="20" y2="160"></line>
+<line stroke="#c3c5d8" stroke-dasharray="3,3" stroke-width="1" x1="290" x2="290" y1="20" y2="160"></line>
+<line stroke="#007c55" stroke-dasharray="3,3" stroke-width="1.5" x1="360" x2="360" y1="20" y2="160"></line>
+<!-- Shaded Area Under Bell Curve -->
+<path d="M 20 160 Q 110 158, 160 110 Q 210 20, 210 20 Q 210 20, 260 110 Q 310 158, 380 160 Z" fill="url(#bellGrad)"></path>
+<!-- Bell Curve Stroke -->
+<path d="M 20 160 Q 110 158, 160 110 Q 210 20, 210 20 Q 210 20, 260 110 Q 310 158, 380 160" fill="none" stroke="#0048c9" stroke-linecap="round" stroke-width="3"></path>
+<!-- Mean Dot & Label -->
+<circle cx="210" cy="20" fill="#0048c9" r="5" stroke="#ffffff" stroke-width="2"></circle>
+<text fill="#0b1c30" font-family="Plus Jakarta Sans" font-size="11" font-weight="700" x="215" y="16">Mean: 58.2</text>
+<!-- Top 1% Dot & Label -->
+<circle cx="360" cy="148" fill="#007c55" r="4"></circle>
+<text fill="#007c55" font-family="Plus Jakarta Sans" font-size="10" font-weight="700" x="320" y="140">Top 1% (92+)</text>
+</svg>
+</div>
+<!-- Percentile Breakdown Badges -->
+<div class="grid grid-cols-2 gap-space-xs mt-space-md text-left">
+<div class="p-space-xs rounded bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-outline block">99th Percentile Cutoff</span>
+<span class="font-exam-numeric text-headline-md text-tertiary font-bold">≥ 89.25 M</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-outline block">Standard Deviation (σ)</span>
+<span class="font-exam-numeric text-headline-md text-on-surface font-bold">± 11.40 M</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-outline block">Median Score (50th %ile)</span>
+<span class="font-exam-numeric text-headline-md text-on-surface font-bold">57.50 M</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-outline block">Integrity Clearance Rate</span>
+<span class="font-exam-numeric text-headline-md text-primary font-bold">98.4% Passed</span>
+</div>
+</div>
+<div class="mt-auto pt-space-md">
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-tertiary">offline_bolt</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Equipercentile Method</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Shift 1 &amp; Shift 2 Synced</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Official Top 10 Toppers Table (8 cols) -->
+<div class="xl:col-span-8 flex flex-col">
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">military_tech</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Official Merit Leaderboard</h3>
+<span class="px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">Verified Top 10</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Validated against raw scoring keys, webcam audit timestamps, and automated response speed vectors.</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="relative">
+<input class="pl-8 pr-space-sm py-1 rounded-lg bg-surface-container-low text-on-surface text-body-sm placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary w-44" placeholder="Filter rank or name..." type="text">
+<span class="material-symbols-outlined absolute left-2 top-1.5 text-[16px] text-outline">filter_list</span>
+</div>
+</div>
+</div>
+<!-- Crisp High-Density Data Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">
+<th class="py-2.5 px-space-sm rounded-l-lg">Rank</th>
+<th class="py-2.5 px-space-sm">Student Name</th>
+<th class="py-2.5 px-space-sm">Total Marks</th>
+<th class="py-2.5 px-space-sm">Accuracy</th>
+<th class="py-2.5 px-space-sm">Time Taken</th>
+<th class="py-2.5 px-space-sm text-center rounded-r-lg">Proctor Audit</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high font-body-sm text-body-sm">
+<!-- Rank 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-space-sm font-exam-numeric font-bold">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-primary text-on-primary font-headline-md text-label-md shadow-sm">1</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Pooja Venkatesh</span>
+<span class="material-symbols-outlined text-[16px] text-primary" title="Identity KYC Verified">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline block">Reg: #NQT-99120 • Bengaluru</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-exam-numeric font-bold text-on-surface text-[15px]">96.50</span>
+<span class="font-label-sm text-label-sm text-tertiary block font-semibold">+14.2% vs avg</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="font-exam-numeric font-bold text-tertiary">98.0%</span>
+<div class="w-12 h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 98%;"></div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline block">49 / 50 Correct</span>
+</td>
+<td class="py-2.5 px-space-sm font-mono text-on-surface font-medium">48m 12s</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                    Zero Flags
+                  </span>
+</td>
+</tr>
+<!-- Rank 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-space-sm font-exam-numeric font-bold">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed font-headline-md text-label-md">2</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Harsh Vardhan</span>
+<span class="material-symbols-outlined text-[16px] text-primary" title="Identity KYC Verified">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline block">Reg: #NQT-88411 • Delhi NCR</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-exam-numeric font-bold text-on-surface text-[15px]">94.25</span>
+<span class="font-label-sm text-label-sm text-tertiary block font-semibold">+12.8% vs avg</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="font-exam-numeric font-bold text-tertiary">96.0%</span>
+<div class="w-12 h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 96%;"></div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline block">48 / 50 Correct</span>
+</td>
+<td class="py-2.5 px-space-sm font-mono text-on-surface font-medium">51m 40s</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                    Zero Flags
+                  </span>
+</td>
+</tr>
+<!-- Rank 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-space-sm font-exam-numeric font-bold">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed font-headline-md text-label-md">3</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Tanvi Deshmukh</span>
+<span class="material-symbols-outlined text-[16px] text-primary" title="Identity KYC Verified">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline block">Reg: #NQT-72109 • Pune</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-exam-numeric font-bold text-on-surface text-[15px]">92.75</span>
+<span class="font-label-sm text-label-sm text-tertiary block font-semibold">+11.4% vs avg</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="font-exam-numeric font-bold text-tertiary">94.0%</span>
+<div class="w-12 h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 94%;"></div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline block">47 / 50 Correct</span>
+</td>
+<td class="py-2.5 px-space-sm font-mono text-on-surface font-medium">54m 02s</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                    Zero Flags
+                  </span>
+</td>
+</tr>
+<!-- Rank 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-space-sm font-exam-numeric font-bold text-on-surface">4</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Aditya Ghosh</span>
+<span class="font-label-sm text-label-sm text-outline block">Reg: #NQT-44192 • Kolkata</span>
+</td>
+<td class="py-2.5 px-space-sm font-exam-numeric font-bold text-on-surface text-[15px]">91.00</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-exam-numeric font-bold text-on-surface">92.0%</span>
+<span class="font-label-sm text-label-sm text-outline block">46/50</span>
+</td>
+<td class="py-2.5 px-space-sm font-mono text-on-surface">53m 15s</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                    Zero Flags
+                  </span>
+</td>
+</tr>
+<!-- Rank 5 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-space-sm font-exam-numeric font-bold text-on-surface">5</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Kavita S. Rao</span>
+<span class="font-label-sm text-label-sm text-outline block">Reg: #NQT-31994 • Hyderabad</span>
+</td>
+<td class="py-2.5 px-space-sm font-exam-numeric font-bold text-on-surface text-[15px]">89.50</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-exam-numeric font-bold text-on-surface">91.8%</span>
+<span class="font-label-sm text-label-sm text-outline block">45/49</span>
+</td>
+<td class="py-2.5 px-space-sm font-mono text-on-surface">56m 22s</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                    Zero Flags
+                  </span>
+</td>
+</tr>
+<!-- Rank 6 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-space-sm font-exam-numeric font-bold text-on-surface">6</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Mohammad Bilal</span>
+<span class="font-label-sm text-label-sm text-outline block">Reg: #NQT-81203 • Lucknow</span>
+</td>
+<td class="py-2.5 px-space-sm font-exam-numeric font-bold text-on-surface text-[15px]">88.75</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-exam-numeric font-bold text-on-surface">90.0%</span>
+<span class="font-label-sm text-label-sm text-outline block">45/50</span>
+</td>
+<td class="py-2.5 px-space-sm font-mono text-on-surface">58m 01s</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                    1 Audio Glitch (Dismissed)
+                  </span>
+</td>
+</tr>
+<!-- Rank 7 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-space-sm font-exam-numeric font-bold text-on-surface">7</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Sneha Nambiar</span>
+<span class="font-label-sm text-label-sm text-outline block">Reg: #NQT-60199 • Kochi</span>
+</td>
+<td class="py-2.5 px-space-sm font-exam-numeric font-bold text-on-surface text-[15px]">87.25</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-exam-numeric font-bold text-on-surface">88.5%</span>
+<span class="font-label-sm text-label-sm text-outline block">44/50</span>
+</td>
+<td class="py-2.5 px-space-sm font-mono text-on-surface">52m 44s</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                    Zero Flags
+                  </span>
+</td>
+</tr>
+<!-- Rank 8 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-space-sm font-exam-numeric font-bold text-on-surface">8</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Arnav Mehta</span>
+<span class="font-label-sm text-label-sm text-outline block">Reg: #NQT-18402 • Ahmedabad</span>
+</td>
+<td class="py-2.5 px-space-sm font-exam-numeric font-bold text-on-surface text-[15px]">86.00</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-exam-numeric font-bold text-on-surface">88.0%</span>
+<span class="font-label-sm text-label-sm text-outline block">44/50</span>
+</td>
+<td class="py-2.5 px-space-sm font-mono text-on-surface">57m 19s</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                    Zero Flags
+                  </span>
+</td>
+</tr>
+<!-- Rank 9 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-space-sm font-exam-numeric font-bold text-on-surface">9</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Bhavna Joshi</span>
+<span class="font-label-sm text-label-sm text-outline block">Reg: #NQT-55410 • Jaipur</span>
+</td>
+<td class="py-2.5 px-space-sm font-exam-numeric font-bold text-on-surface text-[15px]">85.50</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-exam-numeric font-bold text-on-surface">86.2%</span>
+<span class="font-label-sm text-label-sm text-outline block">43/50</span>
+</td>
+<td class="py-2.5 px-space-sm font-mono text-on-surface">55m 30s</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                    Zero Flags
+                  </span>
+</td>
+</tr>
+<!-- Rank 10 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-space-sm font-exam-numeric font-bold text-on-surface">10</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Rishabh Saxena</span>
+<span class="font-label-sm text-label-sm text-outline block">Reg: #NQT-90114 • Bhopal</span>
+</td>
+<td class="py-2.5 px-space-sm font-exam-numeric font-bold text-on-surface text-[15px]">84.75</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-exam-numeric font-bold text-on-surface">86.0%</span>
+<span class="font-label-sm text-label-sm text-outline block">43/50</span>
+</td>
+<td class="py-2.5 px-space-sm font-mono text-on-surface">59m 10s</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                    Zero Flags
+                  </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex items-center justify-between pt-space-md border-t border-surface-container-high mt-space-sm">
+<span class="font-label-sm text-label-sm text-outline">Displaying Official Top 10 of 1,120 Verified Candidates</span>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-semibold transition-colors flex items-center gap-1">
+<span>View Full Rank Ledger (1,120)</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline Micro-interaction Scripts -->
+<script>
+    function publishMockRanks(btn) {
+      const origText = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">sync</span><span>Dispatched to 1,120 Candidates (SMS & WhatsApp Queue Initiated)...</span>';
+      btn.classList.remove('bg-primary-container', 'hover:bg-primary');
+      btn.classList.add('bg-tertiary', 'text-on-tertiary');
+      
+      setTimeout(() => {
+        btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span><span>Rank List Published &amp; Broadcast Completed</span>';
+      }, 1600);
+    }
+
+    function downloadCSVLog() {
+      const dummyContent = "data:text/csv;charset=utf-8,Incident_ID,Candidate_ID,Name,Type,Timestamp,Action_Taken\nINC-101,CAN-9821,Ananya Roy,Window Switch,11:42:09,Flagged\nINC-102,CAN-4109,Vikram Singh,Multiple Faces,11:43:51,Flagged\nINC-103,CAN-6332,Rohit Agrawal,Second Monitor,11:44:18,Monitored";
+      const encodedUri = encodeURI(dummyContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", "PrepAdmin_AntiCheat_Audit_Logs.csv");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    function downloadIntegrityPDF() {
+      alert("Generating digitally signed Anti-Cheat Cryptographic Audit Report (PDF)... Download will begin shortly.");
+    }
+
+    document.getElementById('freeze-sessions-btn')?.addEventListener('click', function() {
+      if(confirm('Are you sure you want to pause 2 flagged test sessions immediately? Candidates will see an official proctor review screen.')) {
+        this.innerHTML = '<span class="material-symbols-outlined text-[18px]">lock</span><span>2 Sessions Frozen</span>';
+        this.classList.replace('bg-error', 'bg-inverse-surface');
+      }
+    });
+  </script>
+</div></main></div></body></html>

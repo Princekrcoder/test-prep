@@ -1,0 +1,664 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-fixed-dim":"#bec6e0","on-primary-container":"#edeeff","surface-container-lowest":"#ffffff","secondary-fixed":"#dae2fd","on-primary-fixed-variant":"#003cab","surface-bright":"#f8f9ff","on-tertiary-fixed":"#002113","outline":"#737687","surface-container-low":"#eff4ff","outline-variant":"#c3c5d8","on-tertiary-container":"#b5ffd7","on-secondary-fixed":"#131b2e","on-secondary-fixed-variant":"#3f465c","primary":"#0048c9","inverse-primary":"#b5c4ff","inverse-surface":"#213145","background":"#f8f9ff","tertiary-fixed-dim":"#4edea3","surface":"#f8f9ff","tertiary-fixed":"#6ffbbe","on-surface-variant":"#434655","on-primary-fixed":"#00174d","tertiary-container":"#007c55","on-tertiary":"#ffffff","surface-container":"#e5eeff","on-secondary":"#ffffff","on-background":"#0b1c30","surface-variant":"#d3e4fe","on-surface":"#0b1c30","on-tertiary-fixed-variant":"#005236","surface-dim":"#cbdbf5","inverse-on-surface":"#eaf1ff","error":"#ba1a1a","error-container":"#ffdad6","surface-tint":"#0051df","primary-container":"#1e60f3","secondary":"#565e74","surface-container-high":"#dce9ff","on-error":"#ffffff","on-primary":"#ffffff","on-error-container":"#93000a","surface-container-highest":"#d3e4fe","on-secondary-container":"#5c647a","secondary-container":"#dae2fd","primary-fixed-dim":"#b5c4ff","primary-fixed":"#dbe1ff","tertiary":"#006141"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{margin:"2rem","margin-mobile":"1rem","space-2xs":"0.25rem","space-xs":"0.5rem","space-2xl":"3rem","space-lg":"1.5rem",gutter:"1.5rem","space-md":"1rem","gutter-mobile":"0.75rem","space-xl":"2rem","space-sm":"0.75rem"},fontFamily:{"headline-xl-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"label-lg":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"exam-numeric":["Plus Jakarta Sans"],"body-lg":["Inter"],"body-sm":["Inter"],"headline-md":["Plus Jakarta Sans"]},fontSize:{"headline-xl-mobile":["22px",{lineHeight:"30px",letterSpacing:"-0.01em",fontWeight:"700"}],"headline-lg":["20px",{lineHeight:"28px",fontWeight:"700"}],"display-hero":["40px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"800"}],"headline-xl":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"700"}],"display-hero-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"800"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"label-lg":["14px",{lineHeight:"20px",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",fontWeight:"600"}],"exam-numeric":["14px",{lineHeight:"14px",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"headline-md":["16px",{lineHeight:"24px",fontWeight:"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.08)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 flex items-center gap-space-sm px-space-lg border-b border-outline/20"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary font-headline-md text-headline-md font-bold">TP</div><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight font-bold text-inverse-on-surface">PrepAdmin</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">EdTech Suite</span></div></div><div class="px-space-md py-space-sm"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline-variant font-semibold">Main Navigation</span></div><nav class="flex-1 px-space-md space-y-space-2xs" data-active-classes="bg-primary text-on-primary font-label-lg rounded-lg shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-container-highest/20 hover:text-inverse-on-surface transition-colors font-label-lg text-label-lg" data-path="dashboard-overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard &amp; Overview</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-container-highest/20 hover:text-inverse-on-surface transition-colors font-label-lg text-label-lg" data-path="student-directory" href="#"><span class="material-symbols-outlined text-[20px]">school</span><span>Student Directory</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary text-on-primary font-label-lg rounded-lg shadow-sm" data-path="test-question-cms" href="#"><span class="material-symbols-outlined text-[20px]">quiz</span><span>Test &amp; Question CMS</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-container-highest/20 hover:text-inverse-on-surface transition-colors font-label-lg text-label-lg" data-path="live-proctoring-results" href="#"><span class="material-symbols-outlined text-[20px]">visibility</span><span>Live Proctoring &amp; Results</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-container-highest/20 hover:text-inverse-on-surface transition-colors font-label-lg text-label-lg" data-path="revenue-sales" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span>Revenue &amp; Sales</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-container-highest/20 hover:text-inverse-on-surface transition-colors font-label-lg text-label-lg" data-path="platform-settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Platform Settings</span></a></nav></div><div class="p-space-md border-t border-outline/20"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-error-container hover:text-on-error-container transition-colors font-label-lg text-label-lg" data-path="logout" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span>Logout</span></a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-md z-40 border-b border-surface-container-high px-space-lg flex items-center justify-between shadow-[0_1px_4px_rgba(0,0,0,0.03)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="text-on-surface-variant hover:text-on-surface">Platform</span><span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span><span class="text-primary font-semibold">Console</span></div><div class="inline-flex items-center gap-space-xs px-space-sm py-space-2xs rounded-full bg-tertiary-fixed text-on-tertiary-fixed border border-tertiary-fixed-dim"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span class="font-label-sm text-label-sm font-semibold">1,428 Live Active</span></div></div><div class="flex items-center gap-space-md"><div class="relative hidden xl:block w-72"><span class="material-symbols-outlined absolute left-3 top-2.5 text-[18px] text-outline">search</span><input class="w-full pl-9 pr-space-md py-1.5 rounded-lg border border-outline-variant bg-surface text-on-surface placeholder:text-outline text-body-sm font-body-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Search tests, candidates, IDs..." type="text"></div><div class="flex items-center gap-space-xs"><button class="inline-flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface hover:bg-surface-container-low transition-colors font-label-md text-label-md" type="button"><span class="material-symbols-outlined text-[18px]">download</span><span>Export Reports</span></button><button class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-colors font-label-md text-label-md font-semibold shadow-sm" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Create New Test</span></button></div><div class="relative flex items-center"><button class="relative p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 flex h-4 w-4 items-center justify-center rounded-full bg-error text-on-error font-label-sm text-[10px] font-bold">5</span></button></div><div class="h-6 w-[1px] bg-surface-container-high"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden md:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold">Dr. A. Sharma</span><span class="font-label-sm text-label-sm text-outline">Super Admin</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Top Operational Banner & Stream Switcher -->
+<section class="w-full flex flex-col gap-space-md mb-space-xl">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-primary font-label-sm uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[16px]">hub</span>
+<span>Curriculum &amp; Exam Governance Engine</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">Test Series CMS &amp; LaTeX Repository</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Author multi-tier competitive examinations, configure invigilation rules, and parse chemical/mathematical schemas.</p>
+</div>
+<!-- Quick Action Controls -->
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span>Version History</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Syllabus Audit</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">file_upload</span>
+<span>Sync LMS Node</span>
+</button>
+</div>
+</div>
+<!-- Exam Streams Horizontal Rail with Metrics -->
+<div class="w-full bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center justify-between gap-space-md overflow-x-auto">
+<div class="flex items-center gap-space-xs min-w-max">
+<!-- Stream Pill 1: Active -->
+<button class="group flex items-center gap-space-sm px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all" type="button">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed"></span>
+<span class="font-bold">TCS NQT</span>
+<div class="flex items-center gap-1.5 ml-1.5 pl-2 bg-on-primary/10 rounded px-1.5 py-0.5 text-on-primary text-[11px] font-mono">
+<span>12 Live</span>
+<span class="opacity-50">/</span>
+<span>4 Draft</span>
+</div>
+</button>
+<!-- Stream Pill 2 -->
+<button class="group flex items-center gap-space-sm px-space-md py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all" type="button">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span>SSC CGL</span>
+<div class="flex items-center gap-1.5 ml-1 pl-2 text-on-surface-variant text-[11px] font-mono">
+<span>18 Live</span>
+<span class="opacity-40">/</span>
+<span>7 Draft</span>
+</div>
+</button>
+<!-- Stream Pill 3 -->
+<button class="group flex items-center gap-space-sm px-space-md py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all" type="button">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>JEE Main</span>
+<div class="flex items-center gap-1.5 ml-1 pl-2 text-on-surface-variant text-[11px] font-mono">
+<span>24 Live</span>
+<span class="opacity-40">/</span>
+<span>11 Draft</span>
+</div>
+</button>
+<!-- Stream Pill 4 -->
+<button class="group flex items-center gap-space-sm px-space-md py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all" type="button">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>NEET UG</span>
+<div class="flex items-center gap-1.5 ml-1 pl-2 text-on-surface-variant text-[11px] font-mono">
+<span>15 Live</span>
+<span class="opacity-40">/</span>
+<span>3 Draft</span>
+</div>
+</button>
+<!-- Stream Pill 5 -->
+<button class="group flex items-center gap-space-sm px-space-md py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all" type="button">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span>UPSC Prelims</span>
+<div class="flex items-center gap-1.5 ml-1 pl-2 text-on-surface-variant text-[11px] font-mono">
+<span>9 Live</span>
+<span class="opacity-40">/</span>
+<span>2 Draft</span>
+</div>
+</button>
+<!-- Stream Pill 6 -->
+<button class="group flex items-center gap-space-sm px-space-md py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all" type="button">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Banking IBPS</span>
+<div class="flex items-center gap-1.5 ml-1 pl-2 text-on-surface-variant text-[11px] font-mono">
+<span>31 Live</span>
+<span class="opacity-40">/</span>
+<span>8 Draft</span>
+</div>
+</button>
+</div>
+<button class="inline-flex items-center gap-space-xs px-space-sm py-2 rounded-lg bg-surface-container-highest/60 hover:bg-surface-container-highest text-primary font-label-md text-label-md transition-colors whitespace-nowrap ml-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>New Exam Category</span>
+</button>
+</div>
+</section>
+<!-- Live Operations Incident Strip (Section 3) -->
+<section class="w-full bg-surface-container-lowest p-space-md rounded-xl shadow-sm mb-space-xl">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">broadcast_on_home</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface">Live Exam Telemetry &amp; Remote Command</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold animate-pulse">
+              ACTIVE SESSION
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Target active running instances to extend timers, dispatch security notices, or freeze timers synchronously.</p>
+</div>
+</div>
+<!-- Action Controllers -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="relative min-w-[240px]">
+<select class="w-full bg-surface-container-low text-on-surface font-label-md text-label-md px-space-md py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer">
+<option selected="">TCS NQT National Mock #04 (Running)</option>
+<option>JEE Main Full Revision Test #12 (Running)</option>
+<option>IBPS PO Prelims Speed Drill #09 (Running)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">more_time</span>
+<span>+15 Mins Duration</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">campaign</span>
+<span>Broadcast Flash Alert</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-error hover:opacity-95 text-on-error font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">pause_circle</span>
+<span>Emergency Pause Session</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Dual Column Layout: Form Configuration (Left) + Bulk Ingestion & Statistics (Right) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- Test Architecture Form (8 Cols) -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-md mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold text-label-md">01</span>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Test Blueprint Configuration</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Setup parameters, weightage logic, and invigilation protocols.</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline-variant font-mono tracking-wider">REF: EXM-2025-NQT4</span>
+</div>
+<div class="space-y-space-md">
+<!-- Test Title & Category -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="md:col-span-2 flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Test Title</label>
+<input class="w-full bg-surface-container-low px-space-md py-2 rounded-lg text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" type="text" value="TCS NQT All-India Grand Mock Test 04">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Sub-Stream Track</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low px-space-md py-2 rounded-lg text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer">
+<option selected="">Cognitive + Technical</option>
+<option>Foundation Skills</option>
+<option>Advanced Coding Deck</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Quantitative Parameters -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<!-- Duration -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Time Limit</span>
+<span class="material-symbols-outlined text-[18px] text-outline">timer</span>
+</div>
+<div class="flex items-baseline gap-1 mt-2">
+<input class="w-16 bg-surface-container-lowest font-headline-lg text-headline-lg font-bold text-primary text-center rounded py-0.5 focus:outline-none focus:ring-1 focus:ring-primary" type="number" value="90">
+<span class="font-label-md text-label-md text-on-surface-variant">Minutes</span>
+</div>
+<input class="w-full accent-primary mt-2 cursor-pointer" max="180" min="15" step="5" type="range" value="90">
+</div>
+<!-- Total Marks -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Cumulative Score</span>
+<span class="material-symbols-outlined text-[18px] text-outline">grade</span>
+</div>
+<div class="flex items-baseline gap-1 mt-2">
+<input class="w-16 bg-surface-container-lowest font-headline-lg text-headline-lg font-bold text-on-surface text-center rounded py-0.5 focus:outline-none focus:ring-1 focus:ring-primary" type="number" value="100">
+<span class="font-label-md text-label-md text-on-surface-variant">Max Marks</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline mt-2">+1.66 Mark / Question</span>
+</div>
+<!-- Total Questions -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Item Count</span>
+<span class="material-symbols-outlined text-[18px] text-outline">format_list_numbered</span>
+</div>
+<div class="flex items-baseline gap-1 mt-2">
+<input class="w-16 bg-surface-container-lowest font-headline-lg text-headline-lg font-bold text-on-surface text-center rounded py-0.5 focus:outline-none focus:ring-1 focus:ring-primary" type="number" value="60">
+<span class="font-label-md text-label-md text-on-surface-variant">Questions</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline mt-2">3 Mandatory Sections</span>
+</div>
+</div>
+<!-- Marking Policy & Invigilation Rules -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Negative Marking Rule</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low px-space-md py-2.5 rounded-lg text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer">
+<option>-0.25 (1/4th Deduction - Standard)</option>
+<option selected="">-0.33 (1/3rd Deduction - TCS / UPSC Tier)</option>
+<option>-0.50 (1/2 Deduction - Specialized)</option>
+<option>Zero Negative Marking</option>
+<option>Custom Differential Section Scoring</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-3 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col justify-center bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Strict AI Proctoring Suite</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Enforce browser lockdown, tab switch limit &amp; webcam checks.</span>
+</div>
+<!-- Interactive Toggle -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Windows Pickers -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Slot Window Open (DateTime)</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">calendar_today</span>
+<input class="w-full bg-surface-container-low pl-10 pr-space-md py-2 rounded-lg text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary" type="text" value="2025-04-12 09:00 AM IST">
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Slot Window Close (DateTime)</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">event_busy</span>
+<input class="w-full bg-surface-container-low pl-10 pr-space-md py-2 rounded-lg text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary" type="text" value="2025-04-13 11:59 PM IST">
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Bottom Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-lg mt-space-lg">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span>Metadata automatically validated against syllabus schema v4.2</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">
+            Save Draft
+          </button>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors font-label-md text-label-md" type="button">
+            Schedule For Later
+          </button>
+<button class="px-space-lg py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary transition-colors font-label-md text-label-md font-bold shadow-sm" type="button">
+            Publish &amp; Deploy Exam
+          </button>
+</div>
+</div>
+</div>
+<!-- Bulk Ingestion & Question Stats (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Bulk Dropzone Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-8 h-8 rounded-lg bg-tertiary/10 text-tertiary flex items-center justify-center font-bold text-label-md">02</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Bulk Ingestion Engine</h2>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span> AI Parser
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Instantly unpack 100+ questions with nested tables, LaTeX matrices, and image links directly from standard document sheets.</p>
+<!-- Upload Dropzone Area -->
+<div class="bg-surface-container-low hover:bg-surface-container transition-all rounded-xl p-space-lg flex flex-col items-center justify-center text-center cursor-pointer group">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-110 transition-transform mb-space-xs">
+<span class="material-symbols-outlined text-[26px]">cloud_upload</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Drag &amp; drop test payload</span>
+<span class="font-body-sm text-body-sm text-outline mt-1">Accepts .XLSX, .CSV, or Microsoft Word (.DOCX)</span>
+<div class="flex items-center gap-2 mt-space-md">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-primary text-label-md font-label-md font-semibold shadow-sm hover:bg-surface-container-high transition-colors" type="button">
+                Browse System Files
+              </button>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm space-y-space-xs">
+<div class="flex items-center justify-between text-label-md font-label-md">
+<button class="inline-flex items-center gap-1 text-primary hover:underline" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Download Schema Template (.XLSX)</span>
+</button>
+<span class="text-outline font-mono text-[11px]">v3.4 Standard</span>
+</div>
+<button class="w-full inline-flex items-center justify-center gap-space-xs py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">batch_prediction</span>
+<span>Trigger Diagnostic Parser Test</span>
+</button>
+</div>
+</div>
+<!-- Quick Repository Metrics Widget -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Question Vault Balance</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Total indexed in TCS pool</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface font-mono">14,892</span>
+<span class="block font-label-sm text-label-sm text-tertiary font-semibold">+340 this week</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Advanced Question Authoring & LaTeX Engine (Section 4) -->
+<section class="w-full bg-surface-container-lowest p-space-xl rounded-xl shadow-sm mb-space-xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-md mb-space-lg gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-bold text-label-md">03</span>
+<div>
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Formula-Grade LaTeX Question Editor</h2>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-mono text-[11px] rounded">MathJax v3.2</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live visual preview for advanced calculus integrals, organic chemistry notations, and matrix structures.</p>
+</div>
+</div>
+<!-- Tool Tabs -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg">
+<button class="px-space-md py-1 rounded bg-surface-container-lowest font-label-md text-label-md font-semibold text-primary shadow-sm" type="button">
+          Split Code &amp; Preview
+        </button>
+<button class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface" type="button">
+          Visual WYSIWYG
+        </button>
+<button class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface" type="button">
+          Symbol Cheat Sheet
+        </button>
+</div>
+</div>
+<!-- Metadata classification row -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md mb-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Question Domain</span>
+<select class="bg-surface-container-low px-space-sm py-1.5 rounded-lg text-on-surface font-label-md text-label-md focus:outline-none focus:ring-1 focus:ring-primary appearance-none cursor-pointer">
+<option selected="">Advanced Mathematics / Calculus</option>
+<option>Thermodynamics &amp; Kinetics</option>
+<option>Logical Reasoning &amp; Matrices</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Cognitive Difficulty</span>
+<select class="bg-surface-container-low px-space-sm py-1.5 rounded-lg text-on-surface font-label-md text-label-md focus:outline-none focus:ring-1 focus:ring-primary appearance-none cursor-pointer">
+<option>Level 1 - Foundational</option>
+<option>Level 2 - Moderate</option>
+<option selected="">Level 3 - Hard / Analytical</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Scoring Scheme</span>
+<div class="flex items-center gap-2">
+<span class="text-tertiary font-mono font-bold text-label-md">+4.00</span>
+<span class="text-outline">/</span>
+<span class="text-error font-mono font-bold text-label-md">-1.00</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Unique Item Tag</span>
+<span class="font-mono text-label-md text-on-surface bg-surface-container-low px-space-sm py-1.5 rounded-lg">ITEM-CALC-DIR-881</span>
+</div>
+</div>
+<!-- LaTeX Editor & Live Preview Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg mb-space-lg">
+<!-- Raw LaTeX / Math Input Canvas -->
+<div class="flex flex-col bg-inverse-surface rounded-xl overflow-hidden shadow-sm">
+<div class="bg-inverse-surface/80 px-space-md py-2 flex items-center justify-between text-inverse-on-surface">
+<div class="flex items-center gap-space-xs font-mono text-[12px]">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">code</span>
+<span>LaTeX Source Buffer (Question Stem)</span>
+</div>
+<div class="flex items-center gap-2 text-[11px] text-outline-variant">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary-fixed"></span>
+<span>Syntax Validated</span>
+</div>
+</div>
+<textarea class="w-full bg-transparent p-space-md font-mono text-[13px] leading-relaxed text-inverse-on-surface focus:outline-none resize-none font-normal" rows="9" spellcheck="false">Consider the continuous function defined for $x &gt; 0$. Evaluate the non-elementary improper Dirichlet integral:
+$$\int_{0}^{\infty} \frac{\sin(x)}{x} \, dx = \frac{\pi}{2}$$
+Given the subsequent combustion reaction in closed equilibrium:
+$$2\text{H}_2\text{(g)} + \text{O}_2\text{(g)} \longrightarrow 2\text{H}_2\text{O}\text{(l)}, \quad \Delta H^\circ = -571.6\text{ kJ/mol}$$
+Determine which of the following analytical scalar assertions holds universally true regarding the convergence limit and standard enthalpy release.</textarea>
+<div class="bg-inverse-surface/90 px-space-md py-2 flex items-center justify-between text-outline-variant text-[12px]">
+<div class="flex items-center gap-space-sm font-mono">
+<span>Lines: 6</span>
+<span>Chars: 382</span>
+<span>TeX Tokens: 42</span>
+</div>
+<button class="text-tertiary-fixed hover:text-tertiary-fixed-dim font-label-sm text-label-sm font-semibold" type="button">
+            Insert Symbol (\alpha, \partial, \infty)
+          </button>
+</div>
+</div>
+<!-- Rendered Preview Canvas (High Fidelity) -->
+<div class="flex flex-col bg-surface-container-low rounded-xl overflow-hidden shadow-sm justify-between">
+<div>
+<div class="bg-surface-container-high/60 px-space-md py-2 flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-space-xs font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px] text-primary">visibility</span>
+<span>Candidate Testing Screen Render (WYSIWYG)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Zoom: 100% (High-DPI)</span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              Consider the continuous function defined for <span class="font-serif italic font-semibold">x &gt; 0</span>. Evaluate the non-elementary improper Dirichlet integral:
+            </p>
+<!-- Rendered Integral Visual -->
+<div class="py-space-sm px-space-md bg-surface-container-lowest rounded-lg shadow-sm flex items-center justify-center overflow-x-auto">
+<div class="flex items-center gap-3 font-serif text-[22px] tracking-wide text-on-surface py-2">
+<div class="flex items-center">
+<span class="text-[34px] leading-none select-none font-light -mr-1">∫</span>
+<div class="flex flex-col text-[11px] font-sans -ml-1 -mt-2">
+<span class="font-bold">∞</span>
+<span class="mt-4 font-bold">0</span>
+</div>
+</div>
+<div class="flex items-center">
+<span class="font-serif italic">sin(x)</span>
+<span class="mx-1.5 font-sans">/</span>
+<span class="font-serif italic">x</span>
+</div>
+<span class="font-serif italic text-[18px]">dx</span>
+<span class="mx-2 text-primary font-bold">=</span>
+<div class="inline-flex flex-col items-center text-[16px]">
+<span class="font-serif font-bold">π</span>
+<div class="w-full h-[1px] bg-on-surface my-0.5"></div>
+<span class="font-mono text-[14px] font-bold">2</span>
+</div>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              Given the subsequent combustion reaction in closed equilibrium:
+            </p>
+<!-- Chemical Equation Visual -->
+<div class="py-space-sm px-space-md bg-surface-container-lowest rounded-lg shadow-sm flex items-center justify-center overflow-x-auto">
+<div class="font-mono text-[15px] font-semibold text-on-surface flex items-center gap-2">
+<span>2H<sub class="text-[11px]">2</sub><span class="text-on-surface-variant font-normal">(g)</span></span>
+<span class="text-primary font-bold">+</span>
+<span>O<sub class="text-[11px]">2</sub><span class="text-on-surface-variant font-normal">(g)</span></span>
+<span class="material-symbols-outlined text-[18px] text-tertiary mx-1">trending_flat</span>
+<span>2H<sub class="text-[11px]">2</sub>O<span class="text-on-surface-variant font-normal">(l)</span>,</span>
+<span class="ml-3 text-secondary font-normal">ΔH° = -571.6 kJ/mol</span>
+</div>
+</div>
+</div>
+</div>
+<div class="px-space-lg pb-space-md">
+<span class="inline-flex items-center gap-1.5 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>Mathematical markup conforms to Screen Reader ARIA standard for visually impaired candidates.</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Multiple Choice Options Matrix Builder (Options A, B, C, D) -->
+<div class="space-y-space-md mb-space-lg">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Options Matrix &amp; Key Formulation</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Select the radio marker corresponding to the single authoritative answer</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Option A (Correct Selected) -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex items-start gap-space-md relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="pt-0.5">
+<input checked="" class="w-5 h-5 accent-primary cursor-pointer" name="correct_opt" type="radio">
+</div>
+<div class="flex flex-col w-full min-w-0">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-md text-label-md font-bold text-primary">Option A (Key Answer)</span>
+<span class="px-2 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed rounded font-label-sm text-label-sm font-bold">Correct Key</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">The Dirichlet limit converges conditionally to π/2; the reaction represents an exothermic standard state condensation.</p>
+</div>
+</div>
+<!-- Option B -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex items-start gap-space-md group">
+<div class="pt-0.5">
+<input class="w-5 h-5 accent-primary cursor-pointer" name="correct_opt" type="radio">
+</div>
+<div class="flex flex-col w-full min-w-0">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-md text-label-md font-bold text-on-surface">Option B</span>
+<span class="text-outline text-label-sm font-label-sm">Distractor</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">The improper integral diverges logarithmically; reaction represents an endothermic gas expansion cycle.</p>
+</div>
+</div>
+<!-- Option C -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex items-start gap-space-md group">
+<div class="pt-0.5">
+<input class="w-5 h-5 accent-primary cursor-pointer" name="correct_opt" type="radio">
+</div>
+<div class="flex flex-col w-full min-w-0">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-md text-label-md font-bold text-on-surface">Option C</span>
+<span class="text-outline text-label-sm font-label-sm">Distractor</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">The improper integral evaluates precisely to π with zero thermodynamic heat dissipation across phases.</p>
+</div>
+</div>
+<!-- Option D -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex items-start gap-space-md group">
+<div class="pt-0.5">
+<input class="w-5 h-5 accent-primary cursor-pointer" name="correct_opt" type="radio">
+</div>
+<div class="flex flex-col w-full min-w-0">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-md text-label-md font-bold text-on-surface">Option D</span>
+<span class="text-outline text-label-sm font-label-sm">Distractor</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Absolute convergence is established via Dirichlet test while enthalpy of formation remains positive.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Step-by-Step Logic Explanation Drawer -->
+<div class="bg-surface-container-low p-space-md rounded-xl mb-space-md">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">lightbulb</span>
+<label class="font-label-md text-label-md text-on-surface font-bold">Comprehensive Solution &amp; Step-by-Step Logic</label>
+<span class="font-label-sm text-label-sm text-outline">(Visible to candidates only during post-exam review phase)</span>
+</div>
+<textarea class="w-full bg-surface-container-lowest p-space-sm rounded-lg text-on-surface font-body-sm text-body-sm leading-relaxed focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" placeholder="Provide mathematical derivations, reference formulas, and textbook citations..." rows="3">Step 1: The Dirichlet integral converges via the alternating series test and contour integration using a semicircular contour in the upper complex half-plane.
+Step 2: Negative delta H (-571.6 kJ) indicates energy release, proving an exothermic reaction under standard atmospheric conditions (298 K, 1 atm).</textarea>
+</div>
+<!-- Question Control Action Strip -->
+<div class="flex items-center justify-between pt-space-sm">
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span>Candidate Mode Preview</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+<span>Clone Question Item</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">
+          Discard Edits
+        </button>
+<button class="inline-flex items-center gap-space-xs px-space-lg py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary transition-colors font-label-md text-label-md font-bold shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Commit to TCS NQT Bank</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Bank Ledger & Item Inspection Table Section -->
+<section class="w-full bg-surface-container-lowest p-space-xl rounded-xl shadow-sm mb-space-xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-md mb-space-md gap-space-sm">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">Existing Questions Ledger: TCS NQT Active Deck</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Review items populated in current draft. Drag to reorder question index sequences.</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-[16px] text-outline">filter_list</span>
+<input class="pl-8 pr-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface text-body-sm font-body-sm focus:outline-none focus:ring-1 focus:ring-primary w-48" placeholder="Filter questions..." type="text">
+</div>
+<button class="px-space-sm py-1.5 bg-surface-container-high text-on-surface rounded-lg font-label-sm text-label-sm font-semibold hover:bg-surface-container-highest transition-colors" type="button">
+          Reindex All
+        </button>
+</div>
+</div>
+<!-- Clean Tabular Registry -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-low text-on-surface-variant uppercase font-label-sm text-label-sm">
+<tr>
+<th class="py-2.5 px-space-md rounded-l-lg">Seq #</th>
+<th class="py-2.5 px-space-md">Question Stem Snippet</th>
+<th class="py-2.5 px-space-md">Domain / Module</th>
+<th class="py-2.5 px-space-md">Weight</th>
+<th class="py-2.5 px-space-md">Type</th>
+<th class="py-2.5 px-space-md text-right rounded-r-lg">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md font-mono font-bold text-primary">Q.01</td>
+<td class="py-3 px-space-md text-on-surface font-medium max-w-md truncate">Consider the continuous function defined for x &gt; 0. Evaluate improper Dirichlet integral...</td>
+<td class="py-3 px-space-md"><span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-[11px] font-semibold">Calculus II</span></td>
+<td class="py-3 px-space-md font-mono text-tertiary font-semibold">+4.0 / -1.0</td>
+<td class="py-3 px-space-md text-on-surface-variant">MCQ Single</td>
+<td class="py-3 px-space-md text-right">
+<div class="inline-flex items-center gap-2">
+<button class="p-1 hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1 hover:text-error transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md font-mono font-bold text-primary">Q.02</td>
+<td class="py-3 px-space-md text-on-surface font-medium max-w-md truncate">A train travelling at 72 km/h crosses a 180 m long bridge in 24 seconds. Find the length...</td>
+<td class="py-3 px-space-md"><span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-[11px] font-semibold">Numerical Ability</span></td>
+<td class="py-3 px-space-md font-mono text-tertiary font-semibold">+2.0 / -0.5</td>
+<td class="py-3 px-space-md text-on-surface-variant">MCQ Single</td>
+<td class="py-3 px-space-md text-right">
+<div class="inline-flex items-center gap-2">
+<button class="p-1 hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1 hover:text-error transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md font-mono font-bold text-primary">Q.03</td>
+<td class="py-3 px-space-md text-on-surface font-medium max-w-md truncate">Analyze the following pseudo-code algorithm and determine the worst-case asymptotic bounds...</td>
+<td class="py-3 px-space-md"><span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-[11px] font-semibold">Technical Logic</span></td>
+<td class="py-3 px-space-md font-mono text-tertiary font-semibold">+3.0 / -0.75</td>
+<td class="py-3 px-space-md text-on-surface-variant">MSQ Multiple</td>
+<td class="py-3 px-space-md text-right">
+<div class="inline-flex items-center gap-2">
+<button class="p-1 hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1 hover:text-error transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div></main></div></body></html>

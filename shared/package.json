@@ -1,0 +1,42 @@
+﻿{
+  "name": "@testprep/shared",
+  "version": "1.0.0",
+  "description": "Shared Zod schemas, TypeScript types, and pure functions for TestPrep",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./schemas/*": {
+      "import": "./dist/schemas/*.js",
+      "require": "./dist/schemas/*.js",
+      "types": "./dist/schemas/*.d.ts"
+    },
+    "./scoring/*": {
+      "import": "./dist/scoring/*.js",
+      "require": "./dist/scoring/*.js",
+      "types": "./dist/scoring/*.d.ts"
+    },
+    "./types": {
+      "import": "./dist/types/index.js",
+      "require": "./dist/types/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "dev": "tsc --build --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "rimraf": "^5.0.5"
+  },
+  "dependencies": {
+    "zod": "^3.22.4"
+  }
+}

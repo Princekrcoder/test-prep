@@ -1,0 +1,445 @@
+﻿generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_DATABASE_URL")
+}
+
+// ─── Enums ────────────────────────────────────────────────────────────────
+
+enum Role {
+  STUDENT
+  EDITOR
+  REVIEWER
+  ADMIN
+}
+
+enum PlanTier {
+  FREE
+  PRO
+  PREMIUM
+}
+
+enum Locale {
+  EN
+  HI
+}
+
+enum ExamFamily {
+  SERVICE_COMPANY
+  GOVERNMENT
+}
+
+enum TimingMode {
+  WHOLE_PAPER
+  SECTIONAL
+}
+
+enum QuestionType {
+  MCQ_SINGLE
+  MCQ_MULTI
+  NUMERIC
+  TRUE_FALSE
+}
+
+enum QuestionStatus {
+  DRAFT
+  IN_REVIEW
+  APPROVED
+  PUBLISHED
+  RETIRED
+}
+
+enum Difficulty {
+  EASY
+  MEDIUM
+  HARD
+}
+
+enum AttemptStatus {
+  IN_PROGRESS
+  SUBMITTED
+  AUTO_SUBMITTED
+  ABANDONED
+  EVALUATED
+}
+
+enum AnswerState {
+  NOT_VISITED
+  NOT_ANSWERED
+  ANSWERED
+  MARKED
+  ANSWERED_AND_MARKED
+}
+
+// ─── User & Auth ──────────────────────────────────────────────────────────
+
+model User {
+  id             String    @id @default(cuid())
+  email          String?   @unique
+  emailVerified  Boolean   @default(false)
+  mobile         String?   @unique
+  mobileVerified Boolean   @default(false)
+  name           String
+  avatarUrl      String?
+  role           Role      @default(STUDENT)
+  googleId       String?   @unique
+  planTier       PlanTier  @default(FREE)
+  planExpiresAt  DateTime?
+  createdAt      DateTime  @default(now())
+  deletedAt      DateTime?
+
+  profile   Profile?
+  sessions  Session[]
+  attempts  Attempt[]
+  bookmarks Bookmark[]
+  activity  DailyActivity[]
+  mastery   TopicMastery[]
+
+  @@index([planTier, planExpiresAt])
+  @@map("users")
+}
+
+model Profile {
+  id              String     @id @default(cuid())
+  userId          String     @unique
+  user            User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  college         String?
+  course          String?
+  branch          String?
+  currentYear     Int?
+  graduationYear  Int?
+  goal            ExamFamily?
+  preferredLocale Locale     @default(EN)
+  dailyGoalMinutes Int       @default(60)
+  onboardedAt     DateTime?
+
+  @@map("profiles")
+}
+
+model Session {
+  id          String    @id @default(cuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  refreshHash String    @unique
+  userAgent   String?
+  ip          String?
+  expiresAt   DateTime
+  revokedAt   DateTime?
+  createdAt   DateTime  @default(now())
+
+  @@index([userId, revokedAt])
+  @@map("sessions")
+}
+
+// ─── Content: Exams & Papers ──────────────────────────────────────────────
+
+model Exam {
+  id          String     @id @default(cuid())
+  slug        String     @unique
+  name        String
+  family      ExamFamily
+  summary     String?
+  syllabusMd  String?
+  iconKey     String?
+  sortOrder   Int        @default(0)
+  isActive    Boolean    @default(true)
+
+  papers TestPaper[]
+
+  @@index([family, isActive, sortOrder])
+  @@map("exams")
+}
+
+model TestPaper {
+  id               String     @id @default(cuid())
+  examId           String
+  exam             Exam       @relation(fields: [examId], references: [id])
+  slug             String
+  title            String
+  description      String?
+  timingMode       TimingMode @default(WHOLE_PAPER)
+  durationSeconds  Int
+  difficulty       Difficulty @default(MEDIUM)
+  isFree           Boolean    @default(false)
+  isPyp            Boolean    @default(false)
+  pypYear          Int?
+  availableLocales Locale[]   @default([EN])
+  publishedAt      DateTime?
+  scoringVersion   Int        @default(1)
+
+  sections     TestSection[]
+  attempts     Attempt[]
+  distribution ScoreDistribution?
+
+  @@unique([examId, slug])
+  @@index([examId, publishedAt])
+  @@map("test_papers")
+}
+
+model TestSection {
+  id              String    @id @default(cuid())
+  paperId         String
+  paper           TestPaper @relation(fields: [paperId], references: [id], onDelete: Cascade)
+  name            String
+  order           Int
+  durationSeconds Int?
+  marksCorrect    Decimal   @default(1) @db.Decimal(5, 2)
+  marksIncorrect  Decimal   @default(0) @db.Decimal(5, 2)
+  lockOnExit      Boolean   @default(false)
+  instructionsMd  String?
+
+  questions TestSectionQuestion[]
+  states    AttemptSectionState[]
+
+  @@unique([paperId, order])
+  @@map("test_sections")
+}
+
+// ─── Questions ────────────────────────────────────────────────────────────
+
+model Topic {
+  id       String  @id @default(cuid())
+  slug     String  @unique
+  name     String
+  parentId String?
+  parent   Topic?  @relation("TopicTree", fields: [parentId], references: [id])
+  children Topic[] @relation("TopicTree")
+
+  questions Question[]
+  mastery   TopicMastery[]
+
+  @@map("topics")
+}
+
+model Question {
+  id               String         @id @default(cuid())
+  type             QuestionType   @default(MCQ_SINGLE)
+  status           QuestionStatus @default(DRAFT)
+  version          Int            @default(1)
+  topicId          String
+  topic            Topic          @relation(fields: [topicId], references: [id])
+  difficulty       Difficulty     @default(MEDIUM)
+  stemMd           String
+  explanationMd    String?
+  imageUrl         String?
+  numericAnswer    Decimal?       @db.Decimal(14, 4)
+  numericTolerance Decimal?       @db.Decimal(10, 4)
+  pValue           Float?
+  discrimination   Float?
+  avgTimeMs        Int?
+  timesServed      Int            @default(0)
+  authorId         String?
+  reviewedById     String?
+  publishedAt      DateTime?
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+
+  options      QuestionOption[]
+  translations QuestionTranslation[]
+  placements   TestSectionQuestion[]
+  answers      AttemptAnswer[]
+  bookmarks    Bookmark[]
+
+  @@index([topicId, status, difficulty])
+  @@index([status, publishedAt])
+  @@map("questions")
+}
+
+model QuestionOption {
+  id         String  @id @default(cuid())
+  questionId String
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  order      Int
+  bodyMd     String
+  imageUrl   String?
+  isCorrect  Boolean @default(false)
+
+  translations OptionTranslation[]
+
+  @@unique([questionId, order])
+  @@map("question_options")
+}
+
+model QuestionTranslation {
+  id            String   @id @default(cuid())
+  questionId    String
+  question      Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  locale        Locale
+  stemMd        String
+  explanationMd String?
+
+  @@unique([questionId, locale])
+  @@map("question_translations")
+}
+
+model OptionTranslation {
+  id       String         @id @default(cuid())
+  optionId String
+  option   QuestionOption @relation(fields: [optionId], references: [id], onDelete: Cascade)
+  locale   Locale
+  bodyMd   String
+
+  @@unique([optionId, locale])
+  @@map("option_translations")
+}
+
+model TestSectionQuestion {
+  id                     String      @id @default(cuid())
+  sectionId              String
+  section                TestSection @relation(fields: [sectionId], references: [id], onDelete: Cascade)
+  questionId             String
+  question               Question    @relation(fields: [questionId], references: [id])
+  order                  Int
+  marksCorrectOverride   Decimal?    @db.Decimal(5, 2)
+  marksIncorrectOverride Decimal?    @db.Decimal(5, 2)
+
+  @@unique([sectionId, order])
+  @@unique([sectionId, questionId])
+  @@index([questionId])
+  @@map("test_section_questions")
+}
+
+// ─── Attempts ─────────────────────────────────────────────────────────────
+
+model Attempt {
+  id             String        @id @default(cuid())
+  userId         String
+  user           User          @relation(fields: [userId], references: [id])
+  paperId        String
+  paper          TestPaper     @relation(fields: [paperId], references: [id])
+  status         AttemptStatus @default(IN_PROGRESS)
+  locale         Locale        @default(EN)
+  startedAt      DateTime      @default(now())
+  expiresAt      DateTime
+  submittedAt    DateTime?
+  evaluatedAt    DateTime?
+  lastSeenAt     DateTime      @default(now())
+  shuffleSeed    String
+  blueprint      Json
+  scoringVersion Int           @default(1)
+  score          Decimal?      @db.Decimal(7, 2)
+  maxScore       Decimal?      @db.Decimal(7, 2)
+  correct        Int?
+  incorrect      Int?
+  unattempted    Int?
+  accuracy       Float?
+  timeTakenSec   Int?
+  percentile     Float?
+  rank           Int?
+
+  answers      AttemptAnswer[]
+  sectionState AttemptSectionState[]
+
+  @@index([userId, status, startedAt])
+  @@index([paperId, status, score])
+  @@index([status, expiresAt])
+  @@map("attempts")
+}
+
+model AttemptSectionState {
+  id          String      @id @default(cuid())
+  attemptId   String
+  attempt     Attempt     @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  sectionId   String
+  section     TestSection @relation(fields: [sectionId], references: [id])
+  enteredAt   DateTime?
+  expiresAt   DateTime?
+  isLocked    Boolean     @default(false)
+  timeSpentMs Int         @default(0)
+
+  @@unique([attemptId, sectionId])
+  @@map("attempt_section_states")
+}
+
+model AttemptAnswer {
+  id                String      @id @default(cuid())
+  attemptId         String
+  attempt           Attempt     @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  questionId        String
+  question          Question    @relation(fields: [questionId], references: [id])
+  selectedOptionIds String[]    @default([])
+  numericValue      Decimal?    @db.Decimal(14, 4)
+  state             AnswerState @default(NOT_VISITED)
+  revision          Int         @default(0)
+  timeSpentMs       Int         @default(0)
+  visitCount        Int         @default(0)
+  isCorrect         Boolean?
+  marksAwarded      Decimal?    @db.Decimal(5, 2)
+  updatedAt         DateTime    @updatedAt
+
+  @@unique([attemptId, questionId])
+  @@index([questionId, isCorrect])
+  @@map("attempt_answers")
+}
+
+// ─── Progress & Engagement ────────────────────────────────────────────────
+
+model TopicMastery {
+  userId    String
+  topicId   String
+  user      User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  topic     Topic  @relation(fields: [topicId], references: [id])
+  attempted Int    @default(0)
+  correct   Int    @default(0)
+  avgTimeMs Int    @default(0)
+  mastery   Float  @default(0)
+  lastSeenAt DateTime @default(now())
+
+  @@id([userId, topicId])
+  @@map("topic_mastery")
+}
+
+model DailyActivity {
+  userId        String
+  day           DateTime @db.Date
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  minutesActive Int      @default(0)
+  questionsDone Int      @default(0)
+  attemptsDone  Int      @default(0)
+
+  @@id([userId, day])
+  @@map("daily_activity")
+}
+
+model ScoreDistribution {
+  paperId    String    @id
+  paper      TestPaper @relation(fields: [paperId], references: [id], onDelete: Cascade)
+  sampleSize Int
+  buckets    Json
+  mean       Float
+  stdDev     Float
+  computedAt DateTime  @default(now())
+
+  @@map("score_distributions")
+}
+
+model Bookmark {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  questionId String
+  question   Question @relation(fields: [questionId], references: [id])
+  note       String?
+  createdAt  DateTime @default(now())
+
+  @@unique([userId, questionId])
+  @@map("bookmarks")
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  actorId    String?
+  action     String
+  entityType String
+  entityId   String
+  before     Json?
+  after      Json?
+  createdAt  DateTime @default(now())
+
+  @@index([entityType, entityId, createdAt])
+  @@map("audit_logs")
+}

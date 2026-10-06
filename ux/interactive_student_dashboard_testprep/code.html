@@ -1,0 +1,712 @@
+<!DOCTYPE html><html lang="en" style="width: 964px; height: 2253px; overflow: hidden; position: relative;"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>TestPrep - Student Dashboard</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            display: ["Plus Jakarta Sans", "sans-serif"],
+          },
+          colors: {
+            brand: {
+              50: "#eff6ff",
+              100: "#dbeafe",
+              500: "#3b82f6",
+              600: "#2563eb",
+              700: "#1d4ed8",
+            }
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #f8fafc;
+        color: #0f172a;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-900 antialiased min-h-screen">
+<!-- Left Sidebar -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-slate-900 text-slate-100 z-30 flex flex-col justify-between shadow-xl">
+<div class="flex flex-col">
+<!-- Logo Header -->
+<div class="h-16 px-6 flex items-center gap-3 border-b border-slate-800">
+<div class="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">school</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display text-lg font-extrabold tracking-tight text-white leading-tight">TestPrep</span>
+<span class="text-xs text-blue-300 font-medium leading-none mt-0.5">Student Portal</span>
+</div>
+</div>
+<!-- Navigation Section Label -->
+<div class="px-6 pt-5 pb-2">
+<span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Main Workspace</span>
+</div>
+<!-- Nav Links -->
+<nav class="flex flex-col gap-1 px-3" id="sidebar-nav">
+<a class="sidebar-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-blue-600 text-white font-semibold shadow-sm transition-all" data-name="dashboard" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="text-sm">Dashboard</span>
+</a>
+<a class="sidebar-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 font-medium transition-all" data-name="mock-tests" href="#">
+<span class="material-symbols-outlined text-[20px]">quiz</span>
+<span class="text-sm">Mock Tests</span>
+</a>
+<a class="sidebar-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 font-medium transition-all" data-name="previous-tests" href="#">
+<span class="material-symbols-outlined text-[20px]">history_edu</span>
+<span class="text-sm">Previous Tests</span>
+</a>
+<a class="sidebar-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 font-medium transition-all" data-name="performance" href="#">
+<span class="material-symbols-outlined text-[20px]">monitoring</span>
+<span class="text-sm">Performance Analysis</span>
+</a>
+<a class="sidebar-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 font-medium transition-all" data-name="bookmarks" href="#">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+<span class="text-sm">Bookmarks</span>
+</a>
+<a class="sidebar-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 font-medium transition-all" data-name="leaderboard" href="#">
+<span class="material-symbols-outlined text-[20px]">leaderboard</span>
+<span class="text-sm">Leaderboard</span>
+</a>
+</nav>
+</div>
+<!-- Bottom Account & System Nav -->
+<div class="flex flex-col gap-1 px-3 pb-6 pt-4 border-t border-slate-800">
+<div class="px-3 pb-2">
+<span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Account &amp; System</span>
+</div>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 font-medium transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="text-sm">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-red-400 hover:bg-red-500/10 hover:text-red-300 font-medium transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+<span class="text-sm">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Top Header -->
+<header class="fixed top-0 left-64 right-0 h-16 bg-white border-b border-slate-200 z-20 flex items-center justify-between px-8 shadow-sm">
+<!-- Global Search -->
+<div class="relative w-96">
+<span class="material-symbols-outlined absolute left-3.5 top-2.5 text-slate-400 text-[20px]">search</span>
+<input class="w-full pl-10 pr-12 py-2 rounded-xl bg-slate-100 text-slate-800 placeholder-slate-400 text-sm border border-slate-200 focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all" id="global-search" placeholder="Search tests, rank questions, or topics..." type="text">
+<kbd class="hidden sm:inline-flex items-center px-1.5 py-0.5 text-[11px] font-semibold text-slate-400 bg-white border border-slate-200 rounded absolute right-3 top-2.5 shadow-xs">⌘K</kbd>
+</div>
+<!-- Actions Area -->
+<div class="flex items-center gap-4">
+<!-- Notification Button & Dropdown Container -->
+<div class="relative">
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors relative" id="notif-btn" type="button">
+<span class="material-symbols-outlined text-[22px]">notifications</span>
+<span class="absolute top-2 right-2 w-2.5 h-2.5 rounded-full bg-red-500 ring-2 ring-white"></span>
+</button>
+<div class="hidden absolute right-0 mt-2 w-80 bg-white rounded-2xl shadow-xl border border-slate-200 py-2 z-40" id="notif-dropdown">
+<div class="px-4 py-2 border-b border-slate-100 flex items-center justify-between">
+<span class="text-sm font-bold text-slate-800">Notifications</span>
+<span class="text-[11px] bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full font-bold">2 New</span>
+</div>
+<div class="divide-y divide-slate-100 max-h-72 overflow-y-auto">
+<div class="p-3 hover:bg-slate-50 transition-colors cursor-pointer flex items-start gap-3">
+<span class="w-2 h-2 rounded-full bg-blue-600 mt-1.5 flex-shrink-0"></span>
+<div>
+<p class="text-xs font-semibold text-slate-800">New TCS NQT Mock Test uploaded</p>
+<p class="text-[11px] text-slate-500">Cognitive &amp; Tech updated with 2025 pattern.</p>
+<span class="text-[10px] text-slate-400 mt-1 block">10 mins ago</span>
+</div>
+</div>
+<div class="p-3 hover:bg-slate-50 transition-colors cursor-pointer flex items-start gap-3">
+<span class="w-2 h-2 rounded-full bg-emerald-600 mt-1.5 flex-shrink-0"></span>
+<div>
+<p class="text-xs font-semibold text-slate-800">Weekly All-India Rank updated</p>
+<p class="text-[11px] text-slate-500">You advanced 34 spots to #482 overall!</p>
+<span class="text-[10px] text-slate-400 mt-1 block">2 hours ago</span>
+</div>
+</div>
+</div>
+<div class="p-2 border-t border-slate-100 text-center">
+<a class="text-xs text-blue-600 hover:underline font-semibold" href="#">Mark all as read</a>
+</div>
+</div>
+</div>
+<!-- User Profile Pill & Dropdown -->
+<div class="relative">
+<button class="flex items-center gap-3 pl-1.5 pr-3 py-1.5 rounded-full bg-slate-100 hover:bg-slate-200 transition-colors" id="profile-btn" type="button">
+<div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[18px]">person</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="text-xs font-bold text-slate-800 leading-tight">Prince Kumar</span>
+<span class="text-[11px] text-slate-500 leading-none">Roll #TP-8841</span>
+</div>
+<span class="material-symbols-outlined text-slate-500 text-[18px] transition-transform" id="profile-arrow">expand_more</span>
+</button>
+<div class="hidden absolute right-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-slate-200 py-2 z-40" id="profile-menu">
+<div class="px-4 py-2 border-b border-slate-100">
+<p class="text-xs font-semibold text-slate-800">prince.kumar@university.edu</p>
+<span class="text-[10px] text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded inline-block mt-0.5">Premium Aspirant</span>
+</div>
+<div class="py-1 text-xs text-slate-700">
+<a class="flex items-center gap-2 px-4 py-2 hover:bg-slate-50" href="#">
+<span class="material-symbols-outlined text-[18px]">account_circle</span> My Profile
+            </a>
+<a class="flex items-center gap-2 px-4 py-2 hover:bg-slate-50" href="#">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span> Test History &amp; Reports
+            </a>
+<a class="flex items-center gap-2 px-4 py-2 hover:bg-slate-50" href="#">
+<span class="material-symbols-outlined text-[18px]">tune</span> Test Preferences
+            </a>
+</div>
+<div class="border-t border-slate-100 pt-1">
+<a class="flex items-center gap-2 px-4 py-2 text-red-600 hover:bg-red-50 text-xs font-semibold" href="#">
+<span class="material-symbols-outlined text-[18px]">logout</span> Sign Out
+            </a>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Body -->
+<main class="ml-64 pt-20 px-8 pb-16 bg-slate-50 min-h-screen">
+<div class="max-w-[1360px] mx-auto flex flex-col gap-8">
+<!-- Top Welcome Banner & Status -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+<div>
+<div class="flex items-center gap-2">
+<h1 class="font-display text-3xl font-extrabold text-slate-900 tracking-tight">Good Evening, Prince!</h1>
+<span class="text-3xl">👋</span>
+</div>
+<p class="text-sm text-slate-600 mt-1 flex items-center gap-2">
+<span>Practice today, Perform tomorrow.</span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+<span class="font-semibold text-blue-600">Discipline today, success tomorrow.</span>
+</p>
+</div>
+<!-- Active Prep Session Pill -->
+<div class="inline-flex items-center gap-2.5 bg-white border border-slate-200 px-4 py-2 rounded-xl shadow-xs self-start sm:self-auto">
+<div class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
+<span class="text-xs font-bold uppercase tracking-wider text-slate-600">Active Prep Session</span>
+<span class="text-xs font-bold text-slate-900 bg-slate-100 px-2 py-0.5 rounded">Fall 2025 Cycle</span>
+</div>
+</div>
+<!-- 4 KPI Stat Cards (100% visible immediately) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+<!-- Metric 1: Tests Attempted -->
+<div class="bg-white p-5 rounded-2xl shadow-xs border border-slate-200 flex items-center justify-between hover:shadow-md transition-shadow">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-slate-500 block">Total Tests Attempted</span>
+<div class="flex items-baseline gap-2.5 mt-1.5">
+<span class="font-display text-3xl font-extrabold text-slate-900 tracking-tight">18</span>
+<span class="text-xs font-bold text-emerald-600 flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> +3 this wk
+              </span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">assignment_turned_in</span>
+</div>
+</div>
+<!-- Metric 2: Average Score -->
+<div class="bg-white p-5 rounded-2xl shadow-xs border border-slate-200 flex items-center justify-between hover:shadow-md transition-shadow">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-slate-500 block">Average Score</span>
+<div class="flex items-baseline gap-2 mt-1.5">
+<span class="font-display text-3xl font-extrabold text-slate-900 tracking-tight">72%</span>
+<span class="text-xs font-bold text-emerald-600 flex items-center">
+<span class="material-symbols-outlined text-[18px]">arrow_drop_up</span> +4.5%
+              </span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">speed</span>
+</div>
+</div>
+<!-- Metric 3: Rank -->
+<div class="bg-white p-5 rounded-2xl shadow-xs border border-slate-200 flex items-center justify-between hover:shadow-md transition-shadow">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-slate-500 block">Rank (All Users)</span>
+<div class="flex items-baseline gap-2 mt-1.5">
+<span class="font-display text-3xl font-extrabold text-slate-900 tracking-tight">#482</span>
+<span class="text-xs text-slate-500 font-medium">of 14.8k</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">military_tech</span>
+</div>
+</div>
+<!-- Metric 4: Streak -->
+<div class="bg-white p-5 rounded-2xl shadow-xs border border-slate-200 flex items-center justify-between hover:shadow-md transition-shadow">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-slate-500 block">Current Streak</span>
+<div class="flex items-baseline gap-1 mt-1.5">
+<span class="font-display text-3xl font-extrabold text-slate-900 tracking-tight">7 Days</span>
+<span class="text-xl">🔥</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">local_fire_department</span>
+</div>
+</div>
+</div>
+<!-- Target Exam Ready Hero Promotional Banner -->
+<div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-50 via-indigo-50/50 to-slate-100 p-8 lg:p-10 border border-blue-100/80 shadow-xs flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="max-w-xl z-10 flex flex-col items-start">
+<span class="bg-blue-600 text-white text-[11px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-flex items-center gap-1.5 shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+            Target Exam Ready
+          </span>
+<h2 class="font-display text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight">
+            Your Success Starts with Practice
+          </h2>
+<p class="text-sm lg:text-base text-slate-600 mt-2 mb-6 leading-relaxed">
+            Take full-length adaptive mock tests, analyze granular topic bottlenecks, and master real test conditions with timed simulation runs.
+          </p>
+<a class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm px-6 py-3 rounded-xl shadow-md transition-all group" href="#recommended-series">
+<span>Start a Mock Test</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Graphic Image Card -->
+<div class="relative w-full md:w-80 h-48 md:h-52 rounded-2xl overflow-hidden shadow-md flex-shrink-0 border border-slate-200">
+<img alt="Student studying at workspace" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSdqKUj4tx-JMt7YpiwtMds7lVuRcVevCiwemuyScQ5j7hgRzsrb3hXMmBlH9bPWxCnCl2N_MGgWt-3e7xcDD1M3woX5vFH8v_l7RrAfeeSEJWPybmZGtJJyKMHGZyqxGWE28i6_lyPkqVMmJuWzy1Kyc3evPwbxxcM9OwIaP5OmYmS-AfuAJs7zyHS2Xwk6oG1wG5lpi_PXa4WM1bN1yRBCtfPD4HcAbIJlAp_8IEml1l04RViAx3">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-4">
+<span class="text-xs text-white font-medium italic">"Discipline today, Success tomorrow"</span>
+</div>
+</div>
+</div>
+<!-- Continue Your Preparation Section -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-display text-xl font-bold text-slate-900">Continue Your Preparation</h2>
+<p class="text-xs sm:text-sm text-slate-500">Pick up subject modules where you left off</p>
+</div>
+<a class="text-sm font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1" href="#">
+<span>View All</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- 4 Subject Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+<!-- Card 1: Quantitative Aptitude -->
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-11 h-11 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">calculate</span>
+</div>
+<span class="text-xs bg-slate-100 text-slate-600 font-semibold px-2.5 py-1 rounded-full">120+ Tests</span>
+</div>
+<h3 class="font-display text-base font-bold text-slate-900">Quantitative Aptitude</h3>
+<p class="text-xs text-slate-500 mt-1 leading-relaxed">Arithmetic, Algebra, Data Interpretation &amp; Geometry</p>
+</div>
+<div class="mt-6 pt-4 border-t border-slate-100">
+<div class="flex justify-between items-center text-xs text-slate-600 mb-1.5 font-medium">
+<span>Overall Progress</span>
+<span class="font-bold text-slate-900">64%</span>
+</div>
+<div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden mb-3">
+<div class="bg-blue-600 h-full rounded-full" style="width: 64%"></div>
+</div>
+<a class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1" href="#">
+<span>Start Practice</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 2: Logical Reasoning -->
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">psychology</span>
+</div>
+<span class="text-xs bg-slate-100 text-slate-600 font-semibold px-2.5 py-1 rounded-full">100+ Tests</span>
+</div>
+<h3 class="font-display text-base font-bold text-slate-900">Logical Reasoning</h3>
+<p class="text-xs text-slate-500 mt-1 leading-relaxed">Syllogisms, Seating arrangement, Puzzles &amp; Series</p>
+</div>
+<div class="mt-6 pt-4 border-t border-slate-100">
+<div class="flex justify-between items-center text-xs text-slate-600 mb-1.5 font-medium">
+<span>Overall Progress</span>
+<span class="font-bold text-slate-900">82%</span>
+</div>
+<div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden mb-3">
+<div class="bg-emerald-600 h-full rounded-full" style="width: 82%"></div>
+</div>
+<a class="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center gap-1" href="#">
+<span>Start Practice</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 3: Verbal Ability -->
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-11 h-11 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">menu_book</span>
+</div>
+<span class="text-xs bg-slate-100 text-slate-600 font-semibold px-2.5 py-1 rounded-full">80+ Tests</span>
+</div>
+<h3 class="font-display text-base font-bold text-slate-900">Verbal Ability</h3>
+<p class="text-xs text-slate-500 mt-1 leading-relaxed">Reading Comprehension, Grammar &amp; Vocabulary</p>
+</div>
+<div class="mt-6 pt-4 border-t border-slate-100">
+<div class="flex justify-between items-center text-xs text-slate-600 mb-1.5 font-medium">
+<span>Overall Progress</span>
+<span class="font-bold text-slate-900">45%</span>
+</div>
+<div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden mb-3">
+<div class="bg-rose-500 h-full rounded-full" style="width: 45%"></div>
+</div>
+<a class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1" href="#">
+<span>Start Practice</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 4: Computer Science -->
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">terminal</span>
+</div>
+<span class="text-xs bg-slate-100 text-slate-600 font-semibold px-2.5 py-1 rounded-full">60+ Tests</span>
+</div>
+<h3 class="font-display text-base font-bold text-slate-900">Computer Science</h3>
+<p class="text-xs text-slate-500 mt-1 leading-relaxed">Data Structures, DBMS, Networking &amp; Pseudocode</p>
+</div>
+<div class="mt-6 pt-4 border-t border-slate-100">
+<div class="flex justify-between items-center text-xs text-slate-600 mb-1.5 font-medium">
+<span>Overall Progress</span>
+<span class="font-bold text-slate-900">58%</span>
+</div>
+<div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden mb-3">
+<div class="bg-indigo-600 h-full rounded-full" style="width: 58%"></div>
+</div>
+<a class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1" href="#">
+<span>Start Practice</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Recommended Test Series Section -->
+<div class="flex flex-col gap-5 pt-2" id="recommended-series">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div>
+<h2 class="font-display text-xl font-bold text-slate-900">Recommended Placement &amp; Govt. Test Series</h2>
+<p class="text-xs sm:text-sm text-slate-500">Simulated according to the most updated 2024-2025 examination rubrics</p>
+</div>
+<!-- Tab Switcher -->
+<div class="flex items-center p-1 bg-slate-200/80 rounded-xl self-start sm:self-auto">
+<button class="px-4 py-1.5 rounded-lg bg-white text-blue-700 font-bold text-xs shadow-xs transition-all" id="tab-service" type="button">
+              Service Companies
+            </button>
+<button class="px-4 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 font-semibold text-xs transition-all" id="tab-govt" type="button">
+              Government Exams
+            </button>
+</div>
+</div>
+<!-- Service Companies Cards (Visible by Default) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5" id="grid-service">
+<!-- Card 1: TCS NQT -->
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-700 font-extrabold text-sm flex items-center justify-center">
+                  TCS
+                </div>
+<span class="text-[11px] font-bold px-2 py-0.5 rounded bg-blue-50 text-blue-700">Latest Pattern</span>
+</div>
+<h4 class="font-display text-base font-bold text-slate-900">TCS NQT 2025</h4>
+<p class="text-xs text-slate-500 mt-0.5">50+ Tests (Cognitive &amp; Tech)</p>
+<div class="flex items-center gap-4 text-xs text-slate-600 mt-4">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-slate-400">timer</span> 120 mins</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-slate-400">groups</span> 24k taken</span>
+</div>
+</div>
+<button class="take-test-btn mt-5 w-full py-2.5 rounded-xl bg-slate-100 hover:bg-blue-600 hover:text-white text-blue-700 font-bold text-xs transition-colors" data-exam="TCS NQT 2025" type="button">
+              Take Test
+            </button>
+</div>
+<!-- Card 2: Accenture -->
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 font-black text-base flex items-center justify-center">
+                  &gt;
+                </div>
+<span class="text-[11px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-700">Placement Papers</span>
+</div>
+<h4 class="font-display text-base font-bold text-slate-900">Accenture Assessment</h4>
+<p class="text-xs text-slate-500 mt-0.5">40+ Full Tests</p>
+<div class="flex items-center gap-4 text-xs text-slate-600 mt-4">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-slate-400">timer</span> 90 mins</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-slate-400">groups</span> 18k taken</span>
+</div>
+</div>
+<button class="take-test-btn mt-5 w-full py-2.5 rounded-xl bg-slate-100 hover:bg-blue-600 hover:text-white text-blue-700 font-bold text-xs transition-colors" data-exam="Accenture Assessment" type="button">
+              Take Test
+            </button>
+</div>
+<!-- Card 3: Infosys -->
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 font-bold text-xs flex items-center justify-center">
+                  INFY
+                </div>
+<span class="text-[11px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-700">Specialist Series</span>
+</div>
+<h4 class="font-display text-base font-bold text-slate-900">Infosys DSE / SP</h4>
+<p class="text-xs text-slate-500 mt-0.5">35+ Technical &amp; Aptitude</p>
+<div class="flex items-center gap-4 text-xs text-slate-600 mt-4">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-slate-400">timer</span> 100 mins</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-slate-400">groups</span> 19k taken</span>
+</div>
+</div>
+<button class="take-test-btn mt-5 w-full py-2.5 rounded-xl bg-slate-100 hover:bg-blue-600 hover:text-white text-blue-700 font-bold text-xs transition-colors" data-exam="Infosys DSE / SP" type="button">
+              Take Test
+            </button>
+</div>
+<!-- Card 4: Cognizant GenC -->
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-700 font-bold text-xs flex items-center justify-center">
+                  CTS
+                </div>
+<span class="text-[11px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-700">GenC Elevate</span>
+</div>
+<h4 class="font-display text-base font-bold text-slate-900">Cognizant GenC Next</h4>
+<p class="text-xs text-slate-500 mt-0.5">45+ Full Practice Sets</p>
+<div class="flex items-center gap-4 text-xs text-slate-600 mt-4">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-slate-400">timer</span> 110 mins</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-slate-400">groups</span> 15k taken</span>
+</div>
+</div>
+<button class="take-test-btn mt-5 w-full py-2.5 rounded-xl bg-slate-100 hover:bg-blue-600 hover:text-white text-blue-700 font-bold text-xs transition-colors" data-exam="Cognizant GenC Next" type="button">
+              Take Test
+            </button>
+</div>
+</div>
+<!-- Government Exams Cards (Hidden initially, shown on click) -->
+<div class="hidden grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5" id="grid-govt">
+<!-- Card 1: SSC CGL -->
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 font-bold text-xs flex items-center justify-center">
+                  SSC
+                </div>
+<span class="text-[11px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-700">PYQ Mock Series</span>
+</div>
+<h4 class="font-display text-base font-bold text-slate-900">SSC CGL Tier 1</h4>
+<p class="text-xs text-slate-500 mt-0.5">75+ Sectional &amp; Full Mock</p>
+<div class="flex items-center gap-4 text-xs text-slate-600 mt-4">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-slate-400">timer</span> 60 mins</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-slate-400">groups</span> 32k taken</span>
+</div>
+</div>
+<button class="take-test-btn mt-5 w-full py-2.5 rounded-xl bg-slate-100 hover:bg-blue-600 hover:text-white text-blue-700 font-bold text-xs transition-colors" data-exam="SSC CGL Tier 1" type="button">
+              Take Test
+            </button>
+</div>
+<!-- Card 2: Banking Prelims -->
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 font-bold text-xs flex items-center justify-center">
+                  IBPS
+                </div>
+<span class="text-[11px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-700">PO &amp; Clerk</span>
+</div>
+<h4 class="font-display text-base font-bold text-slate-900">Banking Prelims</h4>
+<p class="text-xs text-slate-500 mt-0.5">60+ Tests (SBI, IBPS, RRB)</p>
+<div class="flex items-center gap-4 text-xs text-slate-600 mt-4">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-slate-400">timer</span> 60 mins</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-slate-400">groups</span> 14k taken</span>
+</div>
+</div>
+<button class="take-test-btn mt-5 w-full py-2.5 rounded-xl bg-slate-100 hover:bg-blue-600 hover:text-white text-blue-700 font-bold text-xs transition-colors" data-exam="Banking Prelims" type="button">
+              Take Test
+            </button>
+</div>
+<!-- Card 3: Railways RRB -->
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 font-bold text-xs flex items-center justify-center">
+                  RRB
+                </div>
+<span class="text-[11px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-700">CBT 1 &amp; 2</span>
+</div>
+<h4 class="font-display text-base font-bold text-slate-900">Railways RRB NTPC</h4>
+<p class="text-xs text-slate-500 mt-0.5">50+ Speed &amp; Accuracy Tests</p>
+<div class="flex items-center gap-4 text-xs text-slate-600 mt-4">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-slate-400">timer</span> 90 mins</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-slate-400">groups</span> 27k taken</span>
+</div>
+</div>
+<button class="take-test-btn mt-5 w-full py-2.5 rounded-xl bg-slate-100 hover:bg-blue-600 hover:text-white text-blue-700 font-bold text-xs transition-colors" data-exam="Railways RRB NTPC" type="button">
+              Take Test
+            </button>
+</div>
+<!-- Card 4: UPSC CSAT -->
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 font-bold text-xs flex items-center justify-center">
+                  UPSC
+                </div>
+<span class="text-[11px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-700">Prelims Paper II</span>
+</div>
+<h4 class="font-display text-base font-bold text-slate-900">UPSC CSAT Series</h4>
+<p class="text-xs text-slate-500 mt-0.5">40+ Comprehensive Papers</p>
+<div class="flex items-center gap-4 text-xs text-slate-600 mt-4">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-slate-400">timer</span> 120 mins</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-slate-400">groups</span> 12k taken</span>
+</div>
+</div>
+<button class="take-test-btn mt-5 w-full py-2.5 rounded-xl bg-slate-100 hover:bg-blue-600 hover:text-white text-blue-700 font-bold text-xs transition-colors" data-exam="UPSC CSAT Series" type="button">
+              Take Test
+            </button>
+</div>
+</div>
+</div>
+<!-- Bottom Motivational Quote Bar -->
+<div class="w-full bg-slate-100 border border-slate-200 rounded-2xl px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-xs">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 font-black">
+            ”
+          </div>
+<p class="text-sm font-medium text-slate-700 italic">
+            "The more you practice, the luckier you get."
+          </p>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-slate-600">— Gary Player</span>
+<span class="inline-block w-1 h-1 rounded-full bg-slate-400"></span>
+<span class="text-xs font-bold text-blue-600">Pro-Tip #14</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Interactive JavaScript Logic -->
+<script>
+    // Tab switching for exam series
+    const tabService = document.getElementById('tab-service');
+    const tabGovt = document.getElementById('tab-govt');
+    const gridService = document.getElementById('grid-service');
+    const gridGovt = document.getElementById('grid-govt');
+
+    tabService.addEventListener('click', () => {
+      tabService.className = "px-4 py-1.5 rounded-lg bg-white text-blue-700 font-bold text-xs shadow-xs transition-all";
+      tabGovt.className = "px-4 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 font-semibold text-xs transition-all";
+      gridGovt.classList.add('hidden');
+      gridGovt.classList.remove('grid');
+      gridService.classList.remove('hidden');
+      gridService.classList.add('grid');
+    });
+
+    tabGovt.addEventListener('click', () => {
+      tabGovt.className = "px-4 py-1.5 rounded-lg bg-white text-blue-700 font-bold text-xs shadow-xs transition-all";
+      tabService.className = "px-4 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 font-semibold text-xs transition-all";
+      gridService.classList.add('hidden');
+      gridService.classList.remove('grid');
+      gridGovt.classList.remove('hidden');
+      gridGovt.classList.add('grid');
+    });
+
+    // Dropdown toggles
+    const notifBtn = document.getElementById('notif-btn');
+    const notifDropdown = document.getElementById('notif-dropdown');
+    const profileBtn = document.getElementById('profile-btn');
+    const profileMenu = document.getElementById('profile-menu');
+    const profileArrow = document.getElementById('profile-arrow');
+
+    function closeAll() {
+      notifDropdown.classList.add('hidden');
+      profileMenu.classList.add('hidden');
+      profileArrow.classList.remove('rotate-180');
+    }
+
+    notifBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isHidden = notifDropdown.classList.contains('hidden');
+      closeAll();
+      if (isHidden) {
+        notifDropdown.classList.remove('hidden');
+      }
+    });
+
+    profileBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isHidden = profileMenu.classList.contains('hidden');
+      closeAll();
+      if (isHidden) {
+        profileMenu.classList.remove('hidden');
+        profileArrow.classList.add('rotate-180');
+      }
+    });
+
+    document.addEventListener('click', () => {
+      closeAll();
+    });
+
+    // Keyboard shortcut for search
+    document.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        const searchInput = document.getElementById('global-search');
+        if (searchInput) searchInput.focus();
+      }
+      if (e.key === 'Escape') {
+        closeAll();
+      }
+    });
+
+    // Test buttons feedback
+    document.querySelectorAll('.take-test-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const exam = btn.getAttribute('data-exam') || 'Mock Test';
+        btn.innerText = 'Launching...';
+        setTimeout(() => {
+          alert(`Starting mock environment for: ${exam}`);
+          btn.innerText = 'Take Test';
+        }, 400);
+      });
+    });
+
+    // Sidebar active switch
+    document.querySelectorAll('.sidebar-item').forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelectorAll('.sidebar-item').forEach(si => {
+          si.className = 'sidebar-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 font-medium transition-all';
+        });
+        item.className = 'sidebar-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-blue-600 text-white font-semibold shadow-sm transition-all';
+      });
+    });
+  </script>
+<div id="snapdom-sandbox" data-snapdom-sandbox="true" aria-hidden="true" style="position: absolute; left: -9999px; top: -9999px; width: 0px; height: 0px; overflow: hidden;"></div></body></html>

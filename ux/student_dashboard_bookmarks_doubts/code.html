@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container": "#e5eeff",
+            "on-surface-variant": "#434655",
+            "secondary": "#565e74",
+            "primary-container": "#1e60f3",
+            "surface-container-highest": "#d3e4fe",
+            "background": "#f8f9ff",
+            "on-surface": "#0b1c30",
+            "error-container": "#ffdad6",
+            "on-error-container": "#93000a",
+            "error": "#ba1a1a",
+            "surface-bright": "#f8f9ff",
+            "surface-dim": "#cbdbf5",
+            "tertiary-container": "#007c55",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-container": "#edeeff",
+            "on-background": "#0b1c30",
+            "primary": "#0048c9",
+            "tertiary": "#006141",
+            "secondary-container": "#dae2fd",
+            "on-secondary-fixed": "#131b2e",
+            "surface-container-low": "#eff4ff",
+            "surface-container-high": "#dce9ff",
+            "surface": "#f8f9ff"
+          },
+          fontFamily: {
+            headline: ["Plus Jakarta Sans", "sans-serif"],
+            body: ["Inter", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-background text-on-surface font-body min-h-screen">
+  <!-- Persistent Left Sidebar -->
+  <aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between">
+    <div class="flex flex-col">
+      <!-- App Brand Logo -->
+      <div class="h-16 px-6 flex items-center gap-2.5 bg-surface-container-lowest border-b border-surface-container-low">
+        <div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-white shadow-sm">
+          <span class="material-symbols-outlined text-[22px]">school</span>
+        </div>
+        <span class="font-headline font-bold text-xl tracking-tight text-on-surface">TestPrep</span>
+      </div>
+
+      <!-- Navigation links -->
+      <nav class="px-3 pt-4 flex flex-col gap-1">
+        <a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="#">
+          <span class="material-symbols-outlined text-[20px]">dashboard</span>
+          <span>Dashboard</span>
+        </a>
+        <a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="#">
+          <span class="material-symbols-outlined text-[20px]">menu_book</span>
+          <span>My Test Library</span>
+        </a>
+        <a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="#">
+          <span class="material-symbols-outlined text-[20px]">bar_chart</span>
+          <span>Analytics & Reports</span>
+        </a>
+        <a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-headline font-semibold text-sm bg-primary text-white shadow-sm transition-colors" href="#">
+          <span class="material-symbols-outlined text-[20px]">bookmark</span>
+          <span>Bookmarks & Doubts</span>
+        </a>
+        <a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="#">
+          <span class="material-symbols-outlined text-[20px]">person</span>
+          <span>Profile & Billing</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Bottom Sidebar Pass status -->
+    <div class="p-3 flex flex-col gap-2">
+      <div class="p-3 rounded-xl bg-surface-container-low border border-surface-container">
+        <div class="flex items-center gap-1.5 mb-1">
+          <span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+          <span class="font-headline font-semibold text-xs text-on-surface">Pro Super Pass</span>
+        </div>
+        <p class="text-xs text-on-surface-variant">Valid till 31 Dec 2026</p>
+      </div>
+      <a class="flex items-center gap-3 px-3.5 py-2 rounded-xl text-sm text-on-surface-variant hover:bg-surface-container-high transition-colors" href="#">
+        <span class="material-symbols-outlined text-[20px]">logout</span>
+        <span>Logout</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content Wrapper with Left Margin for Sidebar -->
+  <div class="pl-64 flex flex-col min-h-screen">
+    <!-- Persistent Top Header -->
+    <header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-surface-container-low z-40 flex items-center justify-between px-8">
+      <div class="flex items-center gap-4 flex-1 max-w-xl">
+        <div class="relative w-full">
+          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+          <input class="w-full h-10 pl-10 pr-4 bg-surface-container-low rounded-xl text-on-surface text-sm focus:outline-none focus:bg-surface-container" placeholder="Search mock tests, bookmarks, topics..." type="text"/>
+        </div>
+        <div class="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary-container text-on-secondary-fixed whitespace-nowrap text-xs font-medium">
+          <span class="material-symbols-outlined text-[16px] text-primary">flag</span>
+          <span>Target: JEE Main & TCS NQT 2026</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <button class="relative w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+          <span class="material-symbols-outlined text-[22px]">notifications</span>
+          <span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error"></span>
+        </button>
+        <div class="flex items-center gap-2.5 pl-1 py-1 pr-3 rounded-full bg-surface-container-low">
+          <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold">PK</div>
+          <div class="hidden sm:flex flex-col text-left">
+            <span class="font-headline font-semibold text-xs text-on-surface leading-none">Prince Kumar</span>
+            <span class="text-[11px] text-on-surface-variant leading-none mt-0.5">#TP-2026-MCA-904</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Body -->
+    <main class="pt-20 px-8 pb-12 flex-1 flex flex-col gap-6">
+      <!-- Title & Action Banner -->
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-surface-container-lowest p-6 rounded-2xl border border-surface-container-low shadow-sm">
+        <div class="flex flex-col gap-1">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-semibold text-xs uppercase tracking-wider">Exam Prep Desk</span>
+            <span class="text-on-surface-variant text-xs">• Session 2025-2026</span>
+          </div>
+          <h1 class="font-headline font-bold text-2xl text-on-surface tracking-tight">Bookmarks & Doubts Resolution Desk</h1>
+          <p class="text-sm text-on-surface-variant">Review marked conceptual questions, track live mentor resolution tickets, and strengthen weak areas.</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="px-4 py-2.5 rounded-xl bg-primary text-white font-headline font-semibold text-sm hover:bg-primary-container transition-all shadow-sm flex items-center gap-2">
+            <span class="material-symbols-outlined text-[20px]">add_comment</span>
+            <span>+ Ask Academic Doubt</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Strip -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="p-4 rounded-xl bg-surface-container-lowest border border-surface-container-low shadow-sm flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-[24px]">bookmark</span>
+          </div>
+          <div>
+            <span class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Saved Questions</span>
+            <div class="flex items-baseline gap-2 mt-0.5">
+              <span class="font-headline font-bold text-xl text-on-surface">14</span>
+              <span class="text-xs text-tertiary font-semibold">+2 new this week</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-surface-container-lowest border border-surface-container-low shadow-sm flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-fixed">
+            <span class="material-symbols-outlined text-[24px]">contact_support</span>
+          </div>
+          <div>
+            <span class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Faculty Tickets</span>
+            <div class="flex items-baseline gap-2 mt-0.5">
+              <span class="font-headline font-bold text-xl text-on-surface">6</span>
+              <span class="text-xs text-on-surface-variant">Total Logged</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-surface-container-lowest border border-surface-container-low shadow-sm flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-surface-container-low flex items-center justify-center text-tertiary">
+            <span class="material-symbols-outlined text-[24px]">verified</span>
+          </div>
+          <div>
+            <span class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Resolved Doubts</span>
+            <div class="flex items-baseline gap-2 mt-0.5">
+              <span class="font-headline font-bold text-xl text-on-surface">5</span>
+              <span class="text-xs text-tertiary font-semibold">(1 In-Review)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-surface-container-lowest border border-surface-container-low shadow-sm flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-[24px]">speed</span>
+          </div>
+          <div>
+            <span class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">SLA Response Speed</span>
+            <div class="flex items-baseline gap-2 mt-0.5">
+              <span class="font-headline font-bold text-xl text-on-surface">94.8%</span>
+              <span class="text-xs text-primary font-semibold">&lt; 30m avg turnaround</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Segmented Navigation & Subject Filters -->
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-surface-container-low p-2 rounded-xl">
+        <div class="inline-flex gap-1.5">
+          <button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-lowest text-primary font-headline font-semibold text-sm shadow-sm">
+            <span class="material-symbols-outlined text-[18px]">bookmark</span>
+            <span>Saved Questions</span>
+            <span class="ml-1 px-1.5 py-0.5 bg-primary/10 text-primary font-bold text-xs rounded-full">14</span>
+          </button>
+          <button class="flex items-center gap-2 px-4 py-2 rounded-lg text-on-surface-variant hover:text-on-surface font-headline font-semibold text-sm transition-colors">
+            <span class="material-symbols-outlined text-[18px]">forum</span>
+            <span>Faculty Doubt Tickets</span>
+            <span class="ml-1 px-1.5 py-0.5 bg-surface-container-highest text-on-surface-variant font-bold text-xs rounded-full">6</span>
+          </button>
+        </div>
+
+        <div class="flex items-center gap-2 overflow-x-auto">
+          <button class="px-3 py-1.5 rounded-lg bg-primary text-white text-xs font-semibold whitespace-nowrap shadow-sm">All Subjects</button>
+          <button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface text-xs font-medium whitespace-nowrap">Quantitative Aptitude</button>
+          <button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface text-xs font-medium whitespace-nowrap">Logical Reasoning</button>
+          <button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface text-xs font-medium whitespace-nowrap">Physics & Mechanics</button>
+          <button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface text-xs font-medium whitespace-nowrap">Computer Logic</button>
+        </div>
+      </div>
+
+      <!-- TWO-COLUMN WORKSPACE: LEFT (BOOKMARKED CARDS), RIGHT (LIVE TICKETS & ASK FORM) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- LEFT 7 COLS: Bookmarked Question Cards -->
+        <div class="lg:col-span-7 flex flex-col gap-5">
+          <h2 class="font-headline font-bold text-lg text-on-surface flex items-center justify-between">
+            <span>High-Yield Revision Question Deck</span>
+            <span class="text-xs font-normal text-on-surface-variant">Showing 2 of 14</span>
+          </h2>
+
+          <!-- Bookmark Item 1 -->
+          <div class="bg-surface-container-lowest rounded-2xl p-5 border border-surface-container-low shadow-sm flex flex-col gap-4">
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-surface-container-low">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-1 rounded-md bg-secondary-container text-on-secondary-fixed text-xs font-semibold">TCS NQT Advanced Mock 04</span>
+                <span class="text-xs text-on-surface-variant">•</span>
+                <span class="font-headline font-bold text-sm text-on-surface">Question #28</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container text-xs font-semibold">Hard • 32% Accuracy</span>
+                <span class="text-xs text-on-surface-variant flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[14px]">event</span> 12 Feb 2026
+                </span>
+              </div>
+            </div>
+
+            <!-- Question Stem -->
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center gap-1.5 text-primary text-xs font-semibold">
+                <span class="material-symbols-outlined text-[16px]">functions</span>
+                <span>Topic: Bayesian Probability & Manufacturing Quality Control</span>
+              </div>
+              <p class="text-sm text-on-surface leading-relaxed">
+                Factory Line A manufactures 60% of electronic controllers with a defect rate of 2%. Factory Line B manufactures the remaining 40% with a defect rate of 5%. If a randomly tested controller from the assembled inventory is defective, what is the exact posterior probability that it was produced on Line B?
+              </p>
+              
+              <!-- Formula Banner -->
+              <div class="p-3 rounded-xl bg-surface-container-low text-xs font-mono text-primary flex items-center justify-between">
+                <span>P(B|D) = [ P(D|B) · P(B) ] / [ P(D|A)·P(A) + P(D|B)·P(B) ]</span>
+                <span class="text-[11px] text-on-surface-variant font-sans font-medium">Bayes Formulation</span>
+              </div>
+            </div>
+
+            <!-- Options Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <div class="p-2.5 rounded-xl bg-surface-container-low flex items-center justify-between text-xs">
+                <div class="flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center font-bold text-secondary">A</span>
+                  <span>0.375 (3 / 8)</span>
+                </div>
+              </div>
+              <div class="p-2.5 rounded-xl bg-error-container/40 border border-error/20 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-full bg-error text-white flex items-center justify-center font-bold">B</span>
+                  <span class="font-medium text-error">0.500 (1 / 2)</span>
+                </div>
+                <span class="px-1.5 py-0.5 rounded bg-error text-white text-[10px] font-bold">Your Pick</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-tertiary-container/10 border border-tertiary-container/30 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-full bg-tertiary text-white flex items-center justify-center font-bold">C</span>
+                  <span class="font-semibold text-tertiary">0.625 (5 / 8 = 62.5%)</span>
+                </div>
+                <span class="px-1.5 py-0.5 rounded bg-tertiary text-white text-[10px] font-bold">Correct Key</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-surface-container-low flex items-center justify-between text-xs">
+                <div class="flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center font-bold text-secondary">D</span>
+                  <span>0.714 (5 / 7)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Detailed Step-by-Step Logic -->
+            <div class="p-3.5 rounded-xl bg-surface-container-low border border-surface-container flex flex-col gap-2 text-xs">
+              <div class="flex items-center justify-between font-headline font-semibold text-primary">
+                <span class="flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-[16px]">lightbulb</span>
+                  <span>Fast Integer Shortcut (TCS Strategy):</span>
+                </span>
+                <span class="text-[11px] text-tertiary font-bold">Saves 90 seconds</span>
+              </div>
+              <p class="text-on-surface text-xs leading-relaxed">
+                Assume total production of 1,000 controllers.<br/>
+                • Line A = 600 units → 2% defects = 12 defective units.<br/>
+                • Line B = 400 units → 5% defects = 20 defective units.<br/>
+                • Total defects = 12 + 20 = 32 units. Posterior Line B = 20 / 32 = <strong>5 / 8 = 0.625</strong>.
+              </p>
+            </div>
+
+            <!-- Card Actions -->
+            <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-surface-container-low">
+              <div class="flex items-center gap-2">
+                <button class="px-3 py-1.5 rounded-lg bg-primary text-white text-xs font-semibold hover:bg-primary-container transition-colors flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[16px]">replay</span>
+                  <span>Practice 3 Similar Variants</span>
+                </button>
+                <button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface text-xs font-medium hover:bg-surface-container-high transition-colors flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[16px]">help_outline</span>
+                  <span>Ask Mentor on this Q</span>
+                </button>
+              </div>
+              <button class="text-error hover:bg-error-container/30 px-2.5 py-1 rounded-lg text-xs font-medium transition-colors flex items-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">bookmark_remove</span>
+                <span>Remove</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Bookmark Item 2 -->
+          <div class="bg-surface-container-lowest rounded-2xl p-5 border border-surface-container-low shadow-sm flex flex-col gap-4">
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-surface-container-low">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-1 rounded-md bg-secondary-container text-on-secondary-fixed text-xs font-semibold">JEE Advanced Drill 02</span>
+                <span class="text-xs text-on-surface-variant">•</span>
+                <span class="font-headline font-bold text-sm text-on-surface">Question #14</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary text-xs font-semibold">Medium • 54% Accuracy</span>
+                <span class="text-xs text-on-surface-variant flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[14px]">event</span> 08 Feb 2026
+                </span>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center gap-1.5 text-primary text-xs font-semibold">
+                <span class="material-symbols-outlined text-[16px]">rotate_right</span>
+                <span>Topic: Moment of Inertia & Stepped Pulley Equilibrium</span>
+              </div>
+              <p class="text-sm text-on-surface leading-relaxed">
+                A compound stepped pulley consists of two concentric cylinders with moment of inertia I = 0.48 kg·m². The inner hub has radius r₁ = 0.15 m carrying weight m₁ = 4 kg, while the outer rim with radius r₂ = 0.35 m carries weight m₂ = 2 kg on opposing ropes. Determine the net angular acceleration α upon release from rest.
+              </p>
+            </div>
+
+            <!-- Formula snippet box -->
+            <div class="p-3 rounded-xl bg-surface-container-low flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-on-surface">
+              <span>Dynamic Relation: Στ = I·α → α = (m₂·r₂ - m₁·r₁)·g / [ I + m₁·r₁² + m₂·r₂² ]</span>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-surface-container-low">
+              <div class="flex items-center gap-2">
+                <button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface text-xs font-medium hover:bg-surface-container-high transition-colors flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[16px]">menu_book</span>
+                  <span>Review Physics Formula Notes</span>
+                </button>
+              </div>
+              <button class="text-error hover:bg-error-container/30 px-2.5 py-1 rounded-lg text-xs font-medium transition-colors flex items-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">bookmark_remove</span>
+                <span>Remove</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT 5 COLS: Live Doubt Tickets & Response Studio -->
+        <div class="lg:col-span-5 flex flex-col gap-5">
+          <h2 class="font-headline font-bold text-lg text-on-surface flex items-center justify-between">
+            <span>Faculty Doubts & Discussion</span>
+            <span class="text-xs text-primary font-semibold">1 Active Ticket</span>
+          </h2>
+
+          <!-- Active Ticket Card (In-flight SLA timer) -->
+          <div class="bg-surface-container-lowest rounded-2xl p-5 border-l-4 border-primary border-t border-r border-b border-surface-container-low shadow-sm flex flex-col gap-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="font-headline font-bold text-sm text-on-surface">Ticket #DB-9850</span>
+                <span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed text-xs font-medium">Logical Reasoning</span>
+              </div>
+              <div class="flex items-center gap-1 text-primary text-xs font-bold bg-surface-container-low px-2.5 py-1 rounded-full">
+                <span class="material-symbols-outlined text-[14px] animate-spin">sync</span>
+                <span>SLA: 11m left</span>
+              </div>
+            </div>
+            <div>
+              <span class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Your Query:</span>
+              <p class="text-xs text-on-surface mt-1 leading-relaxed">
+                "In 4-statement syllogisms containing 'Only a few A are B' with 'No B is C', why is the conclusion 'All A can never be C' treated as definitively true?"
+              </p>
+            </div>
+            <div class="p-2.5 rounded-xl bg-surface-container-low flex items-center gap-2.5">
+              <div class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center text-primary text-xs">
+                <span class="material-symbols-outlined text-[16px]">support_agent</span>
+              </div>
+              <div class="flex flex-col text-xs">
+                <span class="font-semibold text-on-surface">Senior Reasoning Board</span>
+                <span class="text-on-surface-variant text-[11px]">Preparing annotated Venn explanation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resolved Ticket Card -->
+          <div class="bg-surface-container-lowest rounded-2xl p-5 border-l-4 border-tertiary border-t border-r border-b border-surface-container-low shadow-sm flex flex-col gap-3.5">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="font-headline font-bold text-sm text-on-surface">Ticket #DB-9842</span>
+                <span class="px-2 py-0.5 rounded-full bg-tertiary/10 text-tertiary text-xs font-bold flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[14px]">check_circle</span>
+                  <span>RESOLVED</span>
+                </span>
+              </div>
+              <span class="text-[11px] text-on-surface-variant">Closed on 14 Mar, 04:22 PM</span>
+            </div>
+
+            <!-- Student Query -->
+            <div class="p-3 rounded-xl bg-surface-container-low text-xs">
+              <span class="text-on-surface-variant font-semibold">Your Question on Q#28:</span>
+              <p class="text-on-surface mt-1">
+                "Sir, why do we have to sum Line A and Line B in the denominator instead of dividing by defect sum (0.02 + 0.05)?"
+              </p>
+            </div>
+
+            <!-- Faculty Profile & Answer -->
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold">RI</div>
+                <div class="flex flex-col">
+                  <div class="flex items-center gap-1">
+                    <span class="font-headline font-bold text-xs text-on-surface">Prof. Rajesh Iyer</span>
+                    <span class="material-symbols-outlined text-[14px] text-primary">verified</span>
+                  </div>
+                  <span class="text-[11px] text-on-surface-variant">Lead Faculty • Advanced Quantitative Aptitude</span>
+                </div>
+              </div>
+
+              <div class="p-3 rounded-xl bg-surface-container-lowest border border-surface-container-high text-xs text-on-surface leading-relaxed">
+                "Hello Prince! You cannot directly divide by (0.02 + 0.05) because the <strong>sample space volumes are unequal</strong>. Line A contributes 60% of total plant volume whereas Line B only accounts for 40%. Thus, defect probability must be weighted against the total manufacturing output."
+              </div>
+
+              <!-- Downloadable PDF Attachment -->
+              <a class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high transition-colors text-xs text-primary font-medium" href="#">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+                  <span>Bayes_Theorem_Shortcuts_TCS2026.pdf</span>
+                  <span class="text-on-surface-variant text-[11px] font-normal">(1.4 MB)</span>
+                </div>
+                <span class="material-symbols-outlined text-[16px]">download</span>
+              </a>
+
+              <!-- Student rating confirmation -->
+              <div class="flex items-center justify-between pt-1">
+                <span class="text-[11px] text-tertiary font-semibold flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[14px]">thumb_up</span>
+                  <span>You marked this solution as helpful</span>
+                </span>
+                <span class="text-xs text-amber-500 font-bold">★★★★★</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
