@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Previous Year Papers - TestPrep</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0048c9",
+            "primary-container": "#1e60f3",
+            "on-primary": "#ffffff",
+            "surface": "#f8f9ff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f1f5fd",
+            "surface-container": "#e5eeff",
+            "surface-container-high": "#dbe8fc",
+            "surface-container-highest": "#d3e4fe",
+            "on-surface": "#0b1c30",
+            "on-surface-variant": "#4b5563",
+            "outline": "#9ca3af",
+            "outline-variant": "#e2e8f0",
+            "tertiary": "#059669",
+            "tertiary-container": "#10b981",
+            "tertiary-fixed": "#d1fae5",
+            "on-tertiary-fixed": "#065f46",
+            "secondary": "#4b5563",
+            "secondary-fixed": "#e2e8f0",
+            "on-secondary-fixed": "#1e293b",
+            "primary-fixed": "#dbeafe",
+            "on-primary-fixed": "#1e40af",
+            "primary-fixed-dim": "#93c5fd",
+            "error": "#ef4444"
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8faff;
+      color: #0b1c30;
+      margin: 0;
+      padding: 0;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased bg-[#f8faff] text-[#0b1c30]">
+<!-- Top Navigation Bar matching TestPrep Home -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+<!-- Logo & Tagline -->
+<div class="flex items-center gap-8 shrink-0">
+<a class="flex items-center gap-3" href="#">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#1e60f3] to-[#3b82f6] flex items-center justify-center text-white shadow-sm shadow-blue-500/20">
+<span class="material-symbols-outlined text-[24px]">menu_book</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[22px] font-extrabold tracking-tight text-slate-900 leading-none font-display">Test<span class="text-[#1e60f3]">Prep</span></span>
+<span class="text-[10px] text-slate-400 font-medium tracking-wide mt-1">Practice Today, Perform Tomorrow</span>
+</div>
+</a>
+<!-- Main Nav Links -->
+<nav class="hidden lg:flex items-center gap-7 text-[14px] font-semibold text-slate-600">
+<a class="text-slate-600 hover:text-[#1e60f3] transition-colors" href="#">Home</a>
+<a class="text-slate-600 hover:text-[#1e60f3] transition-colors" href="#">Exams</a>
+<a class="text-slate-600 hover:text-[#1e60f3] transition-colors" href="#">Mock Tests</a>
+<a class="text-[#1e60f3] font-bold relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2.5px] after:bg-[#1e60f3] after:rounded-full" href="#">Previous Year Papers</a>
+<a class="text-slate-600 hover:text-[#1e60f3] transition-colors" href="#">Study Material</a>
+<a class="text-slate-600 hover:text-[#1e60f3] transition-colors" href="#">Pricing</a>
+</nav>
+</div>
+<!-- Right Nav Controls -->
+<div class="flex items-center gap-3 shrink-0">
+<!-- Search Bar -->
+<div class="hidden md:flex items-center relative w-56 lg:w-64">
+<span class="material-symbols-outlined absolute left-3 text-slate-400 text-[18px]">search</span>
+<input class="w-full bg-[#f1f5f9] text-[13px] text-slate-800 placeholder-slate-400 rounded-full pl-9 pr-4 py-2 border-none focus:outline-none focus:ring-2 focus:ring-[#1e60f3]/20 focus:bg-white transition-all" placeholder="Search exams, tests..." type="text"/>
+</div>
+<!-- Target Exam Badge / Dropdown -->
+<button class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 hover:bg-blue-100 transition-colors text-[12px] font-semibold">
+<span class="material-symbols-outlined text-[17px] text-[#1e60f3]">track_changes</span>
+<span>Target: JEE Main &amp; TCS NQT</span>
+<span class="material-symbols-outlined text-[15px] text-blue-400">expand_more</span>
+</button>
+<!-- Notification Bell -->
+<button aria-label="Notifications" class="w-9 h-9 rounded-full flex items-center justify-center text-slate-500 hover:text-slate-800 hover:bg-slate-100 transition-colors relative">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-rose-500 ring-2 ring-white"></span>
+</button>
+<!-- Profile Avatar Pill -->
+<button class="flex items-center gap-2 p-1 pl-1 pr-3 rounded-full hover:bg-slate-50 transition-colors border border-slate-200">
+<div class="w-7 h-7 rounded-full bg-[#1e60f3] text-white flex items-center justify-center font-bold text-[12px]">PK</div>
+<span class="text-[13px] font-semibold text-slate-700">Prince Kumar</span>
+<span class="material-symbols-outlined text-[16px] text-slate-400">expand_more</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Hero Header -->
+<main class="flex-1 w-full pb-16">
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4">
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pb-2">
+<div class="max-w-3xl">
+<!-- Verified Badge -->
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50/80 border border-blue-100/80 text-[#1e60f3] text-[12px] font-semibold mb-3">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>100% AUTHENTIC NTA, TCS, UPSC &amp; SSC ARCHIVES</span>
+</div>
+<h1 class="text-3xl sm:text-4xl lg:text-[40px] font-extrabold tracking-tight text-slate-900 leading-[1.18] font-display">
+            Previous Year Papers with <span class="text-[#1e60f3]">Step-by-Step Solutions</span>
+</h1>
+<p class="mt-3 text-slate-600 text-base leading-relaxed max-w-2xl">
+            Practice authentic past 10 years question papers in real exam CBT interface or download verified PDF answer keys with faculty explanations, accuracy percentiles, and cutoff metrics.
+          </p>
+</div>
+<!-- Stats Callouts -->
+<div class="flex items-center gap-6 bg-white border border-slate-200/80 shadow-sm rounded-2xl p-4 sm:px-6 sm:py-4 shrink-0">
+<div class="flex flex-col">
+<span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Verified Papers</span>
+<span class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-display">1,480+</span>
+<span class="text-[12px] font-semibold text-emerald-600 flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 2014-2025 Live
+            </span>
+</div>
+<div class="w-px h-12 bg-slate-200"></div>
+<div class="flex flex-col">
+<span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Total CBT Attempts</span>
+<span class="text-2xl sm:text-3xl font-extrabold text-[#1e60f3] font-display">4.2M+</span>
+<span class="text-[12px] text-slate-500 font-medium mt-0.5">Across 18 National Exams</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Filter Command Deck -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
+<div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm p-5 sm:p-6 space-y-5">
+<!-- Top Row Filters -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
+<!-- Target Examination -->
+<div class="md:col-span-4">
+<label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px]">account_balance</span>
+              Target Examination
+            </label>
+<div class="relative">
+<select class="w-full bg-[#f8faff] text-slate-800 text-[13px] font-semibold rounded-xl border border-slate-200 py-2.5 px-3.5 pr-10 appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all cursor-pointer" id="examSelect">
+<option selected="" value="tcs-nqt">TCS NQT (National Qualifier Test)</option>
+<option value="jee-main">JEE Main (Session 1 &amp; 2)</option>
+<option value="jee-advanced">JEE Advanced</option>
+<option value="ssc-cgl">SSC CGL (Tier 1 &amp; 2)</option>
+<option value="upsc-cse">UPSC CSE (Civil Services Prelims)</option>
+<option value="ibps-po">IBPS PO (Probationary Officer)</option>
+<option value="gate-cs">GATE CS &amp; IT</option>
+<option value="neet-ug">NEET UG Medical</option>
+<option value="all">All Examinations (Featured)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Shift & Slot -->
+<div class="md:col-span-3">
+<label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+              Shift / Slot
+            </label>
+<div class="relative">
+<select class="w-full bg-[#f8faff] text-slate-800 text-[13px] font-semibold rounded-xl border border-slate-200 py-2.5 px-3.5 pr-10 appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all cursor-pointer" id="slotSelect">
+<option selected="" value="all">All Exam Slots</option>
+<option value="morning">Morning Shift (9:00 AM - 12:00 PM)</option>
+<option value="evening">Evening Shift (3:00 PM - 6:00 PM)</option>
+<option value="special">Special Drive / Off-Campus</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Delivery Format Toggle -->
+<div class="md:col-span-5">
+<label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px]">tune</span>
+              Delivery Format Preference
+            </label>
+<div class="flex items-center bg-[#f1f5f9] p-1 rounded-xl">
+<button class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-[#1e60f3] text-white font-semibold text-[13px] shadow-sm transition-all" id="toggleCbt" type="button">
+<span class="material-symbols-outlined text-[16px]">computer</span>
+                Attempt Online (CBT)
+              </button>
+<button class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg text-slate-600 hover:text-slate-900 font-semibold text-[13px] transition-all" id="togglePdf" type="button">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+                Download PDF Keys
+              </button>
+</div>
+</div>
+</div>
+<!-- Year Filter Pills Row -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1 border-t border-slate-100">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="text-[12px] font-semibold text-slate-400 mr-1">Year:</span>
+<button class="year-filter-btn px-3.5 py-1 rounded-full text-[12px] font-bold bg-[#1e60f3] text-white transition-all shadow-sm" data-year="all" type="button">All Years</button>
+<button class="year-filter-btn px-3.5 py-1 rounded-full text-[12px] font-medium bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-year="2025" type="button">2025</button>
+<button class="year-filter-btn px-3.5 py-1 rounded-full text-[12px] font-medium bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-year="2024" type="button">2024</button>
+<button class="year-filter-btn px-3.5 py-1 rounded-full text-[12px] font-medium bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-year="2023" type="button">2023</button>
+<button class="year-filter-btn px-3.5 py-1 rounded-full text-[12px] font-medium bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-year="2022" type="button">2022</button>
+<button class="year-filter-btn px-3.5 py-1 rounded-full text-[12px] font-medium bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-year="2021" type="button">2021</button>
+<button class="year-filter-btn px-3.5 py-1 rounded-full text-[12px] font-medium bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-year="older" type="button">2020 &amp; Older</button>
+</div>
+<div class="flex items-center gap-2 text-slate-500 text-[12px] font-medium">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span>Showing <strong class="text-slate-800">6 Verified Papers</strong> matching target</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Grid: Papers List & Analytics Hub -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column (8 cols): Papers List -->
+<div class="lg:col-span-8 space-y-4">
+<div class="flex items-center justify-between pb-1">
+<h2 class="text-lg font-bold text-slate-900 flex items-center gap-2 font-display">
+<span class="material-symbols-outlined text-[#1e60f3] text-[22px]">history_edu</span>
+              Authentic PYQ Question Sets
+            </h2>
+<span class="text-xs text-slate-400 font-medium">Updated with 2024 Official Keys</span>
+</div>
+<!-- Paper Card 1: TCS NQT Slot 1 -->
+<article class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row md:items-center justify-between gap-4 group">
+<div class="flex items-start gap-4 min-w-0">
+<div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center shrink-0 text-[#1e60f3]">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap mb-1.5">
+<span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-blue-700">TCS NQT 2024</span>
+<span class="text-[11px] font-medium px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">Slot 1 • 15 Oct 2024</span>
+<span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700">Official Pattern</span>
+</div>
+<h3 class="text-[15px] font-bold text-slate-900 group-hover:text-[#1e60f3] transition-colors">
+                  TCS NQT Cognitive &amp; IT Readiness Exam (Slot 1)
+                </h3>
+<div class="flex items-center gap-4 mt-2 text-slate-500 text-[12px] font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-slate-400">quiz</span> 90 Questions</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-slate-400">timer</span> 100 Mins</span>
+<span class="flex items-center gap-1 text-emerald-600 font-semibold"><span class="material-symbols-outlined text-[15px]">group</span> 142k attempts</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0 self-end md:self-center">
+<button class="w-10 h-10 rounded-xl border border-slate-200 hover:bg-slate-50 hover:text-[#1e60f3] text-slate-600 flex items-center justify-center transition-colors" title="Download Verified PDF Key" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+<button class="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#1e60f3] hover:bg-blue-700 text-white text-[13px] font-semibold transition-all shadow-sm hover:shadow" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+                Attempt as Mock
+              </button>
+</div>
+</article>
+<!-- Paper Card 2: TCS NQT Slot 2 -->
+<article class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row md:items-center justify-between gap-4 group">
+<div class="flex items-start gap-4 min-w-0">
+<div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center shrink-0 text-[#1e60f3]">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap mb-1.5">
+<span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-blue-700">TCS NQT 2024</span>
+<span class="text-[11px] font-medium px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">Slot 2 • 16 Oct 2024</span>
+<span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700">Advanced Coding Incl.</span>
+</div>
+<h3 class="text-[15px] font-bold text-slate-900 group-hover:text-[#1e60f3] transition-colors">
+                  TCS NQT Advanced Digital &amp; Ninja Assessment (Slot 2)
+                </h3>
+<div class="flex items-center gap-4 mt-2 text-slate-500 text-[12px] font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-slate-400">quiz</span> 90 Questions</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-slate-400">timer</span> 100 Mins</span>
+<span class="flex items-center gap-1 text-emerald-600 font-semibold"><span class="material-symbols-outlined text-[15px]">group</span> 98k attempts</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0 self-end md:self-center">
+<button class="w-10 h-10 rounded-xl border border-slate-200 hover:bg-slate-50 hover:text-[#1e60f3] text-slate-600 flex items-center justify-center transition-colors" title="Download Verified PDF Key" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+<button class="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#1e60f3] hover:bg-blue-700 text-white text-[13px] font-semibold transition-all shadow-sm hover:shadow" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+                Attempt as Mock
+              </button>
+</div>
+</article>
+<!-- Paper Card 3: JEE Main 2024 Session 1 -->
+<article class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row md:items-center justify-between gap-4 group">
+<div class="flex items-start gap-4 min-w-0">
+<div class="w-12 h-12 rounded-xl bg-indigo-50 flex items-center justify-center shrink-0 text-indigo-600">
+<span class="material-symbols-outlined text-[24px]">calculate</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap mb-1.5">
+<span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-blue-700">JEE Main 2024</span>
+<span class="text-[11px] font-medium px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">Session 1 • 27 Jan Shift 1</span>
+<span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700">Video Explanations</span>
+</div>
+<h3 class="text-[15px] font-bold text-slate-900 group-hover:text-[#1e60f3] transition-colors">
+                  JEE Main 2024 B.Tech Paper 1 (Physics, Chemistry, Maths)
+                </h3>
+<div class="flex items-center gap-4 mt-2 text-slate-500 text-[12px] font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-slate-400">quiz</span> 90 Questions</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-slate-400">timer</span> 180 Mins</span>
+<span class="flex items-center gap-1 text-emerald-600 font-semibold"><span class="material-symbols-outlined text-[15px]">group</span> 210k attempts</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0 self-end md:self-center">
+<button class="w-10 h-10 rounded-xl border border-slate-200 hover:bg-slate-50 hover:text-[#1e60f3] text-slate-600 flex items-center justify-center transition-colors" title="Download Verified PDF Key" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+<button class="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#1e60f3] hover:bg-blue-700 text-white text-[13px] font-semibold transition-all shadow-sm hover:shadow" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+                Attempt as Mock
+              </button>
+</div>
+</article>
+<!-- Paper Card 4: SSC CGL 2023 Tier-1 -->
+<article class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row md:items-center justify-between gap-4 group">
+<div class="flex items-start gap-4 min-w-0">
+<div class="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center shrink-0 text-amber-600">
+<span class="material-symbols-outlined text-[24px]">account_balance</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap mb-1.5">
+<span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-blue-700">SSC CGL 2023</span>
+<span class="text-[11px] font-medium px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">Tier-1 • 14 July Shift 2</span>
+<span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700">Bilingual (Hindi / Eng)</span>
+</div>
+<h3 class="text-[15px] font-bold text-slate-900 group-hover:text-[#1e60f3] transition-colors">
+                  SSC Combined Graduate Level Tier-1 Official Paper
+                </h3>
+<div class="flex items-center gap-4 mt-2 text-slate-500 text-[12px] font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-slate-400">quiz</span> 100 Questions</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-slate-400">timer</span> 60 Mins</span>
+<span class="flex items-center gap-1 text-emerald-600 font-semibold"><span class="material-symbols-outlined text-[15px]">group</span> 320k attempts</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0 self-end md:self-center">
+<button class="w-10 h-10 rounded-xl border border-slate-200 hover:bg-slate-50 hover:text-[#1e60f3] text-slate-600 flex items-center justify-center transition-colors" title="Download Verified PDF Key" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+<button class="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#1e60f3] hover:bg-blue-700 text-white text-[13px] font-semibold transition-all shadow-sm hover:shadow" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+                Attempt as Mock
+              </button>
+</div>
+</article>
+<!-- Paper Card 5: UPSC CSE Prelims 2024 -->
+<article class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row md:items-center justify-between gap-4 group">
+<div class="flex items-start gap-4 min-w-0">
+<div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center shrink-0 text-emerald-600">
+<span class="material-symbols-outlined text-[24px]">balance</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap mb-1.5">
+<span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-blue-700">UPSC CSE 2024</span>
+<span class="text-[11px] font-medium px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">Prelims GS Paper 1</span>
+<span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-blue-700">Cutoff Benchmark 88.5</span>
+</div>
+<h3 class="text-[15px] font-bold text-slate-900 group-hover:text-[#1e60f3] transition-colors">
+                  Civil Services Preliminary Examination 2024 (General Studies I)
+                </h3>
+<div class="flex items-center gap-4 mt-2 text-slate-500 text-[12px] font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-slate-400">quiz</span> 100 Questions</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-slate-400">timer</span> 120 Mins</span>
+<span class="flex items-center gap-1 text-emerald-600 font-semibold"><span class="material-symbols-outlined text-[15px]">group</span> 185k attempts</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0 self-end md:self-center">
+<button class="w-10 h-10 rounded-xl border border-slate-200 hover:bg-slate-50 hover:text-[#1e60f3] text-slate-600 flex items-center justify-center transition-colors" title="Download Verified PDF Key" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+<button class="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#1e60f3] hover:bg-blue-700 text-white text-[13px] font-semibold transition-all shadow-sm hover:shadow" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+                Attempt as Mock
+              </button>
+</div>
+</article>
+<!-- Paper Card 6: GATE CS 2024 -->
+<article class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row md:items-center justify-between gap-4 group">
+<div class="flex items-start gap-4 min-w-0">
+<div class="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center shrink-0 text-purple-600">
+<span class="material-symbols-outlined text-[24px]">code</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap mb-1.5">
+<span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-blue-700">GATE CS 2024</span>
+<span class="text-[11px] font-medium px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">IISc Bangalore Official</span>
+<span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700">NAT Step Analysis</span>
+</div>
+<h3 class="text-[15px] font-bold text-slate-900 group-hover:text-[#1e60f3] transition-colors">
+                  GATE Computer Science &amp; IT Official Examination Paper
+                </h3>
+<div class="flex items-center gap-4 mt-2 text-slate-500 text-[12px] font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-slate-400">quiz</span> 65 Questions</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-slate-400">timer</span> 180 Mins</span>
+<span class="flex items-center gap-1 text-emerald-600 font-semibold"><span class="material-symbols-outlined text-[15px]">group</span> 74k attempts</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0 self-end md:self-center">
+<button class="w-10 h-10 rounded-xl border border-slate-200 hover:bg-slate-50 hover:text-[#1e60f3] text-slate-600 flex items-center justify-center transition-colors" title="Download Verified PDF Key" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+<button class="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#1e60f3] hover:bg-blue-700 text-white text-[13px] font-semibold transition-all shadow-sm hover:shadow" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+                Attempt as Mock
+              </button>
+</div>
+</article>
+<!-- Pagination Bar -->
+<div class="flex items-center justify-between bg-white border border-slate-200/80 p-3.5 rounded-xl mt-6">
+<button class="flex items-center gap-1 text-[13px] font-semibold text-slate-500 hover:text-slate-900 px-3 py-1.5 rounded-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span> Previous
+            </button>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-[#1e60f3] text-white text-[13px] font-bold" type="button">1</button>
+<button class="w-8 h-8 rounded-lg text-slate-600 hover:bg-slate-100 text-[13px] font-semibold transition-colors" type="button">2</button>
+<button class="w-8 h-8 rounded-lg text-slate-600 hover:bg-slate-100 text-[13px] font-semibold transition-colors" type="button">3</button>
+<span class="text-slate-400 px-1 text-[13px]">...</span>
+<button class="w-8 h-8 rounded-lg text-slate-600 hover:bg-slate-100 text-[13px] font-semibold transition-colors" type="button">24</button>
+</div>
+<button class="flex items-center gap-1 text-[13px] font-bold text-[#1e60f3] hover:text-blue-700 px-3 py-1.5 rounded-lg transition-colors" type="button">
+              Next <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Right Column (4 cols): Weightage & CBT Card & Verification -->
+<aside class="lg:col-span-4 space-y-6">
+<!-- 5-Year Topic Weightage Card -->
+<div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm space-y-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#1e60f3] text-[22px]">analytics</span>
+<h3 class="text-base font-bold text-slate-900 font-display">5-Year Topic Weightage</h3>
+</div>
+<span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-[#1e60f3]">High-Yield</span>
+</div>
+<p class="text-xs text-slate-500 leading-relaxed">
+              Based on deep frequency audits of 120+ authentic shift papers from 2020–2024. Focus your revision on these repeat chapters:
+            </p>
+<!-- SVG Visual Donut Representation -->
+<div class="flex items-center justify-center py-2">
+<div class="relative w-44 h-44 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 100 100">
+<!-- Base / background track -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#f1f5f9" stroke-width="11"></circle>
+<!-- Calculus (28%) -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#1e60f3" stroke-dasharray="238.76" stroke-dashoffset="171.9" stroke-linecap="round" stroke-width="11"></circle>
+<!-- Data Interpretation (22%) -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#10b981" stroke-dasharray="238.76" stroke-dashoffset="186.2" stroke-linecap="round" stroke-width="11" transform="rotate(100.8 50 50)"></circle>
+<!-- Probability & Stats (18%) -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#93c5fd" stroke-dasharray="238.76" stroke-dashoffset="195.7" stroke-linecap="round" stroke-width="11" transform="rotate(180 50 50)"></circle>
+<!-- Data Structures (16%) -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#64748b" stroke-dasharray="238.76" stroke-dashoffset="200.5" stroke-linecap="round" stroke-width="11" transform="rotate(244.8 50 50)"></circle>
+</svg>
+<div class="absolute flex flex-col items-center justify-center text-center">
+<span class="text-3xl font-extrabold text-slate-900 font-display">68%</span>
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Top 3 Modules</span>
+</div>
+</div>
+</div>
+<!-- Distribution Breakdown Bars -->
+<div class="space-y-3 pt-1">
+<div>
+<div class="flex justify-between text-[12px] font-medium mb-1">
+<span class="text-slate-700 flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-sm bg-[#1e60f3]"></span>
+                    Calculus &amp; Algebraic Equations
+                  </span>
+<span class="font-bold text-[#1e60f3]">28% (Avg 24 Qs)</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-slate-100 overflow-hidden">
+<div class="h-full bg-[#1e60f3] rounded-full" style="width: 28%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[12px] font-medium mb-1">
+<span class="text-slate-700 flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-sm bg-[#10b981]"></span>
+                    Data Interpretation &amp; Reasoning
+                  </span>
+<span class="font-bold text-[#10b981]">22% (Avg 19 Qs)</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-slate-100 overflow-hidden">
+<div class="h-full bg-[#10b981] rounded-full" style="width: 22%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[12px] font-medium mb-1">
+<span class="text-slate-700 flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-sm bg-blue-300"></span>
+                    Probability, Combinatorics &amp; Stats
+                  </span>
+<span class="font-bold text-slate-600">18% (Avg 15 Qs)</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-slate-100 overflow-hidden">
+<div class="h-full bg-blue-300 rounded-full" style="width: 18%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[12px] font-medium mb-1">
+<span class="text-slate-700 flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-sm bg-slate-500"></span>
+                    Data Structures &amp; Logic Flow
+                  </span>
+<span class="font-bold text-slate-600">16% (Avg 14 Qs)</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-slate-100 overflow-hidden">
+<div class="h-full bg-slate-500 rounded-full" style="width: 16%"></div>
+</div>
+</div>
+</div>
+<a class="block text-center py-2.5 px-4 rounded-xl bg-blue-50/70 text-[#1e60f3] font-semibold text-[13px] hover:bg-blue-100/70 transition-colors flex items-center justify-center gap-1.5" href="#">
+<span>Explore 10-Year Subject-Wise Matrix</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+<!-- CBT Simulator Highlights Tile -->
+<div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm space-y-3">
+<div class="w-10 h-10 rounded-xl bg-blue-50 text-[#1e60f3] flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">speed</span>
+</div>
+<h4 class="text-[15px] font-bold text-slate-900 font-display">Official CBT Experience</h4>
+<p class="text-xs text-slate-500 leading-relaxed">
+              Practicing in PDF misses timer pressure. Our simulator replicates the exact TCS iON and NTA exam software with virtual calculators, question palettes, and review states.
+            </p>
+<div class="space-y-2 pt-1 text-[12px] font-medium text-slate-700">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_circle</span>
+<span>Virtual Scientific Calculator included</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_circle</span>
+<span>Exact negative marking matrix</span>
+</div>
+</div>
+</div>
+<!-- Verified Faculty Badge Card -->
+<div class="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-sm flex items-center gap-3.5">
+<div class="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-slate-200">
+<img alt="Senior educator" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqTrVPELaDviqbf4Ve8alHo4MLN99_B1fJmo6UtgXJcJSinQL6yh__nc0DbWZf0aoSl8KroLNfXubxvyKNbTLvSXI3pPSN0elpGZIH8eGhq1r2VsZESIpAJRewRFJRFrbASgNv5b57Sqy_c8FGKz4gNoGJ_E37IFQ1vZeQwv7KvFivXCOhlKbiZYLKhiM0Ep4L0KrueD0iLgCr-MWJWYQ4bPIDuqjO8DsvfnBYbgCd-7GMoPcISfW2"/>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] font-bold uppercase tracking-wider text-[#1e60f3]">FACULTY VERIFIED</span>
+<p class="text-[14px] font-bold text-slate-900 leading-tight">Zero-Error Solution Policy</p>
+<span class="text-[11px] text-slate-500 mt-0.5">Every question challenged against official final answer keys.</span>
+</div>
+</div>
+</aside>
+</div>
+</section>
+<!-- Revision Cheat Sheets Promotional Banner -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+<div class="relative overflow-hidden rounded-3xl bg-[#0b1c30] text-white p-8 sm:p-10 lg:p-12 shadow-xl">
+<div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-[#1e60f3]/20 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+<div class="max-w-2xl space-y-3">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-[11px] font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[15px]">auto_stories</span>
+              Free Student Revision Companion
+            </div>
+<h3 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight font-display text-white leading-tight">
+              Download Formula Handbooks &amp; 48-Hour Exam Cheat Sheets
+            </h3>
+<p class="text-slate-300 text-sm leading-relaxed max-w-xl">
+              Quick-revision memory maps compiled from recurring past 10-year formulas. Includes standard constants, calculus derivations, TCS NQT pseudo-code patterns, and shortcuts.
+            </p>
+<div class="flex flex-wrap items-center gap-5 pt-2 text-[12px] font-medium text-slate-300">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-emerald-400 text-[18px]">verified</span>
+<span>54 Color PDFs</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-emerald-400 text-[18px]">bolt</span>
+<span>Instant Download</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-emerald-400 text-[18px]">download_done</span>
+<span>100% Free Access</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
+<a class="px-6 py-3.5 rounded-xl bg-[#1e60f3] hover:bg-blue-600 text-white font-semibold text-[14px] transition-all shadow-lg flex items-center justify-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]">folder_zip</span>
+              Download All Cheat Sheets (PDF)
+            </a>
+<a class="px-5 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold text-[14px] transition-all flex items-center justify-center gap-1" href="#">
+              View Formulas Online
+            </a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Full Matching TestPrep Footer -->
+<footer class="w-full bg-white border-t border-slate-200 mt-auto">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10">
+<!-- Brand / Intro Column -->
+<div class="lg:col-span-2 space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#1e60f3] to-[#3b82f6] flex items-center justify-center text-white shadow-sm shadow-blue-500/20">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+</div>
+<span class="text-xl font-extrabold tracking-tight text-slate-900 font-display">Test<span class="text-[#1e60f3]">Prep</span></span>
+</div>
+<p class="text-[14px] font-bold text-[#1e60f3]">Practice Today, Perform Tomorrow</p>
+<p class="text-[13px] text-slate-500 leading-relaxed max-w-sm">
+            Comprehensive mock assessment platform trusted by millions of aspirants for national engineering, placement drives, banking, and government examinations.
+          </p>
+<div class="flex items-center gap-2 pt-2">
+<a aria-label="Community Forum" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-[#1e60f3] hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[16px]">forum</span>
+</a>
+<a aria-label="Broadcast Announcements" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-[#1e60f3] hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[16px]">podcasts</span>
+</a>
+<a aria-label="Support Mail" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-[#1e60f3] hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+</a>
+<a aria-label="Global Network" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-[#1e60f3] hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[16px]">public</span>
+</a>
+</div>
+</div>
+<!-- Exams Column -->
+<div>
+<p class="text-[12px] font-bold text-slate-900 mb-4 uppercase tracking-wider">Exams</p>
+<ul class="space-y-2.5 text-[13px] text-slate-500">
+<li><a class="hover:text-[#1e60f3] transition-colors" href="#">SSC Exams</a></li>
+<li><a class="hover:text-[#1e60f3] transition-colors" href="#">Banking &amp; Insurance</a></li>
+<li><a class="hover:text-[#1e60f3] transition-colors" href="#">Railways RRB</a></li>
+<li><a class="hover:text-[#1e60f3] transition-colors" href="#">UPSC Civil Services</a></li>
+<li><a class="hover:text-[#1e60f3] transition-colors" href="#">JEE Main &amp; Advanced</a></li>
+</ul>
+</div>
+<!-- Resources Column -->
+<div>
+<p class="text-[12px] font-bold text-slate-900 mb-4 uppercase tracking-wider">Resources</p>
+<ul class="space-y-2.5 text-[13px] text-slate-500">
+<li><a class="hover:text-[#1e60f3] transition-colors" href="#">Mock Tests</a></li>
+<li><a class="text-[#1e60f3] font-semibold hover:text-[#1e60f3] transition-colors" href="#">PYQ Papers</a></li>
+<li><a class="hover:text-[#1e60f3] transition-colors" href="#">Formula Handbooks</a></li>
+<li><a class="hover:text-[#1e60f3] transition-colors" href="#">Daily Quiz Drills</a></li>
+<li><a class="hover:text-[#1e60f3] transition-colors" href="#">Speed Test Matrix</a></li>
+</ul>
+</div>
+<!-- Company Column -->
+<div>
+<p class="text-[12px] font-bold text-slate-900 mb-4 uppercase tracking-wider">Company</p>
+<ul class="space-y-2.5 text-[13px] text-slate-500">
+<li><a class="hover:text-[#1e60f3] transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-[#1e60f3] transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-[#1e60f3] transition-colors" href="#">Educator Network</a></li>
+<li><a class="hover:text-[#1e60f3] transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<!-- Legal Column -->
+<div>
+<p class="text-[12px] font-bold text-slate-900 mb-4 uppercase tracking-wider">Legal</p>
+<ul class="space-y-2.5 text-[13px] text-slate-500">
+<li><a class="hover:text-[#1e60f3] transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-[#1e60f3] transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-[#1e60f3] transition-colors" href="#">Refund Policy</a></li>
+<li><a class="hover:text-[#1e60f3] transition-colors" href="#">Code of Conduct</a></li>
+</ul>
+</div>
+</div>
+<!-- Copyright Bar -->
+<div class="mt-12 pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-3 text-[12px] text-slate-500">
+<p>© 2025 TestPrep EdTech Systems Inc. All rights reserved.</p>
+<div class="flex items-center gap-2 text-emerald-600 font-semibold">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span>All Systems Operational</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Scripts for Interactive Filter State -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Toggle Delivery Format
+      const cbtBtn = document.getElementById("toggleCbt");
+      const pdfBtn = document.getElementById("togglePdf");
+
+      cbtBtn.addEventListener("click", () => {
+        cbtBtn.className = "flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-[#1e60f3] text-white font-semibold text-[13px] shadow-sm transition-all";
+        pdfBtn.className = "flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg text-slate-600 hover:text-slate-900 font-semibold text-[13px] transition-all";
+      });
+
+      pdfBtn.addEventListener("click", () => {
+        pdfBtn.className = "flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-[#1e60f3] text-white font-semibold text-[13px] shadow-sm transition-all";
+        cbtBtn.className = "flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg text-slate-600 hover:text-slate-900 font-semibold text-[13px] transition-all";
+      });
+
+      // Year Filter Pills
+      const yearBtns = document.querySelectorAll(".year-filter-btn");
+      yearBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+          yearBtns.forEach(b => {
+            b.className = "year-filter-btn px-3.5 py-1 rounded-full text-[12px] font-medium bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all";
+          });
+          btn.className = "year-filter-btn px-3.5 py-1 rounded-full text-[12px] font-bold bg-[#1e60f3] text-white transition-all shadow-sm";
+        });
+      });
+    });
+  </script>
+</body></html>

@@ -1,4 +1,4 @@
-﻿// ─── Pure scoring function ─────────────────────────────────────────────────
+// ─── Pure scoring function ─────────────────────────────────────────────────
 // No database, no HTTP, no framework dependencies.
 // Runs identically in the submit handler, the re-evaluation job, and tests.
 

@@ -1,0 +1,42 @@
+'use client';
+import * as React from 'react';
+import { cn } from '@/lib/utils';
+
+interface TabsContextValue { value: string; onChange: (v: string) => void; }
+const TabsContext = React.createContext<TabsContextValue>({ value: '', onChange: () => {} });
+
+interface TabsProps { defaultValue?: string; value?: string; onValueChange?: (v: string) => void; children: React.ReactNode; className?: string; }
+function Tabs({ defaultValue = '', value, onValueChange, children, className }: TabsProps) {
+  const [internal, setInternal] = React.useState(defaultValue);
+  const current = value ?? internal;
+  const onChange = onValueChange ?? setInternal;
+  return <TabsContext.Provider value={{ value: current, onChange }}><div className={className}>{children}</div></TabsContext.Provider>;
+}
+
+const TabsList = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <div ref={ref} className={cn('inline-flex h-10 items-center gap-1 rounded-xl bg-surface-container-low p-1', className)} {...props} />
+  )
+);
+TabsList.displayName = 'TabsList';
+
+interface TabsTriggerProps extends React.ButtonHTMLAttributes<HTMLButtonElement> { value: string; }
+const TabsTrigger = React.forwardRef<HTMLButtonElement, TabsTriggerProps>(({ className, value, children, ...props }, ref) => {
+  const ctx = React.useContext(TabsContext);
+  const isActive = ctx.value === value;
+  return (
+    <button ref={ref} className={cn('inline-flex items-center justify-center whitespace-nowrap rounded-lg px-space-md py-1.5 text-label-md font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:pointer-events-none disabled:opacity-50', isActive ? 'bg-surface-container-lowest text-on-surface shadow-sm' : 'text-on-surface-variant hover:text-on-surface', className)} onClick={() => ctx.onChange(value)} {...props}>{children}</button>
+  );
+});
+TabsTrigger.displayName = 'TabsTrigger';
+
+interface TabsContentProps extends React.HTMLAttributes<HTMLDivElement> { value: string; }
+const TabsContent = React.forwardRef<HTMLDivElement, TabsContentProps>(({ className, value, ...props }, ref) => {
+  const ctx = React.useContext(TabsContext);
+  if (ctx.value !== value) return null;
+  return <div ref={ref} className={cn('mt-space-md', className)} {...props} />;
+});
+TabsContent.displayName = 'TabsContent';
+
+export { Tabs, TabsList, TabsTrigger, TabsContent };
+

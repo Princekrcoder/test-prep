@@ -1,7 +1,7 @@
-﻿/** @type {import('next').NextConfig} */
+const path = require('path');
+
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Proxy all /api/* requests to the backend
-  // In dev: localhost:4000 | In prod: Render URL via env var
   async rewrites() {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
     return [
@@ -17,14 +17,21 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'lh3.googleusercontent.com', // Google profile photos
+        hostname: 'lh3.googleusercontent.com',
       },
     ],
   },
 
-  // Reduce bundle size
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion', 'recharts'],
+  },
+
+  webpack(config) {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@shared': path.resolve(__dirname, '../shared/src'),
+    };
+    return config;
   },
 };
 

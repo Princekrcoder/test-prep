@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error":"#ffffff","on-surface-variant":"#434655","on-primary-fixed-variant":"#003cab","error-container":"#ffdad6","on-secondary-container":"#5c647a","secondary-container":"#dae2fd","surface-variant":"#d3e4fe","on-primary-fixed":"#00174d","background":"#f8f9ff","on-background":"#0b1c30","on-surface":"#0b1c30","inverse-primary":"#b5c4ff","surface-container-low":"#eff4ff","secondary-fixed":"#dae2fd","secondary-fixed-dim":"#bec6e0","outline-variant":"#c3c5d8","on-secondary-fixed-variant":"#3f465c","tertiary-container":"#007c55","surface-container":"#e5eeff","tertiary-fixed":"#6ffbbe","surface-container-high":"#dce9ff","primary":"#0048c9","on-secondary-fixed":"#131b2e","on-secondary":"#ffffff","primary-fixed-dim":"#b5c4ff","tertiary-fixed-dim":"#4edea3","on-tertiary-container":"#b5ffd7","on-tertiary-fixed-variant":"#005236","surface-dim":"#cbdbf5","outline":"#737687","primary-container":"#1e60f3","surface":"#f8f9ff","on-primary-container":"#edeeff","on-tertiary":"#ffffff","primary-fixed":"#dbe1ff","inverse-surface":"#213145","tertiary":"#006141","surface-bright":"#f8f9ff","surface-container-highest":"#d3e4fe","secondary":"#565e74","on-primary":"#ffffff","inverse-on-surface":"#eaf1ff","on-error-container":"#93000a","surface-tint":"#0051df","surface-container-lowest":"#ffffff","on-tertiary-fixed":"#002113","error":"#ba1a1a"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-2xs":"0.25rem","space-xl":"2rem","margin-mobile":"1rem",margin:"2rem","space-sm":"0.75rem","space-lg":"1.5rem","space-md":"1rem","space-xs":"0.5rem","gutter-mobile":"0.75rem",gutter:"1.5rem","space-2xl":"3rem"},fontFamily:{"exam-numeric":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"body-lg":["Inter"],"label-sm":["Inter"],"headline-md":["Plus Jakarta Sans"],"label-lg":["Inter"],"body-sm":["Inter"],"display-hero-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"]},fontSize:{"exam-numeric":["14px",{lineHeight:"14px",fontWeight:"700"}],"display-hero":["40px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"800"}],"label-md":["12px",{lineHeight:"16px",fontWeight:"600"}],"headline-lg":["20px",{lineHeight:"28px",fontWeight:"700"}],"headline-xl":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}],"headline-md":["16px",{lineHeight:"24px",fontWeight:"600"}],"label-lg":["14px",{lineHeight:"20px",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"display-hero-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"800"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"headline-xl-mobile":["22px",{lineHeight:"30px",letterSpacing:"-0.01em",fontWeight:"700"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">school</span></div><div class="flex flex-col"><span class="font-headline-lg text-headline-lg tracking-tight text-on-surface leading-none">TestPrep</span><span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase mt-0.5">Assessment Portal</span></div></div><div class="flex items-center gap-6"><div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Test Engine v2.4 Active</span></div><a class="flex items-center gap-1.5 text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" data-path="help-center" href="#"><span class="material-symbols-outlined text-[18px]">help_outline</span><span>Support</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full flex-1 pt-16 bg-background flex flex-col"><div class="flex flex-col w-full">
+<div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 flex flex-col justify-center min-h-[calc(100vh-8rem)]">
+<!-- Top breadcrumb / context badge -->
+<div class="flex items-center justify-between mb-6">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant text-label-sm font-label-sm shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-semibold text-primary">TCS NQT, SSC CGL &amp; Infosys</span>
+<span>Mock Drives Live Now</span>
+</div>
+<div class="text-label-md font-label-md text-on-surface-variant hidden sm:flex items-center gap-1.5">
+<span>Need assistance?</span>
+<a class="text-primary hover:underline font-semibold" href="#">Contact Helpdesk</a>
+</div>
+</div>
+<!-- Main Two-Column Master Card -->
+<div class="w-full bg-surface-container-lowest rounded-2xl shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 min-h-[720px]">
+<!-- LEFT COLUMN: Brand Hero & Value Proposition (Deep Navy Theme) -->
+<div class="lg:col-span-6 bg-inverse-surface text-inverse-on-surface p-8 sm:p-10 lg:p-12 flex flex-col justify-between relative overflow-hidden">
+<!-- Ambient Decorative Glows -->
+<div class="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-primary/25 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-28 -right-20 w-96 h-96 rounded-full bg-primary-container/20 blur-3xl pointer-events-none"></div>
+<!-- Top Content Block -->
+<div class="relative z-10 flex flex-col">
+<!-- Tagline Pill -->
+<div class="inline-flex items-center gap-2 self-start px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-md mb-6">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span>
+<span class="text-label-sm font-label-sm tracking-wider uppercase text-inverse-on-surface/90 font-bold">For A Brighter Tomorrow</span>
+</div>
+<!-- Main Headline -->
+<h1 class="text-headline-xl sm:text-display-hero font-display-hero text-inverse-on-surface tracking-tight leading-tight mb-4">
+            Same Exam Feel.<br/>
+<span class="text-primary-fixed-dim">Better</span> Preparation.
+          </h1>
+<p class="text-body-md sm:text-body-lg font-body-md text-inverse-on-surface/80 max-w-lg mb-8 leading-relaxed">
+            Practice mock tests for Service Based Companies and Government Job Exams. Real questions. Real experience. Real success.
+          </p>
+<!-- Core Value Feature Bullets -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+<!-- Bullet 1 -->
+<div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/5 backdrop-blur-sm transition-all duration-200 hover:bg-white/10">
+<div class="w-9 h-9 rounded-lg bg-primary-container/40 flex items-center justify-center shrink-0 text-primary-fixed">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">terminal</span>
+</div>
+<div class="flex flex-col">
+<span class="text-label-md font-label-md text-inverse-on-surface font-semibold">Exam-like interface</span>
+<span class="text-body-sm font-body-sm text-inverse-on-surface/70 mt-0.5">Feel real examination ergonomics</span>
+</div>
+</div>
+<!-- Bullet 2 -->
+<div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/5 backdrop-blur-sm transition-all duration-200 hover:bg-white/10">
+<div class="w-9 h-9 rounded-lg bg-tertiary-container/40 flex items-center justify-center shrink-0 text-tertiary-fixed">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">insights</span>
+</div>
+<div class="flex flex-col">
+<span class="text-label-md font-label-md text-inverse-on-surface font-semibold">Detailed analysis</span>
+<span class="text-body-sm font-body-sm text-inverse-on-surface/70 mt-0.5">Percentile &amp; topic breakdown</span>
+</div>
+</div>
+<!-- Bullet 3 -->
+<div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/5 backdrop-blur-sm transition-all duration-200 hover:bg-white/10">
+<div class="w-9 h-9 rounded-lg bg-secondary-container/30 flex items-center justify-center shrink-0 text-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+</div>
+<div class="flex flex-col">
+<span class="text-label-md font-label-md text-inverse-on-surface font-semibold">Topic-wise practice</span>
+<span class="text-body-sm font-body-sm text-inverse-on-surface/70 mt-0.5">Aptitude, Reasoning, Verbal</span>
+</div>
+</div>
+<!-- Bullet 4 -->
+<div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/5 backdrop-blur-sm transition-all duration-200 hover:bg-white/10">
+<div class="w-9 h-9 rounded-lg bg-primary-fixed/20 flex items-center justify-center shrink-0 text-primary-fixed-dim">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<div class="flex flex-col">
+<span class="text-label-md font-label-md text-inverse-on-surface font-semibold">Top career placements</span>
+<span class="text-body-sm font-body-sm text-inverse-on-surface/70 mt-0.5">TCS, Wipro, SSC, IBPS, Infosys</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Vignette / Graphic Inspiration Container -->
+<div class="relative z-10 mt-auto pt-4">
+<div class="w-full rounded-xl bg-black/30 backdrop-blur-md p-4 sm:p-5 flex flex-col sm:flex-row items-center gap-5">
+<!-- Thumbnail Visual representing student workstation -->
+<div class="relative w-full sm:w-44 h-32 rounded-lg overflow-hidden shrink-0 shadow-md">
+<img class="w-full h-full object-cover" data-alt="Focused ambitious young college student wearing dark hoodie studying late night at a modern desk with warm lamp light, mock test analytics dashboard glowing on modern laptop screen, neat study books labeled Aptitude and Reasoning stacked beside keyboard, cinematic deep navy and warm amber lighting ambiance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAitjnb78sDxyIwp91fiyLspQfd2ZInDt8_4ALGzEcbKCqTStjVUO0VcM9Ahue79TjlLXcQ-jlPv2n8b6M4U6NVWPz-2EgcOEYpAAj0RXIinSwo5_KsxTietK-WfdHNyed3K81zI_LQp__76Tt2TwUiwLKDAZsbMQ3faKfSe4JmUg56dnmnJyRB319LWO_W92yaTNR5pcISKsfHs5y6bWfCy5gR7INRxxlKvkN-5ioJvl0bgcCeeO_4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2.5">
+<span class="text-label-sm font-label-sm text-white font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">verified</span>
+                  Real Test Simulator
+                </span>
+</div>
+</div>
+<!-- Motivational Callout Quote -->
+<div class="flex-1 flex flex-col justify-center">
+<div class="flex items-center gap-1.5 text-primary-fixed-dim mb-1">
+<span class="material-symbols-outlined text-[16px]">format_quote</span>
+<span class="text-label-sm font-label-sm font-semibold tracking-wide uppercase">Student Mantra</span>
+</div>
+<p class="text-body-md font-body-md text-inverse-on-surface font-medium italic">
+                “Discipline today. Success tomorrow.”
+              </p>
+<div class="flex items-center gap-2 mt-2">
+<span class="text-label-sm font-label-sm text-inverse-on-surface/60">Target:</span>
+<span class="px-2 py-0.5 rounded bg-white/10 text-label-sm font-label-sm text-inverse-on-surface/90 font-mono">TCS NQT 2025</span>
+<span class="px-2 py-0.5 rounded bg-white/10 text-label-sm font-label-sm text-inverse-on-surface/90 font-mono">SSC CGL</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Authentication Workstation -->
+<div class="lg:col-span-6 bg-surface-container-lowest p-8 sm:p-10 lg:p-12 flex flex-col justify-between">
+<div class="w-full max-w-md mx-auto flex flex-col">
+<!-- Heading Section -->
+<div class="text-center sm:text-left mb-6">
+<h2 class="text-headline-xl font-headline-xl text-on-surface font-bold tracking-tight">
+              Welcome to <span class="text-primary-container">TestPrep</span>
+</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-1.5">
+              Sign in to resume mock tests and check your leaderboards.
+            </p>
+</div>
+<!-- Quick SSO: Continue with Google -->
+<button class="w-full flex items-center justify-center gap-3 px-4 py-3 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-lg text-label-lg transition-all duration-150 shadow-sm active:scale-[0.99] group" type="button">
+<svg class="w-5 h-5 shrink-0" viewbox="0 0 24 24">
+<path d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17Z" fill="#4285F4"></path>
+<path d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24Z" fill="#34A853"></path>
+<path d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.04 0 12s.45 3.82 1.25 5.42l4.03-3.15Z" fill="#FBBC05"></path>
+<path d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98Z" fill="#EA4335"></path>
+</svg>
+<span class="font-semibold text-on-surface">Continue with Google</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</button>
+<!-- Divider -->
+<div class="relative flex items-center justify-center my-6">
+<div class="w-full h-px bg-surface-container-high"></div>
+<span class="absolute px-3 bg-surface-container-lowest text-label-sm font-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Or continue with</span>
+</div>
+<!-- Auth Mode Tabs (Mobile OTP vs Email/Password) -->
+<div class="grid grid-cols-2 gap-1 p-1 bg-surface-container-low rounded-xl mb-6" id="authTabs">
+<button class="py-2 px-3 rounded-lg text-label-md font-label-md font-semibold text-on-primary bg-primary-container shadow-sm transition-all text-center" id="tabOtp" onclick="switchAuthTab('otp')" type="button">
+              Mobile OTP
+            </button>
+<button class="py-2 px-3 rounded-lg text-label-md font-label-md font-semibold text-on-surface-variant hover:text-on-surface transition-all text-center" id="tabEmail" onclick="switchAuthTab('email')" type="button">
+              Email &amp; Password
+            </button>
+</div>
+<!-- FORM VIEW 1: Mobile Number with OTP (Default) -->
+<form class="flex flex-col gap-4" id="otpAuthForm" onsubmit="handleOtpSubmit(event)">
+<div class="flex flex-col gap-1.5">
+<label class="text-label-md font-label-md text-on-surface font-semibold flex items-center justify-between" for="mobileInput">
+<span>Mobile Number <span class="text-primary">*</span></span>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-normal">Fast 4-digit code login</span>
+</label>
+<div class="flex items-center rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow duration-200">
+<!-- Country Code Badge -->
+<div class="flex items-center gap-1.5 px-3.5 py-3 rounded-l-xl bg-surface-container text-on-surface font-semibold text-label-lg shrink-0">
+<span class="text-sm">🇮🇳</span>
+<span>+91</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span>
+</div>
+<!-- Number Input -->
+<input class="flex-1 w-full px-4 py-3 bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant/50 text-body-md font-body-md rounded-r-xl outline-none focus:bg-surface-container-low transition-colors" id="mobileInput" maxlength="10" name="mobile" placeholder="Enter 10-digit mobile number" required="" type="tel"/>
+</div>
+</div>
+<!-- OTP Input Box (Initially Hidden, dynamic reveal) -->
+<div class="hidden flex flex-col gap-2 pt-1 animate-fadeIn" id="otpInputGroup">
+<div class="flex items-center justify-between">
+<label class="text-label-md font-label-md text-on-surface font-semibold">Enter OTP Sent to Mobile</label>
+<button class="text-label-sm font-label-sm text-primary hover:underline font-semibold" onclick="resendOtp()" type="button">Resend in 0:45</button>
+</div>
+<div class="flex gap-2.5 justify-between">
+<input class="otp-box w-12 h-12 text-center text-headline-lg font-headline-lg font-bold rounded-lg bg-surface-container text-on-surface outline-none focus:ring-2 focus:ring-primary text-center" maxlength="1" type="text"/>
+<input class="otp-box w-12 h-12 text-center text-headline-lg font-headline-lg font-bold rounded-lg bg-surface-container text-on-surface outline-none focus:ring-2 focus:ring-primary text-center" maxlength="1" type="text"/>
+<input class="otp-box w-12 h-12 text-center text-headline-lg font-headline-lg font-bold rounded-lg bg-surface-container text-on-surface outline-none focus:ring-2 focus:ring-primary text-center" maxlength="1" type="text"/>
+<input class="otp-box w-12 h-12 text-center text-headline-lg font-headline-lg font-bold rounded-lg bg-surface-container text-on-surface outline-none focus:ring-2 focus:ring-primary text-center" maxlength="1" type="text"/>
+</div>
+</div>
+<!-- Consent Checkbox -->
+<label class="flex items-start gap-2.5 cursor-pointer mt-1 select-none">
+<input checked="" class="mt-0.5 w-4 h-4 rounded text-primary focus:ring-primary bg-surface-container-low accent-primary" required="" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface-variant leading-tight">
+                Keep me signed in on this testing machine for upcoming scheduled tests.
+              </span>
+</label>
+<!-- Submit Button -->
+<button class="w-full mt-2 py-3 px-6 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all duration-200 active:scale-[0.99]" id="btnSendOtp" type="submit">
+<span id="btnOtpText">Send OTP</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</form>
+<!-- FORM VIEW 2: Email & Password (Hidden by default) -->
+<form class="hidden flex flex-col gap-4" id="emailAuthForm" onsubmit="handleEmailSubmit(event)">
+<div class="flex flex-col gap-1.5">
+<label class="text-label-md font-label-md text-on-surface font-semibold" for="emailInput">Registered Email Address</label>
+<div class="flex items-center px-3.5 py-2.5 rounded-xl bg-surface-container text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant mr-2">mail</span>
+<input class="w-full bg-transparent text-body-md font-body-md outline-none placeholder:text-on-surface-variant/50" id="emailInput" placeholder="student@college.edu or gmail.com" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="text-label-md font-label-md text-on-surface font-semibold" for="passInput">Password</label>
+<a class="text-label-sm font-label-sm text-primary hover:underline font-semibold" href="#">Forgot password?</a>
+</div>
+<div class="flex items-center px-3.5 py-2.5 rounded-xl bg-surface-container text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant mr-2">lock</span>
+<input class="w-full bg-transparent text-body-md font-body-md outline-none placeholder:text-on-surface-variant/50" id="passInput" placeholder="Enter your password" type="password"/>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="togglePassVisibility()" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</div>
+<button class="w-full mt-2 py-3 px-6 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all duration-200" type="submit">
+<span>Sign In to Portal</span>
+<span class="material-symbols-outlined text-[18px]">login</span>
+</button>
+</form>
+<!-- Legal & Privacy Disclaimer -->
+<p class="text-body-sm font-body-sm text-on-surface-variant/70 text-center mt-6">
+            By signing in, you agree to TestPrep's 
+            <a class="text-primary hover:underline" href="#">Terms &amp; Conditions</a> and 
+            <a class="text-primary hover:underline" href="#">Privacy Policy</a>.
+          </p>
+<!-- Register Prompt Footer -->
+<div class="mt-6 pt-5 bg-surface-container-low rounded-xl p-3.5 text-center flex items-center justify-center gap-2">
+<span class="text-body-sm font-body-sm text-on-surface-variant">New to TestPrep?</span>
+<a class="text-label-md font-label-md text-primary hover:text-primary-container font-bold flex items-center gap-1 group" href="#">
+<span>Create an account</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Social Proof Metrics Bar (Reference match: 10K+ Learners, 500+ Tests, 95%) -->
+<div class="mt-8 pt-6 bg-surface-container-low/60 rounded-xl p-4 grid grid-cols-3 gap-2 text-center">
+<!-- Metric 1 -->
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1 text-primary-container">
+<span class="material-symbols-outlined text-[18px]">groups</span>
+<span class="text-headline-md font-headline-md font-bold text-on-surface">10K+</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant mt-0.5">Active Learners</span>
+</div>
+<!-- Metric 2 -->
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+<span class="text-headline-md font-headline-md font-bold text-on-surface">500+</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant mt-0.5">Mock Tests</span>
+</div>
+<!-- Metric 3 -->
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-headline-md font-headline-md font-bold text-on-surface">95%</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant mt-0.5">Recommend Us</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Supplementary Trust / Exam Partner Logos Strip -->
+<div class="w-full mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 py-4 px-6 rounded-xl bg-surface-container-low text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="text-label-sm font-label-sm font-semibold uppercase tracking-wider">Exam Syllabus Calibrated For:</span>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-6 text-label-md font-label-md text-on-surface-variant font-medium">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>TCS NQT National Qualifier</span>
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Accenture Placement Drive</span>
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Infosys InfyTQ</span>
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>SSC CGL &amp; IBPS PO</span>
+</div>
+</div>
+</div>
+<!-- Inline Interaction Logic for Switchers and OTP inputs -->
+<script>
+    function switchAuthTab(type) {
+      const tabOtp = document.getElementById('tabOtp');
+      const tabEmail = document.getElementById('tabEmail');
+      const otpForm = document.getElementById('otpAuthForm');
+      const emailForm = document.getElementById('emailAuthForm');
+
+      if (type === 'otp') {
+        tabOtp.className = 'py-2 px-3 rounded-lg text-label-md font-label-md font-semibold text-on-primary bg-primary-container shadow-sm transition-all text-center';
+        tabEmail.className = 'py-2 px-3 rounded-lg text-label-md font-label-md font-semibold text-on-surface-variant hover:text-on-surface transition-all text-center';
+        otpForm.classList.remove('hidden');
+        emailForm.classList.add('hidden');
+      } else {
+        tabEmail.className = 'py-2 px-3 rounded-lg text-label-md font-label-md font-semibold text-on-primary bg-primary-container shadow-sm transition-all text-center';
+        tabOtp.className = 'py-2 px-3 rounded-lg text-label-md font-label-md font-semibold text-on-surface-variant hover:text-on-surface transition-all text-center';
+        emailForm.classList.remove('hidden');
+        otpForm.classList.add('hidden');
+      }
+    }
+
+    let otpSent = false;
+    function handleOtpSubmit(e) {
+      e.preventDefault();
+      const mobileInput = document.getElementById('mobileInput');
+      const otpGroup = document.getElementById('otpInputGroup');
+      const btnText = document.getElementById('btnOtpText');
+
+      if (!otpSent) {
+        if (mobileInput.value.trim().length >= 10) {
+          otpSent = true;
+          otpGroup.classList.remove('hidden');
+          btnText.textContent = 'Verify & Start Mock Prep';
+          const firstOtp = document.querySelector('.otp-box');
+          if (firstOtp) firstOtp.focus();
+        } else {
+          mobileInput.focus();
+        }
+      } else {
+        // Mock verification redirect trigger
+        window.location.href = '#dashboard';
+      }
+    }
+
+    function handleEmailSubmit(e) {
+      e.preventDefault();
+      window.location.href = '#dashboard';
+    }
+
+    function resendOtp() {
+      alert('A new 4-digit verification code has been dispatched to your mobile number.');
+    }
+
+    function togglePassVisibility() {
+      const p = document.getElementById('passInput');
+      p.type = p.type === 'password' ? 'text' : 'password';
+    }
+
+    // Auto-advance OTP inputs
+    document.addEventListener('DOMContentLoaded', () => {
+      const boxes = document.querySelectorAll('.otp-box');
+      boxes.forEach((box, index) => {
+        box.addEventListener('keyup', (e) => {
+          if (e.key >= '0' && e.key <= '9') {
+            if (index < boxes.length - 1) {
+              boxes[index + 1].focus();
+            }
+          } else if (e.key === 'Backspace') {
+            if (index > 0 && !box.value) {
+              boxes[index - 1].focus();
+            }
+          }
+        });
+      });
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-low shadow-[0_-1px_6px_rgba(0,0,0,0.02)] py-6 mt-auto"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-4"><div class="flex items-center gap-6"><div class="flex items-center gap-1.5 text-on-surface-variant"><span class="material-symbols-outlined text-[18px] text-tertiary-container">verified_user</span><span class="font-label-md text-label-md text-on-surface-variant">256-bit SSL Secure Assessment</span></div><div class="hidden sm:flex items-center gap-1.5 text-on-surface-variant"><span class="material-symbols-outlined text-[18px] text-secondary">shield</span><span class="font-label-md text-label-md text-on-surface-variant">ISO 27001 Compliant</span></div></div><div class="flex items-center gap-6"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="system-status" href="#">System Status</a><span class="font-body-sm text-body-sm text-on-surface-variant">© 2025 TestPrep Inc.</span></div></div></footer></body></html>

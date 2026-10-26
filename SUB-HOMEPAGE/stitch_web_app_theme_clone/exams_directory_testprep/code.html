@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Exams Directory - TestPrep</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#0f275e',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-[#F8FAFC] font-sans text-slate-800 antialiased min-h-screen flex flex-col">
+<!-- 1. TOP NAVBAR (Strict match with TestPrep Home screen header) -->
+<header class="sticky top-0 z-50 bg-white border-b border-slate-100 shadow-[0_1px_3px_rgba(0,0,0,0.03)]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+<!-- Brand Logo -->
+<div class="flex items-center gap-8 shrink-0">
+<a class="flex items-center gap-2.5" href="#">
+<!-- Open Book Icon Logo matching screen 68 -->
+<div class="w-10 h-10 flex items-center justify-center text-[#2563EB]">
+<svg class="w-9 h-9" fill="currentColor" viewbox="0 0 36 36">
+<path d="M18 7.5c-4.8 0-9.2-1.7-12.7-4.5A1.5 1.5 0 0 0 3 4.2v21.5a1.5 1.5 0 0 0 2.3 1.3C8.8 29.5 13.2 31 18 31s9.2-1.5 12.7-4a1.5 1.5 0 0 0 2.3-1.3V4.2a1.5 1.5 0 0 0-2.3-1.2C27.2 5.8 22.8 7.5 18 7.5zM16.5 27.2c-3.6-.5-7-1.7-9.5-3.4V6.9c2.7 1.5 5.9 2.5 9.5 2.8v17.5zm12.5-3.4c-2.5 1.7-5.9 2.9-9.5 3.4V9.7c3.6-.3 6.8-1.3 9.5-2.8v16.9z"></path>
+</svg>
+</div>
+<div class="flex flex-col leading-tight">
+<span class="text-[22px] font-bold tracking-tight text-slate-900 font-display">TestPrep</span>
+<span class="text-[10px] font-medium text-slate-400 tracking-wide">Practice Today, Perform Tomorrow</span>
+</div>
+</a>
+<!-- Desktop Navigation Links -->
+<nav class="hidden xl:flex items-center gap-7 text-[14px]">
+<a class="text-slate-600 hover:text-blue-600 font-medium transition-colors" href="#">Home</a>
+<a class="text-blue-600 font-bold border-b-2 border-blue-600 pb-0.5" href="#">Exams</a>
+<a class="text-slate-600 hover:text-blue-600 font-medium transition-colors" href="#">Mock Tests</a>
+<a class="text-slate-600 hover:text-blue-600 font-medium transition-colors" href="#">Previous Year Papers</a>
+<a class="text-slate-600 hover:text-blue-600 font-medium transition-colors" href="#">Study Material</a>
+<a class="text-slate-600 hover:text-blue-600 font-medium transition-colors" href="#">Pricing</a>
+</nav>
+</div>
+<!-- Right Header: Search & Target & Profile -->
+<div class="flex items-center gap-3.5">
+<!-- Search bar with shortcut -->
+<div class="relative hidden md:block w-64 lg:w-72">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[18px]">search</span>
+<input class="w-full bg-[#F1F5F9]/80 pl-9 pr-8 py-2 rounded-lg text-[13px] text-slate-800 placeholder:text-slate-400 border border-transparent focus:border-blue-400 focus:bg-white focus:outline-none transition-all" placeholder="Search exams, tests..." type="text"/>
+</div>
+<!-- Target Goal Badge -->
+<div class="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100/70 text-slate-700 text-[12px] font-medium cursor-pointer hover:bg-blue-100/50 transition-colors">
+<span class="material-symbols-outlined text-[#2563EB] text-[16px]">adjust</span>
+<span>Target: JEE Main &amp; TCS NQT</span>
+<span class="material-symbols-outlined text-slate-400 text-[14px]">expand_more</span>
+</div>
+<!-- Notification Bell -->
+<button aria-label="Notifications" class="relative p-2 rounded-full text-slate-500 hover:bg-slate-100 transition-colors">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-2 right-2 w-1.5 h-1.5 bg-rose-500 rounded-full ring-2 ring-white"></span>
+</button>
+<!-- User Profile Pill -->
+<div class="flex items-center gap-2 pl-1 cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-[#0F2856] text-white flex items-center justify-center font-bold text-[12px]">
+            PK
+          </div>
+<span class="hidden sm:inline text-[13px] font-medium text-slate-700">Prince Kumar</span>
+<span class="material-symbols-outlined text-slate-400 text-[16px]">expand_more</span>
+</div>
+</div>
+</div>
+</header>
+<!-- MAIN CONTENT CONTAINER -->
+<main class="flex-1 w-full">
+<!-- 2. HERO SECTION -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pb-4">
+<!-- Left: Headings -->
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-[#2563EB] text-[12px] font-semibold mb-3 border border-blue-100/80">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>Accredited 2025–2026 Examination Patterns</span>
+</div>
+<h1 class="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-slate-900 tracking-tight leading-[1.15] font-display mb-3">
+            Explore Competitive &amp; <span class="text-[#2563EB]">Entrance Exams</span>
+</h1>
+<p class="text-slate-500 text-[15px] sm:text-[16px] leading-relaxed max-w-2xl">
+            Comprehensive mock test series, simulated CBT exam interfaces, curated previous year papers, and precision AI performance analytics tailored for premier engineering, civil, banking, and global IT hiring assessments.
+          </p>
+</div>
+<!-- Right: Stats Counter Box (Matches Home Page Cards style) -->
+<div class="bg-white rounded-2xl border border-slate-100 shadow-[0_2px_12px_rgba(0,0,0,0.04)] p-5 flex items-center gap-6 sm:gap-8 shrink-0 divide-x divide-slate-100">
+<div class="flex flex-col">
+<div class="text-[26px] font-extrabold text-slate-900 font-display leading-tight flex items-baseline gap-0.5">
+              52<span class="text-[#2563EB] text-[20px] font-bold">+</span>
+</div>
+<span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mt-0.5">Exam Tracks</span>
+</div>
+<div class="pl-6 sm:pl-8 flex flex-col">
+<div class="text-[26px] font-extrabold text-slate-900 font-display leading-tight flex items-baseline gap-0.5">
+              1,420<span class="text-[#2563EB] text-[20px] font-bold">+</span>
+</div>
+<span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mt-0.5">Full Mocks</span>
+</div>
+<div class="pl-6 sm:pl-8 flex flex-col">
+<div class="text-[26px] font-extrabold text-[#10B981] font-display leading-tight flex items-baseline gap-0.5">
+              12.4<span class="text-[18px]">M</span>
+</div>
+<span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mt-0.5">Solves</span>
+</div>
+</div>
+</div>
+<!-- Category Filter Pills Bar -->
+<div class="pt-2 pb-1 overflow-x-auto no-scrollbar">
+<div class="flex items-center gap-2 pb-1 min-w-max" id="categoryTabs">
+<button class="cat-pill active px-4 py-2 rounded-full text-[13px] font-semibold bg-[#2563EB] text-white shadow-sm transition-all" data-cat="all">
+            All Exams (52)
+          </button>
+<button class="cat-pill px-4 py-2 rounded-full text-[13px] font-medium bg-white text-slate-600 hover:text-slate-900 border border-slate-200/80 hover:bg-slate-50 transition-all shadow-sm" data-cat="it">
+            Service Based IT (TCS, Infosys, Cognizant)
+          </button>
+<button class="cat-pill px-4 py-2 rounded-full text-[13px] font-medium bg-white text-slate-600 hover:text-slate-900 border border-slate-200/80 hover:bg-slate-50 transition-all shadow-sm" data-cat="gov-bank">
+            Government &amp; Banking (SSC, IBPS, SBI)
+          </button>
+<button class="cat-pill px-4 py-2 rounded-full text-[13px] font-medium bg-white text-slate-600 hover:text-slate-900 border border-slate-200/80 hover:bg-slate-50 transition-all shadow-sm" data-cat="eng">
+            Engineering Entrance (JEE, GATE, BITSAT)
+          </button>
+<button class="cat-pill px-4 py-2 rounded-full text-[13px] font-medium bg-white text-slate-600 hover:text-slate-900 border border-slate-200/80 hover:bg-slate-50 transition-all shadow-sm" data-cat="med">
+            Medical (NEET UG)
+          </button>
+<button class="cat-pill px-4 py-2 rounded-full text-[13px] font-medium bg-white text-slate-600 hover:text-slate-900 border border-slate-200/80 hover:bg-slate-50 transition-all shadow-sm" data-cat="civil">
+            Civil Services (UPSC)
+          </button>
+</div>
+</div>
+</section>
+<!-- 3. SEARCH & FILTER TOOLBAR -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="p-3 sm:p-4 rounded-2xl bg-white border border-slate-200/80 shadow-[0_2px_8px_rgba(0,0,0,0.02)] flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
+<!-- Live Search -->
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-[19px]">search</span>
+<input class="w-full bg-[#F8FAFC] pl-10 pr-4 py-2.5 rounded-xl text-[13px] text-slate-800 placeholder:text-slate-400 border border-slate-200/60 focus:bg-white focus:border-blue-500 focus:outline-none transition-all" id="examSearchInput" placeholder="Search by exam name, syllabus or conducting body (e.g. JEE, TCS, SSC)..." type="text"/>
+</div>
+<!-- Filter Dropdowns -->
+<div class="flex flex-wrap items-center gap-2.5 shrink-0">
+<!-- Difficulty -->
+<div class="flex items-center gap-1.5 bg-[#F8FAFC] border border-slate-200/70 px-3 py-2 rounded-xl text-slate-700 text-[13px]">
+<span class="material-symbols-outlined text-slate-400 text-[17px]">tune</span>
+<span class="text-slate-400 text-[12px] font-medium">Difficulty:</span>
+<select class="bg-transparent font-medium text-slate-700 focus:outline-none cursor-pointer text-[13px]" id="difficultyFilter">
+<option value="all">All Levels</option>
+<option value="easy">Foundational</option>
+<option value="moderate">Moderate</option>
+<option value="high">Advanced / High</option>
+</select>
+</div>
+<!-- Format/Mode -->
+<div class="flex items-center gap-1.5 bg-[#F8FAFC] border border-slate-200/70 px-3 py-2 rounded-xl text-slate-700 text-[13px]">
+<span class="material-symbols-outlined text-slate-400 text-[17px]">devices</span>
+<span class="text-slate-400 text-[12px] font-medium">Mode:</span>
+<select class="bg-transparent font-medium text-slate-700 focus:outline-none cursor-pointer text-[13px]" id="patternFilter">
+<option value="all">All Formats</option>
+<option value="cbt">Online CBT</option>
+<option value="omr">Offline OMR</option>
+</select>
+</div>
+<!-- Sort -->
+<div class="flex items-center gap-1.5 bg-[#F8FAFC] border border-slate-200/70 px-3 py-2 rounded-xl text-slate-700 text-[13px]">
+<span class="material-symbols-outlined text-slate-400 text-[17px]">swap_vert</span>
+<span class="text-slate-400 text-[12px] font-medium">Sort:</span>
+<select class="bg-transparent font-semibold text-blue-600 focus:outline-none cursor-pointer text-[13px]" id="sortFilter">
+<option value="popular">Most Popular</option>
+<option value="deadline">Upcoming Date</option>
+<option value="tests">Highest Tests</option>
+</select>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. AVAILABLE EXAM CARDS GRID -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
+<div class="flex items-center justify-between mb-5">
+<div class="flex items-center gap-2.5">
+<h2 class="text-[20px] font-bold text-slate-900 font-display">Available Exam Series</h2>
+<span class="text-[12px] font-semibold px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-600" id="resultsCount">
+            9 Tracks Loaded
+          </span>
+</div>
+<div class="hidden sm:flex items-center gap-2 text-emerald-600 text-[12px] font-medium">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span>Syllabi updated for 2025/2026 notifications</span>
+</div>
+</div>
+<!-- Grid of Cards (Clean rounded-2xl white card styling) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="cardsGrid">
+<!-- CARD 1: TCS NQT -->
+<article class="exam-card bg-white rounded-2xl border border-slate-200/80 p-5 shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:shadow-md hover:border-blue-200 transition-all flex flex-col justify-between" data-cat="it" data-diff="moderate" data-pattern="cbt">
+<div>
+<div class="flex items-start justify-between gap-3 mb-3.5">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<div>
+<span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 block">Tata Consultancy Services</span>
+<h3 class="text-[16px] font-bold text-slate-900 font-display">TCS NQT 2026</h3>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100 text-[11px] font-bold shrink-0">Free Mock</span>
+</div>
+<p class="text-[13px] text-slate-500 line-clamp-2 mb-3.5 leading-relaxed">
+              National Qualifier Test for Ninja &amp; Digital roles covering Numerical, Verbal, Reasoning, and Hands-on Advanced Coding drills.
+            </p>
+<div class="flex flex-wrap items-center gap-2 mb-3.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-100 text-[11px] font-medium text-slate-600">
+<span class="material-symbols-outlined text-[13px] text-blue-600">calendar_today</span> Oct 2025 Cycle
+              </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-100 text-[11px] font-medium text-slate-600">
+<span class="material-symbols-outlined text-[13px] text-slate-400">group</span> 480k Enrolled
+              </span>
+<span class="inline-flex items-center px-2 py-1 rounded-lg bg-amber-50 text-amber-700 text-[11px] font-medium">
+                Moderate Difficulty
+              </span>
+</div>
+<div class="px-3 py-2 rounded-xl bg-[#F8FAFC] border border-slate-100 mb-4 flex items-center justify-between text-slate-600 text-[12px]">
+<span class="flex items-center gap-1.5 font-medium">
+<span class="material-symbols-outlined text-blue-600 text-[16px]">layers</span>
+                28 Mocks + 45 Sectional + 12 PYQs
+              </span>
+<span class="font-bold text-blue-600 text-[11px]">CBT Mode</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1 border-t border-slate-100">
+<a class="py-2 text-center rounded-xl bg-slate-100 hover:bg-slate-200/80 text-slate-700 font-semibold text-[13px] transition-colors" href="#">
+              View Syllabus
+            </a>
+<a class="py-2 text-center rounded-xl bg-[#2563EB] hover:bg-blue-700 text-white font-semibold text-[13px] transition-colors shadow-sm" href="#">
+              Take Free Mock
+            </a>
+</div>
+</article>
+<!-- CARD 2: JEE Main -->
+<article class="exam-card bg-white rounded-2xl border border-slate-200/80 p-5 shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:shadow-md hover:border-blue-200 transition-all flex flex-col justify-between" data-cat="eng" data-diff="high" data-pattern="cbt">
+<div>
+<div class="flex items-start justify-between gap-3 mb-3.5">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-indigo-50 border border-indigo-100 text-indigo-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">calculate</span>
+</div>
+<div>
+<span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 block">NTA Official</span>
+<h3 class="text-[16px] font-bold text-slate-900 font-display">JEE Main 2026 Session 1</h3>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-blue-50 text-blue-600 border border-blue-100 text-[11px] font-bold shrink-0">Flagship</span>
+</div>
+<p class="text-[13px] text-slate-500 line-clamp-2 mb-3.5 leading-relaxed">
+              Complete Physics, Chemistry, and Mathematics pattern simulation mirroring latest numerical section negative marking constraints.
+            </p>
+<div class="flex flex-wrap items-center gap-2 mb-3.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-100 text-[11px] font-medium text-slate-600">
+<span class="material-symbols-outlined text-[13px] text-blue-600">calendar_today</span> Jan 2026 Window
+              </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-100 text-[11px] font-medium text-slate-600">
+<span class="material-symbols-outlined text-[13px] text-slate-400">group</span> 1.2M Aspirants
+              </span>
+<span class="inline-flex items-center px-2 py-1 rounded-lg bg-rose-50 text-rose-600 text-[11px] font-medium">
+                High Difficulty
+              </span>
+</div>
+<div class="px-3 py-2 rounded-xl bg-[#F8FAFC] border border-slate-100 mb-4 flex items-center justify-between text-slate-600 text-[12px]">
+<span class="flex items-center gap-1.5 font-medium">
+<span class="material-symbols-outlined text-blue-600 text-[16px]">layers</span>
+                40 Mocks + 120 Drills + 2019-24 PYQs
+              </span>
+<span class="font-bold text-blue-600 text-[11px]">CBT Mode</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1 border-t border-slate-100">
+<a class="py-2 text-center rounded-xl bg-slate-100 hover:bg-slate-200/80 text-slate-700 font-semibold text-[13px] transition-colors" href="#">
+              View Syllabus
+            </a>
+<a class="py-2 text-center rounded-xl bg-[#2563EB] hover:bg-blue-700 text-white font-semibold text-[13px] transition-colors shadow-sm" href="#">
+              Take Free Mock
+            </a>
+</div>
+</article>
+<!-- CARD 3: SSC CGL -->
+<article class="exam-card bg-white rounded-2xl border border-slate-200/80 p-5 shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:shadow-md hover:border-blue-200 transition-all flex flex-col justify-between" data-cat="gov-bank" data-diff="moderate" data-pattern="cbt">
+<div>
+<div class="flex items-start justify-between gap-3 mb-3.5">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-rose-50 border border-rose-100 text-rose-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">account_balance</span>
+</div>
+<div>
+<span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 block">Staff Selection Commission</span>
+<h3 class="text-[16px] font-bold text-slate-900 font-display">SSC CGL Tier-1 2026</h3>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100 text-[11px] font-bold shrink-0">Free Mock</span>
+</div>
+<p class="text-[13px] text-slate-500 line-clamp-2 mb-3.5 leading-relaxed">
+              All 4 sections covered: General Intelligence, General Awareness, Quantitative Aptitude, and English with instant percentile analysis.
+            </p>
+<div class="flex flex-wrap items-center gap-2 mb-3.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-100 text-[11px] font-medium text-slate-600">
+<span class="material-symbols-outlined text-[13px] text-blue-600">calendar_today</span> Sep 2025 Tier-1
+              </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-100 text-[11px] font-medium text-slate-600">
+<span class="material-symbols-outlined text-[13px] text-slate-400">group</span> 950k Candidates
+              </span>
+<span class="inline-flex items-center px-2 py-1 rounded-lg bg-amber-50 text-amber-700 text-[11px] font-medium">
+                Moderate Difficulty
+              </span>
+</div>
+<div class="px-3 py-2 rounded-xl bg-[#F8FAFC] border border-slate-100 mb-4 flex items-center justify-between text-slate-600 text-[12px]">
+<span class="flex items-center gap-1.5 font-medium">
+<span class="material-symbols-outlined text-blue-600 text-[16px]">layers</span>
+                35 Tier-1 Mocks + 80 Sectional
+              </span>
+<span class="font-bold text-blue-600 text-[11px]">CBT Mode</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1 border-t border-slate-100">
+<a class="py-2 text-center rounded-xl bg-slate-100 hover:bg-slate-200/80 text-slate-700 font-semibold text-[13px] transition-colors" href="#">
+              View Syllabus
+            </a>
+<a class="py-2 text-center rounded-xl bg-[#2563EB] hover:bg-blue-700 text-white font-semibold text-[13px] transition-colors shadow-sm" href="#">
+              Take Free Mock
+            </a>
+</div>
+</article>
+<!-- CARD 4: IBPS PO -->
+<article class="exam-card bg-white rounded-2xl border border-slate-200/80 p-5 shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:shadow-md hover:border-blue-200 transition-all flex flex-col justify-between" data-cat="gov-bank" data-diff="moderate" data-pattern="cbt">
+<div>
+<div class="flex items-start justify-between gap-3 mb-3.5">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-emerald-50 border border-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">payments</span>
+</div>
+<div>
+<span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 block">Public Sector Banks</span>
+<h3 class="text-[16px] font-bold text-slate-900 font-display">IBPS PO Prelims &amp; Mains</h3>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100 text-[11px] font-bold shrink-0">Free Mock</span>
+</div>
+<p class="text-[13px] text-slate-500 line-clamp-2 mb-3.5 leading-relaxed">
+              Speed drills for Quantitative Aptitude, Logical Reasoning, Banking Awareness, and descriptive English editorial grading.
+            </p>
+<div class="flex flex-wrap items-center gap-2 mb-3.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-100 text-[11px] font-medium text-slate-600">
+<span class="material-symbols-outlined text-[13px] text-blue-600">calendar_today</span> Oct 2025 Prelims
+              </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-100 text-[11px] font-medium text-slate-600">
+<span class="material-symbols-outlined text-[13px] text-slate-400">group</span> 620k Applicants
+              </span>
+<span class="inline-flex items-center px-2 py-1 rounded-lg bg-blue-50 text-blue-700 text-[11px] font-medium">
+                Speed Intensive
+              </span>
+</div>
+<div class="px-3 py-2 rounded-xl bg-[#F8FAFC] border border-slate-100 mb-4 flex items-center justify-between text-slate-600 text-[12px]">
+<span class="flex items-center gap-1.5 font-medium">
+<span class="material-symbols-outlined text-blue-600 text-[16px]">layers</span>
+                30 Prelims + 15 Mains + 10 Drills
+              </span>
+<span class="font-bold text-blue-600 text-[11px]">CBT Mode</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1 border-t border-slate-100">
+<a class="py-2 text-center rounded-xl bg-slate-100 hover:bg-slate-200/80 text-slate-700 font-semibold text-[13px] transition-colors" href="#">
+              View Syllabus
+            </a>
+<a class="py-2 text-center rounded-xl bg-[#2563EB] hover:bg-blue-700 text-white font-semibold text-[13px] transition-colors shadow-sm" href="#">
+              Take Free Mock
+            </a>
+</div>
+</article>
+<!-- CARD 5: UPSC CSE -->
+<article class="exam-card bg-white rounded-2xl border border-slate-200/80 p-5 shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:shadow-md hover:border-blue-200 transition-all flex flex-col justify-between" data-cat="civil" data-diff="high" data-pattern="omr">
+<div>
+<div class="flex items-start justify-between gap-3 mb-3.5">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-purple-50 border border-purple-100 text-purple-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">shield</span>
+</div>
+<div>
+<span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 block">UPSC Services</span>
+<h3 class="text-[16px] font-bold text-slate-900 font-display">UPSC CSE Prelims (GS + CSAT)</h3>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-purple-50 text-purple-600 border border-purple-100 text-[11px] font-bold shrink-0">Elite</span>
+</div>
+<p class="text-[13px] text-slate-500 line-clamp-2 mb-3.5 leading-relaxed">
+              In-depth multi-statement assertion questions in Polity, Economy, Environment, History paired with qualifying CSAT simulation papers.
+            </p>
+<div class="flex flex-wrap items-center gap-2 mb-3.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-100 text-[11px] font-medium text-slate-600">
+<span class="material-symbols-outlined text-[13px] text-blue-600">calendar_today</span> May 2026 Prelims
+              </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-100 text-[11px] font-medium text-slate-600">
+<span class="material-symbols-outlined text-[13px] text-slate-400">group</span> 850k Registered
+              </span>
+<span class="inline-flex items-center px-2 py-1 rounded-lg bg-rose-50 text-rose-600 text-[11px] font-medium">
+                High Difficulty
+              </span>
+</div>
+<div class="px-3 py-2 rounded-xl bg-[#F8FAFC] border border-slate-100 mb-4 flex items-center justify-between text-slate-600 text-[12px]">
+<span class="flex items-center gap-1.5 font-medium">
+<span class="material-symbols-outlined text-blue-600 text-[16px]">layers</span>
+                24 GS Mocks + 16 CSAT Mocks
+              </span>
+<span class="font-bold text-slate-600 text-[11px]">Offline OMR</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1 border-t border-slate-100">
+<a class="py-2 text-center rounded-xl bg-slate-100 hover:bg-slate-200/80 text-slate-700 font-semibold text-[13px] transition-colors" href="#">
+              View Syllabus
+            </a>
+<a class="py-2 text-center rounded-xl bg-[#2563EB] hover:bg-blue-700 text-white font-semibold text-[13px] transition-colors shadow-sm" href="#">
+              Take Free Mock
+            </a>
+</div>
+</article>
+<!-- CARD 6: GATE CS / IT -->
+<article class="exam-card bg-white rounded-2xl border border-slate-200/80 p-5 shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:shadow-md hover:border-blue-200 transition-all flex flex-col justify-between" data-cat="eng" data-diff="high" data-pattern="cbt">
+<div>
+<div class="flex items-start justify-between gap-3 mb-3.5">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-cyan-50 border border-cyan-100 text-cyan-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">memory</span>
+</div>
+<div>
+<span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 block">IIT Committee</span>
+<h3 class="text-[16px] font-bold text-slate-900 font-display">GATE CS &amp; IT 2026</h3>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100 text-[11px] font-bold shrink-0">Free Mock</span>
+</div>
+<p class="text-[13px] text-slate-500 line-clamp-2 mb-3.5 leading-relaxed">
+              Rigorous MCQ, MSQ (Multiple Select), and NAT questions with built-in official virtual scientific calculator emulation.
+            </p>
+<div class="flex flex-wrap items-center gap-2 mb-3.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-100 text-[11px] font-medium text-slate-600">
+<span class="material-symbols-outlined text-[13px] text-blue-600">calendar_today</span> Feb 2026 Exam
+              </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-100 text-[11px] font-medium text-slate-600">
+<span class="material-symbols-outlined text-[13px] text-slate-400">group</span> 180k Engineers
+              </span>
+<span class="inline-flex items-center px-2 py-1 rounded-lg bg-rose-50 text-rose-600 text-[11px] font-medium">
+                High Difficulty
+              </span>
+</div>
+<div class="px-3 py-2 rounded-xl bg-[#F8FAFC] border border-slate-100 mb-4 flex items-center justify-between text-slate-600 text-[12px]">
+<span class="flex items-center gap-1.5 font-medium">
+<span class="material-symbols-outlined text-blue-600 text-[16px]">layers</span>
+                20 Full Mocks + 60 Subject Tests
+              </span>
+<span class="font-bold text-blue-600 text-[11px]">CBT Mode</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1 border-t border-slate-100">
+<a class="py-2 text-center rounded-xl bg-slate-100 hover:bg-slate-200/80 text-slate-700 font-semibold text-[13px] transition-colors" href="#">
+              View Syllabus
+            </a>
+<a class="py-2 text-center rounded-xl bg-[#2563EB] hover:bg-blue-700 text-white font-semibold text-[13px] transition-colors shadow-sm" href="#">
+              Take Free Mock
+            </a>
+</div>
+</article>
+<!-- CARD 7: NEET UG -->
+<article class="exam-card bg-white rounded-2xl border border-slate-200/80 p-5 shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:shadow-md hover:border-blue-200 transition-all flex flex-col justify-between" data-cat="med" data-diff="high" data-pattern="omr">
+<div>
+<div class="flex items-start justify-between gap-3 mb-3.5">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-rose-50 border border-rose-100 text-rose-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">vital_signs</span>
+</div>
+<div>
+<span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 block">NTA Medical</span>
+<h3 class="text-[16px] font-bold text-slate-900 font-display">NEET UG 2026 - Medical</h3>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100 text-[11px] font-bold shrink-0">Free Mock</span>
+</div>
+<p class="text-[13px] text-slate-500 line-clamp-2 mb-3.5 leading-relaxed">
+              Strict NCERT-aligned Biology (Botany &amp; Zoology), Physics, and Chemistry tests with bubble sheet timer emulation.
+            </p>
+<div class="flex flex-wrap items-center gap-2 mb-3.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-100 text-[11px] font-medium text-slate-600">
+<span class="material-symbols-outlined text-[13px] text-blue-600">calendar_today</span> May 2026 Session
+              </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-100 text-[11px] font-medium text-slate-600">
+<span class="material-symbols-outlined text-[13px] text-slate-400">group</span> 2.1M Aspirants
+              </span>
+<span class="inline-flex items-center px-2 py-1 rounded-lg bg-rose-50 text-rose-600 text-[11px] font-medium">
+                High Competition
+              </span>
+</div>
+<div class="px-3 py-2 rounded-xl bg-[#F8FAFC] border border-slate-100 mb-4 flex items-center justify-between text-slate-600 text-[12px]">
+<span class="flex items-center gap-1.5 font-medium">
+<span class="material-symbols-outlined text-blue-600 text-[16px]">layers</span>
+                32 Mocks + 90 NCERT Chapter Tests
+              </span>
+<span class="font-bold text-slate-600 text-[11px]">Offline OMR</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1 border-t border-slate-100">
+<a class="py-2 text-center rounded-xl bg-slate-100 hover:bg-slate-200/80 text-slate-700 font-semibold text-[13px] transition-colors" href="#">
+              View Syllabus
+            </a>
+<a class="py-2 text-center rounded-xl bg-[#2563EB] hover:bg-blue-700 text-white font-semibold text-[13px] transition-colors shadow-sm" href="#">
+              Take Free Mock
+            </a>
+</div>
+</article>
+<!-- CARD 8: NDA & NA -->
+<article class="exam-card bg-white rounded-2xl border border-slate-200/80 p-5 shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:shadow-md hover:border-blue-200 transition-all flex flex-col justify-between" data-cat="gov-bank" data-diff="moderate" data-pattern="omr">
+<div>
+<div class="flex items-start justify-between gap-3 mb-3.5">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">military_tech</span>
+</div>
+<div>
+<span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 block">UPSC Armed Forces</span>
+<h3 class="text-[16px] font-bold text-slate-900 font-display">NDA &amp; NA (I &amp; II) 2026</h3>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100 text-[11px] font-bold shrink-0">Free Mock</span>
+</div>
+<p class="text-[13px] text-slate-500 line-clamp-2 mb-3.5 leading-relaxed">
+              Rigorous test packs for Paper 1 (Mathematics 300 marks) and Paper 2 General Ability Test (GAT 600 marks) with step-by-step solutions.
+            </p>
+<div class="flex flex-wrap items-center gap-2 mb-3.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-100 text-[11px] font-medium text-slate-600">
+<span class="material-symbols-outlined text-[13px] text-blue-600">calendar_today</span> Apr &amp; Sep 2026
+              </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-100 text-[11px] font-medium text-slate-600">
+<span class="material-symbols-outlined text-[13px] text-slate-400">group</span> 420k Cadets
+              </span>
+<span class="inline-flex items-center px-2 py-1 rounded-lg bg-amber-50 text-amber-700 text-[11px] font-medium">
+                Moderate Difficulty
+              </span>
+</div>
+<div class="px-3 py-2 rounded-xl bg-[#F8FAFC] border border-slate-100 mb-4 flex items-center justify-between text-slate-600 text-[12px]">
+<span class="flex items-center gap-1.5 font-medium">
+<span class="material-symbols-outlined text-blue-600 text-[16px]">layers</span>
+                20 Mocks + 50 Modules + PYQs
+              </span>
+<span class="font-bold text-slate-600 text-[11px]">Offline OMR</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1 border-t border-slate-100">
+<a class="py-2 text-center rounded-xl bg-slate-100 hover:bg-slate-200/80 text-slate-700 font-semibold text-[13px] transition-colors" href="#">
+              View Syllabus
+            </a>
+<a class="py-2 text-center rounded-xl bg-[#2563EB] hover:bg-blue-700 text-white font-semibold text-[13px] transition-colors shadow-sm" href="#">
+              Take Free Mock
+            </a>
+</div>
+</article>
+<!-- CARD 9: Infosys SP & DSE -->
+<article class="exam-card bg-white rounded-2xl border border-slate-200/80 p-5 shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:shadow-md hover:border-blue-200 transition-all flex flex-col justify-between" data-cat="it" data-diff="easy" data-pattern="cbt">
+<div>
+<div class="flex items-start justify-between gap-3 mb-3.5">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-orange-50 border border-orange-100 text-orange-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">code</span>
+</div>
+<div>
+<span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 block">Infosys Assessment</span>
+<h3 class="text-[16px] font-bold text-slate-900 font-display">Infosys SP &amp; DSE Hiring</h3>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100 text-[11px] font-bold shrink-0">Free Mock</span>
+</div>
+<p class="text-[13px] text-slate-500 line-clamp-2 mb-3.5 leading-relaxed">
+              Specialist Programmer and Digital Specialist Engineer assessment patterns focusing on DSA, Dynamic Programming, and SQL diagnostics.
+            </p>
+<div class="flex flex-wrap items-center gap-2 mb-3.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-100 text-[11px] font-medium text-slate-600">
+<span class="material-symbols-outlined text-[13px] text-blue-600">calendar_today</span> Rolling 2025/26
+              </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-100 text-[11px] font-medium text-slate-600">
+<span class="material-symbols-outlined text-[13px] text-slate-400">group</span> 290k Students
+              </span>
+<span class="inline-flex items-center px-2 py-1 rounded-lg bg-emerald-50 text-emerald-700 text-[11px] font-medium">
+                Foundational
+              </span>
+</div>
+<div class="px-3 py-2 rounded-xl bg-[#F8FAFC] border border-slate-100 mb-4 flex items-center justify-between text-slate-600 text-[12px]">
+<span class="flex items-center gap-1.5 font-medium">
+<span class="material-symbols-outlined text-blue-600 text-[16px]">layers</span>
+                15 Coding Tests + 30 Logic Quizzes
+              </span>
+<span class="font-bold text-blue-600 text-[11px]">CBT Mode</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1 border-t border-slate-100">
+<a class="py-2 text-center rounded-xl bg-slate-100 hover:bg-slate-200/80 text-slate-700 font-semibold text-[13px] transition-colors" href="#">
+              View Syllabus
+            </a>
+<a class="py-2 text-center rounded-xl bg-[#2563EB] hover:bg-blue-700 text-white font-semibold text-[13px] transition-colors shadow-sm" href="#">
+              Take Free Mock
+            </a>
+</div>
+</article>
+</div>
+</section>
+<!-- 5. SMART DECISION PATHWAY ASSISTANT CARD -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+<div class="rounded-2xl bg-white border border-slate-200/80 p-6 sm:p-8 shadow-[0_2px_12px_rgba(0,0,0,0.03)]">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Left Info -->
+<div class="lg:col-span-5 flex flex-col gap-2.5">
+<div class="inline-flex items-center gap-1.5 text-blue-600 text-[12px] font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+<span>Smart Decision Assistant</span>
+</div>
+<h2 class="text-2xl sm:text-[26px] font-bold text-slate-900 font-display leading-snug">
+              Find Which Examinations Match Your Degree &amp; Timeline
+            </h2>
+<p class="text-slate-500 text-[14px] leading-relaxed">
+              Not sure which test tracks overlap in syllabus? Choose your educational stream and target graduation year to discover recommended exams, age criteria, and shared aptitude syllabus.
+            </p>
+<div class="flex items-center gap-4 pt-2">
+<div class="flex items-center gap-1.5 text-emerald-600 text-[12px] font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Instant Syllabus Overlap %</span>
+</div>
+<div class="flex items-center gap-1.5 text-emerald-600 text-[12px] font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Age Limit Checks</span>
+</div>
+</div>
+</div>
+<!-- Right Interactive Selection Tool -->
+<div class="lg:col-span-7 bg-[#F8FAFC] border border-slate-200/80 p-5 sm:p-6 rounded-2xl flex flex-col gap-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+<div>
+<label class="block text-[12px] font-semibold text-slate-600 mb-1.5" for="degreeStream">Your Academic Stream</label>
+<select class="w-full bg-white border border-slate-200 py-2.5 px-3 rounded-xl text-[13px] text-slate-800 focus:outline-none focus:border-blue-500 cursor-pointer font-medium shadow-sm" id="degreeStream">
+<option value="btech">B.Tech / B.E (Engineering)</option>
+<option value="bsc">B.Sc / B.C.A / M.C.A</option>
+<option value="commerce">B.Com / B.B.A (Finance &amp; Commerce)</option>
+<option value="humanities">B.A / Humanities &amp; Law</option>
+<option value="hsc">12th Standard (Science PCM/PCB)</option>
+</select>
+</div>
+<div>
+<label class="block text-[12px] font-semibold text-slate-600 mb-1.5" for="targetYear">Target Graduation / Goal Year</label>
+<select class="w-full bg-white border border-slate-200 py-2.5 px-3 rounded-xl text-[13px] text-slate-800 focus:outline-none focus:border-blue-500 cursor-pointer font-medium shadow-sm" id="targetYear">
+<option value="2025">2025 (Immediate Hiring &amp; Entrances)</option>
+<option selected="" value="2026">2026 (Next Academic Session)</option>
+<option value="2027">2027 (Long-term Foundation)</option>
+</select>
+</div>
+</div>
+<!-- Calculated Recommendations Result Area -->
+<div class="p-4 rounded-xl bg-white border border-slate-200/80 flex flex-col gap-3 shadow-sm" id="eligibilityResultBox">
+<div class="flex items-center justify-between">
+<span class="text-[13px] font-bold text-slate-900 font-display">Top 3 Recommended Pathways</span>
+<span class="text-[12px] text-blue-600 font-bold bg-blue-50 px-2 py-0.5 rounded-full">82% Syllabus Synergy</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5" id="matchCardsContainer">
+<div class="p-3 rounded-xl bg-[#F8FAFC] border border-slate-100 flex flex-col justify-between">
+<div>
+<span class="text-[12px] font-bold text-blue-600 block">TCS NQT &amp; MNC Drive</span>
+<span class="text-[11px] text-slate-500">Cognitive + Programming</span>
+</div>
+<span class="text-[11px] text-emerald-600 mt-2 font-semibold">Highest Relevancy</span>
+</div>
+<div class="p-3 rounded-xl bg-[#F8FAFC] border border-slate-100 flex flex-col justify-between">
+<div>
+<span class="text-[12px] font-bold text-slate-800 block">GATE CSE 2026</span>
+<span class="text-[11px] text-slate-500">Core Computer Science</span>
+</div>
+<span class="text-[11px] text-indigo-600 mt-2 font-semibold">PSU + M.Tech Paths</span>
+</div>
+<div class="p-3 rounded-xl bg-[#F8FAFC] border border-slate-100 flex flex-col justify-between">
+<div>
+<span class="text-[12px] font-bold text-slate-800 block">SSC CGL / RRB JE</span>
+<span class="text-[11px] text-slate-500">General Tech &amp; Quantitative</span>
+</div>
+<span class="text-[11px] text-slate-500 mt-2 font-semibold">High Overlap with Aptitude</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-1">
+<span class="text-[12px] text-slate-400">Updated daily from official state and central gazettes.</span>
+<button class="px-4 py-2 rounded-xl bg-[#2563EB] hover:bg-blue-700 text-white text-[13px] font-semibold transition-colors shadow-sm" id="recalcBtn" type="button">
+                Recalculate Roadmap
+              </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. VALUE PROPOSITION FEATURE STRIP -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+<div class="flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-200/80 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
+<div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">timer</span>
+</div>
+<div>
+<h3 class="text-[15px] font-bold text-slate-900 font-display mb-1">Standardized Timers</h3>
+<p class="text-[13px] text-slate-500 leading-relaxed">Experience authentic countdown pressures, strict section switches, and automatic submission locks matching test center environments.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-200/80 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
+<div class="w-11 h-11 rounded-xl bg-indigo-50 border border-indigo-100 text-indigo-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">analytics</span>
+</div>
+<div>
+<h3 class="text-[15px] font-bold text-slate-900 font-display mb-1">Percentile Benchmarking</h3>
+<p class="text-[13px] text-slate-500 leading-relaxed">Measure individual accuracy rate against over 10 million test records to determine where your all-India or national rank lands.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-200/80 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
+<div class="w-11 h-11 rounded-xl bg-cyan-50 border border-cyan-100 text-cyan-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">auto_stories</span>
+</div>
+<div>
+<h3 class="text-[15px] font-bold text-slate-900 font-display mb-1">Detailed Step Solutions</h3>
+<p class="text-[13px] text-slate-500 leading-relaxed">Every question is supplemented with step-by-step mathematical reasoning, alternative shortcuts, and concept tags.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. FREQUENTLY ASKED QUESTIONS (ACCORDION) -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-14">
+<div class="text-center mb-8">
+<span class="text-[11px] font-bold uppercase tracking-wider text-[#2563EB]">Everything You Need To Know</span>
+<h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-display mt-1">
+          Frequently Asked Questions About TestPrep Exams
+        </h2>
+<p class="text-[14px] text-slate-500 max-w-lg mx-auto mt-2">
+          Find clarity on mock test patterns, negative marking algorithms, and subscription validity.
+        </p>
+</div>
+<div class="flex flex-col gap-3" id="faqAccordion">
+<!-- FAQ 1 -->
+<div class="faq-item rounded-2xl bg-white border border-slate-200/80 shadow-[0_2px_8px_rgba(0,0,0,0.02)] overflow-hidden">
+<button class="faq-toggle w-full px-5 py-4 flex items-center justify-between text-left text-slate-900 font-bold text-[14px] hover:text-[#2563EB] transition-colors" type="button">
+<span>Are the mock exams designed on the exact current syllabus pattern?</span>
+<span class="material-symbols-outlined text-slate-400 text-[20px] transition-transform duration-200 faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-5 pb-4 text-[13px] text-slate-500 leading-relaxed border-t border-slate-100 pt-3">
+            Yes, our academic council of subject-matter experts updates mock papers within 48 hours of any official conducting body (NTA, UPSC, IBPS, or TCS) issuing revisions, syllabus cuts, or section-timing rule changes.
+          </div>
+</div>
+<!-- FAQ 2 -->
+<div class="faq-item rounded-2xl bg-white border border-slate-200/80 shadow-[0_2px_8px_rgba(0,0,0,0.02)] overflow-hidden">
+<button class="faq-toggle w-full px-5 py-4 flex items-center justify-between text-left text-slate-900 font-bold text-[14px] hover:text-[#2563EB] transition-colors" type="button">
+<span>Can I retake full mock tests after viewing my diagnostic scorecard?</span>
+<span class="material-symbols-outlined text-slate-400 text-[20px] transition-transform duration-200 faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-5 pb-4 text-[13px] text-slate-500 leading-relaxed border-t border-slate-100 pt-3">
+            All premium full tests allow unlimited re-attempts in 'Revision Practice Mode'. However, only your initial test attempt is recorded in the official national percentile leaderboard to maintain integrity.
+          </div>
+</div>
+<!-- FAQ 3 -->
+<div class="faq-item rounded-2xl bg-white border border-slate-200/80 shadow-[0_2px_8px_rgba(0,0,0,0.02)] overflow-hidden">
+<button class="faq-toggle w-full px-5 py-4 flex items-center justify-between text-left text-slate-900 font-bold text-[14px] hover:text-[#2563EB] transition-colors" type="button">
+<span>How authentic is the Computer-Based Test (CBT) interface?</span>
+<span class="material-symbols-outlined text-slate-400 text-[20px] transition-transform duration-200 faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-5 pb-4 text-[13px] text-slate-500 leading-relaxed border-t border-slate-100 pt-3">
+            Our full-screen exam console duplicates the actual TCS iON and NTA software consoles right down to palette colors (Answered, Not Answered, Marked for Review), virtual keyboard behavior, and scientific calculator layouts.
+          </div>
+</div>
+<!-- FAQ 4 -->
+<div class="faq-item rounded-2xl bg-white border border-slate-200/80 shadow-[0_2px_8px_rgba(0,0,0,0.02)] overflow-hidden">
+<button class="faq-toggle w-full px-5 py-4 flex items-center justify-between text-left text-slate-900 font-bold text-[14px] hover:text-[#2563EB] transition-colors" type="button">
+<span>Are previous year question (PYQ) papers provided with solutions?</span>
+<span class="material-symbols-outlined text-slate-400 text-[20px] transition-transform duration-200 faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-5 pb-4 text-[13px] text-slate-500 leading-relaxed border-t border-slate-100 pt-3">
+            Yes, every PYQ test series from 2018 through 2024 is indexed by shift and date, complete with step-by-step video solutions for complex questions and printable formula reference sheets.
+          </div>
+</div>
+</div>
+</section>
+<!-- 8. PROMOTIONAL BLUE BANNER -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14">
+<div class="p-8 sm:p-10 rounded-2xl bg-[#2563EB] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-[0_8px_24px_rgba(37,99,235,0.25)] relative overflow-hidden">
+<div class="absolute -right-10 -bottom-10 w-64 h-64 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="max-w-xl relative z-10">
+<span class="text-[11px] font-bold uppercase tracking-wider text-blue-200">Comprehensive Test Pass</span>
+<h3 class="text-2xl sm:text-3xl font-extrabold font-display mt-1 mb-2 text-white">
+            Unlock All 50+ Examination Tracks with TestPrep All-Access
+          </h3>
+<p class="text-[14px] text-blue-100 leading-relaxed">
+            One single yearly pass gives you unrestricted access to mock tests, sectional speed drills, coding environments, and all-India percentile reports.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-3 shrink-0 w-full md:w-auto relative z-10">
+<a class="w-full sm:w-auto px-6 py-3 rounded-xl bg-white text-[#2563EB] font-bold text-[13px] text-center hover:bg-blue-50 transition-colors shadow-sm" href="#">
+            View Pricing Plans
+          </a>
+<a class="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-700/80 hover:bg-blue-800 text-white font-bold text-[13px] text-center transition-colors border border-blue-400/40" href="#">
+            Explore Free Mocks
+          </a>
+</div>
+</div>
+</section>
+</main>
+<!-- 9. FOOTER (Matching Home Page Multi-Column Exactly) -->
+<footer class="w-full bg-white border-t border-slate-200/80 mt-auto">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+<!-- Brand Info -->
+<div class="lg:col-span-2 flex flex-col gap-3">
+<div class="flex items-center gap-2 text-[#2563EB]">
+<svg class="w-7 h-7" fill="currentColor" viewbox="0 0 36 36">
+<path d="M18 7.5c-4.8 0-9.2-1.7-12.7-4.5A1.5 1.5 0 0 0 3 4.2v21.5a1.5 1.5 0 0 0 2.3 1.3C8.8 29.5 13.2 31 18 31s9.2-1.5 12.7-4a1.5 1.5 0 0 0 2.3-1.3V4.2a1.5 1.5 0 0 0-2.3-1.2C27.2 5.8 22.8 7.5 18 7.5zM16.5 27.2c-3.6-.5-7-1.7-9.5-3.4V6.9c2.7 1.5 5.9 2.5 9.5 2.8v17.5zm12.5-3.4c-2.5 1.7-5.9 2.9-9.5 3.4V9.7c3.6-.3 6.8-1.3 9.5-2.8v16.9z"></path>
+</svg>
+<span class="text-[20px] font-bold text-slate-900 font-display">TestPrep</span>
+</div>
+<p class="text-[13px] font-bold text-[#2563EB]">Practice Today, Perform Tomorrow</p>
+<p class="text-[13px] text-slate-500 max-w-sm leading-relaxed">
+            Comprehensive mock assessment platform trusted by millions of aspirants for national engineering, placement drives, banking, and government examinations.
+          </p>
+<div class="flex items-center gap-2 pt-2 text-slate-400">
+<a class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[17px]">forum</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[17px]">podcasts</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[17px]">mail</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[17px]">public</span>
+</a>
+</div>
+</div>
+<!-- Links: Exams -->
+<div>
+<p class="text-[12px] font-bold text-slate-900 uppercase tracking-wider mb-3">Exams</p>
+<ul class="flex flex-col gap-2 text-[13px] text-slate-500">
+<li><a class="hover:text-blue-600 transition-colors" href="#">SSC Exams</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">Banking &amp; Insurance</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">Railways RRB</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">UPSC Civil Services</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">JEE Main &amp; Advanced</a></li>
+</ul>
+</div>
+<!-- Links: Resources -->
+<div>
+<p class="text-[12px] font-bold text-slate-900 uppercase tracking-wider mb-3">Resources</p>
+<ul class="flex flex-col gap-2 text-[13px] text-slate-500">
+<li><a class="hover:text-blue-600 transition-colors" href="#">Mock Tests</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">PYQ Papers</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">Formula Handbooks</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">Daily Quiz Drills</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">Speed Test Matrix</a></li>
+</ul>
+</div>
+<!-- Links: Company -->
+<div>
+<p class="text-[12px] font-bold text-slate-900 uppercase tracking-wider mb-3">Company</p>
+<ul class="flex flex-col gap-2 text-[13px] text-slate-500">
+<li><a class="hover:text-blue-600 transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">Educator Network</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<!-- Links: Legal -->
+<div>
+<p class="text-[12px] font-bold text-slate-900 uppercase tracking-wider mb-3">Legal</p>
+<ul class="flex flex-col gap-2 text-[13px] text-slate-500">
+<li><a class="hover:text-blue-600 transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">Refund Policy</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">Code of Conduct</a></li>
+</ul>
+</div>
+</div>
+<!-- Bottom System Status -->
+<div class="mt-10 pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-slate-100 text-[12px] text-slate-500">
+<p>© 2025 TestPrep EdTech Systems Inc. All rights reserved.</p>
+<div class="flex items-center gap-1.5 font-medium text-emerald-600">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span>All Systems Operational</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- CLIENT-SIDE SCRIPT FOR INTERACTIONS -->
+<script>
+    (function() {
+      // 1. Filtering logic
+      const categoryTabs = document.querySelectorAll('#categoryTabs .cat-pill');
+      const cards = document.querySelectorAll('#cardsGrid .exam-card');
+      const resultsCount = document.getElementById('resultsCount');
+      const searchInput = document.getElementById('examSearchInput');
+      const diffFilter = document.getElementById('difficultyFilter');
+      const patternFilter = document.getElementById('patternFilter');
+      
+      let activeCategory = 'all';
+
+      function filterCards() {
+        const query = (searchInput.value || '').toLowerCase().trim();
+        const selectedDiff = diffFilter.value;
+        const selectedPattern = patternFilter.value;
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+          const cardCat = card.getAttribute('data-cat');
+          const cardDiff = card.getAttribute('data-diff');
+          const cardPattern = card.getAttribute('data-pattern');
+          const textContent = card.innerText.toLowerCase();
+
+          const matchesCat = (activeCategory === 'all' || cardCat === activeCategory);
+          const matchesDiff = (selectedDiff === 'all' || cardDiff === selectedDiff);
+          const matchesPattern = (selectedPattern === 'all' || cardPattern === selectedPattern);
+          const matchesQuery = query === '' || textContent.includes(query);
+
+          if (matchesCat && matchesDiff && matchesPattern && matchesQuery) {
+            card.style.display = 'flex';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (resultsCount) {
+          resultsCount.textContent = `${visibleCount} Tracks Loaded`;
+        }
+      }
+
+      categoryTabs.forEach(btn => {
+        btn.addEventListener('click', () => {
+          categoryTabs.forEach(b => {
+            b.classList.remove('bg-[#2563EB]', 'text-white', 'shadow-sm');
+            b.classList.add('bg-white', 'text-slate-600', 'border', 'border-slate-200/80');
+          });
+          btn.classList.remove('bg-white', 'text-slate-600', 'border', 'border-slate-200/80');
+          btn.classList.add('bg-[#2563EB]', 'text-white', 'shadow-sm');
+          
+          activeCategory = btn.getAttribute('data-cat') || 'all';
+          filterCards();
+        });
+      });
+
+      if (searchInput) searchInput.addEventListener('input', filterCards);
+      if (diffFilter) diffFilter.addEventListener('change', filterCards);
+      if (patternFilter) patternFilter.addEventListener('change', filterCards);
+
+      // 2. Interactive Eligibility Recommendations
+      const degreeSelect = document.getElementById('degreeStream');
+      const matchContainer = document.getElementById('matchCardsContainer');
+      const recalcBtn = document.getElementById('recalcBtn');
+
+      const recommendationsMap = {
+        btech: [
+          { title: 'TCS NQT & MNC Drive', sub: 'Cognitive + Coding Drills', tag: '94% Synergy', tagColor: 'text-emerald-600' },
+          { title: 'GATE CS / IT 2026', sub: 'Technical Depth & PSUs', tag: 'PSU Career', tagColor: 'text-blue-600' },
+          { title: 'SSC CGL & RRB JE', sub: 'Quantitative & Aptitude', tag: 'High Overlap', tagColor: 'text-slate-500' }
+        ],
+        bsc: [
+          { title: 'Infosys & Wipro Off-Campus', sub: 'Analytical & Foundation Coding', tag: 'Best Match', tagColor: 'text-emerald-600' },
+          { title: 'IBPS PO & Clerk', sub: 'Banking & Speed Aptitude', tag: 'High Frequency', tagColor: 'text-blue-600' },
+          { title: 'NIMCET MCA Entrance', sub: 'Mathematics & Computer Awareness', tag: 'Postgrad Path', tagColor: 'text-slate-500' }
+        ],
+        commerce: [
+          { title: 'IBPS & SBI PO 2026', sub: 'Financial & Quantitative', tag: 'Top Recommended', tagColor: 'text-emerald-600' },
+          { title: 'SSC CGL Tier 1 & 2', sub: 'Audit Officer & Tax Assistant', tag: 'Strong Overlap', tagColor: 'text-blue-600' },
+          { title: 'RBI Grade B Officer', sub: 'Economic & Social Issues', tag: 'Executive Track', tagColor: 'text-slate-500' }
+        ],
+        humanities: [
+          { title: 'UPSC CSE Prelims 2026', sub: 'General Studies + CSAT', tag: 'Prime Fit', tagColor: 'text-emerald-600' },
+          { title: 'State PSC Exams', sub: 'State Administration & GS', tag: 'High Vacancies', tagColor: 'text-blue-600' },
+          { title: 'SSC CGL Group B/C', sub: 'General Awareness & English', tag: 'Aptitude Practice', tagColor: 'text-slate-500' }
+        ],
+        hsc: [
+          { title: 'JEE Main Session 1 & 2', sub: 'Engineering Entrance PCM', tag: 'Primary Focus', tagColor: 'text-emerald-600' },
+          { title: 'NDA & NA Exam 2026', sub: 'Defense Armed Forces', tag: 'Officer Cadet', tagColor: 'text-blue-600' },
+          { title: 'NEET UG 2026', sub: 'Medical Entrance PCB', tag: 'Medical Focus', tagColor: 'text-slate-500' }
+        ]
+      };
+
+      function updateRecommendations() {
+        if (!degreeSelect || !matchContainer) return;
+        const val = degreeSelect.value || 'btech';
+        const list = recommendationsMap[val] || recommendationsMap.btech;
+
+        matchContainer.innerHTML = list.map(item => `
+          <div class="p-3 rounded-xl bg-[#F8FAFC] border border-slate-100 flex flex-col justify-between transition-all hover:bg-slate-100/70">
+            <div>
+              <span class="text-[12px] font-bold text-slate-800 block">${item.title}</span>
+              <span class="text-[11px] text-slate-500">${item.sub}</span>
+            </div>
+            <span class="text-[11px] ${item.tagColor} mt-2 font-semibold">${item.tag}</span>
+          </div>
+        `).join('');
+      }
+
+      if (degreeSelect) degreeSelect.addEventListener('change', updateRecommendations);
+      if (recalcBtn) recalcBtn.addEventListener('click', updateRecommendations);
+
+      // 3. FAQ Accordion Expand/Collapse
+      const faqToggles = document.querySelectorAll('.faq-toggle');
+      faqToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          const content = toggle.nextElementSibling;
+          const icon = toggle.querySelector('.faq-icon');
+          const isExpanded = !content.classList.contains('hidden');
+
+          document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+          document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = 'rotate(0deg)');
+
+          if (!isExpanded) {
+            content.classList.remove('hidden');
+            if (icon) icon.style.transform = 'rotate(180deg)';
+          }
+        });
+      });
+    })();
+  </script>
+</body></html>

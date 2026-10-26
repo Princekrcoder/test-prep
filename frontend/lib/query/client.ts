@@ -1,4 +1,4 @@
-﻿import { QueryClient } from '@tanstack/react-query';
+import { QueryClient } from '@tanstack/react-query';
 
 // Shared query key factory — prevents string typos across the app
 export const queryKeys = {

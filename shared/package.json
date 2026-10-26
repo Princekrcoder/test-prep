@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "@testprep/shared",
   "version": "1.0.0",
   "description": "Shared Zod schemas, TypeScript types, and pure functions for TestPrep",

@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary-fixed":"#131b2e","on-tertiary-fixed":"#002113","surface-container-highest":"#d3e4fe","on-tertiary-container":"#b5ffd7","primary-container":"#1e60f3","on-primary-fixed-variant":"#003cab","background":"#f8f9ff","secondary-container":"#dae2fd","tertiary":"#006141","inverse-primary":"#b5c4ff","tertiary-container":"#007c55","outline":"#737687","on-primary-fixed":"#00174d","primary-fixed-dim":"#b5c4ff","inverse-surface":"#213145","surface":"#f8f9ff","surface-tint":"#0051df","on-error":"#ffffff","on-tertiary-fixed-variant":"#005236","surface-container-lowest":"#ffffff","primary":"#0048c9","outline-variant":"#c3c5d8","surface-variant":"#d3e4fe","on-surface":"#0b1c30","error":"#ba1a1a","surface-container-high":"#dce9ff","on-error-container":"#93000a","on-primary-container":"#edeeff","on-tertiary":"#ffffff","secondary":"#565e74","on-secondary":"#ffffff","surface-dim":"#cbdbf5","inverse-on-surface":"#eaf1ff","on-background":"#0b1c30","surface-container":"#e5eeff","on-surface-variant":"#434655","surface-container-low":"#eff4ff","error-container":"#ffdad6","on-secondary-fixed-variant":"#3f465c","surface-bright":"#f8f9ff","secondary-fixed":"#dae2fd","tertiary-fixed-dim":"#4edea3","secondary-fixed-dim":"#bec6e0","on-secondary-container":"#5c647a","primary-fixed":"#dbe1ff","tertiary-fixed":"#6ffbbe","on-primary":"#ffffff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"2rem","space-xs":"0.5rem","space-md":"1rem","space-sm":"0.75rem","space-2xl":"3rem","space-2xs":"0.25rem","space-lg":"1.5rem","gutter":"1.5rem","margin-mobile":"1rem","gutter-mobile":"0.75rem","margin":"2rem"},"fontFamily":{"label-lg":["Inter"],"headline-xl":["Plus Jakarta Sans"],"body-lg":["Inter"],"exam-numeric":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"label-md":["Inter"],"body-sm":["Inter"],"label-sm":["Inter"],"headline-md":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"]},"fontSize":{"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"headline-xl":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"exam-numeric":["14px",{"lineHeight":"14px","fontWeight":"700"}],"display-hero-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"800"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-xl-mobile":["22px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-lg":["20px",{"lineHeight":"28px","fontWeight":"700"}],"display-hero":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"800"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full max-w-[1440px] mx-auto px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-shrink-0"><a class="flex items-center gap-space-xs text-primary" data-path="home" href="#"><div class="w-9 h-9 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-headline-lg text-headline-lg"><span class="material-symbols-outlined">school</span></div><span class="font-headline-lg text-headline-lg tracking-tight text-on-surface">TestPrep</span></a><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container rounded-lg"><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="exams" href="#">Exams</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="mock-tests" href="#">Mock Tests</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="previous-year-papers" href="#">Previous Year Papers</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="study-material" href="#">Study Material</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="pricing" href="#">Pricing</a></nav></div><div class="flex items-center gap-space-md flex-1 max-w-md justify-end"><div class="relative w-full hidden md:block max-w-xs"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full pl-9 pr-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest transition-colors" placeholder="Search tests, exams, topics..." type="search"/></div><button aria-label="Notifications" class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors relative flex-shrink-0" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-xs pl-space-xs flex-shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="hidden lg:inline-block font-label-md text-label-md text-on-surface whitespace-nowrap">Prince Kumar</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Search & Notification Drawer Header Banner -->
+<section class="w-full bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-low py-space-xl px-gutter relative overflow-hidden">
+<div class="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="max-w-[1440px] mx-auto w-full relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-space-lg">
+<div class="flex-1 max-w-3xl">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-primary-container/15 text-primary font-label-sm text-label-sm uppercase tracking-wider mb-space-sm shadow-sm">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span>Legal &amp; Compliance • Effective Date: October 2025 • Version 4.2</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mb-space-xs">Transparent Policies, Built with Aspirant Trust</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Empowering millions of competitive exam candidates through clear commitments on proctoring integrity, rigorous consumer refund guarantees, data ownership, and transparent score licensing.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<button class="inline-flex items-center gap-space-2xs px-space-md py-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-high hover:shadow transition-all duration-200" id="pdfDownloadBtn" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">download</span>
+<span>Download Official PDF (Signed)</span>
+</button>
+<button class="inline-flex items-center gap-space-2xs px-space-md py-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-high hover:shadow transition-all duration-200" id="printBtn" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">print</span>
+<span>Print Document</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Sticky Document Navigator & Quick Search Strip -->
+<section class="sticky top-16 z-40 w-full bg-surface-container-lowest/95 backdrop-blur-md shadow-sm">
+<div class="max-w-[1440px] mx-auto px-gutter flex flex-col md:flex-row md:items-center justify-between gap-space-sm py-space-xs">
+<!-- Tabs -->
+<nav class="flex items-center gap-1 overflow-x-auto no-scrollbar py-1" id="legalDocTabs">
+<button class="tab-btn px-space-md py-2 rounded-lg font-label-md text-label-md bg-primary-container text-on-primary-container shadow-sm flex items-center gap-1.5 whitespace-nowrap transition-colors" data-tab="tos">
+<span class="material-symbols-outlined text-[16px]">gavel</span>
+<span>Terms of Service</span>
+</button>
+<button class="tab-btn px-space-md py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface flex items-center gap-1.5 whitespace-nowrap transition-colors" data-tab="privacy">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Privacy Policy &amp; Data Security</span>
+</button>
+<button class="tab-btn px-space-md py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface flex items-center gap-1.5 whitespace-nowrap transition-colors" data-tab="refund">
+<span class="material-symbols-outlined text-[16px]">currency_exchange</span>
+<span>7-Day Refund Policy</span>
+</button>
+<button class="tab-btn px-space-md py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface flex items-center gap-1.5 whitespace-nowrap transition-colors" data-tab="honor">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+<span>Honor Code &amp; Anti-Cheat</span>
+</button>
+</nav>
+<!-- Search in Legal Text -->
+<div class="relative w-full md:w-72 shrink-0 py-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full pl-9 pr-8 py-2 rounded-lg bg-surface-container text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-high transition-colors" id="clauseSearch" placeholder="Search within legal text..." type="search"/>
+<span class="hidden cursor-pointer material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px]" id="searchClear">close</span>
+</div>
+</div>
+</section>
+<!-- Main Body Layout: Sticky TOC + Scrollable Content -->
+<div class="max-w-[1440px] mx-auto px-gutter w-full py-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Column: Sticky Table of Contents & Status Indicators -->
+<aside class="hidden lg:block lg:col-span-4 sticky top-36 space-y-space-md">
+<!-- Table of Contents Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-md text-headline-md text-on-surface">Table of Contents</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">9 Clauses</span>
+</div>
+<div class="w-full h-1 bg-surface-container rounded-full mb-space-md overflow-hidden">
+<div class="h-full bg-primary-container transition-all duration-300 w-0" id="readProgress"></div>
+</div>
+<nav class="flex flex-col space-y-1" id="tocNavigation">
+<a class="toc-link group flex items-center justify-between p-2 rounded-lg font-body-sm text-body-sm text-primary bg-primary/10 transition-colors" href="#clause-1">
+<span class="truncate">1. Acceptance &amp; Eligibility</span>
+<span class="material-symbols-outlined text-[16px] opacity-80 group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</a>
+<a class="toc-link group flex items-center justify-between p-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#clause-2">
+<span class="truncate">2. Account Security &amp; Single Device</span>
+<span class="material-symbols-outlined text-[16px] opacity-40 group-hover:opacity-80 transition-opacity">chevron_right</span>
+</a>
+<a class="toc-link group flex items-center justify-between p-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#clause-3">
+<span class="truncate">3. CBT Simulation &amp; Score Licensing</span>
+<span class="material-symbols-outlined text-[16px] opacity-40 group-hover:opacity-80 transition-opacity">chevron_right</span>
+</a>
+<a class="toc-link group flex items-center justify-between p-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#clause-4">
+<span class="truncate">4. Payments &amp; 7-Day Guarantee</span>
+<span class="material-symbols-outlined text-[16px] opacity-40 group-hover:opacity-80 transition-opacity">chevron_right</span>
+</a>
+<a class="toc-link group flex items-center justify-between p-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#clause-5">
+<span class="truncate">5. Anti-Cheat &amp; Disqualification</span>
+<span class="material-symbols-outlined text-[16px] opacity-40 group-hover:opacity-80 transition-opacity">chevron_right</span>
+</a>
+<a class="toc-link group flex items-center justify-between p-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#clause-6">
+<span class="truncate">6. Question Bank Copyright</span>
+<span class="material-symbols-outlined text-[16px] opacity-40 group-hover:opacity-80 transition-opacity">chevron_right</span>
+</a>
+<a class="toc-link group flex items-center justify-between p-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#clause-7">
+<span class="truncate">7. Data Privacy &amp; AI Analytics</span>
+<span class="material-symbols-outlined text-[16px] opacity-40 group-hover:opacity-80 transition-opacity">chevron_right</span>
+</a>
+<a class="toc-link group flex items-center justify-between p-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#clause-8">
+<span class="truncate">8. Limitation of Liability Disclaimer</span>
+<span class="material-symbols-outlined text-[16px] opacity-40 group-hover:opacity-80 transition-opacity">chevron_right</span>
+</a>
+<a class="toc-link group flex items-center justify-between p-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#clause-9">
+<span class="truncate">9. Grievance Redressal Officer</span>
+<span class="material-symbols-outlined text-[16px] opacity-40 group-hover:opacity-80 transition-opacity">chevron_right</span>
+</a>
+</nav>
+</div>
+<!-- Quick Trust Metric Bento Tile -->
+<div class="bg-surface-container p-space-md rounded-xl space-y-space-sm shadow-sm">
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+<span class="font-label-md text-label-md font-semibold">Aspirant Bill of Rights</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            All user exam records and score metrics are preserved under encrypted AWS India zones with zero third-party commercial reselling.
+          </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-secondary">Arbitration Venue: Delhi, IN</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">24-Hr SLA</span>
+</div>
+</div>
+<!-- Statutory Compliance Summary Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">policy</span>
+<span class="font-label-md text-label-md text-on-surface">Statutory IT Rules, 2021</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            TestPrep complies with Rule 3(2) of the Information Technology (Intermediary Guidelines) for educational testing environments.
+          </p>
+</div>
+</aside>
+<!-- Right Column: Main Structured Legal Content -->
+<main class="lg:col-span-8 space-y-space-xl" id="legalDocumentBody">
+<!-- Clause 1 -->
+<section class="legal-clause bg-surface-container-lowest p-space-xl rounded-xl shadow-sm scroll-mt-28 space-y-space-md" id="clause-1">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Section 01</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">1. Acceptance of Terms &amp; Eligibility</h2>
+</div>
+<span class="inline-flex items-center gap-1 px-space-xs py-1 rounded-md bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+              Binding Contract
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Welcome to the TestPrep competitive examination preparation ecosystem (operated by TestPrep Technologies Private Limited). By accessing our web application, native testing client, or taking any Computer-Based Test (CBT) mock simulation, you explicitly affirm that you are at least 13 years of age, or have procured verified parental/guardian consent if preparing as a minor candidate.
+          </p>
+<div class="bg-surface-container-low p-space-md rounded-lg space-y-space-xs">
+<h3 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">rule</span>
+              Eligibility Qualifications
+            </h3>
+<ul class="list-disc list-inside space-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<li>Candidates must provide authentic identity metadata matching national examination registration forms (e.g., JEE Main, NEET UG, UPSC, CAT roll credentials).</li>
+<li>Falsification of age, category, or academic credentials in All-India Mock Rankings warrants instantaneous revocation of access.</li>
+<li>Corporate, coaching institution, or batch accounts must register under an Institutional Master Service Agreement rather than individual candidate licenses.</li>
+</ul>
+</div>
+</section>
+<!-- Clause 2 -->
+<section class="legal-clause bg-surface-container-lowest p-space-xl rounded-xl shadow-sm scroll-mt-28 space-y-space-md" id="clause-2">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Section 02</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">2. Account Security &amp; Single-Device Policy</h2>
+</div>
+<span class="inline-flex items-center gap-1 px-space-xs py-1 rounded-md bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">devices</span>
+              Enforced Limit
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            To preserve accurate percentile baselines and intellectual property boundaries, TestPrep operates a strict single-concurrent active session enforcement. Subscription credentials are strictly non-transferable and personal to the registered aspirant.
+          </p>
+<!-- Warning callout -->
+<div class="bg-error-container/40 p-space-md rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-error text-[22px] shrink-0 mt-0.5">warning</span>
+<div class="space-y-1">
+<h4 class="font-label-lg text-label-lg text-error">Simultaneous Concurrency Warning</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                If our telemetry discovers two simultaneous active test attempts logged with the same token from distinct geolocations or IP blocks, both active tests will terminate automatically with a zero-mark recorded and an automatic 48-hour quarantine.
+              </p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm pt-space-xs">
+<div class="bg-surface-container p-space-sm rounded-lg">
+<span class="font-label-md text-label-md text-on-surface font-semibold block mb-1">Approved Devices</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">One active desktop browser session OR one active tablet client. Hardware fingerprinting ensures test session continuity during momentary network hiccups.</p>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg">
+<span class="font-label-md text-label-md text-on-surface font-semibold block mb-1">Credentials Sharing</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sharing logins across student groups or study rooms automatically voids the 7-day money-back guarantee and causes permanent account termination without refund.</p>
+</div>
+</div>
+</section>
+<!-- Clause 3 -->
+<section class="legal-clause bg-surface-container-lowest p-space-xl rounded-xl border-none shadow-sm scroll-mt-28 space-y-space-md" id="clause-3">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Section 03</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">3. CBT Mock Test Simulation &amp; Score Licensing</h2>
+</div>
+<span class="inline-flex items-center gap-1 px-space-xs py-1 rounded-md bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">computer</span>
+              Simulation Protocol
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            The TestPrep Computer-Based Testing interface reproduces standard National Testing Agency (NTA), UPSC, and TCS iON testing ergonomics. Test timers, question navigation palettes, and sectional locks operate under rigid simulation algorithms.
+          </p>
+<div class="space-y-space-xs">
+<h4 class="font-headline-md text-headline-md text-on-surface">Score Licensing &amp; All-India Ranking Generation</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              When you submit a mock examination, TestPrep processes raw response arrays into normalized scores, percentile distributions, topic strengths, and speed metrics. You grant TestPrep an irrevocable, royalty-free, anonymized license to incorporate your response outcomes into our national normative ranking tables and machine-learning difficulty calibration models.
+            </p>
+</div>
+<!-- Highlight badge group -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<span class="px-space-sm py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">check</span> No Personal Identity in Public Leaderboards
+            </span>
+<span class="px-space-sm py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">check</span> Roll Masking Enabled
+            </span>
+<span class="px-space-sm py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">check</span> Anti-Tampering Hash Verification
+            </span>
+</div>
+</section>
+<!-- Clause 4: Specialized Refund Callout Banner -->
+<section class="legal-clause bg-surface-container-lowest p-space-xl rounded-xl shadow-sm scroll-mt-28 space-y-space-md" id="clause-4">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Section 04</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">4. Payments, Subscriptions &amp; 7-Day Refund Policy</h2>
+</div>
+<span class="inline-flex items-center gap-1 px-space-xs py-1 rounded-md bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+              7-Day Guarantee
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            All subscriptions, test series passes, and mock bundle purchases are billed securely via authorized payment gateways with 256-bit encryption. Candidates enjoy the highest level of consumer protection through our transparent refund framework.
+          </p>
+<!-- SPECIAL CALLOUT BANNER: 7-DAY MONEY BACK -->
+<div class="bg-gradient-to-br from-tertiary/10 via-surface-container-low to-primary/5 p-space-lg rounded-xl relative overflow-hidden shadow-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary text-on-tertiary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[26px]">savings</span>
+</div>
+<div class="space-y-space-xs flex-1">
+<div class="flex flex-wrap items-center gap-space-xs">
+<h3 class="font-headline-lg text-headline-lg text-on-surface">7-Day No-Questions-Asked Money Back Guarantee</h3>
+<span class="px-2 py-0.5 rounded bg-tertiary text-on-tertiary font-label-sm text-label-sm uppercase">Guaranteed</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                  We believe completely in the caliber of our question bank and CBT engine. If you are not completely satisfied with your purchase, you may initiate an immediate full reversal within 7 calendar days of your transaction.
+                </p>
+<div class="bg-surface-container-lowest/90 backdrop-blur-sm p-space-md rounded-lg space-y-2 mt-space-sm">
+<h4 class="font-label-lg text-label-lg text-on-surface">Clear Eligibility Thresholds:</h4>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0 mt-0.5">check_circle</span>
+<span>The aspirant has attempted fewer than <strong>5 full-length mock examinations</strong> from the active series.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0 mt-0.5">check_circle</span>
+<span>Fewer than <strong>3 high-yield PDF formula compilations or test papers</strong> have been downloaded locally.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0 mt-0.5">check_circle</span>
+<span>Dispatched via self-service click under <em>Account Billing → Request Refund</em> or emailed to <code class="font-mono text-primary font-semibold">refunds@testprep.com</code> within 168 hours of purchase.</span>
+</li>
+</ul>
+<p class="font-label-sm text-label-sm text-secondary pt-1">
+                    Settlements are processed directly back to the original funding source (UPI, Netbanking, or Credit/Debit card) within 5 to 7 operational banking days.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Clause 5: Specialized Proctoring & Anti-Cheat Box -->
+<section class="legal-clause bg-surface-container-lowest p-space-xl rounded-xl shadow-sm scroll-mt-28 space-y-space-md" id="clause-5">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Section 05</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">5. Anti-Cheat, Proctoring &amp; Disqualification</h2>
+</div>
+<span class="inline-flex items-center gap-1 px-space-xs py-1 rounded-md bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">gavel</span>
+              Strict Governance
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            True examination preparedness requires simulating authentic exam conditions with strict probity. TestPrep deploys browser-level automated telemetry during all Live Proctored Series, All-India Open Tests, and Scholarship Challenge Trials.
+          </p>
+<!-- SPECIAL PROCTORING CALLOUT BOX -->
+<div class="bg-surface-container p-space-lg rounded-xl space-y-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">visibility</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Proctoring &amp; Anti-Cheat Governance Framework</h3>
+<span class="font-label-sm text-label-sm text-secondary">Automated Audit Engine v4.2.8</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg space-y-1">
+<div class="flex items-center gap-1.5 text-error font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px]">tab</span>
+                  Tab-Switch Watcher
+                </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Switching browser tabs or unfocusing the window more than <strong>3 times</strong> prompts an automated instantaneous submission of the ongoing paper.
+                </p>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg space-y-1">
+<div class="flex items-center gap-1.5 text-error font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px]">content_paste_off</span>
+                  Clipboard Lock
+                </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Text copy, context-menu invocation, screenshot hotkeys, and peripheral screen shares are instantly locked and logged in candidate telemetry audit logs.
+                </p>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg space-y-1">
+<div class="flex items-center gap-1.5 text-error font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px]">timer_off</span>
+                  Abnormal Speed Anomaly
+                </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Solving complex multi-step numeric questions in under 3.5 seconds flags the test for manual psychometric faculty review prior to rank publication.
+                </p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface">Disqualification consequence: Revocation of cash prizes, rank invalidation, and platform ban.</span>
+<span class="font-label-sm text-label-sm text-error font-semibold uppercase">Zero Appeal Tolerance</span>
+</div>
+</div>
+</section>
+<!-- Clause 6 -->
+<section class="legal-clause bg-surface-container-lowest p-space-xl rounded-xl shadow-sm scroll-mt-28 space-y-space-md" id="clause-6">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Section 06</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">6. Intellectual Property &amp; Question Bank Copyright</h2>
+</div>
+<span class="inline-flex items-center gap-1 px-space-xs py-1 rounded-md bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">copyright</span>
+              Proprietary Asset
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            All question stems, editorial video solutions, hint trees, detailed rationales, graphical schema diagrams, mock papers, and mock performance rubrics accessible on TestPrep constitute the exclusive intellectual property of TestPrep Technologies Pvt. Ltd. and our affiliated academic faculties.
+          </p>
+<div class="bg-surface-container-low p-space-md rounded-lg space-y-2">
+<h4 class="font-headline-md text-headline-md text-on-surface">Prohibited Behaviors under Copyright Act, 1957:</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-error shrink-0 mt-0.5">cancel</span>
+<span>Web scraping, crawling, or automated data extraction from question endpoints.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-error shrink-0 mt-0.5">cancel</span>
+<span>Republishing question datasets in Telegram groups, WhatsApp communities, or YouTube videos.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-error shrink-0 mt-0.5">cancel</span>
+<span>Commercial resale or offline redistribution of downloaded PDF mocks.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-error shrink-0 mt-0.5">cancel</span>
+<span>Injecting TestPrep mock solutions into public LLM fine-tuning corpora without written license.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Clause 7 -->
+<section class="legal-clause bg-surface-container-lowest p-space-xl rounded-xl shadow-sm scroll-mt-28 space-y-space-md" id="clause-7">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Section 07</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">7. User Data Privacy &amp; Test Analytics Usage</h2>
+</div>
+<span class="inline-flex items-center gap-1 px-space-xs py-1 rounded-md bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">security</span>
+              DPDP Act 2023 Compliant
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            TestPrep complies with the Digital Personal Data Protection Act, 2023 (DPDP) and international privacy frameworks. We gather solely the information strictly requisite to benchmark your learning trajectory, compile sectional diagnostic reports, and safeguard your account.
+          </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="bg-surface-container p-space-md rounded-lg space-y-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[18px]">psychology_alt</span>
+                AI Adaptive Diagnostics
+              </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                We analyze your answer cadence, doubt revisions, and question dwell duration to recommend hyper-targeted revision modules. Your records remain private and unlinked to external advertisement brokers.
+              </p>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg space-y-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[18px]">lock_clock</span>
+                Data Retention &amp; Right to Erase
+              </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                You possess full prerogative to download your historical test score ledger or request permanent account expungement at any point by sending an authorized request to <code class="font-mono text-primary">privacy@testprep.com</code>.
+              </p>
+</div>
+</div>
+</section>
+<!-- Clause 8 -->
+<section class="legal-clause bg-surface-container-lowest p-space-xl rounded-xl shadow-sm scroll-mt-28 space-y-space-md" id="clause-8">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Section 08</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">8. Limitation of Liability &amp; Exam Results Disclaimer</h2>
+</div>
+<span class="inline-flex items-center gap-1 px-space-xs py-1 rounded-md bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">info</span>
+              Educational Disclaimer
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            TestPrep is an independent educational technology testing platform. While our mock examinations are crafted by former national toppers, university professors, and subject matter authorities to mirror current exam blueprints accurately, TestPrep makes no explicit guarantee that identical questions will appear in official public examinations conducted by NTA, UPSC, IBPS, or other statutory testing bodies.
+          </p>
+<div class="bg-surface-container-low p-space-md rounded-lg text-on-surface-variant font-body-sm text-body-sm space-y-2">
+<p>
+              In no event shall TestPrep, its directors, instructors, or technical operators be liable for any indirect, consequential, or incidental academic outcomes or admission denials. The maximum cumulative liability under all circumstances shall not exceed the actual sum received by TestPrep from the subscriber in the previous three (3) calendar months.
+            </p>
+</div>
+</section>
+<!-- Clause 9: Grievance Redressal & Statutory Compliance -->
+<section class="legal-clause bg-surface-container-lowest p-space-xl rounded-xl shadow-sm scroll-mt-28 space-y-space-md" id="clause-9">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Section 09</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">9. Grievance Redressal &amp; Governing Law</h2>
+</div>
+<span class="inline-flex items-center gap-1 px-space-xs py-1 rounded-md bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+              Statutory Officer Appointed
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            In compliance with the <strong>Information Technology Act, 2000</strong> and the <strong>Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021</strong>, the contact details of the designated Grievance Redressal Officer are published below. All student concerns are logged and resolved with guaranteed acknowledgment within 24 business hours.
+          </p>
+<!-- Grievance Card -->
+<div class="bg-gradient-to-br from-surface-container via-surface-container-low to-surface-container-high p-space-lg rounded-xl space-y-space-md shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm border-b border-outline-variant/30">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Designated Redressal Authority</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Adv. Rohitashwa Sen, LL.M.</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Chief Legal Officer &amp; Statutory Grievance Officer</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
+<span>Desk Active: Mon – Sat (10:00 – 18:00 IST)</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg space-y-1">
+<div class="flex items-center gap-1.5 text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+                  Direct Grievance Email
+                </div>
+<a class="font-body-sm text-body-sm text-on-surface hover:text-primary font-semibold block underline decoration-primary/40 underline-offset-2" href="mailto:grievance@testprep.com">
+                  grievance@testprep.com
+                </a>
+<span class="font-label-sm text-label-sm text-secondary block">SLA: 24h Ticket Response</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg space-y-1">
+<div class="flex items-center gap-1.5 text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+                  Registered Physical Office
+                </div>
+<p class="font-body-sm text-body-sm text-on-surface leading-tight">
+                  TestPrep EdTech Systems Inc.<br/>
+                  Tower B, 7th Floor, DLF Cyber City,<br/>
+                  Gurugram, Haryana – 122002, India
+                </p>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg space-y-1">
+<div class="flex items-center gap-1.5 text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">balance</span>
+                  Jurisdiction &amp; Venue
+                </div>
+<p class="font-body-sm text-body-sm text-on-surface">
+                  Courts of New Delhi, India shall possess exclusive territorial jurisdiction over any statutory dispute.
+                </p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs">
+<p class="font-label-sm text-label-sm text-secondary">
+                To lodge an expedited escalated ticket, please include your registered Registered Email, Candidate UID, and Transaction ID.
+              </p>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary/90 shadow-sm transition-colors shrink-0" id="raiseTicketBtn" type="button">
+<span class="material-symbols-outlined text-[16px]">outgoing_mail</span>
+<span>Open Grievance Ticket</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Final Acknowledgment Card -->
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">task_alt</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Aspirant Consent Confirmed</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Last revision signed by Chief Information Security Officer • Rev 4.2.0 (Stable)</p>
+</div>
+</div>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors shadow-sm" id="scrollBackTop" type="button">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+<span>Back to Top</span>
+</button>
+</div>
+</main>
+</div>
+</div>
+<!-- Notification Toast for Micro-Interactions -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-xl shadow-xl flex items-center gap-space-xs" id="legalToast">
+<span class="material-symbols-outlined text-tertiary text-[20px]" id="toastIcon">check_circle</span>
+<span class="font-label-md text-label-md" id="toastMessage">Official legal agreement loaded</span>
+</div>
+</div>
+<script>
+  (function () {
+    // Toast helper
+    const toast = document.getElementById('legalToast');
+    const toastMsg = document.getElementById('toastMessage');
+    const toastIcon = document.getElementById('toastIcon');
+    let toastTimeout;
+
+    function showToast(message, icon = 'check_circle') {
+      if (!toast) return;
+      clearTimeout(toastTimeout);
+      toastMsg.textContent = message;
+      toastIcon.textContent = icon;
+      toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 3500);
+    }
+
+    // PDF Download Simulation
+    const pdfBtn = document.getElementById('pdfDownloadBtn');
+    if (pdfBtn) {
+      pdfBtn.addEventListener('click', function () {
+        const originalContent = this.innerHTML;
+        this.innerHTML = '<span class="material-symbols-outlined animate-spin text-[18px]">sync</span><span>Compiling PDF...</span>';
+        setTimeout(() => {
+          this.innerHTML = originalContent;
+          showToast('Downloaded signed Terms_and_Policies_v4.2.pdf', 'download_done');
+        }, 1200);
+      });
+    }
+
+    // Print Button
+    const printBtn = document.getElementById('printBtn');
+    if (printBtn) {
+      printBtn.addEventListener('click', function () {
+        window.print();
+      });
+    }
+
+    // Tab switcher micro-interaction
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', function () {
+        tabBtns.forEach(b => {
+          b.className = 'tab-btn px-space-md py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface flex items-center gap-1.5 whitespace-nowrap transition-colors';
+        });
+        this.className = 'tab-btn px-space-md py-2 rounded-lg font-label-md text-label-md bg-primary-container text-on-primary-container shadow-sm flex items-center gap-1.5 whitespace-nowrap transition-colors';
+        
+        const tabName = this.getAttribute('data-tab');
+        if (tabName === 'refund') {
+          const el = document.getElementById('clause-4');
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+          showToast('Jumped to 7-Day Refund Policy & Guarantee', 'currency_exchange');
+        } else if (tabName === 'honor') {
+          const el = document.getElementById('clause-5');
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+          showToast('Jumped to Proctoring & Anti-Cheat Protocols', 'psychology');
+        } else if (tabName === 'privacy') {
+          const el = document.getElementById('clause-7');
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+          showToast('Jumped to Data Privacy & AI Diagnostics', 'lock');
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          showToast('Viewing Master Terms of Service', 'gavel');
+        }
+      });
+    });
+
+    // Search Filtering
+    const searchInput = document.getElementById('clauseSearch');
+    const searchClear = document.getElementById('searchClear');
+    const clauses = document.querySelectorAll('.legal-clause');
+
+    if (searchInput) {
+      searchInput.addEventListener('input', function (e) {
+        const val = e.target.value.toLowerCase().trim();
+        if (val.length > 0) {
+          searchClear.classList.remove('hidden');
+        } else {
+          searchClear.classList.add('hidden');
+        }
+
+        let matchCount = 0;
+        clauses.forEach(clause => {
+          const text = clause.innerText.toLowerCase();
+          if (!val || text.includes(val)) {
+            clause.classList.remove('hidden');
+            matchCount++;
+          } else {
+            clause.classList.add('hidden');
+          }
+        });
+
+        if (val.length > 2 && matchCount === 0) {
+          showToast('No matching legal clause found', 'search_off');
+        }
+      });
+
+      searchClear.addEventListener('click', function () {
+        searchInput.value = '';
+        searchClear.classList.add('hidden');
+        clauses.forEach(clause => clause.classList.remove('hidden'));
+        searchInput.focus();
+      });
+    }
+
+    // Scroll Progress & Active TOC highlighting
+    const progressBar = document.getElementById('readProgress');
+    const tocLinks = document.querySelectorAll('.toc-link');
+
+    window.addEventListener('scroll', function () {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = window.scrollY;
+      const progress = docHeight > 0 ? (scrolled / docHeight) * 100 : 0;
+      if (progressBar) {
+        progressBar.style.width = Math.min(100, Math.max(0, progress)) + '%';
+      }
+
+      // Highlight current clause
+      let currentSectionId = '';
+      clauses.forEach(section => {
+        const sectionTop = section.offsetTop - 180;
+        if (window.scrollY >= sectionTop) {
+          currentSectionId = section.getAttribute('id');
+        }
+      });
+
+      if (currentSectionId) {
+        tocLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href === '#' + currentSectionId) {
+            link.className = 'toc-link group flex items-center justify-between p-2 rounded-lg font-body-sm text-body-sm text-primary bg-primary/10 transition-colors';
+          } else {
+            link.className = 'toc-link group flex items-center justify-between p-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors';
+          }
+        });
+      }
+    });
+
+    // Raise Grievance Ticket Click
+    const raiseTicketBtn = document.getElementById('raiseTicketBtn');
+    if (raiseTicketBtn) {
+      raiseTicketBtn.addEventListener('click', function () {
+        window.location.href = 'mailto:grievance@testprep.com?subject=Statutory%20Grievance%20Filing%20-%20Rule%203(2)%20IT%20Rules&body=Dear%20Grievance%20Officer,%0A%0ACandidate%20Name:%20%0ARegistered%20Email:%20%0AOrder%20/%20Attempt%20ID:%20%0AGrievance%20Details:%20';
+      });
+    }
+
+    // Scroll Back to Top
+    const scrollBackTop = document.getElementById('scrollBackTop');
+    if (scrollBackTop) {
+      scrollBackTop.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  })();
+</script></main><footer class="w-full bg-surface-container-low mt-space-2xl"><div class="w-full max-w-[1440px] mx-auto px-gutter py-space-2xl"><div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-space-xl mb-space-2xl"><div class="col-span-2 md:col-span-4 lg:col-span-1"><div class="flex items-center gap-space-xs text-primary mb-space-md"><div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-headline-md text-headline-md"><span class="material-symbols-outlined text-[18px]">school</span></div><span class="font-headline-lg text-headline-lg tracking-tight text-on-surface">TestPrep</span></div><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md max-w-xs">Comprehensive preparation platform for national and state entrance exams with realistic mock tests, live analytics, and expert curated question banks.</p><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[20px]">verified</span><span class="font-label-sm text-label-sm uppercase tracking-wider">ISO 9001:2015 Certified Prep</span></div></div><div><h4 class="font-headline-md text-headline-md text-on-surface mb-space-md">Exams</h4><ul class="space-y-space-xs font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="exams" href="#">Engineering (JEE Main &amp; Adv)</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="exams" href="#">Medical (NEET UG)</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="exams" href="#">Civil Services (UPSC CSE)</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="exams" href="#">Banking (IBPS PO &amp; Clerk)</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="exams" href="#">Staff Selection (SSC CGL)</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="exams" href="#">Management (CAT &amp; XAT)</a></li></ul></div><div><h4 class="font-headline-md text-headline-md text-on-surface mb-space-md">Resources</h4><ul class="space-y-space-xs font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="mock-tests" href="#">Full Length Mock Tests</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="previous-year-papers" href="#">Previous 10 Year Papers</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="study-material" href="#">Chapter-wise Notes</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="study-material" href="#">Formula Sheets &amp; Summary</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="support" href="#">Daily Current Affairs</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="support" href="#">Exam Rank Predictor</a></li></ul></div><div><h4 class="font-headline-md text-headline-md text-on-surface mb-space-md">Company</h4><ul class="space-y-space-xs font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="about-us" href="#">About TestPrep</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="support" href="#">Faculty &amp; Mentors</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="pricing" href="#">Pass &amp; Subscriptions</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="support" href="#">Institutional Campus</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="support" href="#">Careers &amp; Culture</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="contact-support" href="#">Help &amp; Contact Support</a></li></ul></div><div><h4 class="font-headline-md text-headline-md text-on-surface mb-space-md">Legal &amp; Policy</h4><ul class="space-y-space-xs font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="privacy-policy" href="#">Privacy Policy</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="terms-of-service" href="#">Terms of Service</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="refund-policy" href="#">Refund &amp; Cancellation</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="honor-code" href="#">Academic Honor Code</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="security" href="#">Security &amp; Compliance</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="cookie-policy" href="#">Cookie Preferences</a></li></ul></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md bg-surface-container/60 rounded-xl px-gutter py-space-md"><p class="font-body-sm text-body-sm text-on-surface-variant text-center md:text-left">© 2025 TestPrep Technologies Pvt. Ltd. All rights reserved. Built for competitive excellence.</p><div class="flex items-center gap-space-md text-on-surface-variant"><span class="flex items-center gap-1 font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px] text-tertiary">shield</span>Secure 256-Bit SSL</span><span class="flex items-center gap-1 font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px] text-tertiary">support_agent</span>24/7 Academic Desk</span></div></div></div></footer></body></html>

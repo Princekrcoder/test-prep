@@ -1,4 +1,4 @@
-﻿import { z } from 'zod';
+import { z } from 'zod';
 
 export const startAttemptSchema = z.object({
   locale: z.enum(['EN', 'HI']).default('EN'),

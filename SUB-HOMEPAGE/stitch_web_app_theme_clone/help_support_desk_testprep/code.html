@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary-fixed":"#131b2e","on-tertiary-fixed":"#002113","surface-container-highest":"#d3e4fe","on-tertiary-container":"#b5ffd7","primary-container":"#1e60f3","on-primary-fixed-variant":"#003cab","background":"#f8f9ff","secondary-container":"#dae2fd","tertiary":"#006141","inverse-primary":"#b5c4ff","tertiary-container":"#007c55","outline":"#737687","on-primary-fixed":"#00174d","primary-fixed-dim":"#b5c4ff","inverse-surface":"#213145","surface":"#f8f9ff","surface-tint":"#0051df","on-error":"#ffffff","on-tertiary-fixed-variant":"#005236","surface-container-lowest":"#ffffff","primary":"#0048c9","outline-variant":"#c3c5d8","surface-variant":"#d3e4fe","on-surface":"#0b1c30","error":"#ba1a1a","surface-container-high":"#dce9ff","on-error-container":"#93000a","on-primary-container":"#edeeff","on-tertiary":"#ffffff","secondary":"#565e74","on-secondary":"#ffffff","surface-dim":"#cbdbf5","inverse-on-surface":"#eaf1ff","on-background":"#0b1c30","surface-container":"#e5eeff","on-surface-variant":"#434655","surface-container-low":"#eff4ff","error-container":"#ffdad6","on-secondary-fixed-variant":"#3f465c","surface-bright":"#f8f9ff","secondary-fixed":"#dae2fd","tertiary-fixed-dim":"#4edea3","secondary-fixed-dim":"#bec6e0","on-secondary-container":"#5c647a","primary-fixed":"#dbe1ff","tertiary-fixed":"#6ffbbe","on-primary":"#ffffff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"2rem","space-xs":"0.5rem","space-md":"1rem","space-sm":"0.75rem","space-2xl":"3rem","space-2xs":"0.25rem","space-lg":"1.5rem","gutter":"1.5rem","margin-mobile":"1rem","gutter-mobile":"0.75rem","margin":"2rem"},"fontFamily":{"label-lg":["Inter"],"headline-xl":["Plus Jakarta Sans"],"body-lg":["Inter"],"exam-numeric":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"label-md":["Inter"],"body-sm":["Inter"],"label-sm":["Inter"],"headline-md":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"]},"fontSize":{"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"headline-xl":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"exam-numeric":["14px",{"lineHeight":"14px","fontWeight":"700"}],"display-hero-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"800"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-xl-mobile":["22px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-lg":["20px",{"lineHeight":"28px","fontWeight":"700"}],"display-hero":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"800"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full max-w-[1440px] mx-auto px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-shrink-0"><a class="flex items-center gap-space-xs text-primary" data-path="home" href="#"><div class="w-9 h-9 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-headline-lg text-headline-lg"><span class="material-symbols-outlined">school</span></div><span class="font-headline-lg text-headline-lg tracking-tight text-on-surface">TestPrep</span></a><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container rounded-lg"><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="exams" href="#">Exams</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="mock-tests" href="#">Mock Tests</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="previous-year-papers" href="#">Previous Year Papers</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="study-material" href="#">Study Material</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="pricing" href="#">Pricing</a></nav></div><div class="flex items-center gap-space-md flex-1 max-w-md justify-end"><div class="relative w-full hidden md:block max-w-xs"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full pl-9 pr-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest transition-colors" placeholder="Search tests, exams, topics..." type="search"/></div><button aria-label="Notifications" class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors relative flex-shrink-0" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-xs pl-space-xs flex-shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="hidden lg:inline-block font-label-md text-label-md text-on-surface whitespace-nowrap">Prince Kumar</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Live Operational Status Ticker & Ambient Header Ribbon -->
+<section class="w-full bg-surface-container-high text-on-surface py-2.5 px-gutter border-b border-outline-variant/30">
+<div class="max-w-[1440px] mx-auto flex flex-wrap items-center justify-between gap-3 text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary"></span>
+</span>
+<span class="font-label-md text-label-md text-tertiary tracking-wide uppercase">CBT Cloud Online</span>
+<span class="text-outline-variant">•</span>
+<span class="text-on-surface-variant font-medium">All Exam Engines &amp; Live Servers are 100% Operational (99.98% uptime in last 30 days)</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="flex items-center gap-1 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">bolt</span> Live Socket v4.12
+        </span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm">Active Proctors: 1,480 Active Sessions</span>
+</div>
+</div>
+</section>
+<!-- Support Hero & Search Workstation -->
+<section class="relative w-full overflow-hidden bg-surface py-space-xl px-gutter">
+<!-- Subtle Ambient Blur Blobs -->
+<div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-primary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -right-20 w-80 h-80 rounded-full bg-tertiary-fixed/20 blur-3xl pointer-events-none"></div>
+<div class="max-w-[1440px] mx-auto relative z-10 flex flex-col items-center text-center">
+<!-- Eyebrow Badge -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary-container text-on-secondary-fixed text-label-sm font-label-sm mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary-container">support_agent</span>
+<span>24/7 Aspirant Support Desk • Average Response Time: &lt; 15 mins</span>
+</div>
+<!-- Main Heading -->
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight max-w-4xl mb-space-sm">
+        We are Here to Support Your <span class="text-primary-container">Exam Journey</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-space-xl">
+        Facing CBT simulator interruptions, academic key disputes, or payment clearance holdups? Our dedicated academic desks and tech response teams are standing by.
+      </p>
+<!-- Instant Search Console -->
+<div class="w-full max-w-3xl relative mb-space-lg">
+<div class="flex items-center bg-surface-container-lowest rounded-xl shadow-lg p-2 transition-all focus-within:shadow-xl">
+<div class="pl-3 pr-2 text-primary-container flex items-center">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</div>
+<input class="w-full bg-transparent text-on-surface placeholder:text-outline font-body-md text-body-md py-2.5 px-2 focus:outline-none" id="supportSearch" placeholder="Search articles, test issues, payment status, or mock test queries (e.g. calculator error, refund, timer lag)..." type="search"/>
+<button class="hidden sm:inline-flex items-center gap-1.5 px-space-md py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-lg text-label-lg hover:opacity-95 transition-opacity flex-shrink-0" onclick="triggerSearchAlert()" type="button">
+            Find Answers
+          </button>
+</div>
+<!-- Trending Pills -->
+<div class="flex flex-wrap items-center justify-center gap-2 mt-3 text-label-sm font-label-sm text-on-surface-variant">
+<span class="text-outline uppercase tracking-wider">Common Searches:</span>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors" onclick="setQuery('CBT Full Screen Lock')" type="button">CBT Full Screen Lock</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors" onclick="setQuery('JEE Main Scorecard Dispute')" type="button">Answer Key Dispute</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors" onclick="setQuery('UPI Auto-Debit Refund')" type="button">UPI Auto-Debit Refund</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors" onclick="setQuery('Scientific Calculator Shortcut')" type="button">Scientific Calculator</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 4 Core Channels Bento Grid -->
+<section class="w-full bg-surface px-gutter py-space-lg">
+<div class="max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-2">
+<div>
+<span class="text-primary-container font-label-md text-label-md uppercase tracking-wider block mb-1">Direct Routing</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Specialized Support Desks</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Route your inquiry straight to senior test engineers, subject faculties, or payment clearing officers.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1: Technical & CBT Simulator -->
+<div class="group bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary-container mb-space-md">
+<span class="material-symbols-outlined text-[28px]">terminal</span>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="text-label-sm font-label-sm text-tertiary uppercase tracking-wider">Live Diagnostics</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Technical &amp; CBT Simulator Issues</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg leading-relaxed">
+              Report countdown timer freezes, question palette glitches, math formula rendering bugs, or mobile app test sync delays.
+            </p>
+</div>
+<button class="inline-flex items-center gap-1.5 text-primary-container font-label-lg text-label-lg group-hover:gap-2.5 transition-all text-left" onclick="prefillCategory('CBT Simulator')" type="button">
+<span>Report Issue</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- Card 2: Billing & Payments -->
+<div class="group bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary-container mb-space-md">
+<span class="material-symbols-outlined text-[28px]">receipt_long</span>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="text-label-sm font-label-sm text-tertiary uppercase tracking-wider">Fast Settlement</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Billing, Payments &amp; Invoices</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg leading-relaxed">
+              Instant UPI verification check, plan upgrade adjustments, GST receipt issuance, or bank account chargeback assistance.
+            </p>
+</div>
+<button class="inline-flex items-center gap-1.5 text-primary-container font-label-lg text-label-lg group-hover:gap-2.5 transition-all text-left" onclick="prefillCategory('Payment/Billing')" type="button">
+<span>Track Payment</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- Card 3: Academic Doubt -->
+<div class="group bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary-container mb-space-md">
+<span class="material-symbols-outlined text-[28px]">psychology</span>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="text-label-sm font-label-sm text-tertiary uppercase tracking-wider">Faculty Desk</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Doubt Resolution with Faculty</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg leading-relaxed">
+              Connect with exam mentors for question paper dispute filings, ambiguous solution clarifications, or wrong answer key challenges.
+            </p>
+</div>
+<button class="inline-flex items-center gap-1.5 text-primary-container font-label-lg text-label-lg group-hover:gap-2.5 transition-all text-left" onclick="prefillCategory('Question Error')" type="button">
+<span>Submit Academic Doubt</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- Card 4: Enterprise & Campus -->
+<div class="group bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary-container mb-space-md">
+<span class="material-symbols-outlined text-[28px]">corporate_fare</span>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="text-label-sm font-label-sm text-primary-container uppercase tracking-wider">Priority SLA</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Campus &amp; Enterprise Support</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg leading-relaxed">
+              Dedicated high-priority helpline for partner coaching institutes, university exam directors, and institutional batch administrators.
+            </p>
+</div>
+<a class="inline-flex items-center gap-1.5 text-primary-container font-label-lg text-label-lg group-hover:gap-2.5 transition-all" href="#ticketSection" onclick="prefillCategory('Account Access')">
+<span>Institutional Desk</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive 2-Column: Ticket Creation & Live User Tracker -->
+<section class="w-full bg-surface-container-low px-gutter py-space-2xl" id="ticketSection">
+<div class="max-w-[1440px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Column: Submit Ticket Form (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg sm:p-space-xl shadow-md">
+<div class="flex items-center justify-between pb-space-md mb-space-md border-b border-surface-container">
+<div>
+<span class="text-label-sm font-label-sm text-primary-container uppercase tracking-wider">Direct Helpdesk Dispatch</span>
+<h3 class="font-headline-xl text-headline-xl text-on-surface mt-1">Submit a Support Ticket</h3>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[22px]">confirmation_number</span>
+</div>
+</div>
+<form class="space-y-space-md" id="ticketForm" onsubmit="handleTicketSubmit(event)">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Full Name -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5" for="fullName">Aspirant Full Name</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">person</span>
+<input class="w-full pl-9 pr-3 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md shadow-sm focus:outline-none focus:bg-surface-container-low" id="fullName" required="" type="text" value="Prince Kumar"/>
+</div>
+</div>
+<!-- Email or Mobile -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5" for="regContact">Registered Email or Mobile</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">contact_mail</span>
+<input class="w-full pl-9 pr-3 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md shadow-sm focus:outline-none focus:bg-surface-container-low" id="regContact" required="" type="text" value="prince.kumar@testprep.mock"/>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Issue Category -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5" for="issueCategory">Issue Category</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">category</span>
+<select class="w-full pl-9 pr-8 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm focus:outline-none focus:bg-surface-container-low appearance-none cursor-pointer" id="issueCategory" required="">
+<option value="CBT Simulator">CBT Simulator &amp; Test Engine</option>
+<option value="Payment/Billing">Payment, Refund &amp; Invoice</option>
+<option value="Question Error">Question Error / Answer Key Dispute</option>
+<option value="Account Access">Account Access &amp; Device Switching</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Target Exam -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5" for="targetExam">Target Exam Series</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">school</span>
+<select class="w-full pl-9 pr-8 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm focus:outline-none focus:bg-surface-container-low appearance-none cursor-pointer" id="targetExam">
+<option value="JEE Main &amp; Adv">Engineering (JEE Main &amp; Adv)</option>
+<option value="NEET UG">Medical (NEET UG 2025)</option>
+<option value="UPSC CSE">Civil Services (UPSC CSE Prelims)</option>
+<option value="SSC CGL">Staff Selection (SSC CGL Tier-1)</option>
+<option value="IBPS PO">Banking (IBPS PO &amp; Clerk)</option>
+<option value="CAT / XAT">Management (CAT / XAT 2025)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Description -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="issueDescription">Detailed Incident Description</label>
+<span class="text-label-sm font-label-sm text-outline">Include Question ID or Session ID</span>
+</div>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md shadow-sm focus:outline-none focus:bg-surface-container-low" id="issueDescription" placeholder="Mention your test attempt name, question number, error message on screen, or exact transaction UPI reference ID..." required="" rows="4"></textarea>
+</div>
+<!-- Drag & Drop Attachment Area -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5">Attachment (Scorecard, Receipt or Error Screenshot)</label>
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container text-center cursor-pointer transition-colors" id="dropZone" onclick="document.getElementById('fileUpload').click()">
+<input accept="image/*,.pdf" class="hidden" id="fileUpload" onchange="updateFileLabel(this)" type="file"/>
+<div class="flex flex-col items-center justify-center">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary-container mb-2">
+<span class="material-symbols-outlined text-[20px]">cloud_upload</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface" id="fileNameDisplay">
+<span class="text-primary-container">Click to upload</span> or drag and drop screenshot
+                  </p>
+<p class="font-body-sm text-body-sm text-outline-variant mt-1">PNG, JPG, or PDF up to 10MB</p>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>
+<span>Encrypted ticket payload via 256-bit SSL</span>
+</div>
+<button class="w-full sm:w-auto px-space-xl py-3 rounded-lg bg-primary-container text-on-primary-container font-label-lg text-label-lg shadow-sm hover:opacity-95 transition-all flex items-center justify-center gap-2" id="submitBtn" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Submit Support Ticket</span>
+</button>
+</div>
+</form>
+<!-- Success Alert Banner (Hidden by default) -->
+<div class="hidden mt-space-md p-space-md rounded-xl bg-tertiary text-on-tertiary items-center justify-between shadow-md" id="ticketSuccessMsg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[24px]">task_alt</span>
+<div>
+<p class="font-headline-md text-headline-md">Ticket Submitted Successfully!</p>
+<p class="font-body-sm text-body-sm text-on-tertiary/90">Assigned Reference: <span class="font-bold underline">#TKT-85098</span>. Our subject team will reply within 15 minutes.</p>
+</div>
+</div>
+<button class="p-1 hover:bg-on-tertiary/20 rounded" onclick="dismissTicketAlert()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Right Column: User's Recent Tickets & Real-Time Status (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Profile Badge Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-headline-md text-headline-md shadow-sm">
+                PK
+              </div>
+<div>
+<div class="flex items-center gap-2">
+<h4 class="font-headline-md text-headline-md text-on-surface">Prince Kumar</h4>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Pro Pass</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Aspirant ID: #TP-982143 • UPSC / JEE</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-label-sm font-label-sm text-outline block">Active Queries</span>
+<span class="font-headline-lg text-headline-lg text-primary-container">1 Open</span>
+</div>
+</div>
+<!-- Section Heading -->
+<div class="flex items-center justify-between px-1">
+<h4 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">history</span>
+<span>Recent Tickets &amp; Live Status</span>
+</h4>
+<span class="text-label-sm font-label-sm text-outline-variant">Auto-sync 30s</span>
+</div>
+<!-- Ticket Card 1: In Progress -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all">
+<div class="flex items-start justify-between gap-2 mb-2">
+<div class="flex items-center gap-2">
+<span class="font-exam-numeric text-exam-numeric text-primary-container font-mono">#TKT-85012</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">Billing Desk</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+<span>In Progress</span>
+</span>
+</div>
+<h5 class="font-headline-md text-headline-md text-on-surface mb-1">Invoice Download for Pro Super Pass</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm line-clamp-2">
+              Tax invoice with GSTIN not generated after net-banking debit for the 1-year unlimited mock bundle.
+            </p>
+<!-- Agent Assigned Box -->
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between mb-3">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-sm text-label-sm">
+                  SS
+                </div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface">Shalini Sharma (Accounts Specialist)</p>
+<p class="text-body-sm text-[11px] text-outline">Assigned 18 mins ago • Reviewing UTR</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-tertiary">chat</span>
+</div>
+<div class="flex items-center justify-between pt-1 text-label-sm font-label-sm">
+<span class="text-outline">Updated 6 mins ago</span>
+<button class="text-primary-container hover:underline" onclick="alert('Viewing thread for #TKT-85012: The finance team has verified your bank reference and the regenerated PDF invoice has been emailed.')" type="button">
+                View Chat History →
+              </button>
+</div>
+</div>
+<!-- Ticket Card 2: Resolved -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all">
+<div class="flex items-start justify-between gap-2 mb-2">
+<div class="flex items-center gap-2">
+<span class="font-exam-numeric text-exam-numeric text-outline font-mono">#TKT-84920</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-outline font-label-sm text-label-sm">CBT Simulator</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-on-tertiary-container text-on-tertiary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary">check_circle</span>
+<span>Resolved</span>
+</span>
+</div>
+<h5 class="font-headline-md text-headline-md text-on-surface mb-1">TCS NQT Sectional Timer Lag</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm line-clamp-2">
+              Question 14 to 15 navigation in Numerical Ability suffered 4-second delay during mock simulation #4.
+            </p>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between mb-3">
+<div class="flex items-center gap-2 text-on-surface-variant text-body-sm text-[12px]">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified</span>
+<span>Resolved by Server Team. Cache purge delivered • Score recalculated</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 text-label-sm font-label-sm">
+<span class="text-outline">Closed yesterday</span>
+<button class="text-outline hover:text-on-surface transition-colors" onclick="alert('Feedback recorded. Thank you Prince!')" type="button">
+                Rate Resolution (5★)
+              </button>
+</div>
+</div>
+<!-- Quick FAQ / Support Policy Tip -->
+<div class="p-space-md rounded-xl bg-surface-container text-on-surface flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-container text-[22px] flex-shrink-0 mt-0.5">info</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Emergency Live Exam Interruption?</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-relaxed">
+                If your full-length CBT session drops during a live test, close the tab and re-enter from your dashboard within 15 minutes. Answers are auto-cached on our cloud every 5 seconds.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Direct Contact & Escalation Grid (IT Rules 2021 Compliant) -->
+<section class="w-full bg-surface px-gutter py-space-2xl">
+<div class="max-w-[1440px] mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<span class="text-primary-container font-label-md text-label-md uppercase tracking-wider block mb-1">Always Reachable</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Direct Contact &amp; Escalation Channels</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Pick your preferred channel for real-time aspirant support, immediate escalation, or formal statutory complaints.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg mb-space-xl">
+<!-- Channel 1: Email Support -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high text-primary-container flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[26px]">mail</span>
+</div>
+<div class="inline-block px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm mb-2">
+              SLA: Guaranteed &lt; 2 Hours
+            </div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Email Desk</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              For comprehensive test disputes, institutional contracts, or invoice recalculation inquiries.
+            </p>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<span class="text-label-sm font-label-sm text-outline block">Direct Address:</span>
+<a class="font-headline-md text-headline-md text-primary-container hover:underline break-all" href="mailto:support@testprep.com">
+                support@testprep.com
+              </a>
+</div>
+</div>
+<p class="text-body-sm text-[12px] text-outline mt-space-md flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check</span>
+<span>Ticketing receipt dispatched instantly</span>
+</p>
+</div>
+<!-- Channel 2: WhatsApp Helpline -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[26px]">chat</span>
+</div>
+<div class="inline-block px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm mb-2">
+              Mon – Sun: 7:00 AM – 11:00 PM IST
+            </div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">WhatsApp Helpline</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Fastest route for live test day issues, server reload assistance, and rapid payment verification.
+            </p>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<span class="text-label-sm font-label-sm text-outline block">Official Verified Business:</span>
+<a class="font-headline-md text-headline-md text-tertiary hover:underline flex items-center gap-1.5" href="https://wa.me/919876543210" rel="noopener noreferrer" target="_blank">
+<span>+91 98765 43210</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified</span>
+</a>
+</div>
+</div>
+<p class="text-body-sm text-[12px] text-outline mt-space-md flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">schedule</span>
+<span>Average initial reply: under 4 minutes</span>
+</p>
+</div>
+<!-- Channel 3: Statutory Grievance Redressal -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container text-outline flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[26px]">gavel</span>
+</div>
+<div class="inline-block px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm mb-2">
+              Statutory IT Rules 2021
+            </div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Grievance &amp; Escalation Desk</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              For unresolved complaints exceeding 48 hours or formal student consumer compliance concerns.
+            </p>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<span class="text-label-sm font-label-sm text-outline block">Grievance Officer:</span>
+<p class="font-headline-md text-headline-md text-on-surface">Adv. Rohit Narang</p>
+<a class="text-body-sm text-[13px] text-primary-container hover:underline block mt-0.5" href="mailto:grievance@testprep.com">
+                grievance@testprep.com
+              </a>
+</div>
+</div>
+<p class="text-body-sm text-[12px] text-outline mt-space-md flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">verified_user</span>
+<span>Acknowledgement in 24h • Redressal in 15 days</span>
+</p>
+</div>
+</div>
+<!-- Campus Support Banner with Illustration Placeholder -->
+<div class="bg-surface-container-high rounded-xl p-space-lg flex flex-col lg:flex-row items-center justify-between gap-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="w-16 h-16 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary-container shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-[36px]">hub</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Institutional &amp; University Lab Desks</h3>
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">High Concurrency Ready</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-2xl">
+              Conducting batch-wide tests for 500+ candidates simultaneously? Get dedicated on-call network engineers and pre-allocated server clusters for flawless college lab exams.
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-3 flex-shrink-0 w-full lg:w-auto">
+<button class="w-full lg:w-auto px-space-lg py-2.5 rounded-lg bg-on-surface text-surface font-label-lg text-label-lg hover:opacity-90 transition-opacity" onclick="alert('Campus Support Hotline: 1800-420-9988 (Toll Free). Connecting you to our Institutional Operations Desk.')" type="button">
+            Call Campus Desk
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Comprehensive FAQ Accordion for Support -->
+<section class="w-full bg-surface-container-low px-gutter py-space-2xl">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-space-xl">
+<span class="text-primary-container font-label-md text-label-md uppercase tracking-wider block mb-1">Instant Clarity</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Frequently Asked Support Questions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          Quick, battle-tested solutions to the most common exam interruptions and account situations.
+        </p>
+</div>
+<div class="space-y-space-sm" id="faqAccordion">
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all">
+<button class="w-full px-space-lg py-space-md text-left flex items-center justify-between gap-4 hover:bg-surface-container-low/40 transition-colors" onclick="toggleFaq(1)" type="button">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary-container font-headline-md text-headline-md">1</span>
+<span class="font-headline-md text-headline-md text-on-surface">What should I do if my mock test freezes midway or internet disconnects?</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-300" id="faqIcon-1">expand_more</span>
+</button>
+<div class="hidden px-space-lg pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md leading-relaxed border-t border-surface-container-high/40" id="faqContent-1">
+<p class="mb-2">
+<strong>Do not panic.</strong> Our CBT engine is built with client-side local caching and continuous auto-sync. If your internet connection drops or your browser window crashes:
+            </p>
+<ol class="list-decimal pl-5 space-y-1 mb-2">
+<li>Re-open the same browser or app and navigate to <strong>Mock Tests &gt; Ongoing Sessions</strong>.</li>
+<li>Click <strong>Resume Test</strong>. Your remaining timer countdown and marked responses are securely loaded from the snapshot cache.</li>
+<li>You have up to 15 minutes of buffer to reconnect before the system marks the session as automatically submitted.</li>
+</ol>
+<p class="text-body-sm text-[13px] text-tertiary font-medium">
+              Note: Test timer does not penalize you for minor latency blips under 60 seconds.
+            </p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all">
+<button class="w-full px-space-lg py-space-md text-left flex items-center justify-between gap-4 hover:bg-surface-container-low/40 transition-colors" onclick="toggleFaq(2)" type="button">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary-container font-headline-md text-headline-md">2</span>
+<span class="font-headline-md text-headline-md text-on-surface">How do I challenge an answer key that I believe is incorrect?</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-300" id="faqIcon-2">expand_more</span>
+</button>
+<div class="hidden px-space-lg pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md leading-relaxed border-t border-surface-container-high/40" id="faqContent-2">
+<p class="mb-2">
+              You can challenge any answer key within 48 hours of test completion directly from your analytics page:
+            </p>
+<ol class="list-decimal pl-5 space-y-1 mb-2">
+<li>Open your test scorecard and click into the specific question solution view.</li>
+<li>Click the small flag icon <strong>“Report Discrepancy / Challenge Answer”</strong> in the top-right corner of the stem.</li>
+<li>Submit your textbook citation (NCERT, standard engineering reference, or official gazette) and a short proof note.</li>
+</ol>
+<p>
+              Our subject matter committee audits all challenges twice weekly. If an error is upheld, all candidate scorecards and percentile ranks for that mock test are universally recalibrated with bonus marks.
+            </p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all">
+<button class="w-full px-space-lg py-space-md text-left flex items-center justify-between gap-4 hover:bg-surface-container-low/40 transition-colors" onclick="toggleFaq(3)" type="button">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary-container font-headline-md text-headline-md">3</span>
+<span class="font-headline-md text-headline-md text-on-surface">How quickly is a payment failure refunded back to my bank account?</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-300" id="faqIcon-3">expand_more</span>
+</button>
+<div class="hidden px-space-lg pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md leading-relaxed border-t border-surface-container-high/40" id="faqContent-3">
+<p class="mb-2">
+              If money was debited from your bank account or UPI app (Google Pay, PhonePe, Paytm) but your subscription pass was not immediately activated:
+            </p>
+<ul class="list-disc pl-5 space-y-1 mb-2">
+<li><strong>Automated UPI Reversals:</strong> Usually settle back to your source account within <strong>2 to 4 hours</strong> per NPCI guidelines.</li>
+<li><strong>Credit / Debit Cards &amp; Net Banking:</strong> Depend on banking gateway clearing protocols and take <strong>3 to 5 business days</strong>.</li>
+</ul>
+<p>
+              You can track or expedite this by providing the 12-digit UTR/RRN number in the support ticket form above.
+            </p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all">
+<button class="w-full px-space-lg py-space-md text-left flex items-center justify-between gap-4 hover:bg-surface-container-low/40 transition-colors" onclick="toggleFaq(4)" type="button">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary-container font-headline-md text-headline-md">4</span>
+<span class="font-headline-md text-headline-md text-on-surface">Can I change my target exam selection after purchasing a pass?</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-300" id="faqIcon-4">expand_more</span>
+</button>
+<div class="hidden px-space-lg pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md leading-relaxed border-t border-surface-container-high/40" id="faqContent-4">
+<p class="mb-2">
+              Yes, aspirants holding the <strong>All-Access Super Pass</strong> can switch their primary target stream (e.g., from JEE Main to NEET or SSC CGL) at any time from their account settings without any extra fee.
+            </p>
+<p>
+              If you purchased an <em>Exam-Specific Single Pack</em> by mistake, you can request a target swap via the ticket desk within <strong>72 hours of purchase</strong>, provided you have attempted no more than two full-length tests from that series.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Client-Side Script -->
+<script>
+    // FAQ Accordion Toggle
+    function toggleFaq(id) {
+      const content = document.getElementById('faqContent-' + id);
+      const icon = document.getElementById('faqIcon-' + id);
+      const isHidden = content.classList.contains('hidden');
+      
+      // Close all first for clean single-view
+      for (let i = 1; i <= 4; i++) {
+        const c = document.getElementById('faqContent-' + i);
+        const ic = document.getElementById('faqIcon-' + i);
+        if (c && ic) {
+          c.classList.add('hidden');
+          ic.classList.remove('rotate-180');
+        }
+      }
+
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      }
+    }
+
+    // Prefill form category from interactive cards
+    function prefillCategory(categoryName) {
+      const select = document.getElementById('issueCategory');
+      if (select) {
+        select.value = categoryName;
+      }
+      const section = document.getElementById('ticketSection');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Search bar helper
+    function setQuery(query) {
+      const searchInput = document.getElementById('supportSearch');
+      if (searchInput) {
+        searchInput.value = query;
+        searchInput.focus();
+      }
+    }
+
+    function triggerSearchAlert() {
+      const q = document.getElementById('supportSearch').value.trim();
+      if (!q) {
+        alert('Please enter a search topic or question.');
+        return;
+      }
+      alert('Searching TestPrep knowledge base for: "' + q + '"...\nFound 14 relevant guidebooks and resolution threads.');
+    }
+
+    // File upload label update
+    function updateFileLabel(input) {
+      const display = document.getElementById('fileNameDisplay');
+      if (input.files && input.files[0]) {
+        display.innerHTML = '<span class="text-tertiary font-semibold">Attached:</span> ' + input.files[0].name;
+      }
+    }
+
+    // Handle ticket submission
+    function handleTicketSubmit(event) {
+      event.preventDefault();
+      const submitBtn = document.getElementById('submitBtn');
+      const originalText = submitBtn.innerHTML;
+      
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">sync</span> Submitting...';
+
+      setTimeout(function() {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+        
+        // Show success alert
+        const alertBox = document.getElementById('ticketSuccessMsg');
+        if (alertBox) {
+          alertBox.classList.remove('hidden');
+          alertBox.classList.add('flex');
+          alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        
+        // Reset description
+        document.getElementById('issueDescription').value = '';
+        document.getElementById('fileNameDisplay').innerHTML = '<span class="text-primary-container">Click to upload</span> or drag and drop screenshot';
+      }, 700);
+    }
+
+    function dismissTicketAlert() {
+      const alertBox = document.getElementById('ticketSuccessMsg');
+      if (alertBox) {
+        alertBox.classList.add('hidden');
+        alertBox.classList.remove('flex');
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low mt-space-2xl"><div class="w-full max-w-[1440px] mx-auto px-gutter py-space-2xl"><div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-space-xl mb-space-2xl"><div class="col-span-2 md:col-span-4 lg:col-span-1"><div class="flex items-center gap-space-xs text-primary mb-space-md"><div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-headline-md text-headline-md"><span class="material-symbols-outlined text-[18px]">school</span></div><span class="font-headline-lg text-headline-lg tracking-tight text-on-surface">TestPrep</span></div><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md max-w-xs">Comprehensive preparation platform for national and state entrance exams with realistic mock tests, live analytics, and expert curated question banks.</p><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[20px]">verified</span><span class="font-label-sm text-label-sm uppercase tracking-wider">ISO 9001:2015 Certified Prep</span></div></div><div><h4 class="font-headline-md text-headline-md text-on-surface mb-space-md">Exams</h4><ul class="space-y-space-xs font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="exams" href="#">Engineering (JEE Main &amp; Adv)</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="exams" href="#">Medical (NEET UG)</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="exams" href="#">Civil Services (UPSC CSE)</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="exams" href="#">Banking (IBPS PO &amp; Clerk)</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="exams" href="#">Staff Selection (SSC CGL)</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="exams" href="#">Management (CAT &amp; XAT)</a></li></ul></div><div><h4 class="font-headline-md text-headline-md text-on-surface mb-space-md">Resources</h4><ul class="space-y-space-xs font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="mock-tests" href="#">Full Length Mock Tests</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="previous-year-papers" href="#">Previous 10 Year Papers</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="study-material" href="#">Chapter-wise Notes</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="study-material" href="#">Formula Sheets &amp; Summary</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="support" href="#">Daily Current Affairs</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="support" href="#">Exam Rank Predictor</a></li></ul></div><div><h4 class="font-headline-md text-headline-md text-on-surface mb-space-md">Company</h4><ul class="space-y-space-xs font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="about-us" href="#">About TestPrep</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="support" href="#">Faculty &amp; Mentors</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="pricing" href="#">Pass &amp; Subscriptions</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="support" href="#">Institutional Campus</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="support" href="#">Careers &amp; Culture</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="contact-support" href="#">Help &amp; Contact Support</a></li></ul></div><div><h4 class="font-headline-md text-headline-md text-on-surface mb-space-md">Legal &amp; Policy</h4><ul class="space-y-space-xs font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="privacy-policy" href="#">Privacy Policy</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="terms-of-service" href="#">Terms of Service</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="refund-policy" href="#">Refund &amp; Cancellation</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="honor-code" href="#">Academic Honor Code</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="security" href="#">Security &amp; Compliance</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="cookie-policy" href="#">Cookie Preferences</a></li></ul></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md bg-surface-container/60 rounded-xl px-gutter py-space-md"><p class="font-body-sm text-body-sm text-on-surface-variant text-center md:text-left">© 2025 TestPrep Technologies Pvt. Ltd. All rights reserved. Built for competitive excellence.</p><div class="flex items-center gap-space-md text-on-surface-variant"><span class="flex items-center gap-1 font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px] text-tertiary">shield</span>Secure 256-Bit SSL</span><span class="flex items-center gap-1 font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px] text-tertiary">support_agent</span>24/7 Academic Desk</span></div></div></div></footer></body></html>

@@ -1,4 +1,4 @@
-﻿import { Router, Request, Response } from 'express';
+import { Router, Request, Response } from 'express';
 import { prisma } from '../../lib/prisma';
 
 const router = Router();
@@ -88,7 +88,7 @@ router.get('/:slug/papers', async (req: Request, res: Response, next) => {
       where: {
         examId: exam.id,
         publishedAt: { not: null },
-        ...(difficulty ? { difficulty: difficulty as string } : {}),
+        ...(difficulty ? { difficulty: difficulty as any } : {}),
         ...(isFree !== undefined ? { isFree: isFree === 'true' } : {}),
       },
       orderBy: { publishedAt: 'desc' },

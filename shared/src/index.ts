@@ -1,4 +1,4 @@
-﻿// Schemas
+// Schemas
 export * from './schemas/auth';
 export * from './schemas/onboarding';
 export * from './schemas/attempt';

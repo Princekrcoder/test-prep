@@ -1,4 +1,4 @@
-﻿import { create } from 'zustand';
+import { create } from 'zustand';
 import type { AnswerState } from '@shared/types/index';
 
 interface LocalAnswer {

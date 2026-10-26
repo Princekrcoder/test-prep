@@ -1,4 +1,4 @@
-﻿const API_BASE = '/api'; // Proxied to backend via next.config.js rewrites
+const API_BASE = '/api'; // Proxied to backend via next.config.js rewrites
 
 interface RequestOptions extends RequestInit {
   data?: unknown;

@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary":"#ffffff","on-tertiary-container":"#b5ffd7","on-secondary-container":"#5c647a","error-container":"#ffdad6","on-background":"#0b1c30","surface-variant":"#d3e4fe","tertiary-fixed-dim":"#4edea3","on-error":"#ffffff","surface-container-highest":"#d3e4fe","inverse-primary":"#b5c4ff","secondary":"#565e74","on-tertiary-fixed":"#002113","on-surface-variant":"#434655","primary-container":"#1e60f3","inverse-on-surface":"#eaf1ff","primary":"#0048c9","on-secondary-fixed-variant":"#3f465c","surface-container-high":"#dce9ff","inverse-surface":"#213145","on-tertiary-fixed-variant":"#005236","primary-fixed-dim":"#b5c4ff","surface":"#f8f9ff","tertiary-fixed":"#6ffbbe","on-primary-fixed":"#00174d","on-surface":"#0b1c30","surface-dim":"#cbdbf5","on-primary":"#ffffff","surface-bright":"#f8f9ff","surface-container-lowest":"#ffffff","tertiary-container":"#007c55","outline":"#737687","surface-container":"#e5eeff","on-primary-container":"#edeeff","secondary-fixed-dim":"#bec6e0","surface-container-low":"#eff4ff","on-secondary-fixed":"#131b2e","on-primary-fixed-variant":"#003cab","primary-fixed":"#dbe1ff","on-error-container":"#93000a","surface-tint":"#0051df","outline-variant":"#c3c5d8","tertiary":"#006141","error":"#ba1a1a","secondary-container":"#dae2fd","secondary-fixed":"#dae2fd","background":"#f8f9ff","on-tertiary":"#ffffff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xl":"2rem","space-2xl":"3rem","space-md":"1rem","gutter-mobile":"0.75rem","space-xs":"0.5rem",margin:"2rem","space-lg":"1.5rem","margin-mobile":"1rem","space-2xs":"0.25rem","space-sm":"0.75rem",gutter:"1.5rem"},fontFamily:{"label-sm":["Inter"],"label-lg":["Inter"],"body-sm":["Inter"],"body-md":["Inter"],"display-hero-mobile":["Plus Jakarta Sans"],"label-md":["Inter"],"display-hero":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"body-lg":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"exam-numeric":["Plus Jakarta Sans"]},fontSize:{"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}],"label-lg":["14px",{lineHeight:"20px",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"display-hero-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"800"}],"label-md":["12px",{lineHeight:"16px",fontWeight:"600"}],"display-hero":["40px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"800"}],"headline-xl":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}],"headline-xl-mobile":["22px",{lineHeight:"30px",letterSpacing:"-0.01em",fontWeight:"700"}],"headline-md":["16px",{lineHeight:"24px",fontWeight:"600"}],"headline-lg":["20px",{lineHeight:"28px",fontWeight:"700"}],"exam-numeric":["14px",{lineHeight:"14px",fontWeight:"700"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-xs" data-path="home" href="#"><div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-on-primary font-headline-lg text-headline-lg">T</div><span class="font-headline-lg text-headline-lg tracking-tight text-on-surface">TestPrep</span></a><div class="hidden xl:flex items-center gap-space-xs bg-secondary-container text-on-secondary-fixed px-space-sm py-space-2xs rounded-full font-label-sm text-label-sm"><span class="material-symbols-outlined text-primary text-[16px]">adjust</span><span>Target: JEE Main &amp; TCS NQT</span></div></div><div class="hidden lg:flex items-center flex-1 max-w-md mx-space-md"><div class="relative w-full"><span class="material-symbols-outlined absolute left-space-sm top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full pl-10 pr-space-md py-space-xs rounded-xl bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#1e60f3] transition-all" placeholder="Search exams, study materials..." type="text"/></div></div><nav class="hidden 2xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg"><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all font-label-md text-label-md" data-path="home" href="#">Home</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all font-label-md text-label-md" data-path="exams" href="#">Exams</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all font-label-md text-label-md" data-path="mock-tests" href="#">Mock Tests</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all font-label-md text-label-md" data-path="previous-year-papers" href="#">Previous Year Papers</a><a aria-current="page" class="px-space-sm py-space-xs transition-all bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg" data-path="study-material" href="#">Study Material</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all font-label-md text-label-md" data-path="pricing" href="#">Pricing</a></nav><div class="flex items-center gap-space-sm"><button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-xs pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden md:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-tight">Prince Kumar</span><span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Aspirant</span></div></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
+<!-- Top Ambient Glow Gradient Container -->
+<div class="relative overflow-hidden bg-surface-container-low px-gutter py-space-xl lg:py-space-2xl">
+<!-- Atmospheric background light elements -->
+<div class="absolute -top-32 -left-20 w-96 h-96 rounded-full bg-primary-fixed blur-3xl opacity-40 pointer-events-none"></div>
+<div class="absolute -bottom-24 right-10 w-80 h-80 rounded-full bg-surface-variant blur-2xl opacity-60 pointer-events-none"></div>
+<div class="relative max-w-7xl mx-auto flex flex-col gap-space-lg">
+<!-- Top Badge -->
+<div class="flex items-center gap-space-xs self-start bg-surface-container-lowest text-primary px-space-md py-space-2xs rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">100% Free Aspirant Companion • Curated by Top Rankers &amp; IIT Faculty</span>
+</div>
+<!-- Main Header Typography & Asymmetric Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<h1 class="font-display-hero text-display-hero tracking-tight text-on-surface">
+            Master High-Yield Concepts with Concise <span class="text-primary-container">Study Handbooks</span> &amp; Formula Sheets
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+            Download chapter-wise formula flashcards, 48-hour exam cheat sheets, and verified revision notes for Engineering, Service IT, SSC, Banking, and UPSC.
+          </p>
+</div>
+<!-- Quick Stats Pill Stack -->
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-space-sm">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">menu_book</span>
+</div>
+<div>
+<span class="font-headline-lg text-headline-lg text-on-surface block leading-tight">450+</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Verified Handbooks</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary px-space-xs py-space-2xs bg-on-tertiary-container/30 rounded-full">PDF Vault</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[24px]">download_done</span>
+</div>
+<div>
+<span class="font-headline-lg text-headline-lg text-on-surface block leading-tight">1.8M+</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Downloads Recorded</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary px-space-xs py-space-2xs bg-secondary-container rounded-full">Verified Active</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">published_with_changes</span>
+</div>
+<div>
+<span class="font-headline-lg text-headline-lg text-on-surface block leading-tight">2025/26</span>
+<span class="font-label-md text-label-md text-on-surface-variant">NTA &amp; TCS Blueprint</span>
+</div>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
+</div>
+</div>
+</div>
+<!-- Live Search & Fast Filter Bar -->
+<div class="w-full bg-surface-container-lowest p-space-xs sm:p-space-sm rounded-2xl shadow-md mt-space-xs flex flex-col md:flex-row items-center gap-space-xs">
+<div class="relative flex-1 w-full flex items-center">
+<span class="material-symbols-outlined absolute left-space-md text-outline text-[22px]">search</span>
+<input class="w-full pl-12 pr-space-md py-space-sm rounded-xl bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest transition-all" id="searchInput" placeholder="Search by subject, chapter, or formula handbook (e.g. Calculus, Time &amp; Work, Puzzles)..." type="text"/>
+</div>
+<div class="flex items-center gap-space-xs w-full md:w-auto">
+<button class="w-full md:w-auto px-space-lg py-space-sm bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg rounded-xl shadow-sm transition-all flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[20px]">filter_list</span>
+<span>Filter Material</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Content Workspace -->
+<div class="w-full max-w-7xl mx-auto px-gutter py-space-xl flex flex-col gap-space-xl">
+<!-- Filter Bars: Category Pills + Exam Track Switcher -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-xs">
+<!-- Category Pills horizontal scrollable -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-2 scrollbar-none" id="categoryPillContainer">
+<button class="px-space-md py-space-xs rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm whitespace-nowrap shadow-sm category-pill active">
+          All Materials (450+)
+        </button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm whitespace-nowrap transition-all category-pill">
+          Formula Handbooks
+        </button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm whitespace-nowrap transition-all category-pill">
+          Topic Quick Revision Notes
+        </button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm whitespace-nowrap transition-all category-pill">
+          48-Hour Exam Cheat Sheets
+        </button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm whitespace-nowrap transition-all category-pill">
+          Solved Mind Maps
+        </button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm whitespace-nowrap transition-all category-pill">
+          Aptitude &amp; Reasoning Hacks
+        </button>
+</div>
+<!-- Exam Track Selector -->
+<div class="flex items-center gap-space-xs self-start lg:self-auto shrink-0 bg-surface-container-low p-1.5 rounded-xl">
+<span class="material-symbols-outlined text-outline text-[18px] ml-2">school</span>
+<select class="bg-transparent text-on-surface font-label-md text-label-md pr-space-md py-1 outline-none cursor-pointer">
+<option>All Tracks (Global)</option>
+<option selected="">Engineering / JEE &amp; GATE</option>
+<option>Service IT / TCS NQT &amp; Infosys</option>
+<option>SSC &amp; Central Govt Exams</option>
+<option>Banking / IBPS &amp; SBI PO</option>
+<option>Medical / NEET-UG</option>
+</select>
+</div>
+</div>
+<!-- Spotlight Banner: Resource of the Week -->
+<div class="relative overflow-hidden rounded-2xl bg-inverse-surface text-inverse-on-surface p-space-lg lg:p-space-xl shadow-lg">
+<!-- Decorative Backdrop Geometry -->
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-primary-container opacity-20 blur-3xl pointer-events-none"></div>
+<div class="absolute right-1/4 bottom-0 w-64 h-64 rounded-full bg-tertiary opacity-15 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-space-2xs bg-tertiary text-on-tertiary rounded-full font-label-sm text-label-sm uppercase">Spotlight Handbook of the Week</span>
+<span class="font-body-sm text-body-sm text-inverse-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">local_fire_department</span> Trending #1
+            </span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-inverse-on-surface">
+            TCS NQT 2025 Foundation &amp; Ninja Numerical Ability Blueprint
+          </h2>
+<p class="font-body-md text-body-md text-surface-container-highest max-w-2xl">
+            Exhaustive formula repository covering 100% of tested arithmetic, elementary statistics, advanced data interpretation, and memory hacks with 200+ solved recurring questions.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs text-surface-container">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">check_circle</span>
+<span class="font-body-sm text-body-sm">114 Verified Pages</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">update</span>
+<span class="font-body-sm text-body-sm">Last Synced 2 Days Ago</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">download</span>
+<span class="font-body-sm text-body-sm">410,290 Aspirants</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-space-sm justify-end">
+<button class="w-full py-space-sm px-space-md rounded-xl bg-surface-container-highest hover:bg-surface-bright text-on-surface font-label-lg text-label-lg shadow-sm transition-all flex items-center justify-center gap-space-xs" onclick="triggerPreviewModal('TCS NQT 2025 Foundation &amp; Ninja Numerical Ability Blueprint', '114 Pages • High Resolution Vector PDF • 410k Downloads')" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+<span>Instant Preview</span>
+</button>
+<a class="w-full py-space-sm px-space-md rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg shadow-md transition-all flex items-center justify-center gap-space-xs" download="" href="#">
+<span class="material-symbols-outlined text-[20px]">cloud_download</span>
+<span>Download Master Bundle (14 MB)</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Featured Handbooks Grid (6 bespoke cards) -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Curated Formula &amp; Revision Handbooks</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Structured chapter-wise compendiums prepared by subject matter specialists</p>
+</div>
+<span class="font-label-md text-label-md text-primary flex items-center gap-1 cursor-pointer hover:underline">
+          View All 450 Notes <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Card 1: Calculus -->
+<div class="flex flex-col justify-between bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">calculate</span>
+</div>
+<span class="px-space-sm py-space-2xs rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+                JEE / GATE
+              </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold ml-1">4.9</span>
+</div>
+<span class="text-outline text-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">185k Downloads</span>
+<span class="text-outline text-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">64 Pgs</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface line-clamp-2">
+              Calculus &amp; Coordinate Geometry Master Formula Handbook
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+              Derivatives, indefinite &amp; definite integrals, conic sections, vectors 3D, and standard polar curves condensed into quick-reference summaries.
+            </p>
+<!-- Visual micro-indicator (Topic breakdown spark) -->
+<div class="w-full bg-surface-container-low rounded-lg p-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span> 24 Differential Equ.</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary"></span> 40 Geometric Props</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs mt-space-md pt-space-xs">
+<button class="flex-1 py-space-xs rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" onclick="triggerPreviewModal('Calculus &amp; Coordinate Geometry Master Formula Handbook', '64 Pages • Engineering Track')" type="button">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Read Online</span>
+</button>
+<a class="flex-1 py-space-xs rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-1 shadow-sm transition-colors" download="" href="#">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Download PDF</span>
+</a>
+</div>
+</div>
+<!-- Card 2: Quant 120 Speed Hacks -->
+<div class="flex flex-col justify-between bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">speed</span>
+</div>
+<span class="px-space-sm py-space-2xs rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+                TCS NQT / SSC CGL
+              </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold ml-1">4.9</span>
+</div>
+<span class="text-outline text-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">320k Downloads</span>
+<span class="text-outline text-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">42 Pgs</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface line-clamp-2">
+              Quantitative Aptitude 120 Speed Hacks &amp; Vedic Math Shortcuts
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+              10-second solutions for percentage multipliers, compound interest approximations, pipe problems, and digital sum cross-checks.
+            </p>
+<div class="w-full bg-surface-container-low rounded-lg p-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary"></span> 120 Formulas</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary-container"></span> 80 Examples</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs mt-space-md pt-space-xs">
+<button class="flex-1 py-space-xs rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" onclick="triggerPreviewModal('Quantitative Aptitude 120 Speed Hacks &amp; Vedic Math Shortcuts', '42 Pages • Aptitude Series')" type="button">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Read Online</span>
+</button>
+<a class="flex-1 py-space-xs rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-1 shadow-sm transition-colors" download="" href="#">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Download PDF</span>
+</a>
+</div>
+</div>
+<!-- Card 3: Data Interpretation -->
+<div class="flex flex-col justify-between bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">analytics</span>
+</div>
+<span class="px-space-sm py-space-2xs rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+                Banking &amp; CAT
+              </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold ml-1">4.8</span>
+</div>
+<span class="text-outline text-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">140k Downloads</span>
+<span class="text-outline text-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">56 Pgs</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface line-clamp-2">
+              Data Interpretation &amp; Logical Puzzles Playbook
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+              Master radar webs, missing table charts, caselets, linear &amp; circular seating arrangements with step-by-step elimination logic.
+            </p>
+<div class="w-full bg-surface-container-low rounded-lg p-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span> 32 Chart Types</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary"></span> 45 Puzzles</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs mt-space-md pt-space-xs">
+<button class="flex-1 py-space-xs rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" onclick="triggerPreviewModal('Data Interpretation &amp; Logical Puzzles Playbook', '56 Pages • Banking &amp; CAT Edition')" type="button">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Read Online</span>
+</button>
+<a class="flex-1 py-space-xs rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-1 shadow-sm transition-colors" download="" href="#">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Download PDF</span>
+</a>
+</div>
+</div>
+<!-- Card 4: General Science & History -->
+<div class="flex flex-col justify-between bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-fixed-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">history_edu</span>
+</div>
+<span class="px-space-sm py-space-2xs rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+                SSC / Railways
+              </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold ml-1">4.9</span>
+</div>
+<span class="text-outline text-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">210k Downloads</span>
+<span class="text-outline text-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">88 Pgs</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface line-clamp-2">
+              General Science &amp; Modern Indian History Rapid Pocketbook
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+              Chronological milestone tables (1857-1947), constitutional articles, SI units, and human biology diagrams for fast 24-hour recall.
+            </p>
+<div class="w-full bg-surface-container-low rounded-lg p-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span> 14 Timeline Charts</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary"></span> High-Yield Static GK</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs mt-space-md pt-space-xs">
+<button class="flex-1 py-space-xs rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" onclick="triggerPreviewModal('General Science &amp; Modern Indian History Rapid Pocketbook', '88 Pages • SSC / Railways Edition')" type="button">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Read Online</span>
+</button>
+<a class="flex-1 py-space-xs rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-1 shadow-sm transition-colors" download="" href="#">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Download PDF</span>
+</a>
+</div>
+</div>
+<!-- Card 5: Core Computer Science -->
+<div class="flex flex-col justify-between bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">terminal</span>
+</div>
+<span class="px-space-sm py-space-2xs rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+                Infosys / TCS / GATE
+              </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold ml-1">4.9</span>
+</div>
+<span class="text-outline text-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">260k Downloads</span>
+<span class="text-outline text-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">92 Pgs</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface line-clamp-2">
+              Core Computer Science: DSA, DBMS &amp; OS Revision Guide
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+              Time complexity cheat matrices, SQL index structures, normalization paradigms, deadlocks, and thread synchronization code blueprints.
+            </p>
+<div class="w-full bg-surface-container-low rounded-lg p-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary"></span> Big-O Cheatsheet</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary-container"></span> 40 Tech Interview Qs</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs mt-space-md pt-space-xs">
+<button class="flex-1 py-space-xs rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" onclick="triggerPreviewModal('Core Computer Science: DSA, DBMS &amp; OS Revision Guide', '92 Pages • IT Assessment Pack')" type="button">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Read Online</span>
+</button>
+<a class="flex-1 py-space-xs rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-1 shadow-sm transition-colors" download="" href="#">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Download PDF</span>
+</a>
+</div>
+</div>
+<!-- Card 6: Physics Compendium -->
+<div class="flex flex-col justify-between bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">biotech</span>
+</div>
+<span class="px-space-sm py-space-2xs rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+                JEE / NEET
+              </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold ml-1">4.9</span>
+</div>
+<span class="text-outline text-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">190k Downloads</span>
+<span class="text-outline text-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">50 Pgs</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface line-clamp-2">
+              Physics Kinematics, Electrodynamics &amp; Optics Compendium
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+              Maxwell equations, ray optics sign conventions, rotational dynamics formulas, and wave interference shortcuts in pure printable vector layout.
+            </p>
+<div class="w-full bg-surface-container-low rounded-lg p-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span> 78 Circuit Diagrams</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span> 100% NCERT Align</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs mt-space-md pt-space-xs">
+<button class="flex-1 py-space-xs rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" onclick="triggerPreviewModal('Physics Kinematics, Electrodynamics &amp; Optics Compendium', '50 Pages • Medical &amp; Engineering')" type="button">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Read Online</span>
+</button>
+<a class="flex-1 py-space-xs rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-1 shadow-sm transition-colors" download="" href="#">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Download PDF</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Editorial Featurette Section: Why These Handbooks Outperform -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center bg-surface-container-low rounded-2xl p-space-lg lg:p-space-xl">
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Engineered for Rapid Retention</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Designed like flight manuals: Zero clutter, instant visual parsing.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Generic study notes suffer from wall-of-text fatigue. Our handbook framework applies structural hierarchy, color-coded equation derivations, and spatial memory triggers to maximize retention when revising in the critical final 48 hours.
+        </p>
+<div class="grid grid-cols-2 gap-space-sm pt-space-2xs">
+<div class="bg-surface-container-lowest p-space-sm rounded-xl">
+<span class="material-symbols-outlined text-primary text-[22px] mb-1">highlighter_size_3</span>
+<span class="font-headline-md text-headline-md text-on-surface block">High-Yield Highlight</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Only patterns verified by the last 10 years of entrance examinations.</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-xl">
+<span class="material-symbols-outlined text-tertiary text-[22px] mb-1">picture_as_pdf</span>
+<span class="font-headline-md text-headline-md text-on-surface block">Vector Print Ready</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Clean high-DPI PDFs formatted for A4 home printing and tablet stylus notes.</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 relative">
+<div class="relative w-full h-80 rounded-2xl overflow-hidden shadow-md">
+<img class="w-full h-full object-cover" data-alt="An organized, aesthetic flat lay of a modern student desk featuring printed formula charts, a tablet displaying mathematical diagrams, sharp pen notes, and a digital timer in soft natural daylight, conveying academic precision and focus with blue accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaz9EtLGg_c-RJ3GeWI72_rQLufwLSbz--jPtAec-1D46J4HNqXB9lYUOzrVOhBWMa18FKCZAV8EppIaRivZjEBWsNpCOcRq2RVYawQ75AtBO7_0qegsFAifsJrGL9XtYmNexm0ruBSefkyCajr0Ba5BxOhP4FwQy1zoArKdDOVrOinF-gEAW93mBFHnuaLFP2mLmOPXShMzUMD--8TDz6a31RCCcuOEAHp3S0FW_D29S_188LWCGO"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-transparent to-transparent flex items-end p-space-md">
+<div class="text-on-primary">
+<span class="font-headline-md text-headline-md block">A4 Printable Format</span>
+<span class="font-body-sm text-body-sm opacity-90">Dark-mode tablet &amp; crisp ink-friendly monochrome themes included in every download.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- FAQ Section -->
+<div class="flex flex-col gap-space-lg pt-space-xs">
+<div class="text-center max-w-xl mx-auto">
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Frequently Asked Questions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Everything you need to know about accessing TestPrep formula handbooks</p>
+</div>
+<div class="max-w-3xl w-full mx-auto flex flex-col gap-space-xs">
+<!-- FAQ 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-md text-headline-md text-on-surface">Are these formula handbooks 100% free forever?</h4>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 faq-icon">expand_more</span>
+</div>
+<div class="faq-content hidden pt-space-xs font-body-md text-body-md text-on-surface-variant">
+            Yes. All core chapter-wise formula compendiums, cheat sheets, and solved revision handbooks on this portal are openly accessible with no paywall or forced subscription. You can download vector PDFs directly.
+          </div>
+</div>
+<!-- FAQ 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-md text-headline-md text-on-surface">Can I read them offline on the TestPrep mobile app?</h4>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 faq-icon">expand_more</span>
+</div>
+<div class="faq-content hidden pt-space-xs font-body-md text-body-md text-on-surface-variant">
+            Absolutely. You can tap the 'Read Online' or 'Save to App' option. Once cached on the TestPrep iOS/Android companion app, they remain accessible without an active internet connection on train commutes or offline sessions.
+          </div>
+</div>
+<!-- FAQ 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-md text-headline-md text-on-surface">How frequently are notes updated with new exam patterns?</h4>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 faq-icon">expand_more</span>
+</div>
+<div class="faq-content hidden pt-space-xs font-body-md text-body-md text-on-surface-variant">
+            Our subject panels update every handbook within 72 hours of any official syllabus tweak by NTA, TCS iON, IBPS, or UPSC. Each handbook has an explicit 'Last Verified' timestamp stamp in the header.
+          </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Quick Preview Modal Backing -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-space-md bg-on-surface/40 backdrop-blur-sm hidden" id="previewModal">
+<div class="bg-surface-container-lowest rounded-2xl max-w-2xl w-full p-space-lg shadow-2xl flex flex-col gap-space-md relative animate-in fade-in zoom-in-95">
+<button class="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface" onclick="closePreviewModal()" type="button">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[20px]">auto_stories</span>
+<span>Quick Vector Reader</span>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<h3 class="font-headline-xl text-headline-xl text-on-surface" id="modalTitle">Handbook Preview</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="modalSubtitle">Document Metadata</p>
+</div>
+<!-- Preview Mock Document Sheet -->
+<div class="bg-surface-container-low rounded-xl p-space-md h-64 overflow-y-auto flex flex-col gap-space-sm font-mono text-body-sm text-on-surface">
+<div class="p-space-xs bg-surface-container-lowest rounded shadow-xs flex items-center justify-between">
+<span class="text-primary font-bold">§ 1.1 Core Equations &amp; Proof Summary</span>
+<span class="text-xs bg-secondary-container px-2 py-0.5 rounded text-on-secondary-fixed">NTA Standard</span>
+</div>
+<p class="text-xs font-sans text-on-surface-variant">
+          • Standard Limit: lim(x→0) [sin(x)/x] = 1; lim(x→0) [(e^x - 1)/x] = 1.<br/>
+          • L'Hôpital Rule verification valid strictly on [0/0] and [∞/∞] indeterminate states.<br/>
+          • Mean Value Theorem: If f continuous on [a,b] &amp; differentiable on (a,b), ∃ c ∈ (a,b) s.t. f'(c) = [f(b)-f(a)] / (b-a).
+        </p>
+<div class="p-space-xs bg-surface-container-lowest rounded shadow-xs flex items-center justify-between">
+<span class="text-tertiary font-bold">§ 1.2 Rapid Elimination Matrix</span>
+<span class="text-xs bg-on-tertiary-container/40 px-2 py-0.5 rounded text-tertiary">Speed Hack</span>
+</div>
+<p class="text-xs font-sans text-on-surface-variant">
+          • For conic eccentricity e &lt; 1 (Ellipse), e = 1 (Parabola), e &gt; 1 (Hyperbola). Directrix intersection shortcut yields axis coordinate directly within 15 seconds.
+        </p>
+</div>
+<div class="flex items-center justify-end gap-space-xs pt-space-xs">
+<button class="px-space-md py-space-xs rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md" onclick="closePreviewModal()" type="button">
+          Close Reader
+        </button>
+<a class="px-space-md py-space-xs rounded-xl bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-1" download="" href="#">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Download Clean PDF</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Micro-interactions Script -->
+<script>
+    function toggleFaq(element) {
+      const content = element.querySelector('.faq-content');
+      const icon = element.querySelector('.faq-icon');
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    function triggerPreviewModal(title, subtitle) {
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalSubtitle').innerText = subtitle;
+      document.getElementById('previewModal').classList.remove('hidden');
+    }
+
+    function closePreviewModal() {
+      document.getElementById('previewModal').classList.add('hidden');
+    }
+
+    // Instant Filter Pill selection
+    const pills = document.querySelectorAll('.category-pill');
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => {
+          p.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-sm');
+          p.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        });
+        pill.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        pill.classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm');
+      });
+    });
+
+    // Close preview on escape
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closePreviewModal();
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_8px_rgba(0,0,0,0.03)]"><div class="w-full px-gutter py-space-2xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl"><div class="lg:col-span-1 flex flex-col gap-space-md"><div class="flex items-center gap-space-xs"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary font-headline-md text-headline-md">T</div><span class="font-headline-lg text-headline-lg text-on-surface">TestPrep</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Premier mock exams, assessment series, and real-time rank predictions for competitive entrance and recruitment tests.</p><div class="flex items-center gap-space-xs"><a class="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">share</span></a><a class="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">public</span></a><a class="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">forum</span></a></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg text-on-surface">Exams</span><nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-bold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="exams" href="#">JEE Main &amp; Advanced</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="exams" href="#">NEET Medical</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="exams" href="#">GATE Engineering</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="exams" href="#">TCS NQT Placement</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="exams" href="#">Banking &amp; SSC</a></nav></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg text-on-surface">Resources</span><nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-bold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="mock-tests" href="#">All India Mock Tests</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="previous-year-papers" href="#">Past Year Question Papers</a><a aria-current="page" class="transition-colors text-primary font-bold" data-path="study-material" href="#">Formula Sheets &amp; Notes</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#">Test Series Pass</a><a aria-current="page" class="transition-colors text-primary font-bold" data-path="study-material" href="#">Rank Predictor</a></nav></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg text-on-surface">Company</span><div class="flex flex-col gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">About Us</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Educators &amp; Faculty</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Careers</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Press &amp; Media</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Contact Support</a></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg text-on-surface">Legal &amp; Trust</span><div class="flex flex-col gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Privacy Policy</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Terms of Service</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Honor Code &amp; Conduct</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Refund Policy</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Security Standards</a></div></div></div><div class="mt-space-2xl pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant font-body-sm text-body-sm"><p>© 2025 TestPrep Technologies Inc. All rights reserved.</p><div class="flex items-center gap-space-md"><span class="flex items-center gap-space-2xs text-tertiary font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px]">verified</span>Proctoring &amp; Exam Engine Verified</span><span>ISO 27001 Certified EdTech</span></div></div></div></footer></body></html>

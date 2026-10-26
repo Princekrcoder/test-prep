@@ -1,4 +1,4 @@
-﻿// ─── API Response Envelopes ────────────────────────────────────────────────
+// ─── API Response Envelopes ────────────────────────────────────────────────
 
 export interface ApiResponse<T> {
   data: T;

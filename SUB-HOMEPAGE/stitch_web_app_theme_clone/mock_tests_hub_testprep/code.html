@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mock Tests Hub - TestPrep</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#0048c9',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-[#f8fafc] text-slate-800 font-sans min-h-screen flex flex-col antialiased">
+<!-- Live Mock Alert Bar -->
+<div class="bg-gradient-to-r from-slate-900 via-[#0a192f] to-slate-900 text-white px-4 lg:px-8 py-2.5 shadow-sm text-xs sm:text-sm">
+<div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2.5">
+<div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-center sm:justify-start">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-rose-600 text-white font-semibold text-[11px] uppercase tracking-wider shadow-sm animate-pulse">
+<span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+          Live National Window
+        </span>
+<p class="font-medium text-slate-200">
+          National All-India Mock Test #05 <span class="text-slate-400 font-normal">(TCS NQT &amp; JEE Main 2026)</span>
+</p>
+<span class="hidden md:inline-flex items-center gap-1.5 text-emerald-400 font-medium text-xs bg-emerald-950/50 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
+<span class="material-symbols-outlined text-[15px]">timer</span>
+          Window closes in <strong class="font-bold tracking-tight" id="countdown-ticker">01h 54m 05s</strong>
+</span>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<a class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold shadow-sm transition-all duration-150" href="#schedule">
+<span>Register for Live Rank Mock</span>
+<span class="px-1.5 py-0.5 text-[10px] uppercase font-bold rounded bg-blue-700 text-white">Free</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Header / Navigation Bar (matches Home Page Screen 68) -->
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-[0_2px_12px_rgba(0,0,0,0.03)]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3 flex items-center justify-between gap-4">
+<!-- Brand Logo -->
+<div class="flex items-center gap-8 shrink-0">
+<a class="flex items-center gap-2.5 group" href="#">
+<div class="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-md shadow-blue-500/20 group-hover:bg-blue-700 transition">
+<span class="material-symbols-outlined text-[22px]">menu_book</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xl font-display font-extrabold text-slate-900 tracking-tight leading-none">TestPrep</span>
+<span class="text-[10px] text-slate-500 font-medium tracking-tight mt-0.5">Practice Today, Perform Tomorrow</span>
+</div>
+</a>
+<!-- Main Navigation Links -->
+<nav class="hidden lg:flex items-center gap-6 text-[14px]">
+<a class="text-slate-600 hover:text-blue-600 font-medium transition-colors" href="#">Home</a>
+<a class="text-slate-600 hover:text-blue-600 font-medium transition-colors" href="#">Exams</a>
+<a class="text-blue-600 font-semibold relative after:absolute after:-bottom-[19px] after:left-0 after:right-0 after:h-[2px] after:bg-blue-600" href="#">Mock Tests</a>
+<a class="text-slate-600 hover:text-blue-600 font-medium transition-colors" href="#">Previous Year Papers</a>
+<a class="text-slate-600 hover:text-blue-600 font-medium transition-colors" href="#">Study Material</a>
+<a class="text-slate-600 hover:text-blue-600 font-medium transition-colors" href="#">Pricing</a>
+</nav>
+</div>
+<!-- Search & Profile Controls -->
+<div class="flex items-center gap-3">
+<!-- Search Bar -->
+<div class="hidden sm:flex items-center relative w-56 lg:w-72">
+<span class="material-symbols-outlined absolute left-3 text-slate-400 text-[18px] pointer-events-none">search</span>
+<input class="w-full pl-9 pr-3 py-1.5 text-xs lg:text-sm bg-slate-50 hover:bg-slate-100/80 focus:bg-white border border-slate-200 rounded-lg text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all" placeholder="Search exams, tests..." type="text"/>
+</div>
+<!-- Target Pill Selector -->
+<button class="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200/80 text-slate-700 hover:bg-slate-200/60 transition text-xs font-medium" type="button">
+<span class="material-symbols-outlined text-blue-600 text-[16px]">track_changes</span>
+<span>Target: JEE Main &amp; TCS NQT</span>
+<span class="material-symbols-outlined text-slate-400 text-[16px]">expand_more</span>
+</button>
+<!-- Notification Bell -->
+<button aria-label="Notifications" class="p-2 rounded-full text-slate-500 hover:text-slate-800 hover:bg-slate-100 transition relative">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-rose-500 ring-2 ring-white"></span>
+</button>
+<!-- User Profile Pill -->
+<div class="flex items-center gap-2 pl-1 border-l border-slate-200">
+<div class="w-8 h-8 rounded-full bg-slate-900 text-white font-semibold text-xs flex items-center justify-center ring-2 ring-slate-100">
+            PK
+          </div>
+<div class="hidden md:flex items-center gap-1 text-xs font-semibold text-slate-800 cursor-pointer">
+<span>Prince Kumar</span>
+<span class="material-symbols-outlined text-slate-400 text-[16px]">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Container -->
+<main class="flex-1 w-full">
+<!-- Hero Section (Matches home page high contrast headline & stats) -->
+<section class="relative overflow-hidden bg-gradient-to-b from-blue-50/60 via-slate-50/40 to-[#f8fafc] border-b border-slate-200/60 pt-8 pb-10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Pre-headline Pill Badge -->
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100/70 border border-blue-200 text-blue-700 text-xs font-semibold mb-4 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>100% CBT Engine Replica • NTA &amp; TCS iON Standards</span>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+<div class="max-w-3xl">
+<h1 class="text-3xl sm:text-4xl lg:text-[42px] font-display font-extrabold text-slate-900 tracking-tight leading-tight">
+              India's #1 CBT Simulation Hub &amp; <span class="text-blue-600">Real-Time</span> All-India Rankings
+            </h1>
+<p class="mt-3 text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
+              Simulate official TCS iON, NTA, and IBPS test ergonomics. Benchmark accuracy, pace bottlenecks, and percentile curves with over 180,000 active test-takers daily.
+            </p>
+</div>
+<!-- Quick Stats Pill (matches Home hero companion box) -->
+<div class="flex items-center bg-white p-2 rounded-2xl border border-slate-200/90 shadow-sm shrink-0 self-start lg:self-auto divide-x divide-slate-100">
+<div class="flex items-center gap-3 px-4 py-1.5">
+<div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">query_stats</span>
+</div>
+<div>
+<div class="text-lg font-display font-extrabold text-slate-900 leading-none">4.2M+</div>
+<div class="text-[11px] font-medium text-slate-500 mt-0.5">Attempts Logged</div>
+</div>
+</div>
+<div class="flex items-center gap-3 px-4 py-1.5">
+<div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">speed</span>
+</div>
+<div>
+<div class="text-lg font-display font-extrabold text-slate-900 leading-none">±0.04%</div>
+<div class="text-[11px] font-medium text-slate-500 mt-0.5">AIR Correlation</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Category Filter Pills -->
+<div class="mt-8 flex items-center gap-2 overflow-x-auto pb-2 no-scrollbar" id="format-tabs">
+<button class="px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-blue-600 text-white shadow-sm shadow-blue-500/20 shrink-0 flex items-center gap-2 transition">
+<span class="material-symbols-outlined text-[17px]">dashboard</span>
+<span>All Tests (340)</span>
+</button>
+<button class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-white hover:bg-slate-100/80 text-slate-700 border border-slate-200/90 shrink-0 flex items-center gap-2 transition">
+<span class="material-symbols-outlined text-rose-500 text-[17px]">podcasts</span>
+<span>All-India Live Mocks (Ranked)</span>
+</button>
+<button class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-white hover:bg-slate-100/80 text-slate-700 border border-slate-200/90 shrink-0 flex items-center gap-2 transition">
+<span class="material-symbols-outlined text-blue-600 text-[17px]">computer</span>
+<span>Full-Length CBT Mocks</span>
+</button>
+<button class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-white hover:bg-slate-100/80 text-slate-700 border border-slate-200/90 shrink-0 flex items-center gap-2 transition">
+<span class="material-symbols-outlined text-emerald-600 text-[17px]">bolt</span>
+<span>Chapter-wise &amp; Sectional Drills</span>
+</button>
+<button class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-white hover:bg-slate-100/80 text-slate-700 border border-slate-200/90 shrink-0 flex items-center gap-2 transition">
+<span class="material-symbols-outlined text-indigo-600 text-[17px]">history_edu</span>
+<span>PYQ Simulations</span>
+</button>
+<button class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-white hover:bg-slate-100/80 text-slate-700 border border-slate-200/90 shrink-0 flex items-center gap-2 transition">
+<span class="material-symbols-outlined text-teal-600 text-[17px]">assignment_turned_in</span>
+<span>Free Diagnostic Tests</span>
+</button>
+</div>
+<!-- Filter Dropdown Toolbar -->
+<div class="mt-4 p-3 sm:p-4 bg-white rounded-2xl border border-slate-200/90 shadow-sm grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+<div class="col-span-2 sm:col-span-1">
+<label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-500 mb-1">Subject Focus</label>
+<div class="relative">
+<select class="w-full appearance-none bg-slate-50 hover:bg-slate-100/70 text-slate-800 text-xs sm:text-sm rounded-lg px-3 py-2 pr-8 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition">
+<option>All Modules &amp; Subjects</option>
+<option>Quantitative Aptitude</option>
+<option>Logical Reasoning</option>
+<option>Verbal Ability &amp; Reading</option>
+<option>Coding &amp; Technical Domain</option>
+<option>General Awareness &amp; Banking</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<div>
+<label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-500 mb-1">Duration Format</label>
+<div class="relative">
+<select class="w-full appearance-none bg-slate-50 hover:bg-slate-100/70 text-slate-800 text-xs sm:text-sm rounded-lg px-3 py-2 pr-8 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition">
+<option>Any Duration</option>
+<option>15m Speed Sprints</option>
+<option>30m-60m Sectionals</option>
+<option>120m-180m Full Mocks</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<div>
+<label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-500 mb-1">Difficulty Level</label>
+<div class="relative">
+<select class="w-full appearance-none bg-slate-50 hover:bg-slate-100/70 text-slate-800 text-xs sm:text-sm rounded-lg px-3 py-2 pr-8 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition">
+<option>All Difficulty Tiers</option>
+<option>Foundation (Easy)</option>
+<option>Exam Standard (Moderate)</option>
+<option>Advanced &amp; Topper Hard</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<div>
+<label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-500 mb-1">Language</label>
+<div class="relative">
+<select class="w-full appearance-none bg-slate-50 hover:bg-slate-100/70 text-slate-800 text-xs sm:text-sm rounded-lg px-3 py-2 pr-8 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition">
+<option>Bilingual (English + Hindi)</option>
+<option>English Only</option>
+<option>Hindi Only</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<div class="col-span-2 sm:col-span-2 lg:col-span-1 flex items-end">
+<button class="w-full bg-slate-100 hover:bg-slate-200/80 text-slate-700 font-semibold text-xs sm:text-sm py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 border border-slate-200/80 transition" type="button">
+<span class="material-symbols-outlined text-[17px]">filter_alt_off</span>
+<span>Reset Filters</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Mock Tests Cards Grid -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<div class="flex items-center justify-between mb-6">
+<div>
+<h2 class="text-xl sm:text-2xl font-display font-extrabold text-slate-900 tracking-tight">Available CBT Mock Series</h2>
+<p class="text-slate-500 text-xs sm:text-sm mt-0.5">Showing 6 recommended high-yield mock tests matched with your target preferences</p>
+</div>
+<span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider hidden sm:inline-block">Sorted by Relevance &amp; Closeness</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1: TCS NQT -->
+<div class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md transition-all flex flex-col justify-between p-5 relative overflow-hidden group">
+<div class="absolute top-0 left-0 right-0 h-1 bg-blue-600"></div>
+<div>
+<div class="flex items-center justify-between gap-2 mb-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 border border-rose-200 text-xs font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-600 animate-ping"></span>
+                Live All-India CBT
+              </span>
+<span class="text-xs font-semibold text-emerald-600 flex items-center gap-1 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200/60">
+<span class="material-symbols-outlined text-[14px]">thumb_up</span> +1.0 / -0.25 Marking
+              </span>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-100">
+<span class="material-symbols-outlined text-[22px]">terminal</span>
+</div>
+<div>
+<h3 class="font-display font-bold text-slate-900 text-base group-hover:text-blue-600 transition-colors leading-snug">
+                  TCS NQT 2026 Full Length National Mock 05
+                </h3>
+<p class="text-xs text-slate-500 mt-1">National Benchmark Edition • Cognitive &amp; Advanced Coding</p>
+</div>
+</div>
+<!-- Stats Bar -->
+<div class="mt-4 grid grid-cols-3 gap-2 bg-slate-50 border border-slate-100 p-2.5 rounded-xl text-center">
+<div>
+<div class="font-display font-bold text-slate-900 text-sm">80</div>
+<div class="text-[11px] text-slate-500 font-medium">Questions</div>
+</div>
+<div>
+<div class="font-display font-bold text-slate-900 text-sm">120m</div>
+<div class="text-[11px] text-slate-500 font-medium">Time Limit</div>
+</div>
+<div>
+<div class="font-display font-bold text-emerald-600 text-sm">94/100</div>
+<div class="text-[11px] text-slate-500 font-medium">Topper Score</div>
+</div>
+</div>
+<!-- Social proof & progress -->
+<div class="mt-3.5 flex items-center justify-between text-xs text-slate-600">
+<span class="flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-blue-600 text-[16px]">groups</span>
+<strong>48,290</strong> Candidates Attempted
+              </span>
+<span class="text-emerald-700 font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">bolt</span> Fast Solutions
+              </span>
+</div>
+<div class="mt-2.5 w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+<div class="bg-blue-600 h-1.5 rounded-full" style="width: 86%"></div>
+</div>
+<div class="flex justify-between items-center mt-1 text-[11px]">
+<span class="text-slate-500">Registration window capacity</span>
+<span class="font-semibold text-blue-700">86% Filled</span>
+</div>
+</div>
+<div class="mt-5 pt-3 border-t border-slate-100 flex items-center gap-2">
+<button class="flex-1 py-2 px-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs sm:text-sm transition flex items-center justify-center gap-1.5 shadow-sm shadow-blue-500/20" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>Start Test Now</span>
+</button>
+<button aria-label="Details" class="p-2 rounded-xl border border-slate-200 text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition" type="button">
+<span class="material-symbols-outlined text-[18px]">info</span>
+</button>
+</div>
+</div>
+<!-- Card 2: JEE Main -->
+<div class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md transition-all flex flex-col justify-between p-5 relative overflow-hidden group">
+<div class="absolute top-0 left-0 right-0 h-1 bg-cyan-600"></div>
+<div>
+<div class="flex items-center justify-between gap-2 mb-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-cyan-50 text-cyan-800 border border-cyan-200 text-xs font-semibold">
+<span class="material-symbols-outlined text-[14px]">layers</span> NTA Engine Pattern
+              </span>
+<span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-200/60">Free Access</span>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-11 h-11 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center shrink-0 border border-cyan-100">
+<span class="material-symbols-outlined text-[22px]">electric_bolt</span>
+</div>
+<div>
+<h3 class="font-display font-bold text-slate-900 text-base group-hover:text-blue-600 transition-colors leading-snug">
+                  JEE Main 2026 All-India Physics Grand Mock
+                </h3>
+<p class="text-xs text-slate-500 mt-1">Mechanics • Electrodynamics • Modern Physics</p>
+</div>
+</div>
+<!-- Stats Bar -->
+<div class="mt-4 grid grid-cols-3 gap-2 bg-slate-50 border border-slate-100 p-2.5 rounded-xl text-center">
+<div>
+<div class="font-display font-bold text-slate-900 text-sm">30</div>
+<div class="text-[11px] text-slate-500 font-medium">MCQ + Numerical</div>
+</div>
+<div>
+<div class="font-display font-bold text-slate-900 text-sm">60m</div>
+<div class="text-[11px] text-slate-500 font-medium">Duration</div>
+</div>
+<div>
+<div class="font-display font-bold text-blue-600 text-sm">100/120</div>
+<div class="text-[11px] text-slate-500 font-medium">Cutoff Target</div>
+</div>
+</div>
+<div class="mt-3.5 flex items-center justify-between text-xs text-slate-600">
+<span class="flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-amber-500 text-[16px]">bar_chart</span>
+                Difficulty: <strong>Hard (High Rigor)</strong>
+</span>
+<span class="text-blue-700 font-semibold">Bilingual</span>
+</div>
+<div class="mt-3 p-2 rounded-xl bg-slate-50 border border-slate-100 flex items-center gap-2 text-xs text-slate-600">
+<span class="material-symbols-outlined text-emerald-600 text-[18px] shrink-0">verified</span>
+<p class="truncate">Includes video solution hints by Top IIT Mentors</p>
+</div>
+</div>
+<div class="mt-5 pt-3 border-t border-slate-100 flex items-center gap-2">
+<button class="flex-1 py-2 px-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs sm:text-sm transition flex items-center justify-center gap-1.5 shadow-sm shadow-blue-500/20" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>Take Free Mock</span>
+</button>
+<button aria-label="Bookmark" class="p-2 rounded-xl border border-slate-200 text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+</button>
+</div>
+</div>
+<!-- Card 3: SSC CGL -->
+<div class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md transition-all flex flex-col justify-between p-5 relative overflow-hidden group">
+<div class="absolute top-0 left-0 right-0 h-1 bg-emerald-600"></div>
+<div>
+<div class="flex items-center justify-between gap-2 mb-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-semibold">
+<span class="material-symbols-outlined text-[14px]">speed</span> Speed Booster Drill
+              </span>
+<span class="text-xs font-medium text-slate-500">Tier-1 Format</span>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-100">
+<span class="material-symbols-outlined text-[22px]">calculate</span>
+</div>
+<div>
+<h3 class="font-display font-bold text-slate-900 text-base group-hover:text-blue-600 transition-colors leading-snug">
+                  SSC CGL Tier 1 Quantitative Aptitude Sectional Drill
+                </h3>
+<p class="text-xs text-slate-500 mt-1">Arithmetic • Algebra • Mensuration Drills</p>
+</div>
+</div>
+<!-- Stats Bar -->
+<div class="mt-4 grid grid-cols-3 gap-2 bg-slate-50 border border-slate-100 p-2.5 rounded-xl text-center">
+<div>
+<div class="font-display font-bold text-slate-900 text-sm">25</div>
+<div class="text-[11px] text-slate-500 font-medium">Questions</div>
+</div>
+<div>
+<div class="font-display font-bold text-slate-900 text-sm">20m</div>
+<div class="text-[11px] text-slate-500 font-medium">Sprint Pace</div>
+</div>
+<div>
+<div class="font-display font-bold text-emerald-600 text-sm">+2 / -0.5</div>
+<div class="text-[11px] text-slate-500 font-medium">Marks</div>
+</div>
+</div>
+<div class="mt-3.5 flex items-center justify-between text-xs text-slate-600">
+<span class="flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-emerald-600 text-[16px]">pace</span>
+                Target Pace: <strong>48 sec / Q</strong>
+</span>
+<span class="text-slate-700 font-medium">31,520 Solved</span>
+</div>
+<div class="mt-3 p-2 rounded-xl bg-slate-50 border border-slate-100 flex items-center gap-2 text-xs text-slate-600">
+<span class="w-2 h-2 rounded-full bg-emerald-500 shrink-0"></span>
+<p class="truncate">Real-time question-wise timer toggle included</p>
+</div>
+</div>
+<div class="mt-5 pt-3 border-t border-slate-100 flex items-center gap-2">
+<button class="flex-1 py-2 px-3 rounded-xl bg-slate-100 hover:bg-slate-200/80 text-slate-800 font-semibold text-xs sm:text-sm border border-slate-200 transition flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-blue-600 text-[18px]">timer</span>
+<span>Start Speed Drill</span>
+</button>
+<button aria-label="Download" class="p-2 rounded-xl border border-slate-200 text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+</button>
+</div>
+</div>
+<!-- Card 4: Reasoning Sprint -->
+<div class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md transition-all flex flex-col justify-between p-5 relative overflow-hidden group">
+<div class="absolute top-0 left-0 right-0 h-1 bg-indigo-600"></div>
+<div>
+<div class="flex items-center justify-between gap-2 mb-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200 text-xs font-semibold">
+<span class="material-symbols-outlined text-[14px]">psychology</span> Micro Practice
+              </span>
+<span class="text-xs font-semibold text-emerald-600">15 Min Challenge</span>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-11 h-11 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 border border-indigo-100">
+<span class="material-symbols-outlined text-[22px]">extension</span>
+</div>
+<div>
+<h3 class="font-display font-bold text-slate-900 text-base group-hover:text-blue-600 transition-colors leading-snug">
+                  Logical Reasoning: Syllogisms &amp; Seating Puzzles Sprint
+                </h3>
+<p class="text-xs text-slate-500 mt-1">Circular • Parallel Row Arrangements</p>
+</div>
+</div>
+<!-- Stats Bar -->
+<div class="mt-4 grid grid-cols-3 gap-2 bg-slate-50 border border-slate-100 p-2.5 rounded-xl text-center">
+<div>
+<div class="font-display font-bold text-slate-900 text-sm">15</div>
+<div class="text-[11px] text-slate-500 font-medium">Puzzles</div>
+</div>
+<div>
+<div class="font-display font-bold text-slate-900 text-sm">15m</div>
+<div class="text-[11px] text-slate-500 font-medium">Sprint</div>
+</div>
+<div>
+<div class="font-display font-bold text-slate-900 text-sm">88%</div>
+<div class="text-[11px] text-slate-500 font-medium">Avg Acc.</div>
+</div>
+</div>
+<div class="mt-3.5 flex items-center justify-between text-xs text-slate-600">
+<span class="flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-slate-400 text-[16px]">done_all</span>
+                Negative marking enabled
+              </span>
+<span class="text-slate-400">Updated Yesterday</span>
+</div>
+<div class="mt-3 p-2 rounded-xl bg-slate-50 border border-slate-100 text-xs text-slate-600 truncate">
+              Focus areas: Reverse syllogisms, blood relation matrices.
+            </div>
+</div>
+<div class="mt-5 pt-3 border-t border-slate-100 flex items-center gap-2">
+<button class="flex-1 py-2 px-3 rounded-xl bg-slate-100 hover:bg-slate-200/80 text-slate-800 font-semibold text-xs sm:text-sm border border-slate-200 transition flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-blue-600 text-[18px]">play_arrow</span>
+<span>Quick Practice</span>
+</button>
+<button aria-label="Bookmark" class="p-2 rounded-xl border border-slate-200 text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+</button>
+</div>
+</div>
+<!-- Card 5: GATE CS -->
+<div class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md transition-all flex flex-col justify-between p-5 relative overflow-hidden group">
+<div class="absolute top-0 left-0 right-0 h-1 bg-blue-700"></div>
+<div>
+<div class="flex items-center justify-between gap-2 mb-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-xs font-semibold">
+<span class="material-symbols-outlined text-[14px]">card_membership</span> Diagnostic Test
+              </span>
+<span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200/60">100% FREE</span>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-11 h-11 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center shrink-0 border border-blue-100">
+<span class="material-symbols-outlined text-[22px]">account_tree</span>
+</div>
+<div>
+<h3 class="font-display font-bold text-slate-900 text-base group-hover:text-blue-600 transition-colors leading-snug">
+                  GATE CS 2027 Algorithms &amp; Data Structures Diagnostic
+                </h3>
+<p class="text-xs text-slate-500 mt-1">Trees, Graphs, DP &amp; Complexity Bounds</p>
+</div>
+</div>
+<!-- Stats Bar -->
+<div class="mt-4 grid grid-cols-3 gap-2 bg-slate-50 border border-slate-100 p-2.5 rounded-xl text-center">
+<div>
+<div class="font-display font-bold text-slate-900 text-sm">30</div>
+<div class="text-[11px] text-slate-500 font-medium">NAT &amp; MSQ</div>
+</div>
+<div>
+<div class="font-display font-bold text-slate-900 text-sm">90m</div>
+<div class="text-[11px] text-slate-500 font-medium">Duration</div>
+</div>
+<div>
+<div class="font-display font-bold text-blue-600 text-sm">50 Marks</div>
+<div class="text-[11px] text-slate-500 font-medium">Weightage</div>
+</div>
+</div>
+<div class="mt-3.5 flex items-center justify-between text-xs text-slate-600">
+<span class="flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-blue-600 text-[16px]">calculate</span>
+                Virtual Calculator Active
+              </span>
+<span class="text-emerald-700 font-semibold">14,310 Aspirants</span>
+</div>
+<div class="mt-3 p-2 rounded-xl bg-slate-50 border border-slate-100 text-xs text-slate-600 truncate">
+              Provides granular sub-concept mapping for GATE predictor.
+            </div>
+</div>
+<div class="mt-5 pt-3 border-t border-slate-100 flex items-center gap-2">
+<button class="flex-1 py-2 px-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs sm:text-sm transition flex items-center justify-center gap-1.5 shadow-sm shadow-blue-500/20" type="button">
+<span class="material-symbols-outlined text-[18px]">assignment</span>
+<span>Attempt Diagnostic</span>
+</button>
+<button aria-label="Bookmark" class="p-2 rounded-xl border border-slate-200 text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+</button>
+</div>
+</div>
+<!-- Card 6: IBPS PO -->
+<div class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md transition-all flex flex-col justify-between p-5 relative overflow-hidden group">
+<div class="absolute top-0 left-0 right-0 h-1 bg-amber-500"></div>
+<div>
+<div class="flex items-center justify-between gap-2 mb-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200 text-xs font-semibold">
+<span class="material-symbols-outlined text-[14px]">insights</span> AIR Predictor Enabled
+              </span>
+<span class="text-xs font-medium text-slate-500">Prelims Mock 02</span>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-11 h-11 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 border border-amber-100">
+<span class="material-symbols-outlined text-[22px]">account_balance</span>
+</div>
+<div>
+<h3 class="font-display font-bold text-slate-900 text-base group-hover:text-blue-600 transition-colors leading-snug">
+                  IBPS PO Prelims Banking &amp; Economy Mock 02
+                </h3>
+<p class="text-xs text-slate-500 mt-1">Sectional Cutoffs • Section Lock Timers</p>
+</div>
+</div>
+<!-- Stats Bar -->
+<div class="mt-4 grid grid-cols-3 gap-2 bg-slate-50 border border-slate-100 p-2.5 rounded-xl text-center">
+<div>
+<div class="font-display font-bold text-slate-900 text-sm">100</div>
+<div class="text-[11px] text-slate-500 font-medium">Questions</div>
+</div>
+<div>
+<div class="font-display font-bold text-slate-900 text-sm">60m</div>
+<div class="text-[11px] text-slate-500 font-medium">20m / Sec</div>
+</div>
+<div>
+<div class="font-display font-bold text-slate-900 text-sm">71.5</div>
+<div class="text-[11px] text-slate-500 font-medium">Expected Cutoff</div>
+</div>
+</div>
+<div class="mt-3.5 flex items-center justify-between text-xs text-slate-600">
+<span class="flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-blue-600 text-[16px]">analytics</span>
+                Instant Percentile Benchmark
+              </span>
+<span class="text-slate-800 font-semibold">22,890 Attempts</span>
+</div>
+<div class="mt-3 p-2 rounded-xl bg-slate-50 border border-slate-100 flex items-center gap-2 text-xs text-slate-600">
+<span class="material-symbols-outlined text-amber-600 text-[18px] shrink-0">lock_clock</span>
+<p class="truncate">Strict 20-min sectional switching lock as per rules</p>
+</div>
+</div>
+<div class="mt-5 pt-3 border-t border-slate-100 flex items-center gap-2">
+<button class="flex-1 py-2 px-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs sm:text-sm transition flex items-center justify-center gap-1.5 shadow-sm shadow-blue-500/20" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>Take Prelims Test</span>
+</button>
+<button aria-label="Bookmark" class="p-2 rounded-xl border border-slate-200 text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose TestPrep / Rely on TestPrep Section (Matches Home Page Style) -->
+<section class="w-full bg-white border-y border-slate-200/80 py-14">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-2xl mx-auto mb-12">
+<span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+            Standard of Excellence
+          </span>
+<h2 class="text-2xl sm:text-3xl font-display font-extrabold text-slate-900 mt-3 tracking-tight">
+            Why 2.4 Million Aspirants Rely on TestPrep Mocks
+          </h2>
+<p class="text-slate-500 text-sm sm:text-base mt-2">
+            Every simulated test is calibrated using 10 years of normalized question telemetry and certified CBT software standards.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Feature 1 -->
+<div class="p-6 rounded-2xl bg-slate-50/70 border border-slate-200/80 hover:bg-white hover:shadow-md hover:border-blue-200 transition-all flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-blue-100/70 text-blue-600 flex items-center justify-center mb-4 group-hover:bg-blue-600 group-hover:text-white transition">
+<span class="material-symbols-outlined text-[24px]">desktop_windows</span>
+</div>
+<h3 class="font-display font-bold text-slate-900 text-base mb-2">Exact CBT Console Ergonomics</h3>
+<p class="text-slate-500 text-xs sm:text-sm leading-relaxed">
+                Experience the actual TCS iON and NTA exam screen, question palette, review tags, sectional locks, and on-screen scientific calculators.
+              </p>
+</div>
+<div class="mt-5 pt-3 text-blue-600 font-semibold text-xs flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+<span>Zero Exam Day Surprise</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="p-6 rounded-2xl bg-slate-50/70 border border-slate-200/80 hover:bg-white hover:shadow-md hover:border-emerald-200 transition-all flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-emerald-100/70 text-emerald-600 flex items-center justify-center mb-4 group-hover:bg-emerald-600 group-hover:text-white transition">
+<span class="material-symbols-outlined text-[24px]">troubleshoot</span>
+</div>
+<h3 class="font-display font-bold text-slate-900 text-base mb-2">Instant AI Weakness Diagnostics</h3>
+<p class="text-slate-500 text-xs sm:text-sm leading-relaxed">
+                Pinpoint precise concept vulnerabilities, unforced silly errors, negative marking leaks, and time-waster traps across every topic.
+              </p>
+</div>
+<div class="mt-5 pt-3 text-emerald-600 font-semibold text-xs flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+<span>Sub-Topic Precision</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="p-6 rounded-2xl bg-slate-50/70 border border-slate-200/80 hover:bg-white hover:shadow-md hover:border-indigo-200 transition-all flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-indigo-100/70 text-indigo-600 flex items-center justify-center mb-4 group-hover:bg-indigo-600 group-hover:text-white transition">
+<span class="material-symbols-outlined text-[24px]">leaderboard</span>
+</div>
+<h3 class="font-display font-bold text-slate-900 text-base mb-2">True Normalized AIR Percentile</h3>
+<p class="text-slate-500 text-xs sm:text-sm leading-relaxed">
+                Rank calculated dynamically against 100,000+ competitors under uniform timed conditions with multi-shift formulas.
+              </p>
+</div>
+<div class="mt-5 pt-3 text-indigo-600 font-semibold text-xs flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+<span>Official Scaling Logic</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Feature 4 -->
+<div class="p-6 rounded-2xl bg-slate-50/70 border border-slate-200/80 hover:bg-white hover:shadow-md hover:border-rose-200 transition-all flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-rose-100/70 text-rose-600 flex items-center justify-center mb-4 group-hover:bg-rose-600 group-hover:text-white transition">
+<span class="material-symbols-outlined text-[24px]">smart_display</span>
+</div>
+<h3 class="font-display font-bold text-slate-900 text-base mb-2">Video Solutions by Master Mentors</h3>
+<p class="text-slate-500 text-xs sm:text-sm leading-relaxed">
+                Every single mock question features both detailed typed rationale and a 90-second shortcut breakdown video by top rankers.
+              </p>
+</div>
+<div class="mt-5 pt-3 text-rose-600 font-semibold text-xs flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+<span>Shortcut Techniques</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Upcoming Live National Mock Test Schedule Section -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="schedule">
+<div class="bg-white rounded-2xl border border-slate-200/90 shadow-sm p-5 sm:p-7">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-6">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-rose-600 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">notification_important</span>
+              Calendar • National CBT Circuit
+            </span>
+<h2 class="text-xl sm:text-2xl font-display font-extrabold text-slate-900 mt-1 tracking-tight">
+              Upcoming Live National Mock Test Schedule
+            </h2>
+<p class="text-slate-500 text-xs sm:text-sm mt-0.5">
+              Book your seat early to secure prompt rank generation and educator doubt analysis sessions.
+            </p>
+</div>
+<button class="self-start lg:self-auto px-3.5 py-2 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200/90 text-xs sm:text-sm font-semibold transition flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-blue-600 text-[18px]">calendar_month</span>
+<span>Add All to Google Calendar</span>
+</button>
+</div>
+<!-- Schedule Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 text-slate-600 font-semibold text-xs uppercase tracking-wider border-b border-slate-200/80">
+<th class="py-3 px-4 rounded-l-xl">Mock Test Title</th>
+<th class="py-3 px-4">Target Stream</th>
+<th class="py-3 px-4">Live Window Slot</th>
+<th class="py-3 px-4">Aspirants Registered</th>
+<th class="py-3 px-4 text-right rounded-r-xl">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 text-xs sm:text-sm text-slate-700">
+<tr class="hover:bg-slate-50/70 transition-colors">
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-100">
+<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+</div>
+<div>
+<span class="font-display font-bold text-slate-900 block">All-India Mega Mock #06: TCS NQT &amp; Wipro Elite</span>
+<span class="text-slate-500 text-xs">Complete Numerical, Reasoning, English &amp; Hands-on Coding</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-medium">Engineering / IT</span>
+</td>
+<td class="py-4 px-4">
+<div class="font-semibold text-slate-900">Oct 26, 2025</div>
+<div class="text-slate-400 text-xs">10:00 AM – 1:00 PM IST</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-1.5 font-medium">
+<span class="font-bold text-slate-900">54,120</span>
+<span class="text-emerald-600 text-xs">(+1.2k today)</span>
+</div>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="px-3.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold shadow-sm transition" type="button">
+                    Register Free
+                  </button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/70 transition-colors">
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center shrink-0 border border-cyan-100">
+<span class="material-symbols-outlined text-[20px]">psychology_alt</span>
+</div>
+<div>
+<span class="font-display font-bold text-slate-900 block">JEE Main 2026 Shift Simulation #02</span>
+<span class="text-slate-500 text-xs">Strict 300-Mark Full Syllabus Paper (Physics, Chem, Math)</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="px-2.5 py-1 rounded-full bg-cyan-50 text-cyan-800 text-xs font-medium">JEE Engineering</span>
+</td>
+<td class="py-4 px-4">
+<div class="font-semibold text-slate-900">Oct 28, 2025</div>
+<div class="text-slate-400 text-xs">02:00 PM – 05:00 PM IST</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-1.5 font-medium">
+<span class="font-bold text-slate-900">39,400</span>
+<span class="text-rose-600 text-xs font-semibold">(Near Capacity)</span>
+</div>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="px-3.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold shadow-sm transition" type="button">
+                    Book Slot
+                  </button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/70 transition-colors">
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 border border-amber-100">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+</div>
+<div>
+<span class="font-display font-bold text-slate-900 block">SBI PO &amp; IBPS PO National Mega Prelims</span>
+<span class="text-slate-500 text-xs">English, Quantitative Aptitude &amp; Reasoning Aptitude</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="px-2.5 py-1 rounded-full bg-amber-50 text-amber-800 text-xs font-medium">Banking &amp; PO</span>
+</td>
+<td class="py-4 px-4">
+<div class="font-semibold text-slate-900">Nov 02, 2025</div>
+<div class="text-slate-400 text-xs">11:00 AM – 12:00 PM IST</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-1.5 font-medium">
+<span class="font-bold text-slate-900">62,810</span>
+<span class="text-emerald-600 text-xs">(Open)</span>
+</div>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="px-3.5 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold border border-slate-200 transition" type="button">
+                    Notify Me
+                  </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Banner inside schedule (similar to Track Your Progress banner on Home) -->
+<div class="mt-6 p-4 sm:p-5 bg-gradient-to-r from-blue-50 via-indigo-50/40 to-blue-50 rounded-2xl border border-blue-100 flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3.5">
+<div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-sm shadow-blue-500/20">
+<span class="material-symbols-outlined text-[22px]">workspace_premium</span>
+</div>
+<div>
+<h4 class="font-display font-bold text-slate-900 text-sm sm:text-base">Need Unlimited Access to All 4,500+ Sectional Tests &amp; PYQs?</h4>
+<p class="text-slate-600 text-xs sm:text-sm">Unlock the TestPrep Pro Pass starting from ₹49/month with instant explanations &amp; video walkthroughs.</p>
+</div>
+</div>
+<a class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs sm:text-sm font-semibold transition shrink-0 shadow-sm flex items-center gap-1" href="#">
+<span>View TestPrep Pass</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Matches exact structure and styling from TestPrep Home Page) -->
+<footer class="w-full bg-white border-t border-slate-200/90 mt-auto">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+<!-- Brand column -->
+<div class="lg:col-span-2 flex flex-col gap-3">
+<a class="flex items-center gap-2.5" href="#">
+<div class="w-8 h-8 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-sm">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+</div>
+<span class="text-xl font-display font-extrabold text-slate-900 tracking-tight">TestPrep</span>
+</a>
+<p class="text-sm font-semibold text-blue-600">Practice Today, Perform Tomorrow</p>
+<p class="text-xs sm:text-sm text-slate-500 max-w-sm leading-relaxed">
+            Comprehensive mock assessment platform trusted by millions of aspirants for national engineering, placement drives, banking, and government examinations.
+          </p>
+<div class="flex items-center gap-2 pt-2 text-slate-500">
+<a aria-label="Community" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 flex items-center justify-center transition" href="#">
+<span class="material-symbols-outlined text-[18px]">forum</span>
+</a>
+<a aria-label="Announcements" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 flex items-center justify-center transition" href="#">
+<span class="material-symbols-outlined text-[18px]">podcasts</span>
+</a>
+<a aria-label="Support Mail" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 flex items-center justify-center transition" href="#">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</a>
+<a aria-label="Global" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 flex items-center justify-center transition" href="#">
+<span class="material-symbols-outlined text-[18px]">public</span>
+</a>
+</div>
+</div>
+<!-- Links: Exams -->
+<div>
+<p class="text-xs font-bold text-slate-900 mb-3 uppercase tracking-wider">Exams</p>
+<ul class="flex flex-col gap-2 text-xs sm:text-sm text-slate-600">
+<li><a class="hover:text-blue-600 transition-colors" href="#">SSC Exams</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">Banking &amp; Insurance</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">Railways RRB</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">UPSC Civil Services</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">JEE Main &amp; Advanced</a></li>
+</ul>
+</div>
+<!-- Links: Resources -->
+<div>
+<p class="text-xs font-bold text-slate-900 mb-3 uppercase tracking-wider">Resources</p>
+<ul class="flex flex-col gap-2 text-xs sm:text-sm text-slate-600">
+<li><a class="hover:text-blue-600 font-semibold text-blue-600 transition-colors" href="#">Mock Tests</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">PYQ Papers</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">Formula Handbooks</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">Daily Quiz Drills</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">Speed Test Matrix</a></li>
+</ul>
+</div>
+<!-- Links: Company -->
+<div>
+<p class="text-xs font-bold text-slate-900 mb-3 uppercase tracking-wider">Company</p>
+<ul class="flex flex-col gap-2 text-xs sm:text-sm text-slate-600">
+<li><a class="hover:text-blue-600 transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">Educator Network</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<!-- Links: Legal -->
+<div>
+<p class="text-xs font-bold text-slate-900 mb-3 uppercase tracking-wider">Legal</p>
+<ul class="flex flex-col gap-2 text-xs sm:text-sm text-slate-600">
+<li><a class="hover:text-blue-600 transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">Refund Policy</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">Code of Conduct</a></li>
+</ul>
+</div>
+</div>
+<!-- Copyright Bar -->
+<div class="mt-10 pt-5 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+<p>© 2025 TestPrep EdTech Systems Inc. All rights reserved.</p>
+<div class="flex items-center gap-1.5 font-medium text-emerald-600">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span>All Systems Operational</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    // Live countdown timer script
+    (function initCountdown() {
+      var secondsRemaining = 6845;
+      var tickerEl = document.getElementById('countdown-ticker');
+      if (!tickerEl) return;
+      var interval = setInterval(function() {
+        if (secondsRemaining <= 0) {
+          clearInterval(interval);
+          tickerEl.textContent = 'Window Closed';
+          return;
+        }
+        secondsRemaining--;
+        var h = Math.floor(secondsRemaining / 3600);
+        var m = Math.floor((secondsRemaining % 3600) / 60);
+        var s = secondsRemaining % 60;
+        var formatted = (h < 10 ? '0' : '') + h + 'h ' +
+                        (m < 10 ? '0' : '') + m + 'm ' +
+                        (s < 10 ? '0' : '') + s + 's';
+        tickerEl.textContent = formatted;
+      }, 1000);
+    })();
+
+    // Tab switcher toggle
+    document.querySelectorAll('#format-tabs button').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('#format-tabs button').forEach(function(b) {
+          b.className = 'px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-white hover:bg-slate-100/80 text-slate-700 border border-slate-200/90 shrink-0 flex items-center gap-2 transition';
+        });
+        this.className = 'px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-blue-600 text-white shadow-sm shadow-blue-500/20 shrink-0 flex items-center gap-2 transition';
+      });
+    });
+  </script>
+</body></html>

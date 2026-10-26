@@ -1,4 +1,4 @@
-﻿/** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
   content: [
@@ -127,11 +127,26 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
         display: ['var(--font-jakarta)', 'var(--font-inter)', 'system-ui', 'sans-serif'],
+        'display-hero': ['var(--font-jakarta)', 'sans-serif'],
+        'display-hero-mobile': ['var(--font-jakarta)', 'sans-serif'],
+        'headline-xl': ['var(--font-jakarta)', 'sans-serif'],
+        'headline-xl-mobile': ['var(--font-jakarta)', 'sans-serif'],
+        'headline-lg': ['var(--font-jakarta)', 'sans-serif'],
+        'headline-md': ['var(--font-jakarta)', 'sans-serif'],
+        'label-lg': ['var(--font-inter)', 'sans-serif'],
+        'label-md': ['var(--font-inter)', 'sans-serif'],
+        'label-sm': ['var(--font-inter)', 'sans-serif'],
+        'body-lg': ['var(--font-inter)', 'sans-serif'],
+        'body-md': ['var(--font-inter)', 'sans-serif'],
+        'body-sm': ['var(--font-inter)', 'sans-serif'],
+        'exam-numeric': ['var(--font-jakarta)', 'sans-serif'],
       },
 
       fontSize: {
         'display-hero': ['40px', { lineHeight: '48px', letterSpacing: '-0.02em', fontWeight: '800' }],
+        'display-hero-mobile': ['28px', { lineHeight: '36px', letterSpacing: '-0.01em', fontWeight: '800' }],
         'headline-xl': ['28px', { lineHeight: '36px', letterSpacing: '-0.015em', fontWeight: '700' }],
+        'headline-xl-mobile': ['22px', { lineHeight: '30px', letterSpacing: '-0.01em', fontWeight: '700' }],
         'headline-lg': ['20px', { lineHeight: '28px', fontWeight: '700' }],
         'headline-md': ['16px', { lineHeight: '24px', fontWeight: '600' }],
         'label-lg': ['14px', { lineHeight: '20px', fontWeight: '600' }],
@@ -140,6 +155,7 @@ module.exports = {
         'body-lg': ['16px', { lineHeight: '26px', fontWeight: '400' }],
         'body-md': ['14px', { lineHeight: '22px', fontWeight: '400' }],
         'body-sm': ['12px', { lineHeight: '18px', fontWeight: '400' }],
+        'exam-numeric': ['14px', { lineHeight: '14px', fontWeight: '700' }],
       },
 
       // ─── Animations ────────────────────────────────────────────────────
